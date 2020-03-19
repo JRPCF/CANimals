@@ -4,12 +4,20 @@ import torch.nn as nn
 import torch.nn.functional as F
 import helper
 
+"""
+Jose Ronaldo Pinheiro Carneiro Filho (jc4896)
+
+implementation of original discriminator
+"""
+
 class Discriminator(nn.Module):
     
     def __init__(self, num_classes=1):
         super(Discriminator, self).__init__()
+        
         v=256*256*3
         n=((v-4*4+2)/2+1)*32 #((input_volume−kernel_volume+2padding)/stride+1)*numberOfLayers
+        
         self.conv1 = conv(v, n) #(32 4x4)
         self.conv2 = conv(n,2*n) #(64 4x4)
         self.conv3 = conv(2*n, 4*n) #(128 4x4)
@@ -23,8 +31,9 @@ class Discriminator(nn.Module):
         
         self real = nn.Linear(16*n, 2)
 
+    #helper method to create convolutional layers
     def conv(in_channels, out_channels, kernel_size=4, stride=2, padding=1):
-        return nn.Conv2d(in_channels=in_channels, out_channels=out_channels, 
+        return nn.Conv3d(in_channels=in_channels, out_channels=out_channels, 
                            kernel_size=kernel_size, stride=stride, padding=padding, bias=False)
     
     def forward(self, x):
