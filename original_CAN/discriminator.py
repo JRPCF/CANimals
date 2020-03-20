@@ -33,7 +33,7 @@ class Discriminator(nn.Module):
 
     #helper method to create convolutional layers
     def conv(in_channels, out_channels, kernel_size=4, stride=2, padding=1):
-        return nn.Conv3d(in_channels=in_channels, out_channels=out_channels, 
+        return nn.conv2d(in_channels=in_channels, out_channels=out_channels, 
                            kernel_size=kernel_size, stride=stride, padding=padding, bias=False)
     
     def forward(self, x):
