@@ -21,21 +21,13 @@ class StanfordDogs(Dataset):
 
     def __init__(self, path, specific_classes=None):
         super().__init__()
-        # self.train = train
-        # self.dataset = torchvision.datasets.FashionMNIST(
-        #     root='./data/fashion_mnist',
-        #     train=train,
-        #     download=True,
-        #     transform=transforms.Compose([
-        #         transforms.ToTensor()
-        #     ])
-        # )
         self.dataset_dict, self.classes = self.load_data_from_path(path)
         self.specific_classes = specific_classes
         self.current_dataset = self.prepare_dataset_for_use()
         self.transform = transforms.Compose([
-            #transforms.CenterCrop((self.CROP_SIZE, self.CROP_SIZE)),
-            transforms.ToTensor()
+            transforms.CenterCrop((self.CROP_SIZE, self.CROP_SIZE)),
+            transforms.ToTensor(),
+            transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
         ])
 
 
