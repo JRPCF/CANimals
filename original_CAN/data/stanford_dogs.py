@@ -84,6 +84,8 @@ class StanfordDogs(Dataset):
     def __getitem__(self, index):
         img_path, label = self.current_dataset[index]
         image = Image.open(img_path)
+        if (np.array(image).shape[2] != 3):
+            print(img_path, label, np.array(image).shape)
         image = self.transform(image)
 
         return image, label
