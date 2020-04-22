@@ -388,10 +388,10 @@ for epoch in range(num_epochs):
         d_loss = d_real_real_loss + d_real_multi_loss + d_fake_real_loss
         
         #torch.log(1-g_fake_real_loss), the 1- is not necessary because computed against label=0 now
-        #print('DRR Loss:', d_real_real_loss.data.cpu().numpy(),
-        #      'DRM Loss:', d_real_multi_loss.data.cpu().numpy(), 
-        #      'DFR Loss:',d_fake_real_loss.data.cpu().numpy(), 
-        #      'D Loss:',d_loss.data.cpu().numpy())
+        print('DRR Loss:', d_real_real_loss.data.cpu().numpy(),
+             'DRM Loss:', d_real_multi_loss.data.cpu().numpy(), 
+             'DFR Loss:',d_fake_real_loss.data.cpu().numpy(), 
+             'D Loss:',d_loss.data.cpu().numpy())
         
         # 10.
         d_loss.backward(retain_graph=True)
@@ -400,14 +400,14 @@ for epoch in range(num_epochs):
         # 11.
         #g_loss=torch.log(g_fake_real_loss)-g_fake_entropy_loss
         g_loss=g_fake_real_loss - g_fake_entropy_loss
-#         print('GFR Loss:',g_fake_real_loss.data.cpu().numpy(), 
-#               'GFE Loss:',g_fake_entropy_loss.data.cpu().numpy(), 
-#               'G Loss:',g_loss.data.cpu().numpy())
+        print('GFR Loss:',g_fake_real_loss.data.cpu().numpy(), 
+              'GFE Loss:',g_fake_entropy_loss.data.cpu().numpy(), 
+              'G Loss:',g_loss.data.cpu().numpy())
         
         # 12.
         g_loss.backward()
         optimizerG.step()
-#         print('D Loss:', d_loss.data.cpu().numpy(), 'G Loss:', g_loss.data.cpu().numpy())
+        print('D Loss:', d_loss.data.cpu().numpy(), 'G Loss:', g_loss.data.cpu().numpy())
 
         
         # Output training stats
