@@ -21,7 +21,7 @@ BATCH_SIZE = 128
 ngpu = 1
 lr = 0.0001
 num_epochs = 100
-
+CROP_SIZE = 256
 
 
 # Set random seed for reproducibility
@@ -42,7 +42,7 @@ device = torch.device("cuda:0" if (torch.cuda.is_available() and ngpu > 0) else 
 Yarne Hermann YPH2105
 """
 
-train_dataset = StanfordDogs('./images', resize=True)
+train_dataset = StanfordDogs('./images', crop_size=crop_size, resize=True)
 train_dataloader = DataLoader(train_dataset, batch_size=32, shuffle=True, num_workers=4)
 
 
@@ -198,7 +198,7 @@ def D_loss(D_out_real, D_out_multi, multi_labels, D_out_false, weights=None, inf
     
     
     multi_outputs = D_out_multi[row_indices, multi_labels]
-    log_m = torch.mean(torch.log(multi_outputs))
+    log_m = torch.mean(torch.log(multi_outputs+eps))
     log_f = torch.mean(torch.log(1 - D_out_false + eps))
     
     if info:
@@ -220,6 +220,7 @@ Yarne Hermann YPH2105
 # I took the negative of what is mentioned on page 9 in the paper in order to create a loss
 # to be minimized. If I'm correct real_loss can be used as it is right now
 def entropy_loss(D_out):
+    eps=1e-7
     batch_size = D_out.size(0)
     K = D_out.size(1)
     loss = torch.zeros(batch_size)
@@ -231,7 +232,7 @@ def entropy_loss(D_out):
         
         
         # c_loss = 1/K * torch.log(probabilities[:, c]) + (1 - 1/K) * torch.log(torch.ones(batch_size)-probabilities[:, c])         
-        c_loss = 1/K * torch.log(D_out[:, c]) + (1 - 1/K) * torch.log(1-D_out[:, c])         
+        c_loss = 1/K * torch.log(D_out[:, c] + eps) + (1 - 1/K) * torch.log(1-D_out[:, c]+eps)         
         
         loss += c_loss
     #print(loss)
@@ -329,8 +330,9 @@ print("Starting Training Loop...")
 for epoch in range(num_epochs):
     # For each batch in the dataloader
     for batch_i, (real_images, real_labels) in enumerate(train_dataloader, 0):
-#         print(batch_i, '/', len(train_dataloader))
+        print(batch_i, '/', len(train_dataloader))
         info = (batch_i % print_every == 0)
+#         info=True
         b_size = real_images.size(0)
         optimizerG.zero_grad()
         
@@ -362,7 +364,7 @@ for epoch in range(num_epochs):
         # 9.
         #d_loss= torch.log(d_real_real_loss)+torch.log(d_real_multi_loss)+torch.log(d_fake_real_loss) 
         #d_loss = d_real_real_loss + d_real_multi_loss + d_fake_real_loss
-        d_loss = D_loss(D_real, D_multi, real_labels, D_fake, weights=D_loss_weights, info=info)
+        d_loss = D_loss(D_real, D_multi, real_labels, D_fake, weights=D_loss_weights, info=True)
         
         #torch.log(1-g_fake_real_loss), the 1- is not necessary because computed against label=0 now
 #         print('DRR Loss:', d_real_real_loss.data.cpu().numpy(),
@@ -377,7 +379,7 @@ for epoch in range(num_epochs):
         # 11.
         #g_loss=torch.log(g_fake_real_loss)-g_fake_entropy_loss
         #g_loss=g_fake_real_loss - g_fake_entropy_loss
-        g_loss = G_loss(D_fake, D_fake_entropy, weights=G_loss_weights, info=info)
+        g_loss = G_loss(D_fake, D_fake_entropy, weights=G_loss_weights, info=True)
         
 #         print('GFR Loss:',g_fake_real_loss.data.cpu().numpy(), 
 #               'GFE Loss:',g_fake_entropy_loss.data.cpu().numpy(), 
@@ -386,7 +388,7 @@ for epoch in range(num_epochs):
         # 12.
         g_loss.backward()
         optimizerG.step()
-#         print('D Loss:', d_loss.data.cpu().numpy(), 'G Loss:', g_loss.data.cpu().numpy())
+        print('D Loss:', d_loss.data.cpu().numpy(), 'G Loss:', g_loss.data.cpu().numpy())
 
         
         # Output training stats
