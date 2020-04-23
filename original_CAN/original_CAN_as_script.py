@@ -20,6 +20,9 @@ train_on_gpu = torch.cuda.is_available()
 BATCH_SIZE = 128
 ngpu = 1
 lr = 0.0001
+num_epochs = 100
+
+
 
 # Set random seed for reproducibility
 manualSeed = 999
@@ -316,7 +319,6 @@ img_list = []
 G_losses = []
 D_losses = []
 iters = 0
-num_epochs = 5 #50
 print_every = 50
 dt = datetime.now()
 D_loss_weights = [1.0, 0.1, 1.0]
