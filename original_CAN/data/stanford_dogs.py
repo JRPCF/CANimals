@@ -17,18 +17,27 @@ from PIL import Image
 
 class StanfordDogs(Dataset):
     NUM_CLASSES = 120
-    CROP_SIZE = 256
+    # CROP_SIZE = 256
 
-    def __init__(self, path, specific_classes=None):
+    def __init__(self, path, specific_classes=None, crop_size=256, resize=False):
         super().__init__()
+        self.crop_size = crop_size
         self.dataset_dict, self.classes = self.load_data_from_path(path)
         self.specific_classes = specific_classes
         self.current_dataset = self.prepare_dataset_for_use()
-        self.transform = transforms.Compose([
-            transforms.CenterCrop((self.CROP_SIZE, self.CROP_SIZE)),
-            transforms.ToTensor(),
-            transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
-        ])
+        if resize:
+            self.transform = self.transform = transforms.Compose([
+                transforms.Resize((self.crop_size, self.crop_size)),
+                # transforms.CenterCrop((self.crop_size, self.crop_size)),
+                transforms.ToTensor(),
+                transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+            ])
+        else:
+            self.transform = transforms.Compose([
+                transforms.CenterCrop((self.crop_size, self.crop_size)),
+                transforms.ToTensor(),
+                transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+            ])
 
 
     def load_data_from_path(self, path):
@@ -45,7 +54,8 @@ class StanfordDogs(Dataset):
                 classes.append(class_name)
                 dataset_dict[class_name] = []
                 for img_path in os.listdir(os.path.join(path, o)):
-                    dataset_dict[class_name].append(os.path.join(path, o, img_path))
+                    if ".jpg" in img_path:
+                        dataset_dict[class_name].append(os.path.join(path, o, img_path))
         return dataset_dict, classes
 
     # 3 construct current (shuffled) dataset
