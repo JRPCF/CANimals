@@ -1,5 +1,3 @@
-print("test0")
-
 import os
 import random
 import time
@@ -16,13 +14,7 @@ import matplotlib.pyplot as plt
 
 from data.stanford_dogs import StanfordDogs
 
-print("test")
-
-
 train_on_gpu = torch.cuda.is_available()
-
-
-print("test2")
 
 
 BATCH_SIZE = 128
@@ -39,7 +31,7 @@ torch.manual_seed(manualSeed)
 device = torch.device("cuda:0" if (torch.cuda.is_available() and ngpu > 0) else "cpu")
 
 
-num_epochs = 100
+
 
 
 
@@ -47,10 +39,8 @@ num_epochs = 100
 Yarne Hermann YPH2105
 """
 
-train_dataset = StanfordDogs('./images')
-train_dataloader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-
-
+train_dataset = StanfordDogs('./images', resize=True)
+train_dataloader = DataLoader(train_dataset, batch_size=32, shuffle=True, num_workers=4)
 
 
 # custom weights initialization called on netG and netD
@@ -64,8 +54,8 @@ def weights_init(m):
         nn.init.constant_(m.bias.data, 0)
 
 
-
-
+        
+        
 """
 implementation of original generator
 """
@@ -118,6 +108,7 @@ class Generator(nn.Module):
         
     def forward(self, x):
         return self.main(x)
+
 
 
 
@@ -185,11 +176,88 @@ class Discriminator(nn.Module):
         multi_output = F.softmax(self.multi3(multi_output))
 
         return real_output, multi_output
+
+
+
+
+
+
+
+def D_loss(D_out_real, D_out_multi, multi_labels, D_out_false, weights=None, info=False):
+    batch_size = D_out_multi.size(0)
+    eps=1e-7
+    log_r = torch.mean(torch.log(D_out_real + eps))
+    
+    row_indices = torch.from_numpy(np.arange(batch_size))
+    if train_on_gpu:
+        multi_labels = multi_labels.cuda()
+        row_indices = row_indices.cuda()
     
     
+    multi_outputs = D_out_multi[row_indices, multi_labels]
+    log_m = torch.mean(torch.log(multi_outputs))
+    log_f = torch.mean(torch.log(1 - D_out_false + eps))
     
+    if info:
+        print("DRR", log_r.data.cpu().numpy(), "DRM", log_m.data.cpu().numpy(), "DFF", log_f.data.cpu().numpy())
+    if weights is None: 
+        return - (log_r + log_m + log_f)
+    else:
+        return - (weights[0] * log_r + weights[1] * log_m + weights[2] * log_f )
+#         s = sum(weights)
+#         return - (weights[0]/s * log_r + weights[1]/s * log_m + weights[2]/s * log_f )
+
+
+
+
+"""
+Yarne Hermann YPH2105
+"""
+# Have to make sure to be correct about maximizing or minimizing loss.
+# I took the negative of what is mentioned on page 9 in the paper in order to create a loss
+# to be minimized. If I'm correct real_loss can be used as it is right now
+def entropy_loss(D_out):
+    batch_size = D_out.size(0)
+    K = D_out.size(1)
+    loss = torch.zeros(batch_size)
+    if train_on_gpu:
+        D_out = D_out.cuda()
+        loss = loss.cuda()
+            
+    for c in range(K):
+        
+        
+        # c_loss = 1/K * torch.log(probabilities[:, c]) + (1 - 1/K) * torch.log(torch.ones(batch_size)-probabilities[:, c])         
+        c_loss = 1/K * torch.log(D_out[:, c]) + (1 - 1/K) * torch.log(1-D_out[:, c])         
+        
+        loss += c_loss
+    #print(loss)
+    return loss.mean()
+
+
+
+
+def G_loss(D_out_false, D_out_multi, weights=None, info=False):
+    batch_size = D_out_multi.size(0)
+    eps=1e-7
+    log_f = torch.mean(torch.log(D_out_false + eps))
+    l_entropy = entropy_loss(D_out_multi)
     
+    if info:
+        print("GFR", log_f.data.cpu().numpy(), "GFE", l_entropy.data.cpu().numpy())
     
+
+    if weights is None: 
+        return  - (log_f + l_entropy)
+    else:
+        return - (weights[0] * log_f + weights[1] * l_entropy)
+#         s = sum(weights)
+#         return - (weights[0]/s * log_f + weights[1]/s * l_entropy)
+
+
+
+
+
 G = Generator(ngpu).to(device)
 
 # Handle multi-gpu if desired
@@ -202,7 +270,6 @@ G.apply(weights_init)
 
 # Print the model
 print(G)
-
 
 # Create the Discriminator
 D = Discriminator(ngpu, num_classes=train_dataset.NUM_CLASSES).to(device)
@@ -219,101 +286,6 @@ D.apply(weights_init)
 print(D)
 
 
-
-
-""" 
-FROM Udacity DCGAN implementation
-"""
-# label should be 1 or 0
-def real_loss(D_out, label=1, smooth=False):
-    batch_size = D_out.size(0)
-    # label smoothing
-    if smooth:
-        # smooth, real labels = 0.9
-        if label == 1:
-            labels = torch.ones(batch_size)*0.9
-        else: # label == 0:
-            labels = torch.ones(batch_size)*0.1
-    else:
-        if label == 1:
-            labels = torch.ones(batch_size)
-        else: # label == 0:
-            labels = torch.zeros(batch_size)
-        
-    # move labels to GPU if available     
-    if train_on_gpu:
-        labels = labels.cuda()
-    # binary cross entropy with logits loss
-    criterion = nn.BCELoss()  # Changed from BCEWithLogitsLoss, because I saw BCEWithLogitsLoss is for if you don't add the sigmoid loss yourself
-    # calculate loss
-    loss = criterion(D_out.squeeze(), labels)
-    return loss
-
-
-"""
-MODIFIED Udacity DCGAN implementation
-"""
-"""
-J.R. Carneiro JC4896
-"""
-def multi_loss(D_out, labels):
-    # batch_size = D_out.size(0)
-    # labels = torch.zeros(batch_size) # fake labels = 0
-    if train_on_gpu:
-        labels = labels.cuda()
-    criterion = nn.CrossEntropyLoss() 
-    loss = criterion(D_out.squeeze(), labels)
-    return loss
-
-
-
-
-
-
-"""
-Yarne Hermann YPH2105
-"""
-# Have to make sure to be correct about maximizing or minimizing loss.
-# I took the negative of what is mentioned on page 9 in the paper in order to create a loss
-# to be minimized. If I'm correct real_loss can be used as it is right now
-def entropy_loss(D_out):
-    batch_size = D_out.size(0)
-    K = train_dataset.NUM_CLASSES
-    loss = torch.zeros(batch_size)
-    one_matr = torch.ones(batch_size)
-    if train_on_gpu:
-        loss = loss.cuda()
-        one_matr = one_matr.cuda()
-    
-        
-    
-    # softmaxing
-    # e = torch.exp(D_out)
-    # s = torch.sum(e, dim=1)
-    # probabilities = e / s.view(BATCH_SIZE, 1)
-    
-    # Just regular normalization
-    
-    #probabilities = D_out / torch.sum(D_out, dim=1).view(batch_size, 1)
-    
-    #print(probabilities)
-            
-    for c in range(K):
-        
-        
-        # c_loss = 1/K * torch.log(probabilities[:, c]) + (1 - 1/K) * torch.log(torch.ones(batch_size)-probabilities[:, c])         
-        c_loss = 1/K * torch.log(D_out[:, c]) + (1 - 1/K) * torch.log(one_matr-D_out[:, c])         
-        
-        loss += c_loss
-    #print(loss)
-    return loss.sum() / batch_size
-
-
-
-
-
-
-
 # Create batch of latent vectors that we will use to visualize
 #  the progression of the generator
 fixed_z = torch.randn(BATCH_SIZE, 100, 1, 1, device=device)
@@ -327,18 +299,16 @@ optimizerD = optim.SGD(D.parameters(), lr=lr)
 optimizerG = optim.SGD(G.parameters(), lr=lr)
 
 
-
-
 if train_on_gpu:
     G.cuda()
     D.cuda()
     print('GPU available for training. Models moved to GPU')
 else:
     print('Training on CPU.')
-    
 
-    
-   
+
+
+
 # Training Loop
 
 # Lists to keep track of progress
@@ -346,15 +316,19 @@ img_list = []
 G_losses = []
 D_losses = []
 iters = 0
+num_epochs = 5 #50
 print_every = 50
 dt = datetime.now()
+D_loss_weights = [1.0, 0.1, 1.0]
+G_loss_weights = [1.0, 0.1]
 
 print("Starting Training Loop...")
 # For each epoch
 for epoch in range(num_epochs):
     # For each batch in the dataloader
     for batch_i, (real_images, real_labels) in enumerate(train_dataloader, 0):
-        print(batch_i, '/', len(train_dataloader))
+#         print(batch_i, '/', len(train_dataloader))
+        info = (batch_i % print_every == 0)
         b_size = real_images.size(0)
         optimizerG.zero_grad()
         
@@ -373,25 +347,26 @@ for epoch in range(num_epochs):
         
         # 5) Forward pass real batch through D
         D_real, D_multi = D(real_images) #.view(-1)
-        d_real_real_loss = real_loss(D_real, label=1) 
-        # 6.
-        d_real_multi_loss = multi_loss(D_multi, real_labels)
+#         d_real_real_loss = real_loss(D_real, label=1) 
+#         # 6.
+#         d_real_multi_loss = multi_loss(D_multi, real_labels)
         # 7.
         D_fake, D_fake_entropy = D(fake_images)
-        d_fake_real_loss = real_loss(D_fake, label=0)
-        g_fake_real_loss = real_loss(D_fake, label=1)
-        # 8.
-        g_fake_entropy_loss = entropy_loss(D_fake_entropy) ##
+#         d_fake_real_loss = real_loss(D_fake, label=0)
+#         g_fake_real_loss = real_loss(D_fake, label=1)
+#         # 8.
+#         g_fake_entropy_loss = entropy_loss(D_fake_entropy) ##
         
         # 9.
         #d_loss= torch.log(d_real_real_loss)+torch.log(d_real_multi_loss)+torch.log(d_fake_real_loss) 
-        d_loss = d_real_real_loss + d_real_multi_loss + d_fake_real_loss
+        #d_loss = d_real_real_loss + d_real_multi_loss + d_fake_real_loss
+        d_loss = D_loss(D_real, D_multi, real_labels, D_fake, weights=D_loss_weights, info=info)
         
         #torch.log(1-g_fake_real_loss), the 1- is not necessary because computed against label=0 now
-        print('DRR Loss:', d_real_real_loss.data.cpu().numpy(),
-             'DRM Loss:', d_real_multi_loss.data.cpu().numpy(), 
-             'DFR Loss:',d_fake_real_loss.data.cpu().numpy(), 
-             'D Loss:',d_loss.data.cpu().numpy())
+#         print('DRR Loss:', d_real_real_loss.data.cpu().numpy(),
+#               'DRM Loss:', d_real_multi_loss.data.cpu().numpy(), 
+#               'DFR Loss:',d_fake_real_loss.data.cpu().numpy(), 
+#               'D Loss:',d_loss.data.cpu().numpy())
         
         # 10.
         d_loss.backward(retain_graph=True)
@@ -399,26 +374,28 @@ for epoch in range(num_epochs):
         
         # 11.
         #g_loss=torch.log(g_fake_real_loss)-g_fake_entropy_loss
-        g_loss=g_fake_real_loss - g_fake_entropy_loss
-        print('GFR Loss:',g_fake_real_loss.data.cpu().numpy(), 
-              'GFE Loss:',g_fake_entropy_loss.data.cpu().numpy(), 
-              'G Loss:',g_loss.data.cpu().numpy())
+        #g_loss=g_fake_real_loss - g_fake_entropy_loss
+        g_loss = G_loss(D_fake, D_fake_entropy, weights=G_loss_weights, info=info)
+        
+#         print('GFR Loss:',g_fake_real_loss.data.cpu().numpy(), 
+#               'GFE Loss:',g_fake_entropy_loss.data.cpu().numpy(), 
+#               'G Loss:',g_loss.data.cpu().numpy())
         
         # 12.
         g_loss.backward()
         optimizerG.step()
-        print('D Loss:', d_loss.data.cpu().numpy(), 'G Loss:', g_loss.data.cpu().numpy())
+#         print('D Loss:', d_loss.data.cpu().numpy(), 'G Loss:', g_loss.data.cpu().numpy())
 
         
         # Output training stats
-        if batch_i % print_every == 0:
+        if info:
             # append discriminator loss and generator loss
             G_losses.append(g_loss.item())
             D_losses.append(d_loss.item())
             
             # print discriminator and generator loss
-            print('Epoch [{:5d}/{:5d}] | d_loss: {:6.4f} | g_loss: {:6.4f}'.format(
-                    epoch+1, num_epochs, d_loss.item(), g_loss.item()))
+            print('Epoch [{:5d}/{:5d}], batch {} | d_loss: {:6.4f} | g_loss: {:6.4f}'.format(
+                    epoch+1, num_epochs, batch_i, d_loss.item(), g_loss.item()))
 
     
     ## AFTER EACH EPOCH##    
@@ -429,20 +406,51 @@ for epoch in range(num_epochs):
     img_z = G(fixed_z).detach().cpu()
     img_list.append(img_z)
     # Save training generator samples
-    with open('img_z_' + str(dt) + '_epoch_' + str(epoch+1) + '.pkl', 'wb') as f:
+    with open('img_z/img_z_' + str(dt) + '_epoch_' + str(epoch+1) + '.pkl', 'wb') as f:
         pkl.dump(img_z, f)
     
     #img_list.append(make_grid(img_z, padding=2, normalize=True))
     G.train() # back to training mode  
     
-    torch.save(G, 'G_' + str(dt) + '_epoch_' + str(epoch+1) + '.pt')
-    torch.save(D, 'D_' + str(dt) + '_epoch_' + str(epoch+1) + '.pt')
+    torch.save(G, 'models/G_' + str(dt) + '_epoch_' + str(epoch+1) + '.pt')
+    torch.save(D, 'models/D_' + str(dt) + '_epoch_' + str(epoch+1) + '.pt')
     
+with open('losses/G_losses' + str(dt) + '.pkl', 'wb') as f:
+        pkl.dump(G_losses, f)
+with open('losses/D_losses' + str(dt) + '.pkl', 'wb') as f:
+        pkl.dump(D_losses, f)
     
-    
+# # Save training generator samples
+# with open('train_samples.pkl', 'wb') as f:
+#     pkl.dump(img_list, f)
     
 
 
+
+### END -   FROM Udacity DCGAN implementation ###
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
 
