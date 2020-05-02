@@ -1,10 +1,7 @@
 """
 Pytorch dataset class for the Stanford Dogs dataset
-"""
-"""
 Yarne Hermann YPH2105
 """
-
 import os
 import random
 random.seed(0)
@@ -17,9 +14,8 @@ from PIL import Image
 
 class StanfordDogs(Dataset):
     NUM_CLASSES = 120
-    # CROP_SIZE = 256
 
-    def __init__(self, path, specific_classes=None, crop_size=256, resize=False):
+    def __init__(self, path, specific_classes=None, crop_size=256, resize=True):
         super().__init__()
         self.crop_size = crop_size
         self.dataset_dict, self.classes = self.load_data_from_path(path)
@@ -28,7 +24,6 @@ class StanfordDogs(Dataset):
         if resize:
             self.transform = self.transform = transforms.Compose([
                 transforms.Resize((self.crop_size, self.crop_size)),
-                # transforms.CenterCrop((self.crop_size, self.crop_size)),
                 transforms.ToTensor(),
                 transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
             ])
@@ -42,8 +37,6 @@ class StanfordDogs(Dataset):
 
     def load_data_from_path(self, path):
         # 1 Read class names from directories and store in a classes array
-        # Taking [10:] makes us get the dog name without a code in the front
-        # classes = [o[10:] for o in os.listdir(path) if os.path.isdir(os.path.join(path,o))]
         classes = []
         dataset_dict = {}
 
@@ -80,7 +73,8 @@ class StanfordDogs(Dataset):
 
 
     """
-    This will allow to restrict to only a subset of more specific classes
+    This will allow to dynamically restrict to only a subset of more specific classes
+    (Not used in final result)
     """
     def set_specific_classes(self, specific_classes=None):
         # self.specific_classes=specific_classes
@@ -89,6 +83,8 @@ class StanfordDogs(Dataset):
         pass
 
     def get_num_classes(self):
+        if self.specific_classes: 
+            return len(self.specific_classes)
         return self.NUM_CLASSES
 
     def __getitem__(self, index):
