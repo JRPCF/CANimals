@@ -32,10 +32,9 @@ num_workers = 4
 lr_sgd = 0.0001
 lr_adam = 0.0002
 beta1_adam = 0.5
-num_epochs = 1500
+num_epochs = 500
 CROP_SIZE = 128
-specific_classes = ["Maltese_dog", "Rhodesian_ridgeback", "bloodhound", "Norwegian_elkhound", "Staffordshire_bullterrier",
-                    "standard_schnauzer", "cocker_spaniel", "Old_English_sheepdog", "Bouvier_des_Flandres", "Doberman"]
+
 
 # Set random seed for reproducibility
 manualSeed = 999
@@ -51,12 +50,17 @@ train_on_gpu = torch.cuda.is_available()
 # These parameters can be changed  #
 ####################################
 
+# The subset of dog classes to use. Set specific_classes to None to sue the entire Stanford Dogs dataset. 
+# specific_classes = ["Maltese_dog"]
+specific_classes = ["Maltese_dog", "Rhodesian_ridgeback", "bloodhound", "Norwegian_elkhound", "Staffordshire_bullterrier",
+                    "standard_schnauzer", "cocker_spaniel", "Old_English_sheepdog", "Bouvier_des_Flandres", "Doberman"]
+
 # If True, will load a model and continue training on it. 
 # Provide timestamp and epoch. Timestamp will be reused.
 # Epoch will continue incrementing from the provided value until num_epochs is reached
 continue_training = False
-continue_training_timestamp = '2020-04-29 00:26:01.611844'
-continue_training_epoch = 991
+continue_training_timestamp = '2020-05-03 18:13:26.043295'
+continue_training_epoch = 300
 # This value should not be changed
 continue_training_path = 'models/{}_' + continue_training_timestamp + '_epoch_' + str(continue_training_epoch) + '_' + str(CROP_SIZE) + '.pt'
 
@@ -208,10 +212,16 @@ for epoch in range(start_epoch, num_epochs):
     D_losses.append(d_loss.item())
     # Every 20 epochs: backup to disk so we can load and visualize
     if (epoch+1) % 20 == 0:
-        with open('losses/G_losses' + str(dt) + '_' + str(CROP_SIZE) + '.pkl', 'wb') as f:
-            pkl.dump(G_losses, f)
-        with open('losses/D_losses' + str(dt) + '_' + str(CROP_SIZE) + '.pkl', 'wb') as f:
-            pkl.dump(D_losses, f)
+        if not continue_training:
+            with open('losses/G_losses' + str(dt) + '_' + str(CROP_SIZE) + '.pkl', 'wb') as f:
+                pkl.dump(G_losses, f)
+            with open('losses/D_losses' + str(dt) + '_' + str(CROP_SIZE) + '.pkl', 'wb') as f:
+                pkl.dump(D_losses, f)
+        else: 
+            with open('losses/G_losses' + str(dt) + '_' + str(CROP_SIZE) + '_continue_epoch_' + str(continue_training_epoch) + '.pkl', 'wb') as f:
+                pkl.dump(G_losses, f)
+            with open('losses/D_losses' + str(dt) + '_' + str(CROP_SIZE) + '_continue_epoch_' + str(continue_training_epoch) + '.pkl', 'wb') as f:
+                pkl.dump(D_losses, f)
     
     
     # generate and save sample, fake images for the fixed_z
@@ -222,7 +232,10 @@ for epoch in range(start_epoch, num_epochs):
     img_z = G(fixed_z).detach().cpu()
     img_list.append(img_z)
     # Save training generator samples
-    sample_save_path = 'img_z/img_z_' + str(dt) + '_epoch_' + str(epoch+1) + '_' + str(CROP_SIZE) + '.pkl'
+    if continue_training:
+        sample_save_path = 'img_z/img_z_' + str(dt) + '_epoch_' + str(epoch+1) + '_' + str(CROP_SIZE) + '_continue_epoch_' + str(continue_training_epoch) + '.pkl'
+    else:
+        sample_save_path = 'img_z/img_z_' + str(dt) + '_epoch_' + str(epoch+1) + '_' + str(CROP_SIZE) + '.pkl'
     print("SAVING:", sample_save_path)
     with open(sample_save_path, 'wb') as f:
         pkl.dump(img_z, f)
@@ -231,16 +244,26 @@ for epoch in range(start_epoch, num_epochs):
     G.train() # back to training mode  
     
     # Save models
-    model_save_path = 'models/{}_' + str(dt) + '_epoch_' + str(epoch+1) + '_' + str(CROP_SIZE) + '.pt'
+    if continue_training:
+        model_save_path = 'models/{}_' + str(dt) + '_epoch_' + str(epoch+1) + '_' + str(CROP_SIZE) + '_continue_epoch_' + str(continue_training_epoch) + '.pt'
+    else:
+        model_save_path = 'models/{}_' + str(dt) + '_epoch_' + str(epoch+1) + '_' + str(CROP_SIZE) + '.pt'
     torch.save(G, model_save_path.format('G'))
     torch.save(D, model_save_path.format('D'))
 
 
 # Make sure to save all losses after training has finished
-with open('losses/G_losses' + str(dt) + '_' + str(CROP_SIZE) + '.pkl', 'wb') as f:
-    pkl.dump(G_losses, f)
-with open('losses/D_losses' + str(dt) + '_' + str(CROP_SIZE) + '.pkl', 'wb') as f:
-    pkl.dump(D_losses, f)
+if not continue_training:
+    with open('losses/G_losses' + str(dt) + '_' + str(CROP_SIZE) + '.pkl', 'wb') as f:
+        pkl.dump(G_losses, f)
+    with open('losses/D_losses' + str(dt) + '_' + str(CROP_SIZE) + '.pkl', 'wb') as f:
+        pkl.dump(D_losses, f)
+else: 
+    with open('losses/G_losses' + str(dt) + '_' + str(CROP_SIZE) + '_continue_epoch_' + str(continue_training_epoch) + '.pkl', 'wb') as f:
+        pkl.dump(G_losses, f)
+    with open('losses/D_losses' + str(dt) + '_' + str(CROP_SIZE) + '_continue_epoch_' + str(continue_training_epoch) + '.pkl', 'wb') as f:
+        pkl.dump(D_losses, f)
+    
     
 
     
