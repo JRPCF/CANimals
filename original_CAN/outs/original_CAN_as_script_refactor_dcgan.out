@@ -1,0 +1,3543 @@
+Random Seed:  999
+Dataset size: 1745 Number of classes: 10
+Generator(
+  (main): Sequential(
+    (0): ConvTranspose2d(100, 2048, kernel_size=(4, 4), stride=(1, 1), bias=False)
+    (1): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): ConvTranspose2d(2048, 1024, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (4): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU(inplace=True)
+    (6): ConvTranspose2d(1024, 512, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (7): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU(inplace=True)
+    (9): ConvTranspose2d(512, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (10): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (11): ReLU(inplace=True)
+    (12): ConvTranspose2d(256, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (13): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (14): ReLU(inplace=True)
+    (15): ConvTranspose2d(128, 3, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (16): Tanh()
+  )
+)
+Discriminator(
+  (conv1): Conv2d(3, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+  (conv2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+  (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv3): Conv2d(64, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+  (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv4): Conv2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+  (bn4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv5): Conv2d(256, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+  (bn5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (real): Linear(in_features=4096, out_features=1, bias=True)
+  (multi1): Linear(in_features=4096, out_features=1024, bias=True)
+  (multi2): Linear(in_features=1024, out_features=512, bias=True)
+  (multi3): Linear(in_features=512, out_features=120, bias=True)
+)
+Starting Training Loop...
+DRR -0.83935714 DRM -4.78588 DFF -0.5562937
+GFR -1.3482434 GFE -5.7931333
+Epoch [    1/  500], batch 0 | d_loss: 1.3957 | g_loss: 1.3482
+DRR -0.67178285 DRM -4.816705 DFF -0.69696987
+GFR -3.0830848 GFE -5.7911005
+Epoch [    1/  500], batch 50 | d_loss: 1.3688 | g_loss: 3.0831
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_1_128.pkl
+/home/yph2105/.local/lib/python3.6/site-packages/torch/nn/functional.py:1351: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/yph2105/CANimals/original_CAN/model.py:109: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  multi_output = F.softmax(self.multi3(multi_output))
+DRR -0.7137257 DRM -4.7998886 DFF -0.8618497
+GFR -3.1799793 GFE -5.792351
+Epoch [    2/  500], batch 0 | d_loss: 1.5756 | g_loss: 3.1800
+DRR -0.44681084 DRM -4.819022 DFF -0.98723847
+GFR -1.6431023 GFE -5.793282
+Epoch [    2/  500], batch 50 | d_loss: 1.4340 | g_loss: 1.6431
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_2_128.pkl
+DRR -0.7486237 DRM -4.819968 DFF -0.5224665
+GFR -1.1177647 GFE -5.793607
+Epoch [    3/  500], batch 0 | d_loss: 1.2711 | g_loss: 1.1178
+DRR -0.48344406 DRM -4.7731557 DFF -0.74009705
+GFR -1.1718872 GFE -5.7939935
+Epoch [    3/  500], batch 50 | d_loss: 1.2235 | g_loss: 1.1719
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_3_128.pkl
+DRR -0.8015697 DRM -4.7913175 DFF -0.58664393
+GFR -1.3478751 GFE -5.793792
+Epoch [    4/  500], batch 0 | d_loss: 1.3882 | g_loss: 1.3479
+DRR -0.56824124 DRM -4.800146 DFF -0.47092664
+GFR -1.2019656 GFE -5.7933226
+Epoch [    4/  500], batch 50 | d_loss: 1.0392 | g_loss: 1.2020
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_4_128.pkl
+DRR -0.5961788 DRM -4.7796335 DFF -0.28978735
+GFR -1.6529336 GFE -5.792998
+Epoch [    5/  500], batch 0 | d_loss: 0.8860 | g_loss: 1.6529
+DRR -0.3101498 DRM -4.8596573 DFF -0.8777644
+GFR -1.7687514 GFE -5.79429
+Epoch [    5/  500], batch 50 | d_loss: 1.1879 | g_loss: 1.7688
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_5_128.pkl
+DRR -0.58158016 DRM -4.77235 DFF -0.66918176
+GFR -1.1912764 GFE -5.7941866
+Epoch [    6/  500], batch 0 | d_loss: 1.2508 | g_loss: 1.1913
+DRR -0.67265236 DRM -4.8064814 DFF -0.5774908
+GFR -1.2397083 GFE -5.792971
+Epoch [    6/  500], batch 50 | d_loss: 1.2501 | g_loss: 1.2397
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_6_128.pkl
+DRR -0.46824086 DRM -4.7928324 DFF -0.7069485
+GFR -1.3969543 GFE -5.7931633
+Epoch [    7/  500], batch 0 | d_loss: 1.1752 | g_loss: 1.3970
+DRR -0.6750219 DRM -4.758008 DFF -0.46915555
+GFR -1.8292465 GFE -5.793625
+Epoch [    7/  500], batch 50 | d_loss: 1.1442 | g_loss: 1.8292
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_7_128.pkl
+DRR -0.31817502 DRM -4.822715 DFF -0.5046498
+GFR -1.9655954 GFE -5.793513
+Epoch [    8/  500], batch 0 | d_loss: 0.8228 | g_loss: 1.9656
+DRR -0.49911118 DRM -4.764276 DFF -0.4476744
+GFR -1.1388531 GFE -5.793662
+Epoch [    8/  500], batch 50 | d_loss: 0.9468 | g_loss: 1.1389
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_8_128.pkl
+DRR -0.81407523 DRM -4.7655344 DFF -0.33822003
+GFR -1.1405534 GFE -5.793774
+Epoch [    9/  500], batch 0 | d_loss: 1.1523 | g_loss: 1.1406
+DRR -0.44393238 DRM -4.8037343 DFF -0.23843451
+GFR -2.02848 GFE -5.793297
+Epoch [    9/  500], batch 50 | d_loss: 0.6824 | g_loss: 2.0285
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_9_128.pkl
+DRR -0.37601423 DRM -4.796137 DFF -0.8538087
+GFR -2.9058702 GFE -5.792886
+Epoch [   10/  500], batch 0 | d_loss: 1.2298 | g_loss: 2.9059
+DRR -0.38418424 DRM -4.775095 DFF -0.56166923
+GFR -3.096799 GFE -5.7953115
+Epoch [   10/  500], batch 50 | d_loss: 0.9459 | g_loss: 3.0968
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_10_128.pkl
+DRR -0.35415357 DRM -4.7951193 DFF -0.7891122
+GFR -2.267948 GFE -5.7936935
+Epoch [   11/  500], batch 0 | d_loss: 1.1433 | g_loss: 2.2679
+DRR -0.44049037 DRM -4.7795167 DFF -0.95772386
+GFR -2.847403 GFE -5.7944036
+Epoch [   11/  500], batch 50 | d_loss: 1.3982 | g_loss: 2.8474
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_11_128.pkl
+DRR -0.5957396 DRM -4.7996407 DFF -0.62029797
+GFR -1.2850325 GFE -5.7941837
+Epoch [   12/  500], batch 0 | d_loss: 1.2160 | g_loss: 1.2850
+DRR -0.2964283 DRM -4.780986 DFF -0.5516418
+GFR -2.7043552 GFE -5.794137
+Epoch [   12/  500], batch 50 | d_loss: 0.8481 | g_loss: 2.7044
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_12_128.pkl
+DRR -0.7661598 DRM -4.797242 DFF -0.41364408
+GFR -1.6051271 GFE -5.7929325
+Epoch [   13/  500], batch 0 | d_loss: 1.1798 | g_loss: 1.6051
+DRR -0.23330988 DRM -4.809231 DFF -0.75479615
+GFR -1.9062674 GFE -5.7938232
+Epoch [   13/  500], batch 50 | d_loss: 0.9881 | g_loss: 1.9063
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_13_128.pkl
+DRR -0.16395271 DRM -4.7807794 DFF -0.8674301
+GFR -3.31468 GFE -5.7940316
+Epoch [   14/  500], batch 0 | d_loss: 1.0314 | g_loss: 3.3147
+DRR -0.5423752 DRM -4.775485 DFF -0.49391046
+GFR -2.0753002 GFE -5.793418
+Epoch [   14/  500], batch 50 | d_loss: 1.0363 | g_loss: 2.0753
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_14_128.pkl
+DRR -0.6623722 DRM -4.7625103 DFF -0.49439967
+GFR -1.7325149 GFE -5.793295
+Epoch [   15/  500], batch 0 | d_loss: 1.1568 | g_loss: 1.7325
+DRR -0.53737605 DRM -4.7825694 DFF -0.358647
+GFR -2.1162028 GFE -5.7939262
+Epoch [   15/  500], batch 50 | d_loss: 0.8960 | g_loss: 2.1162
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_15_128.pkl
+DRR -0.2897402 DRM -4.798575 DFF -0.8185467
+GFR -2.1544034 GFE -5.794075
+Epoch [   16/  500], batch 0 | d_loss: 1.1083 | g_loss: 2.1544
+DRR -0.23217595 DRM -4.778841 DFF -0.34187526
+GFR -2.7498407 GFE -5.794677
+Epoch [   16/  500], batch 50 | d_loss: 0.5741 | g_loss: 2.7498
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_16_128.pkl
+DRR -0.4022208 DRM -4.782234 DFF -0.4963831
+GFR -2.7660503 GFE -5.793637
+Epoch [   17/  500], batch 0 | d_loss: 0.8986 | g_loss: 2.7661
+DRR -0.5075076 DRM -4.772774 DFF -0.4654196
+GFR -1.5881664 GFE -5.7934813
+Epoch [   17/  500], batch 50 | d_loss: 0.9729 | g_loss: 1.5882
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_17_128.pkl
+DRR -1.0601152 DRM -4.7937984 DFF -0.26997882
+GFR -1.4458209 GFE -5.7946997
+Epoch [   18/  500], batch 0 | d_loss: 1.3301 | g_loss: 1.4458
+DRR -0.24511403 DRM -4.791133 DFF -0.87135863
+GFR -1.8828516 GFE -5.7940044
+Epoch [   18/  500], batch 50 | d_loss: 1.1165 | g_loss: 1.8829
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_18_128.pkl
+DRR -1.3191811 DRM -4.762931 DFF -0.19060835
+GFR -1.0398974 GFE -5.7939878
+Epoch [   19/  500], batch 0 | d_loss: 1.5098 | g_loss: 1.0399
+DRR -0.51152354 DRM -4.7878723 DFF -0.6847601
+GFR -2.8378935 GFE -5.7938604
+Epoch [   19/  500], batch 50 | d_loss: 1.1963 | g_loss: 2.8379
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_19_128.pkl
+DRR -0.6931004 DRM -4.7763705 DFF -0.25239757
+GFR -1.4632189 GFE -5.7942142
+Epoch [   20/  500], batch 0 | d_loss: 0.9455 | g_loss: 1.4632
+DRR -0.3075952 DRM -4.8012543 DFF -0.5155097
+GFR -1.8514609 GFE -5.7931767
+Epoch [   20/  500], batch 50 | d_loss: 0.8231 | g_loss: 1.8515
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_20_128.pkl
+DRR -0.2444003 DRM -4.7947636 DFF -1.6458087
+GFR -1.6848627 GFE -5.7935915
+Epoch [   21/  500], batch 0 | d_loss: 1.8902 | g_loss: 1.6849
+DRR -0.22225878 DRM -4.8569703 DFF -0.28081524
+GFR -2.7688987 GFE -5.7936187
+Epoch [   21/  500], batch 50 | d_loss: 0.5031 | g_loss: 2.7689
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_21_128.pkl
+DRR -0.32669774 DRM -4.8135724 DFF -0.7018747
+GFR -2.7560186 GFE -5.793767
+Epoch [   22/  500], batch 0 | d_loss: 1.0286 | g_loss: 2.7560
+DRR -0.3424983 DRM -4.7553587 DFF -0.7941226
+GFR -1.7308307 GFE -5.7936535
+Epoch [   22/  500], batch 50 | d_loss: 1.1366 | g_loss: 1.7308
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_22_128.pkl
+DRR -0.94033253 DRM -4.81549 DFF -0.40740615
+GFR -1.7469854 GFE -5.7936163
+Epoch [   23/  500], batch 0 | d_loss: 1.3477 | g_loss: 1.7470
+DRR -0.18664785 DRM -4.8053827 DFF -1.1418325
+GFR -2.782868 GFE -5.7933083
+Epoch [   23/  500], batch 50 | d_loss: 1.3285 | g_loss: 2.7829
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_23_128.pkl
+DRR -1.1341555 DRM -4.783432 DFF -0.5019059
+GFR -1.6998591 GFE -5.794252
+Epoch [   24/  500], batch 0 | d_loss: 1.6361 | g_loss: 1.6999
+DRR -0.35635957 DRM -4.7827606 DFF -0.36566535
+GFR -2.6144607 GFE -5.7947984
+Epoch [   24/  500], batch 50 | d_loss: 0.7220 | g_loss: 2.6145
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_24_128.pkl
+DRR -0.44709575 DRM -4.8039384 DFF -1.1298612
+GFR -2.4167624 GFE -5.794281
+Epoch [   25/  500], batch 0 | d_loss: 1.5770 | g_loss: 2.4168
+DRR -0.7730719 DRM -4.7977085 DFF -0.37829798
+GFR -0.9702065 GFE -5.793692
+Epoch [   25/  500], batch 50 | d_loss: 1.1514 | g_loss: 0.9702
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_25_128.pkl
+DRR -0.5489205 DRM -4.8386116 DFF -0.43297824
+GFR -1.3733075 GFE -5.79405
+Epoch [   26/  500], batch 0 | d_loss: 0.9819 | g_loss: 1.3733
+DRR -0.39648515 DRM -4.796712 DFF -0.37471598
+GFR -1.6066062 GFE -5.794088
+Epoch [   26/  500], batch 50 | d_loss: 0.7712 | g_loss: 1.6066
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_26_128.pkl
+DRR -0.48667663 DRM -4.7757897 DFF -1.074579
+GFR -1.3780239 GFE -5.793731
+Epoch [   27/  500], batch 0 | d_loss: 1.5613 | g_loss: 1.3780
+DRR -0.5592175 DRM -4.82464 DFF -0.46146128
+GFR -1.7303916 GFE -5.794846
+Epoch [   27/  500], batch 50 | d_loss: 1.0207 | g_loss: 1.7304
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_27_128.pkl
+DRR -0.82174516 DRM -4.8453045 DFF -0.5150472
+GFR -1.305557 GFE -5.7945137
+Epoch [   28/  500], batch 0 | d_loss: 1.3368 | g_loss: 1.3056
+DRR -0.32947057 DRM -4.802588 DFF -0.44396883
+GFR -2.8531442 GFE -5.7938843
+Epoch [   28/  500], batch 50 | d_loss: 0.7734 | g_loss: 2.8531
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_28_128.pkl
+DRR -0.47951406 DRM -4.802576 DFF -0.5367174
+GFR -2.0120788 GFE -5.7942705
+Epoch [   29/  500], batch 0 | d_loss: 1.0162 | g_loss: 2.0121
+DRR -0.33434582 DRM -4.8111434 DFF -0.61013126
+GFR -4.1656475 GFE -5.7947006
+Epoch [   29/  500], batch 50 | d_loss: 0.9445 | g_loss: 4.1656
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_29_128.pkl
+DRR -0.3376559 DRM -4.847321 DFF -0.5919435
+GFR -1.9417508 GFE -5.793977
+Epoch [   30/  500], batch 0 | d_loss: 0.9296 | g_loss: 1.9418
+DRR -0.47108784 DRM -4.820519 DFF -0.10371186
+GFR -2.7189443 GFE -5.794283
+Epoch [   30/  500], batch 50 | d_loss: 0.5748 | g_loss: 2.7189
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_30_128.pkl
+DRR -0.16465232 DRM -4.818471 DFF -0.7253014
+GFR -3.1658335 GFE -5.794154
+Epoch [   31/  500], batch 0 | d_loss: 0.8900 | g_loss: 3.1658
+DRR -0.50976443 DRM -4.8599396 DFF -0.2926267
+GFR -2.0037227 GFE -5.793812
+Epoch [   31/  500], batch 50 | d_loss: 0.8024 | g_loss: 2.0037
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_31_128.pkl
+DRR -0.6964297 DRM -4.7917924 DFF -0.26770833
+GFR -2.0441792 GFE -5.7945495
+Epoch [   32/  500], batch 0 | d_loss: 0.9641 | g_loss: 2.0442
+DRR -0.30800676 DRM -4.816319 DFF -0.3522241
+GFR -2.0720825 GFE -5.794014
+Epoch [   32/  500], batch 50 | d_loss: 0.6602 | g_loss: 2.0721
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_32_128.pkl
+DRR -0.14068788 DRM -4.7811003 DFF -0.47500005
+GFR -2.0343752 GFE -5.7937574
+Epoch [   33/  500], batch 0 | d_loss: 0.6157 | g_loss: 2.0344
+DRR -0.39927262 DRM -4.834644 DFF -0.28752992
+GFR -2.1134768 GFE -5.794713
+Epoch [   33/  500], batch 50 | d_loss: 0.6868 | g_loss: 2.1135
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_33_128.pkl
+DRR -0.15936682 DRM -4.846184 DFF -0.5917579
+GFR -2.215151 GFE -5.794094
+Epoch [   34/  500], batch 0 | d_loss: 0.7511 | g_loss: 2.2152
+DRR -0.4461906 DRM -4.8061724 DFF -0.31706327
+GFR -2.452937 GFE -5.794244
+Epoch [   34/  500], batch 50 | d_loss: 0.7633 | g_loss: 2.4529
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_34_128.pkl
+DRR -0.6344362 DRM -4.742896 DFF -0.102404505
+GFR -1.35637 GFE -5.795014
+Epoch [   35/  500], batch 0 | d_loss: 0.7368 | g_loss: 1.3564
+DRR -0.8413764 DRM -4.7872753 DFF -0.63117415
+GFR -2.2617848 GFE -5.794208
+Epoch [   35/  500], batch 50 | d_loss: 1.4726 | g_loss: 2.2618
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_35_128.pkl
+DRR -0.42019397 DRM -4.815467 DFF -0.85319996
+GFR -2.0727978 GFE -5.7943044
+Epoch [   36/  500], batch 0 | d_loss: 1.2734 | g_loss: 2.0728
+DRR -0.58192396 DRM -4.8123903 DFF -0.24266328
+GFR -1.7854507 GFE -5.7947607
+Epoch [   36/  500], batch 50 | d_loss: 0.8246 | g_loss: 1.7855
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_36_128.pkl
+DRR -0.17127451 DRM -4.8007336 DFF -0.92822003
+GFR -1.999979 GFE -5.7934093
+Epoch [   37/  500], batch 0 | d_loss: 1.0995 | g_loss: 2.0000
+DRR -0.9429881 DRM -4.789709 DFF -0.31206697
+GFR -1.4526231 GFE -5.794569
+Epoch [   37/  500], batch 50 | d_loss: 1.2551 | g_loss: 1.4526
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_37_128.pkl
+DRR -0.5023118 DRM -4.8445706 DFF -0.7825988
+GFR -1.4997946 GFE -5.7944317
+Epoch [   38/  500], batch 0 | d_loss: 1.2849 | g_loss: 1.4998
+DRR -0.7365836 DRM -4.7871504 DFF -0.8119108
+GFR -0.93821347 GFE -5.7948203
+Epoch [   38/  500], batch 50 | d_loss: 1.5485 | g_loss: 0.9382
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_38_128.pkl
+DRR -0.39318258 DRM -4.817359 DFF -1.0394788
+GFR -1.6053286 GFE -5.7944903
+Epoch [   39/  500], batch 0 | d_loss: 1.4327 | g_loss: 1.6053
+DRR -0.4970496 DRM -4.7680902 DFF -0.59073955
+GFR -1.1527293 GFE -5.7948856
+Epoch [   39/  500], batch 50 | d_loss: 1.0878 | g_loss: 1.1527
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_39_128.pkl
+DRR -0.2547569 DRM -4.8209248 DFF -1.0557592
+GFR -1.3657279 GFE -5.794536
+Epoch [   40/  500], batch 0 | d_loss: 1.3105 | g_loss: 1.3657
+DRR -0.6766609 DRM -4.803382 DFF -0.21145642
+GFR -1.940732 GFE -5.794425
+Epoch [   40/  500], batch 50 | d_loss: 0.8881 | g_loss: 1.9407
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_40_128.pkl
+DRR -0.27220425 DRM -4.7769175 DFF -1.5230386
+GFR -1.6777638 GFE -5.794782
+Epoch [   41/  500], batch 0 | d_loss: 1.7952 | g_loss: 1.6778
+DRR -0.55158585 DRM -4.840746 DFF -0.53414977
+GFR -1.9734746 GFE -5.794383
+Epoch [   41/  500], batch 50 | d_loss: 1.0857 | g_loss: 1.9735
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_41_128.pkl
+DRR -0.35808048 DRM -4.818597 DFF -0.59544194
+GFR -1.9800231 GFE -5.794586
+Epoch [   42/  500], batch 0 | d_loss: 0.9535 | g_loss: 1.9800
+DRR -0.8262266 DRM -4.7878695 DFF -0.47364497
+GFR -1.2771287 GFE -5.7944083
+Epoch [   42/  500], batch 50 | d_loss: 1.2999 | g_loss: 1.2771
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_42_128.pkl
+DRR -0.2722324 DRM -4.8571157 DFF -0.93416214
+GFR -1.6203381 GFE -5.794581
+Epoch [   43/  500], batch 0 | d_loss: 1.2064 | g_loss: 1.6203
+DRR -0.78004694 DRM -4.7701893 DFF -0.60377955
+GFR -1.3986251 GFE -5.794035
+Epoch [   43/  500], batch 50 | d_loss: 1.3838 | g_loss: 1.3986
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_43_128.pkl
+DRR -0.34706324 DRM -4.769058 DFF -0.8943573
+GFR -1.2407181 GFE -5.793784
+Epoch [   44/  500], batch 0 | d_loss: 1.2414 | g_loss: 1.2407
+DRR -0.45532483 DRM -4.833926 DFF -0.549492
+GFR -1.9387219 GFE -5.794361
+Epoch [   44/  500], batch 50 | d_loss: 1.0048 | g_loss: 1.9387
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_44_128.pkl
+DRR -0.52776337 DRM -4.8136864 DFF -0.5684515
+GFR -1.8147243 GFE -5.7947636
+Epoch [   45/  500], batch 0 | d_loss: 1.0962 | g_loss: 1.8147
+DRR -0.49572265 DRM -4.7826767 DFF -0.4565429
+GFR -1.5488981 GFE -5.794512
+Epoch [   45/  500], batch 50 | d_loss: 0.9523 | g_loss: 1.5489
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_45_128.pkl
+DRR -0.83823025 DRM -4.8124933 DFF -0.46436623
+GFR -1.0655135 GFE -5.79431
+Epoch [   46/  500], batch 0 | d_loss: 1.3026 | g_loss: 1.0655
+DRR -0.5913403 DRM -4.8280735 DFF -0.5120308
+GFR -1.0002949 GFE -5.7936354
+Epoch [   46/  500], batch 50 | d_loss: 1.1034 | g_loss: 1.0003
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_46_128.pkl
+DRR -0.38384318 DRM -4.7823005 DFF -0.5513772
+GFR -1.276926 GFE -5.7938356
+Epoch [   47/  500], batch 0 | d_loss: 0.9352 | g_loss: 1.2769
+DRR -0.8654029 DRM -4.8301497 DFF -0.42195237
+GFR -1.3115857 GFE -5.7940392
+Epoch [   47/  500], batch 50 | d_loss: 1.2874 | g_loss: 1.3116
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_47_128.pkl
+DRR -0.30769086 DRM -4.802633 DFF -0.9399606
+GFR -1.3280684 GFE -5.794243
+Epoch [   48/  500], batch 0 | d_loss: 1.2477 | g_loss: 1.3281
+DRR -0.3650624 DRM -4.829058 DFF -0.49714136
+GFR -1.6316434 GFE -5.793913
+Epoch [   48/  500], batch 50 | d_loss: 0.8622 | g_loss: 1.6316
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_48_128.pkl
+DRR -0.43146142 DRM -4.8373485 DFF -0.65432155
+GFR -1.9461309 GFE -5.794261
+Epoch [   49/  500], batch 0 | d_loss: 1.0858 | g_loss: 1.9461
+DRR -0.66936976 DRM -4.839612 DFF -0.68388045
+GFR -0.9825565 GFE -5.794528
+Epoch [   49/  500], batch 50 | d_loss: 1.3533 | g_loss: 0.9826
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_49_128.pkl
+DRR -0.31773895 DRM -4.8366356 DFF -0.9395021
+GFR -1.3750993 GFE -5.794431
+Epoch [   50/  500], batch 0 | d_loss: 1.2572 | g_loss: 1.3751
+DRR -0.55072373 DRM -4.7881737 DFF -0.7438448
+GFR -1.1067961 GFE -5.794409
+Epoch [   50/  500], batch 50 | d_loss: 1.2946 | g_loss: 1.1068
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_50_128.pkl
+DRR -0.59117055 DRM -4.795159 DFF -0.5785969
+GFR -1.3341701 GFE -5.7948437
+Epoch [   51/  500], batch 0 | d_loss: 1.1698 | g_loss: 1.3342
+DRR -0.56579506 DRM -4.8356295 DFF -0.46254963
+GFR -1.2683821 GFE -5.7942524
+Epoch [   51/  500], batch 50 | d_loss: 1.0283 | g_loss: 1.2684
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_51_128.pkl
+DRR -0.40451536 DRM -4.75708 DFF -0.7858213
+GFR -1.3017094 GFE -5.7943077
+Epoch [   52/  500], batch 0 | d_loss: 1.1903 | g_loss: 1.3017
+DRR -0.19255793 DRM -4.7724757 DFF -0.3486316
+GFR -1.3908234 GFE -5.7945623
+Epoch [   52/  500], batch 50 | d_loss: 0.5412 | g_loss: 1.3908
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_52_128.pkl
+DRR -0.6648272 DRM -4.804926 DFF -0.3683502
+GFR -1.5615113 GFE -5.7945676
+Epoch [   53/  500], batch 0 | d_loss: 1.0332 | g_loss: 1.5615
+DRR -0.3743968 DRM -4.795958 DFF -0.50626403
+GFR -1.2824354 GFE -5.7944384
+Epoch [   53/  500], batch 50 | d_loss: 0.8807 | g_loss: 1.2824
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_53_128.pkl
+DRR -1.1580312 DRM -4.8439703 DFF -0.24342924
+GFR -1.7888893 GFE -5.7949634
+Epoch [   54/  500], batch 0 | d_loss: 1.4015 | g_loss: 1.7889
+DRR -0.79444027 DRM -4.818146 DFF -0.50166714
+GFR -0.9544641 GFE -5.795053
+Epoch [   54/  500], batch 50 | d_loss: 1.2961 | g_loss: 0.9545
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_54_128.pkl
+DRR -0.4615857 DRM -4.8459764 DFF -0.68174624
+GFR -1.3815402 GFE -5.7945967
+Epoch [   55/  500], batch 0 | d_loss: 1.1433 | g_loss: 1.3815
+DRR -0.37772793 DRM -4.835829 DFF -0.5887395
+GFR -1.3408766 GFE -5.7941713
+Epoch [   55/  500], batch 50 | d_loss: 0.9665 | g_loss: 1.3409
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_55_128.pkl
+DRR -0.34066835 DRM -4.8101377 DFF -0.38809726
+GFR -1.6257663 GFE -5.79445
+Epoch [   56/  500], batch 0 | d_loss: 0.7288 | g_loss: 1.6258
+DRR -0.8561172 DRM -4.810064 DFF -0.41208863
+GFR -1.0139792 GFE -5.7946734
+Epoch [   56/  500], batch 50 | d_loss: 1.2682 | g_loss: 1.0140
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_56_128.pkl
+DRR -0.55732477 DRM -4.8262796 DFF -0.65583193
+GFR -1.3147676 GFE -5.7946177
+Epoch [   57/  500], batch 0 | d_loss: 1.2132 | g_loss: 1.3148
+DRR -0.80917084 DRM -4.795705 DFF -0.5750295
+GFR -1.489562 GFE -5.794269
+Epoch [   57/  500], batch 50 | d_loss: 1.3842 | g_loss: 1.4896
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_57_128.pkl
+DRR -0.4789747 DRM -4.76484 DFF -0.5910723
+GFR -1.1626296 GFE -5.793974
+Epoch [   58/  500], batch 0 | d_loss: 1.0700 | g_loss: 1.1626
+DRR -0.6487634 DRM -4.7894735 DFF -0.41366223
+GFR -1.3445348 GFE -5.7943115
+Epoch [   58/  500], batch 50 | d_loss: 1.0624 | g_loss: 1.3445
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_58_128.pkl
+DRR -0.24391696 DRM -4.7790556 DFF -0.49801323
+GFR -2.3234322 GFE -5.7944956
+Epoch [   59/  500], batch 0 | d_loss: 0.7419 | g_loss: 2.3234
+DRR -1.1037223 DRM -4.793303 DFF -0.4055854
+GFR -1.0157331 GFE -5.794433
+Epoch [   59/  500], batch 50 | d_loss: 1.5093 | g_loss: 1.0157
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_59_128.pkl
+DRR -0.4137919 DRM -4.8220973 DFF -0.5876589
+GFR -1.4694532 GFE -5.794894
+Epoch [   60/  500], batch 0 | d_loss: 1.0015 | g_loss: 1.4695
+DRR -0.30824625 DRM -4.812834 DFF -0.702639
+GFR -2.0333881 GFE -5.794721
+Epoch [   60/  500], batch 50 | d_loss: 1.0109 | g_loss: 2.0334
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_60_128.pkl
+DRR -0.20586546 DRM -4.786413 DFF -0.35599536
+GFR -1.639673 GFE -5.794774
+Epoch [   61/  500], batch 0 | d_loss: 0.5619 | g_loss: 1.6397
+DRR -0.6474554 DRM -4.8166323 DFF -0.35733622
+GFR -1.0402302 GFE -5.794366
+Epoch [   61/  500], batch 50 | d_loss: 1.0048 | g_loss: 1.0402
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_61_128.pkl
+DRR -0.32990834 DRM -4.8091793 DFF -0.8217777
+GFR -2.02225 GFE -5.7941732
+Epoch [   62/  500], batch 0 | d_loss: 1.1517 | g_loss: 2.0222
+DRR -0.74825084 DRM -4.8320456 DFF -0.3599037
+GFR -1.7745703 GFE -5.795579
+Epoch [   62/  500], batch 50 | d_loss: 1.1082 | g_loss: 1.7746
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_62_128.pkl
+DRR -0.10644351 DRM -4.7899537 DFF -0.8010768
+GFR -2.7876797 GFE -5.794754
+Epoch [   63/  500], batch 0 | d_loss: 0.9075 | g_loss: 2.7877
+DRR -0.46747085 DRM -4.863854 DFF -0.38828903
+GFR -1.7786059 GFE -5.7947364
+Epoch [   63/  500], batch 50 | d_loss: 0.8558 | g_loss: 1.7786
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_63_128.pkl
+DRR -0.5285419 DRM -4.8225155 DFF -0.3531099
+GFR -1.4102654 GFE -5.7952523
+Epoch [   64/  500], batch 0 | d_loss: 0.8817 | g_loss: 1.4103
+DRR -0.21064356 DRM -4.777134 DFF -0.6392009
+GFR -2.0267906 GFE -5.7947326
+Epoch [   64/  500], batch 50 | d_loss: 0.8498 | g_loss: 2.0268
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_64_128.pkl
+DRR -0.35917303 DRM -4.80486 DFF -0.28158885
+GFR -2.2229073 GFE -5.7946444
+Epoch [   65/  500], batch 0 | d_loss: 0.6408 | g_loss: 2.2229
+DRR -0.21249184 DRM -4.7931495 DFF -0.5643583
+GFR -2.10954 GFE -5.795438
+Epoch [   65/  500], batch 50 | d_loss: 0.7769 | g_loss: 2.1095
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_65_128.pkl
+DRR -0.2510114 DRM -4.79981 DFF -1.053244
+GFR -2.2779396 GFE -5.795086
+Epoch [   66/  500], batch 0 | d_loss: 1.3043 | g_loss: 2.2779
+DRR -0.4199365 DRM -4.7678185 DFF -0.5643446
+GFR -1.9655404 GFE -5.7948227
+Epoch [   66/  500], batch 50 | d_loss: 0.9843 | g_loss: 1.9655
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_66_128.pkl
+DRR -0.2639319 DRM -4.7930074 DFF -0.9627625
+GFR -2.3580937 GFE -5.794841
+Epoch [   67/  500], batch 0 | d_loss: 1.2267 | g_loss: 2.3581
+DRR -0.6446781 DRM -4.8130765 DFF -0.29131526
+GFR -1.9227703 GFE -5.7951403
+Epoch [   67/  500], batch 50 | d_loss: 0.9360 | g_loss: 1.9228
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_67_128.pkl
+DRR -0.25985026 DRM -4.790061 DFF -0.6879909
+GFR -2.3183563 GFE -5.7947574
+Epoch [   68/  500], batch 0 | d_loss: 0.9478 | g_loss: 2.3184
+DRR -0.47381276 DRM -4.8032184 DFF -0.5728848
+GFR -2.886016 GFE -5.7947855
+Epoch [   68/  500], batch 50 | d_loss: 1.0467 | g_loss: 2.8860
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_68_128.pkl
+DRR -0.38379648 DRM -4.8144207 DFF -0.32015106
+GFR -1.423386 GFE -5.794566
+Epoch [   69/  500], batch 0 | d_loss: 0.7039 | g_loss: 1.4234
+DRR -0.50088143 DRM -4.7781086 DFF -0.44336182
+GFR -1.6249171 GFE -5.7948523
+Epoch [   69/  500], batch 50 | d_loss: 0.9442 | g_loss: 1.6249
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_69_128.pkl
+DRR -0.3179614 DRM -4.853402 DFF -0.35808158
+GFR -2.6776662 GFE -5.794854
+Epoch [   70/  500], batch 0 | d_loss: 0.6760 | g_loss: 2.6777
+DRR -0.20175278 DRM -4.8119235 DFF -0.8077012
+GFR -2.7153187 GFE -5.794978
+Epoch [   70/  500], batch 50 | d_loss: 1.0095 | g_loss: 2.7153
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_70_128.pkl
+DRR -0.31121147 DRM -4.808357 DFF -0.53381723
+GFR -1.7347064 GFE -5.7949347
+Epoch [   71/  500], batch 0 | d_loss: 0.8450 | g_loss: 1.7347
+DRR -0.76362103 DRM -4.8054795 DFF -0.30807725
+GFR -1.7943913 GFE -5.7948
+Epoch [   71/  500], batch 50 | d_loss: 1.0717 | g_loss: 1.7944
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_71_128.pkl
+DRR -0.6019673 DRM -4.803286 DFF -0.46659568
+GFR -1.6830587 GFE -5.7948246
+Epoch [   72/  500], batch 0 | d_loss: 1.0686 | g_loss: 1.6831
+DRR -0.31047225 DRM -4.7926593 DFF -0.43108734
+GFR -2.698701 GFE -5.794449
+Epoch [   72/  500], batch 50 | d_loss: 0.7416 | g_loss: 2.6987
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_72_128.pkl
+DRR -0.5115314 DRM -4.7930713 DFF -0.5539252
+GFR -1.792939 GFE -5.7944393
+Epoch [   73/  500], batch 0 | d_loss: 1.0655 | g_loss: 1.7929
+DRR -0.5272949 DRM -4.817916 DFF -0.35185534
+GFR -2.2045417 GFE -5.7948074
+Epoch [   73/  500], batch 50 | d_loss: 0.8792 | g_loss: 2.2045
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_73_128.pkl
+DRR -0.27569914 DRM -4.8036976 DFF -0.39870703
+GFR -2.864512 GFE -5.7939835
+Epoch [   74/  500], batch 0 | d_loss: 0.6744 | g_loss: 2.8645
+DRR -0.43561572 DRM -4.823516 DFF -0.42628595
+GFR -1.7038853 GFE -5.795437
+Epoch [   74/  500], batch 50 | d_loss: 0.8619 | g_loss: 1.7039
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_74_128.pkl
+DRR -0.13190988 DRM -4.7984257 DFF -1.0185034
+GFR -2.8951244 GFE -5.79451
+Epoch [   75/  500], batch 0 | d_loss: 1.1504 | g_loss: 2.8951
+DRR -0.30691558 DRM -4.8140845 DFF -0.5198913
+GFR -2.0166225 GFE -5.794975
+Epoch [   75/  500], batch 50 | d_loss: 0.8268 | g_loss: 2.0166
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_75_128.pkl
+DRR -0.23537296 DRM -4.808133 DFF -0.48421627
+GFR -1.8556232 GFE -5.794476
+Epoch [   76/  500], batch 0 | d_loss: 0.7196 | g_loss: 1.8556
+DRR -0.31816113 DRM -4.783985 DFF -0.5076742
+GFR -1.9065218 GFE -5.794896
+Epoch [   76/  500], batch 50 | d_loss: 0.8258 | g_loss: 1.9065
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_76_128.pkl
+DRR -0.21628886 DRM -4.779052 DFF -0.5778032
+GFR -1.8792846 GFE -5.794511
+Epoch [   77/  500], batch 0 | d_loss: 0.7941 | g_loss: 1.8793
+DRR -0.5326292 DRM -4.83668 DFF -0.23911047
+GFR -1.5389243 GFE -5.7946663
+Epoch [   77/  500], batch 50 | d_loss: 0.7717 | g_loss: 1.5389
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_77_128.pkl
+DRR -0.44169617 DRM -4.842044 DFF -0.5613576
+GFR -2.2696586 GFE -5.7946367
+Epoch [   78/  500], batch 0 | d_loss: 1.0031 | g_loss: 2.2697
+DRR -0.19893019 DRM -4.792879 DFF -0.58686304
+GFR -2.3377988 GFE -5.794363
+Epoch [   78/  500], batch 50 | d_loss: 0.7858 | g_loss: 2.3378
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_78_128.pkl
+DRR -0.2991712 DRM -4.7738366 DFF -0.40744781
+GFR -1.8624163 GFE -5.794578
+Epoch [   79/  500], batch 0 | d_loss: 0.7066 | g_loss: 1.8624
+DRR -0.52697456 DRM -4.741466 DFF -0.4174964
+GFR -1.5715868 GFE -5.794646
+Epoch [   79/  500], batch 50 | d_loss: 0.9445 | g_loss: 1.5716
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_79_128.pkl
+DRR -0.16207792 DRM -4.806076 DFF -0.54436445
+GFR -2.1548252 GFE -5.7949367
+Epoch [   80/  500], batch 0 | d_loss: 0.7064 | g_loss: 2.1548
+DRR -0.39092386 DRM -4.790898 DFF -0.812103
+GFR -3.224074 GFE -5.795578
+Epoch [   80/  500], batch 50 | d_loss: 1.2030 | g_loss: 3.2241
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_80_128.pkl
+DRR -0.21110408 DRM -4.778508 DFF -0.4783268
+GFR -2.849515 GFE -5.7950296
+Epoch [   81/  500], batch 0 | d_loss: 0.6894 | g_loss: 2.8495
+DRR -0.30843714 DRM -4.839211 DFF -0.5685326
+GFR -2.3677902 GFE -5.7948303
+Epoch [   81/  500], batch 50 | d_loss: 0.8770 | g_loss: 2.3678
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_81_128.pkl
+DRR -0.38734162 DRM -4.7942 DFF -0.32868817
+GFR -2.1415148 GFE -5.7950606
+Epoch [   82/  500], batch 0 | d_loss: 0.7160 | g_loss: 2.1415
+DRR -0.40578592 DRM -4.835639 DFF -0.28727147
+GFR -2.0296612 GFE -5.7948694
+Epoch [   82/  500], batch 50 | d_loss: 0.6931 | g_loss: 2.0297
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_82_128.pkl
+DRR -0.44717938 DRM -4.8103676 DFF -0.12345947
+GFR -2.0237935 GFE -5.7942967
+Epoch [   83/  500], batch 0 | d_loss: 0.5706 | g_loss: 2.0238
+DRR -0.33653128 DRM -4.81648 DFF -0.40833163
+GFR -2.3428507 GFE -5.794627
+Epoch [   83/  500], batch 50 | d_loss: 0.7449 | g_loss: 2.3429
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_83_128.pkl
+DRR -0.16209851 DRM -4.843306 DFF -0.57711625
+GFR -2.0081546 GFE -5.7943335
+Epoch [   84/  500], batch 0 | d_loss: 0.7392 | g_loss: 2.0082
+DRR -0.2587779 DRM -4.78006 DFF -0.6774934
+GFR -2.5206604 GFE -5.7946925
+Epoch [   84/  500], batch 50 | d_loss: 0.9363 | g_loss: 2.5207
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_84_128.pkl
+DRR -0.29736155 DRM -4.8184595 DFF -0.6817689
+GFR -3.1458 GFE -5.7950573
+Epoch [   85/  500], batch 0 | d_loss: 0.9791 | g_loss: 3.1458
+DRR -0.4194944 DRM -4.8485813 DFF -0.33742762
+GFR -1.6972868 GFE -5.7946677
+Epoch [   85/  500], batch 50 | d_loss: 0.7569 | g_loss: 1.6973
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_85_128.pkl
+DRR -0.42689544 DRM -4.832821 DFF -0.23990172
+GFR -1.8363441 GFE -5.7947674
+Epoch [   86/  500], batch 0 | d_loss: 0.6668 | g_loss: 1.8363
+DRR -0.24126136 DRM -4.8229456 DFF -0.33047372
+GFR -3.3633385 GFE -5.7955317
+Epoch [   86/  500], batch 50 | d_loss: 0.5717 | g_loss: 3.3633
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_86_128.pkl
+DRR -0.256439 DRM -4.8717833 DFF -0.22909164
+GFR -2.300559 GFE -5.795252
+Epoch [   87/  500], batch 0 | d_loss: 0.4855 | g_loss: 2.3006
+DRR -0.31866446 DRM -4.8049755 DFF -0.49696463
+GFR -2.4123583 GFE -5.794849
+Epoch [   87/  500], batch 50 | d_loss: 0.8156 | g_loss: 2.4124
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_87_128.pkl
+DRR -0.33857882 DRM -4.8417563 DFF -0.14203769
+GFR -2.1054006 GFE -5.79459
+Epoch [   88/  500], batch 0 | d_loss: 0.4806 | g_loss: 2.1054
+DRR -0.2166653 DRM -4.8268375 DFF -0.69746464
+GFR -2.9462416 GFE -5.7949524
+Epoch [   88/  500], batch 50 | d_loss: 0.9141 | g_loss: 2.9462
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_88_128.pkl
+DRR -0.4846872 DRM -4.771904 DFF -0.25701421
+GFR -2.133893 GFE -5.79519
+Epoch [   89/  500], batch 0 | d_loss: 0.7417 | g_loss: 2.1339
+DRR -0.30435184 DRM -4.8061666 DFF -0.24097915
+GFR -3.177218 GFE -5.7941847
+Epoch [   89/  500], batch 50 | d_loss: 0.5453 | g_loss: 3.1772
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_89_128.pkl
+DRR -0.1038826 DRM -4.82352 DFF -0.9001288
+GFR -3.492535 GFE -5.7940984
+Epoch [   90/  500], batch 0 | d_loss: 1.0040 | g_loss: 3.4925
+DRR -0.6264225 DRM -4.8090115 DFF -0.26569414
+GFR -1.6241751 GFE -5.7946506
+Epoch [   90/  500], batch 50 | d_loss: 0.8921 | g_loss: 1.6242
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_90_128.pkl
+DRR -0.22791232 DRM -4.8283896 DFF -0.35034725
+GFR -2.677998 GFE -5.7948465
+Epoch [   91/  500], batch 0 | d_loss: 0.5783 | g_loss: 2.6780
+DRR -0.19323783 DRM -4.799898 DFF -0.2799016
+GFR -2.663266 GFE -5.7944546
+Epoch [   91/  500], batch 50 | d_loss: 0.4731 | g_loss: 2.6633
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_91_128.pkl
+DRR -0.30954474 DRM -4.796667 DFF -0.19479442
+GFR -2.8775 GFE -5.7943497
+Epoch [   92/  500], batch 0 | d_loss: 0.5043 | g_loss: 2.8775
+DRR -0.062455628 DRM -4.7960196 DFF -0.48425174
+GFR -3.7894588 GFE -5.7946835
+Epoch [   92/  500], batch 50 | d_loss: 0.5467 | g_loss: 3.7895
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_92_128.pkl
+DRR -0.25537297 DRM -4.781061 DFF -0.32759452
+GFR -2.5966058 GFE -5.7944117
+Epoch [   93/  500], batch 0 | d_loss: 0.5830 | g_loss: 2.5966
+DRR -0.28146 DRM -4.8145733 DFF -0.22876611
+GFR -2.5016303 GFE -5.794658
+Epoch [   93/  500], batch 50 | d_loss: 0.5102 | g_loss: 2.5016
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_93_128.pkl
+DRR -0.16568479 DRM -4.770811 DFF -0.5599072
+GFR -4.761428 GFE -5.795104
+Epoch [   94/  500], batch 0 | d_loss: 0.7256 | g_loss: 4.7614
+DRR -0.30454028 DRM -4.8216667 DFF -0.117813826
+GFR -2.5603201 GFE -5.794783
+Epoch [   94/  500], batch 50 | d_loss: 0.4224 | g_loss: 2.5603
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_94_128.pkl
+DRR -0.2161043 DRM -4.778858 DFF -0.23987722
+GFR -2.6494684 GFE -5.7952213
+Epoch [   95/  500], batch 0 | d_loss: 0.4560 | g_loss: 2.6495
+DRR -0.11052004 DRM -4.7694902 DFF -0.38213998
+GFR -3.167499 GFE -5.7943244
+Epoch [   95/  500], batch 50 | d_loss: 0.4927 | g_loss: 3.1675
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_95_128.pkl
+DRR -0.1213624 DRM -4.785339 DFF -0.35227334
+GFR -3.148572 GFE -5.7948985
+Epoch [   96/  500], batch 0 | d_loss: 0.4736 | g_loss: 3.1486
+DRR -0.16570619 DRM -4.824368 DFF -0.3174583
+GFR -2.079599 GFE -5.7943068
+Epoch [   96/  500], batch 50 | d_loss: 0.4832 | g_loss: 2.0796
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_96_128.pkl
+DRR -0.50977236 DRM -4.8111906 DFF -0.18696126
+GFR -2.4452868 GFE -5.7951283
+Epoch [   97/  500], batch 0 | d_loss: 0.6967 | g_loss: 2.4453
+DRR -0.42003947 DRM -4.7938604 DFF -0.07890923
+GFR -2.7815137 GFE -5.7955194
+Epoch [   97/  500], batch 50 | d_loss: 0.4989 | g_loss: 2.7815
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_97_128.pkl
+DRR -0.09482286 DRM -4.806287 DFF -0.6772163
+GFR -3.8605173 GFE -5.7950935
+Epoch [   98/  500], batch 0 | d_loss: 0.7720 | g_loss: 3.8605
+DRR -0.22966468 DRM -4.780096 DFF -0.13712926
+GFR -3.4850974 GFE -5.795298
+Epoch [   98/  500], batch 50 | d_loss: 0.3668 | g_loss: 3.4851
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_98_128.pkl
+DRR -0.4763349 DRM -4.8447194 DFF -0.09188913
+GFR -2.4133763 GFE -5.794751
+Epoch [   99/  500], batch 0 | d_loss: 0.5682 | g_loss: 2.4134
+DRR -0.22636817 DRM -4.7874565 DFF -0.26373133
+GFR -3.4256902 GFE -5.794249
+Epoch [   99/  500], batch 50 | d_loss: 0.4901 | g_loss: 3.4257
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_99_128.pkl
+DRR -0.10155524 DRM -4.775858 DFF -0.84881276
+GFR -4.185523 GFE -5.7949877
+Epoch [  100/  500], batch 0 | d_loss: 0.9504 | g_loss: 4.1855
+DRR -0.13878602 DRM -4.8000336 DFF -0.17558697
+GFR -2.412197 GFE -5.7952085
+Epoch [  100/  500], batch 50 | d_loss: 0.3144 | g_loss: 2.4122
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_100_128.pkl
+DRR -0.36961818 DRM -4.8166924 DFF -0.074477956
+GFR -2.7087014 GFE -5.795314
+Epoch [  101/  500], batch 0 | d_loss: 0.4441 | g_loss: 2.7087
+DRR -0.28064278 DRM -4.785755 DFF -0.14303581
+GFR -3.3034182 GFE -5.795166
+Epoch [  101/  500], batch 50 | d_loss: 0.4237 | g_loss: 3.3034
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_101_128.pkl
+DRR -0.16224 DRM -4.806386 DFF -0.28989136
+GFR -4.201153 GFE -5.794519
+Epoch [  102/  500], batch 0 | d_loss: 0.4521 | g_loss: 4.2012
+DRR -0.44693744 DRM -4.813508 DFF -0.14306599
+GFR -2.108546 GFE -5.7952557
+Epoch [  102/  500], batch 50 | d_loss: 0.5900 | g_loss: 2.1085
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_102_128.pkl
+DRR -0.13798027 DRM -4.8127313 DFF -0.4840037
+GFR -3.7725775 GFE -5.7948437
+Epoch [  103/  500], batch 0 | d_loss: 0.6220 | g_loss: 3.7726
+DRR -0.30564207 DRM -4.8164625 DFF -0.14668722
+GFR -2.700666 GFE -5.795222
+Epoch [  103/  500], batch 50 | d_loss: 0.4523 | g_loss: 2.7007
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_103_128.pkl
+DRR -0.13414368 DRM -4.7815523 DFF -0.25605065
+GFR -3.554474 GFE -5.795253
+Epoch [  104/  500], batch 0 | d_loss: 0.3902 | g_loss: 3.5545
+DRR -0.13331127 DRM -4.8003345 DFF -0.48219395
+GFR -3.8180313 GFE -5.795355
+Epoch [  104/  500], batch 50 | d_loss: 0.6155 | g_loss: 3.8180
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_104_128.pkl
+DRR -0.07293958 DRM -4.7983723 DFF -0.5401997
+GFR -3.611019 GFE -5.7948046
+Epoch [  105/  500], batch 0 | d_loss: 0.6131 | g_loss: 3.6110
+DRR -0.080556855 DRM -4.8152905 DFF -0.38809896
+GFR -4.357129 GFE -5.7947693
+Epoch [  105/  500], batch 50 | d_loss: 0.4687 | g_loss: 4.3571
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_105_128.pkl
+DRR -0.1627514 DRM -4.799941 DFF -0.32712188
+GFR -3.6714754 GFE -5.794924
+Epoch [  106/  500], batch 0 | d_loss: 0.4899 | g_loss: 3.6715
+DRR -0.064548224 DRM -4.8440285 DFF -0.40458053
+GFR -3.7990584 GFE -5.7947536
+Epoch [  106/  500], batch 50 | d_loss: 0.4691 | g_loss: 3.7991
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_106_128.pkl
+DRR -0.18536347 DRM -4.795714 DFF -0.18899514
+GFR -2.5913815 GFE -5.795002
+Epoch [  107/  500], batch 0 | d_loss: 0.3744 | g_loss: 2.5914
+DRR -0.17973587 DRM -4.8222876 DFF -0.2368563
+GFR -3.1485608 GFE -5.7955027
+Epoch [  107/  500], batch 50 | d_loss: 0.4166 | g_loss: 3.1486
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_107_128.pkl
+DRR -0.19886562 DRM -4.7589116 DFF -0.23277941
+GFR -3.3206067 GFE -5.7947006
+Epoch [  108/  500], batch 0 | d_loss: 0.4316 | g_loss: 3.3206
+DRR -0.06220882 DRM -4.7865934 DFF -0.31381828
+GFR -3.629271 GFE -5.795289
+Epoch [  108/  500], batch 50 | d_loss: 0.3760 | g_loss: 3.6293
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_108_128.pkl
+DRR -0.06019809 DRM -4.776449 DFF -0.3461232
+GFR -3.291967 GFE -5.7952833
+Epoch [  109/  500], batch 0 | d_loss: 0.4063 | g_loss: 3.2920
+DRR -0.22131 DRM -4.8114142 DFF -0.071741745
+GFR -3.9486737 GFE -5.7953057
+Epoch [  109/  500], batch 50 | d_loss: 0.2931 | g_loss: 3.9487
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_109_128.pkl
+DRR -0.024356367 DRM -4.806112 DFF -0.49944258
+GFR -3.640075 GFE -5.7952642
+Epoch [  110/  500], batch 0 | d_loss: 0.5238 | g_loss: 3.6401
+DRR -0.15079929 DRM -4.817236 DFF -0.21768913
+GFR -3.206358 GFE -5.7953444
+Epoch [  110/  500], batch 50 | d_loss: 0.3685 | g_loss: 3.2064
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_110_128.pkl
+DRR -0.6704886 DRM -4.809481 DFF -0.1090907
+GFR -3.1729326 GFE -5.794892
+Epoch [  111/  500], batch 0 | d_loss: 0.7796 | g_loss: 3.1729
+DRR -0.20976242 DRM -4.8215647 DFF -0.25285572
+GFR -3.1259673 GFE -5.7948217
+Epoch [  111/  500], batch 50 | d_loss: 0.4626 | g_loss: 3.1260
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_111_128.pkl
+DRR -0.06649562 DRM -4.803553 DFF -0.29891413
+GFR -3.5123003 GFE -5.794999
+Epoch [  112/  500], batch 0 | d_loss: 0.3654 | g_loss: 3.5123
+DRR -0.16667071 DRM -4.7816725 DFF -0.19229232
+GFR -3.3847408 GFE -5.7952113
+Epoch [  112/  500], batch 50 | d_loss: 0.3590 | g_loss: 3.3847
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_112_128.pkl
+DRR -0.16207106 DRM -4.770604 DFF -0.17354667
+GFR -3.5318623 GFE -5.7942543
+Epoch [  113/  500], batch 0 | d_loss: 0.3356 | g_loss: 3.5319
+DRR -0.21230651 DRM -4.808927 DFF -0.12877059
+GFR -2.7697105 GFE -5.7950697
+Epoch [  113/  500], batch 50 | d_loss: 0.3411 | g_loss: 2.7697
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_113_128.pkl
+DRR -0.12345068 DRM -4.7602696 DFF -0.058993876
+GFR -4.4525485 GFE -5.795211
+Epoch [  114/  500], batch 0 | d_loss: 0.1824 | g_loss: 4.4525
+DRR -0.20213716 DRM -4.767949 DFF -0.10890716
+GFR -3.486418 GFE -5.7949033
+Epoch [  114/  500], batch 50 | d_loss: 0.3110 | g_loss: 3.4864
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_114_128.pkl
+DRR -0.18410397 DRM -4.803017 DFF -0.1590586
+GFR -3.1586719 GFE -5.795047
+Epoch [  115/  500], batch 0 | d_loss: 0.3432 | g_loss: 3.1587
+DRR -0.4386176 DRM -4.746854 DFF -0.02775067
+GFR -4.180912 GFE -5.794583
+Epoch [  115/  500], batch 50 | d_loss: 0.4664 | g_loss: 4.1809
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_115_128.pkl
+DRR -0.045842573 DRM -4.7646046 DFF -0.5618764
+GFR -5.5132303 GFE -5.7950296
+Epoch [  116/  500], batch 0 | d_loss: 0.6077 | g_loss: 5.5132
+DRR -0.21773495 DRM -4.774288 DFF -0.28700837
+GFR -5.051039 GFE -5.795396
+Epoch [  116/  500], batch 50 | d_loss: 0.5047 | g_loss: 5.0510
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_116_128.pkl
+DRR -0.042941324 DRM -4.800697 DFF -0.27759838
+GFR -3.5731575 GFE -5.795384
+Epoch [  117/  500], batch 0 | d_loss: 0.3205 | g_loss: 3.5732
+DRR -0.12692222 DRM -4.810831 DFF -0.12629336
+GFR -3.1582565 GFE -5.794904
+Epoch [  117/  500], batch 50 | d_loss: 0.2532 | g_loss: 3.1583
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_117_128.pkl
+DRR -0.0486902 DRM -4.7539787 DFF -0.31345057
+GFR -3.7497482 GFE -5.795395
+Epoch [  118/  500], batch 0 | d_loss: 0.3621 | g_loss: 3.7497
+DRR -0.34054857 DRM -4.8194 DFF -0.22453336
+GFR -3.0956063 GFE -5.794804
+Epoch [  118/  500], batch 50 | d_loss: 0.5651 | g_loss: 3.0956
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_118_128.pkl
+DRR -0.081176236 DRM -4.776534 DFF -0.12391265
+GFR -3.4213443 GFE -5.7951684
+Epoch [  119/  500], batch 0 | d_loss: 0.2051 | g_loss: 3.4213
+DRR -0.2018164 DRM -4.8145022 DFF -0.118305065
+GFR -3.3032684 GFE -5.7948365
+Epoch [  119/  500], batch 50 | d_loss: 0.3201 | g_loss: 3.3033
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_119_128.pkl
+DRR -0.067438215 DRM -4.805667 DFF -0.32104796
+GFR -5.6239233 GFE -5.7953677
+Epoch [  120/  500], batch 0 | d_loss: 0.3885 | g_loss: 5.6239
+DRR -0.13811237 DRM -4.8083 DFF -0.14750935
+GFR -3.685439 GFE -5.795521
+Epoch [  120/  500], batch 50 | d_loss: 0.2856 | g_loss: 3.6854
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_120_128.pkl
+DRR -0.020813586 DRM -4.818079 DFF -0.38602406
+GFR -4.5738134 GFE -5.7952347
+Epoch [  121/  500], batch 0 | d_loss: 0.4068 | g_loss: 4.5738
+DRR -0.057037577 DRM -4.7943993 DFF -0.10117187
+GFR -4.2246885 GFE -5.7950315
+Epoch [  121/  500], batch 50 | d_loss: 0.1582 | g_loss: 4.2247
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_121_128.pkl
+DRR -0.05486825 DRM -4.76981 DFF -0.20944545
+GFR -2.6487436 GFE -5.795334
+Epoch [  122/  500], batch 0 | d_loss: 0.2643 | g_loss: 2.6487
+DRR -0.019073956 DRM -4.816018 DFF -0.8747057
+GFR -5.190789 GFE -5.7958374
+Epoch [  122/  500], batch 50 | d_loss: 0.8938 | g_loss: 5.1908
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_122_128.pkl
+DRR -0.015436817 DRM -4.8368387 DFF -0.96589947
+GFR -6.3972626 GFE -5.7954535
+Epoch [  123/  500], batch 0 | d_loss: 0.9813 | g_loss: 6.3973
+DRR -0.08563266 DRM -4.785124 DFF -0.1450873
+GFR -4.144542 GFE -5.795561
+Epoch [  123/  500], batch 50 | d_loss: 0.2307 | g_loss: 4.1445
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_123_128.pkl
+DRR -0.06882038 DRM -4.810293 DFF -0.050782077
+GFR -4.8124666 GFE -5.7955537
+Epoch [  124/  500], batch 0 | d_loss: 0.1196 | g_loss: 4.8125
+DRR -0.14418142 DRM -4.7953067 DFF -0.11998067
+GFR -3.9439952 GFE -5.7945356
+Epoch [  124/  500], batch 50 | d_loss: 0.2642 | g_loss: 3.9440
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_124_128.pkl
+DRR -0.15137222 DRM -4.799933 DFF -0.19471067
+GFR -3.415658 GFE -5.7953367
+Epoch [  125/  500], batch 0 | d_loss: 0.3461 | g_loss: 3.4157
+DRR -0.045580756 DRM -4.7893353 DFF -0.23899886
+GFR -3.926202 GFE -5.794989
+Epoch [  125/  500], batch 50 | d_loss: 0.2846 | g_loss: 3.9262
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_125_128.pkl
+DRR -0.08787417 DRM -4.8265643 DFF -0.14501205
+GFR -4.249169 GFE -5.7951503
+Epoch [  126/  500], batch 0 | d_loss: 0.2329 | g_loss: 4.2492
+DRR -0.3892565 DRM -4.8078775 DFF -0.0569898
+GFR -2.850367 GFE -5.795342
+Epoch [  126/  500], batch 50 | d_loss: 0.4462 | g_loss: 2.8504
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_126_128.pkl
+DRR -0.08932859 DRM -4.797071 DFF -0.061965175
+GFR -4.288804 GFE -5.795326
+Epoch [  127/  500], batch 0 | d_loss: 0.1513 | g_loss: 4.2888
+DRR -0.096985266 DRM -4.840761 DFF -0.11772241
+GFR -3.9085302 GFE -5.7953935
+Epoch [  127/  500], batch 50 | d_loss: 0.2147 | g_loss: 3.9085
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_127_128.pkl
+DRR -0.10104684 DRM -4.83447 DFF -0.11839768
+GFR -3.3738432 GFE -5.7953463
+Epoch [  128/  500], batch 0 | d_loss: 0.2194 | g_loss: 3.3738
+DRR -0.104097515 DRM -4.8162537 DFF -0.106617585
+GFR -4.50895 GFE -5.795308
+Epoch [  128/  500], batch 50 | d_loss: 0.2107 | g_loss: 4.5090
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_128_128.pkl
+DRR -0.0060548624 DRM -4.7861786 DFF -0.55095327
+GFR -6.0752997 GFE -5.795309
+Epoch [  129/  500], batch 0 | d_loss: 0.5570 | g_loss: 6.0753
+DRR -0.24793316 DRM -4.817609 DFF -0.06239631
+GFR -3.2794123 GFE -5.795378
+Epoch [  129/  500], batch 50 | d_loss: 0.3103 | g_loss: 3.2794
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_129_128.pkl
+DRR -0.04459468 DRM -4.8132477 DFF -0.2906416
+GFR -4.0745363 GFE -5.796381
+Epoch [  130/  500], batch 0 | d_loss: 0.3352 | g_loss: 4.0745
+DRR -0.113413095 DRM -4.776524 DFF -0.047533117
+GFR -4.4632034 GFE -5.795483
+Epoch [  130/  500], batch 50 | d_loss: 0.1609 | g_loss: 4.4632
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_130_128.pkl
+DRR -0.016743273 DRM -4.8256283 DFF -0.1610193
+GFR -4.3827 GFE -5.7948713
+Epoch [  131/  500], batch 0 | d_loss: 0.1778 | g_loss: 4.3827
+DRR -0.22439632 DRM -4.7980776 DFF -0.042329736
+GFR -2.811932 GFE -5.795381
+Epoch [  131/  500], batch 50 | d_loss: 0.2667 | g_loss: 2.8119
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_131_128.pkl
+DRR -0.048901856 DRM -4.7988095 DFF -0.059589054
+GFR -3.8412752 GFE -5.795282
+Epoch [  132/  500], batch 0 | d_loss: 0.1085 | g_loss: 3.8413
+DRR -0.093131214 DRM -4.8232374 DFF -0.1427657
+GFR -3.4722114 GFE -5.7955074
+Epoch [  132/  500], batch 50 | d_loss: 0.2359 | g_loss: 3.4722
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_132_128.pkl
+DRR -0.009987753 DRM -4.8005385 DFF -0.51046747
+GFR -5.4028664 GFE -5.7956667
+Epoch [  133/  500], batch 0 | d_loss: 0.5205 | g_loss: 5.4029
+DRR -0.050434478 DRM -4.7912354 DFF -0.15095761
+GFR -4.0084786 GFE -5.7950697
+Epoch [  133/  500], batch 50 | d_loss: 0.2014 | g_loss: 4.0085
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_133_128.pkl
+DRR -0.106177464 DRM -4.8388267 DFF -0.10265003
+GFR -3.7170644 GFE -5.795175
+Epoch [  134/  500], batch 0 | d_loss: 0.2088 | g_loss: 3.7171
+DRR -0.09525282 DRM -4.825887 DFF -0.15757796
+GFR -3.7836227 GFE -5.7953534
+Epoch [  134/  500], batch 50 | d_loss: 0.2528 | g_loss: 3.7836
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_134_128.pkl
+DRR -0.06981232 DRM -4.8068047 DFF -0.11076939
+GFR -4.5284204 GFE -5.7955227
+Epoch [  135/  500], batch 0 | d_loss: 0.1806 | g_loss: 4.5284
+DRR -0.39652926 DRM -4.785303 DFF -0.040730376
+GFR -2.8766086 GFE -5.795841
+Epoch [  135/  500], batch 50 | d_loss: 0.4373 | g_loss: 2.8766
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_135_128.pkl
+DRR -0.048247397 DRM -4.8029594 DFF -0.22428209
+GFR -5.1093807 GFE -5.795989
+Epoch [  136/  500], batch 0 | d_loss: 0.2725 | g_loss: 5.1094
+DRR -0.11875562 DRM -4.7738314 DFF -0.07942944
+GFR -3.9299767 GFE -5.795274
+Epoch [  136/  500], batch 50 | d_loss: 0.1982 | g_loss: 3.9300
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_136_128.pkl
+DRR -0.015675243 DRM -4.773795 DFF -0.06729945
+GFR -3.672632 GFE -5.7949395
+Epoch [  137/  500], batch 0 | d_loss: 0.0830 | g_loss: 3.6726
+DRR -0.22414201 DRM -4.814707 DFF -0.094581455
+GFR -4.0392523 GFE -5.795249
+Epoch [  137/  500], batch 50 | d_loss: 0.3187 | g_loss: 4.0393
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_137_128.pkl
+DRR -0.008810081 DRM -4.8112526 DFF -0.6041857
+GFR -4.991025 GFE -5.7954736
+Epoch [  138/  500], batch 0 | d_loss: 0.6130 | g_loss: 4.9910
+DRR -0.03965576 DRM -4.8026667 DFF -0.45451328
+GFR -4.64046 GFE -5.795882
+Epoch [  138/  500], batch 50 | d_loss: 0.4942 | g_loss: 4.6405
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_138_128.pkl
+DRR -0.042616524 DRM -4.8103933 DFF -0.12758453
+GFR -4.8673315 GFE -5.7956953
+Epoch [  139/  500], batch 0 | d_loss: 0.1702 | g_loss: 4.8673
+DRR -0.02662508 DRM -4.7909827 DFF -0.27985826
+GFR -5.761961 GFE -5.7955613
+Epoch [  139/  500], batch 50 | d_loss: 0.3065 | g_loss: 5.7620
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_139_128.pkl
+DRR -0.053224936 DRM -4.817207 DFF -0.06915112
+GFR -3.4262366 GFE -5.795519
+Epoch [  140/  500], batch 0 | d_loss: 0.1224 | g_loss: 3.4262
+DRR -0.07727845 DRM -4.798911 DFF -0.053152286
+GFR -3.4708009 GFE -5.796126
+Epoch [  140/  500], batch 50 | d_loss: 0.1304 | g_loss: 3.4708
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_140_128.pkl
+DRR -0.015217917 DRM -4.8301973 DFF -0.14689037
+GFR -5.3679047 GFE -5.7955837
+Epoch [  141/  500], batch 0 | d_loss: 0.1621 | g_loss: 5.3679
+DRR -0.2543366 DRM -4.8315334 DFF -0.017919907
+GFR -2.343748 GFE -5.7949243
+Epoch [  141/  500], batch 50 | d_loss: 0.2723 | g_loss: 2.3437
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_141_128.pkl
+DRR -0.018596806 DRM -4.7711763 DFF -0.66371536
+GFR -5.8523164 GFE -5.794792
+Epoch [  142/  500], batch 0 | d_loss: 0.6823 | g_loss: 5.8523
+DRR -0.11551424 DRM -4.8264627 DFF -0.049409386
+GFR -4.1541862 GFE -5.7954473
+Epoch [  142/  500], batch 50 | d_loss: 0.1649 | g_loss: 4.1542
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_142_128.pkl
+DRR -0.13645759 DRM -4.8019915 DFF -0.048464693
+GFR -4.8381643 GFE -5.7954636
+Epoch [  143/  500], batch 0 | d_loss: 0.1849 | g_loss: 4.8382
+DRR -0.020440742 DRM -4.7996116 DFF -0.12300782
+GFR -4.527905 GFE -5.7959685
+Epoch [  143/  500], batch 50 | d_loss: 0.1434 | g_loss: 4.5279
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_143_128.pkl
+DRR -0.0322252 DRM -4.7929974 DFF -0.09449449
+GFR -5.027108 GFE -5.7951465
+Epoch [  144/  500], batch 0 | d_loss: 0.1267 | g_loss: 5.0271
+DRR -0.034249846 DRM -4.7648687 DFF -0.48282915
+GFR -6.8578596 GFE -5.7960424
+Epoch [  144/  500], batch 50 | d_loss: 0.5171 | g_loss: 6.8579
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_144_128.pkl
+DRR -0.1877512 DRM -4.7517023 DFF -0.033109218
+GFR -3.6532197 GFE -5.7957435
+Epoch [  145/  500], batch 0 | d_loss: 0.2209 | g_loss: 3.6532
+DRR -0.020192234 DRM -4.813379 DFF -0.16119257
+GFR -5.7499857 GFE -5.795763
+Epoch [  145/  500], batch 50 | d_loss: 0.1814 | g_loss: 5.7500
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_145_128.pkl
+DRR -0.003856896 DRM -4.7943673 DFF -0.45218217
+GFR -5.913038 GFE -5.795848
+Epoch [  146/  500], batch 0 | d_loss: 0.4560 | g_loss: 5.9130
+DRR -0.16809028 DRM -4.8257256 DFF -0.085017234
+GFR -4.89921 GFE -5.7955217
+Epoch [  146/  500], batch 50 | d_loss: 0.2531 | g_loss: 4.8992
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_146_128.pkl
+DRR -0.009826835 DRM -4.806224 DFF -0.2676292
+GFR -4.219806 GFE -5.7952805
+Epoch [  147/  500], batch 0 | d_loss: 0.2775 | g_loss: 4.2198
+DRR -0.046387725 DRM -4.769262 DFF -0.08982472
+GFR -3.5349958 GFE -5.7952585
+Epoch [  147/  500], batch 50 | d_loss: 0.1362 | g_loss: 3.5350
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_147_128.pkl
+DRR -0.026997024 DRM -4.820203 DFF -0.12132193
+GFR -4.898215 GFE -5.795635
+Epoch [  148/  500], batch 0 | d_loss: 0.1483 | g_loss: 4.8982
+DRR -0.14887011 DRM -4.811331 DFF -0.037024833
+GFR -5.1250014 GFE -5.795486
+Epoch [  148/  500], batch 50 | d_loss: 0.1859 | g_loss: 5.1250
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_148_128.pkl
+DRR -0.022312788 DRM -4.816477 DFF -0.17545511
+GFR -4.936603 GFE -5.795344
+Epoch [  149/  500], batch 0 | d_loss: 0.1978 | g_loss: 4.9366
+DRR -0.15958887 DRM -4.8291535 DFF -0.046135813
+GFR -3.5475194 GFE -5.795238
+Epoch [  149/  500], batch 50 | d_loss: 0.2057 | g_loss: 3.5475
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_149_128.pkl
+DRR -0.016626963 DRM -4.795956 DFF -0.15661427
+GFR -6.1964254 GFE -5.795464
+Epoch [  150/  500], batch 0 | d_loss: 0.1732 | g_loss: 6.1964
+DRR -0.03149514 DRM -4.79296 DFF -0.093589306
+GFR -5.3819275 GFE -5.7957616
+Epoch [  150/  500], batch 50 | d_loss: 0.1251 | g_loss: 5.3819
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_150_128.pkl
+DRR -0.031452168 DRM -4.804543 DFF -0.07888657
+GFR -4.9157357 GFE -5.7957616
+Epoch [  151/  500], batch 0 | d_loss: 0.1103 | g_loss: 4.9157
+DRR -0.10024229 DRM -4.829887 DFF -0.062249105
+GFR -3.7549696 GFE -5.795264
+Epoch [  151/  500], batch 50 | d_loss: 0.1625 | g_loss: 3.7550
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_151_128.pkl
+DRR -0.030774085 DRM -4.794984 DFF -0.04678308
+GFR -4.5441103 GFE -5.7952766
+Epoch [  152/  500], batch 0 | d_loss: 0.0776 | g_loss: 4.5441
+DRR -0.049555063 DRM -4.7748823 DFF -0.011277767
+GFR -4.3279834 GFE -5.794977
+Epoch [  152/  500], batch 50 | d_loss: 0.0608 | g_loss: 4.3280
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_152_128.pkl
+DRR -0.005510814 DRM -4.8369265 DFF -0.21021292
+GFR -5.6942453 GFE -5.7952404
+Epoch [  153/  500], batch 0 | d_loss: 0.2157 | g_loss: 5.6942
+DRR -0.070227996 DRM -4.77437 DFF -0.035476543
+GFR -4.118824 GFE -5.795458
+Epoch [  153/  500], batch 50 | d_loss: 0.1057 | g_loss: 4.1188
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_153_128.pkl
+DRR -0.013356292 DRM -4.811995 DFF -0.07936737
+GFR -4.5088944 GFE -5.7954144
+Epoch [  154/  500], batch 0 | d_loss: 0.0927 | g_loss: 4.5089
+DRR -0.14337696 DRM -4.7833033 DFF -0.011608231
+GFR -5.0597057 GFE -5.7947407
+Epoch [  154/  500], batch 50 | d_loss: 0.1550 | g_loss: 5.0597
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_154_128.pkl
+DRR -0.18361568 DRM -4.800226 DFF -0.008825036
+GFR -5.4750915 GFE -5.794755
+Epoch [  155/  500], batch 0 | d_loss: 0.1924 | g_loss: 5.4751
+DRR -0.05224972 DRM -4.828599 DFF -0.17970724
+GFR -5.4693775 GFE -5.7962503
+Epoch [  155/  500], batch 50 | d_loss: 0.2320 | g_loss: 5.4694
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_155_128.pkl
+DRR -0.021328926 DRM -4.8301234 DFF -0.036555253
+GFR -4.7793894 GFE -5.7956023
+Epoch [  156/  500], batch 0 | d_loss: 0.0579 | g_loss: 4.7794
+DRR -0.09801229 DRM -4.824628 DFF -0.07496042
+GFR -5.164847 GFE -5.7957745
+Epoch [  156/  500], batch 50 | d_loss: 0.1730 | g_loss: 5.1648
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_156_128.pkl
+DRR -0.009639464 DRM -4.8746715 DFF -0.20082891
+GFR -4.474244 GFE -5.795325
+Epoch [  157/  500], batch 0 | d_loss: 0.2105 | g_loss: 4.4742
+DRR -0.0675367 DRM -4.813059 DFF -0.030774951
+GFR -4.5231175 GFE -5.7957335
+Epoch [  157/  500], batch 50 | d_loss: 0.0983 | g_loss: 4.5231
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_157_128.pkl
+DRR -0.06173192 DRM -4.793431 DFF -0.04261057
+GFR -5.9137373 GFE -5.7957153
+Epoch [  158/  500], batch 0 | d_loss: 0.1043 | g_loss: 5.9137
+DRR -0.0653961 DRM -4.81406 DFF -0.1355404
+GFR -4.9766665 GFE -5.7957945
+Epoch [  158/  500], batch 50 | d_loss: 0.2009 | g_loss: 4.9767
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_158_128.pkl
+DRR -0.04576015 DRM -4.8376465 DFF -0.09171621
+GFR -6.5203314 GFE -5.7957063
+Epoch [  159/  500], batch 0 | d_loss: 0.1375 | g_loss: 6.5203
+DRR -0.03347586 DRM -4.8392687 DFF -0.038736526
+GFR -4.734478 GFE -5.7954655
+Epoch [  159/  500], batch 50 | d_loss: 0.0722 | g_loss: 4.7345
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_159_128.pkl
+DRR -0.055827916 DRM -4.8251724 DFF -0.029343687
+GFR -4.02573 GFE -5.795797
+Epoch [  160/  500], batch 0 | d_loss: 0.0852 | g_loss: 4.0257
+DRR -0.062799595 DRM -4.8158455 DFF -0.058617193
+GFR -4.698369 GFE -5.7956448
+Epoch [  160/  500], batch 50 | d_loss: 0.1214 | g_loss: 4.6984
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_160_128.pkl
+DRR -0.008018926 DRM -4.796114 DFF -0.17526469
+GFR -4.7523613 GFE -5.795829
+Epoch [  161/  500], batch 0 | d_loss: 0.1833 | g_loss: 4.7524
+DRR -0.12344801 DRM -4.7878757 DFF -0.008226519
+GFR -4.6879683 GFE -5.795945
+Epoch [  161/  500], batch 50 | d_loss: 0.1317 | g_loss: 4.6880
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_161_128.pkl
+DRR -0.006637005 DRM -4.7710853 DFF -0.13015705
+GFR -5.4928937 GFE -5.795595
+Epoch [  162/  500], batch 0 | d_loss: 0.1368 | g_loss: 5.4929
+DRR -0.032975726 DRM -4.8143296 DFF -0.08021036
+GFR -4.879922 GFE -5.795483
+Epoch [  162/  500], batch 50 | d_loss: 0.1132 | g_loss: 4.8799
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_162_128.pkl
+DRR -0.013652592 DRM -4.744276 DFF -0.06914054
+GFR -4.3123703 GFE -5.795027
+Epoch [  163/  500], batch 0 | d_loss: 0.0828 | g_loss: 4.3124
+DRR -0.016108694 DRM -4.7645264 DFF -0.113043204
+GFR -5.986792 GFE -5.7959027
+Epoch [  163/  500], batch 50 | d_loss: 0.1292 | g_loss: 5.9868
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_163_128.pkl
+DRR -0.029574 DRM -4.754985 DFF -0.074429266
+GFR -5.1140375 GFE -5.796047
+Epoch [  164/  500], batch 0 | d_loss: 0.1040 | g_loss: 5.1140
+DRR -0.010976099 DRM -4.786362 DFF -0.12890783
+GFR -5.037901 GFE -5.795904
+Epoch [  164/  500], batch 50 | d_loss: 0.1399 | g_loss: 5.0379
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_164_128.pkl
+DRR -0.04253242 DRM -4.7593923 DFF -0.076193504
+GFR -5.512059 GFE -5.7962594
+Epoch [  165/  500], batch 0 | d_loss: 0.1187 | g_loss: 5.5121
+DRR -0.38804823 DRM -4.7696133 DFF -0.015550754
+GFR -2.8949986 GFE -5.795771
+Epoch [  165/  500], batch 50 | d_loss: 0.4036 | g_loss: 2.8950
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_165_128.pkl
+DRR -0.136394 DRM -4.784955 DFF -0.092031024
+GFR -4.1821356 GFE -5.7957172
+Epoch [  166/  500], batch 0 | d_loss: 0.2284 | g_loss: 4.1821
+DRR -0.4796054 DRM -4.806527 DFF -0.017248135
+GFR -2.4288745 GFE -5.7956996
+Epoch [  166/  500], batch 50 | d_loss: 0.4969 | g_loss: 2.4289
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_166_128.pkl
+DRR -0.045140333 DRM -4.8027515 DFF -0.098637395
+GFR -6.2498436 GFE -5.7959
+Epoch [  167/  500], batch 0 | d_loss: 0.1438 | g_loss: 6.2498
+DRR -0.038051628 DRM -4.8074784 DFF -0.22386038
+GFR -5.423617 GFE -5.7957993
+Epoch [  167/  500], batch 50 | d_loss: 0.2619 | g_loss: 5.4236
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_167_128.pkl
+DRR -0.022260236 DRM -4.8381925 DFF -0.1728009
+GFR -5.5520144 GFE -5.795664
+Epoch [  168/  500], batch 0 | d_loss: 0.1951 | g_loss: 5.5520
+DRR -0.09447387 DRM -4.7896166 DFF -0.02195854
+GFR -4.1921473 GFE -5.7956634
+Epoch [  168/  500], batch 50 | d_loss: 0.1164 | g_loss: 4.1921
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_168_128.pkl
+DRR -0.03640949 DRM -4.7685595 DFF -0.08490226
+GFR -5.0213227 GFE -5.795615
+Epoch [  169/  500], batch 0 | d_loss: 0.1213 | g_loss: 5.0213
+DRR -0.060283713 DRM -4.7459574 DFF -0.043417767
+GFR -5.3808665 GFE -5.7959914
+Epoch [  169/  500], batch 50 | d_loss: 0.1037 | g_loss: 5.3809
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_169_128.pkl
+DRR -0.018091034 DRM -4.789748 DFF -0.032179743
+GFR -4.759644 GFE -5.7960634
+Epoch [  170/  500], batch 0 | d_loss: 0.0503 | g_loss: 4.7596
+DRR -0.032623604 DRM -4.7957907 DFF -0.04513131
+GFR -4.5895805 GFE -5.795869
+Epoch [  170/  500], batch 50 | d_loss: 0.0778 | g_loss: 4.5896
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_170_128.pkl
+DRR -0.08161063 DRM -4.784944 DFF -0.009457294
+GFR -5.311353 GFE -5.795924
+Epoch [  171/  500], batch 0 | d_loss: 0.0911 | g_loss: 5.3114
+DRR -0.021592129 DRM -4.818491 DFF -0.052490864
+GFR -4.554099 GFE -5.7956734
+Epoch [  171/  500], batch 50 | d_loss: 0.0741 | g_loss: 4.5541
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_171_128.pkl
+DRR -0.006334395 DRM -4.7770095 DFF -0.027194917
+GFR -4.868495 GFE -5.795222
+Epoch [  172/  500], batch 0 | d_loss: 0.0335 | g_loss: 4.8685
+DRR -0.02773747 DRM -4.7868853 DFF -0.022499293
+GFR -3.9941921 GFE -5.795711
+Epoch [  172/  500], batch 50 | d_loss: 0.0502 | g_loss: 3.9942
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_172_128.pkl
+DRR -0.07234608 DRM -4.804189 DFF -0.020851642
+GFR -5.769853 GFE -5.795911
+Epoch [  173/  500], batch 0 | d_loss: 0.0932 | g_loss: 5.7699
+DRR -0.05864753 DRM -4.784545 DFF -0.01795267
+GFR -4.0124893 GFE -5.795799
+Epoch [  173/  500], batch 50 | d_loss: 0.0766 | g_loss: 4.0125
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_173_128.pkl
+DRR -0.02457193 DRM -4.7660756 DFF -0.007845726
+GFR -4.579605 GFE -5.796075
+Epoch [  174/  500], batch 0 | d_loss: 0.0324 | g_loss: 4.5796
+DRR -0.049553804 DRM -4.8067894 DFF -0.01599421
+GFR -4.475331 GFE -5.796169
+Epoch [  174/  500], batch 50 | d_loss: 0.0655 | g_loss: 4.4753
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_174_128.pkl
+DRR -0.033879764 DRM -4.8303337 DFF -0.06538062
+GFR -5.237089 GFE -5.796032
+Epoch [  175/  500], batch 0 | d_loss: 0.0993 | g_loss: 5.2371
+DRR -0.033219833 DRM -4.795399 DFF -0.017773926
+GFR -4.880459 GFE -5.7959657
+Epoch [  175/  500], batch 50 | d_loss: 0.0510 | g_loss: 4.8805
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_175_128.pkl
+DRR -0.019893106 DRM -4.8334427 DFF -0.10367477
+GFR -5.485241 GFE -5.7955294
+Epoch [  176/  500], batch 0 | d_loss: 0.1236 | g_loss: 5.4852
+DRR -0.010306989 DRM -4.81386 DFF -0.020724025
+GFR -4.5273876 GFE -5.795333
+Epoch [  176/  500], batch 50 | d_loss: 0.0310 | g_loss: 4.5274
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_176_128.pkl
+DRR -0.0028455155 DRM -4.782729 DFF -0.09846108
+GFR -5.7848496 GFE -5.7965083
+Epoch [  177/  500], batch 0 | d_loss: 0.1013 | g_loss: 5.7848
+DRR -0.0033688291 DRM -4.819456 DFF -0.19092226
+GFR -5.658173 GFE -5.7959337
+Epoch [  177/  500], batch 50 | d_loss: 0.1943 | g_loss: 5.6582
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_177_128.pkl
+DRR -0.017687898 DRM -4.797595 DFF -0.013895395
+GFR -5.765203 GFE -5.7953835
+Epoch [  178/  500], batch 0 | d_loss: 0.0316 | g_loss: 5.7652
+DRR -0.06440744 DRM -4.8324614 DFF -0.081360355
+GFR -5.541456 GFE -5.7959614
+Epoch [  178/  500], batch 50 | d_loss: 0.1458 | g_loss: 5.5415
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_178_128.pkl
+DRR -0.011006115 DRM -4.806856 DFF -0.11071096
+GFR -6.0972204 GFE -5.79502
+Epoch [  179/  500], batch 0 | d_loss: 0.1217 | g_loss: 6.0972
+DRR -0.092870735 DRM -4.806916 DFF -0.024637556
+GFR -4.1494427 GFE -5.795631
+Epoch [  179/  500], batch 50 | d_loss: 0.1175 | g_loss: 4.1494
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_179_128.pkl
+DRR -0.11243018 DRM -4.767907 DFF -0.0077209314
+GFR -6.1658955 GFE -5.7958765
+Epoch [  180/  500], batch 0 | d_loss: 0.1202 | g_loss: 6.1659
+DRR -0.8754413 DRM -4.832715 DFF -0.094525486
+GFR -5.5852203 GFE -5.796081
+Epoch [  180/  500], batch 50 | d_loss: 0.9700 | g_loss: 5.5852
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_180_128.pkl
+DRR -0.5453621 DRM -4.8461175 DFF -0.072588414
+GFR -6.423505 GFE -5.7963986
+Epoch [  181/  500], batch 0 | d_loss: 0.6180 | g_loss: 6.4235
+DRR -0.17045991 DRM -4.834989 DFF -0.17275855
+GFR -4.2180924 GFE -5.7961802
+Epoch [  181/  500], batch 50 | d_loss: 0.3432 | g_loss: 4.2181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_181_128.pkl
+DRR -0.12316272 DRM -4.8140874 DFF -0.15406601
+GFR -3.148684 GFE -5.7955613
+Epoch [  182/  500], batch 0 | d_loss: 0.2772 | g_loss: 3.1487
+DRR -0.08490506 DRM -4.83335 DFF -0.07719829
+GFR -4.8261743 GFE -5.7958055
+Epoch [  182/  500], batch 50 | d_loss: 0.1621 | g_loss: 4.8262
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_182_128.pkl
+DRR -0.021163993 DRM -4.7603106 DFF -0.12372015
+GFR -5.25731 GFE -5.7955155
+Epoch [  183/  500], batch 0 | d_loss: 0.1449 | g_loss: 5.2573
+DRR -0.08780046 DRM -4.766502 DFF -0.038920306
+GFR -3.8316708 GFE -5.7955256
+Epoch [  183/  500], batch 50 | d_loss: 0.1267 | g_loss: 3.8317
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_183_128.pkl
+DRR -0.034156926 DRM -4.8300385 DFF -0.15079063
+GFR -4.989336 GFE -5.7954483
+Epoch [  184/  500], batch 0 | d_loss: 0.1849 | g_loss: 4.9893
+DRR -0.028351456 DRM -4.823177 DFF -0.034681544
+GFR -4.5558934 GFE -5.795866
+Epoch [  184/  500], batch 50 | d_loss: 0.0630 | g_loss: 4.5559
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_184_128.pkl
+DRR -0.05453329 DRM -4.837509 DFF -0.028820869
+GFR -5.011426 GFE -5.795703
+Epoch [  185/  500], batch 0 | d_loss: 0.0834 | g_loss: 5.0114
+DRR -0.016620483 DRM -4.790188 DFF -0.07577141
+GFR -4.62922 GFE -5.795895
+Epoch [  185/  500], batch 50 | d_loss: 0.0924 | g_loss: 4.6292
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_185_128.pkl
+DRR -0.03560288 DRM -4.8614817 DFF -0.035735674
+GFR -4.345052 GFE -5.7949715
+Epoch [  186/  500], batch 0 | d_loss: 0.0713 | g_loss: 4.3451
+DRR -0.022462295 DRM -4.7960835 DFF -0.036719944
+GFR -5.109565 GFE -5.796075
+Epoch [  186/  500], batch 50 | d_loss: 0.0592 | g_loss: 5.1096
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_186_128.pkl
+DRR -0.019356703 DRM -4.7857113 DFF -0.053603377
+GFR -4.6647625 GFE -5.7956753
+Epoch [  187/  500], batch 0 | d_loss: 0.0730 | g_loss: 4.6648
+DRR -0.038244747 DRM -4.8007083 DFF -0.039635744
+GFR -4.673499 GFE -5.795685
+Epoch [  187/  500], batch 50 | d_loss: 0.0779 | g_loss: 4.6735
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_187_128.pkl
+DRR -0.017514586 DRM -4.814129 DFF -0.014346408
+GFR -5.2770033 GFE -5.795615
+Epoch [  188/  500], batch 0 | d_loss: 0.0319 | g_loss: 5.2770
+DRR -0.059280995 DRM -4.793543 DFF -0.03517796
+GFR -4.3009715 GFE -5.795559
+Epoch [  188/  500], batch 50 | d_loss: 0.0945 | g_loss: 4.3010
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_188_128.pkl
+DRR -0.013628578 DRM -4.8316817 DFF -0.024750385
+GFR -4.6802435 GFE -5.79555
+Epoch [  189/  500], batch 0 | d_loss: 0.0384 | g_loss: 4.6802
+DRR -0.035532042 DRM -4.811748 DFF -0.031192224
+GFR -4.486046 GFE -5.7954373
+Epoch [  189/  500], batch 50 | d_loss: 0.0667 | g_loss: 4.4860
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_189_128.pkl
+DRR -0.026199758 DRM -4.860743 DFF -0.033750117
+GFR -5.0556955 GFE -5.7956963
+Epoch [  190/  500], batch 0 | d_loss: 0.0599 | g_loss: 5.0557
+DRR -0.023902323 DRM -4.777566 DFF -0.03869447
+GFR -4.772661 GFE -5.795738
+Epoch [  190/  500], batch 50 | d_loss: 0.0626 | g_loss: 4.7727
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_190_128.pkl
+DRR -0.009857468 DRM -4.78664 DFF -0.04705123
+GFR -5.397417 GFE -5.796199
+Epoch [  191/  500], batch 0 | d_loss: 0.0569 | g_loss: 5.3974
+DRR -0.018476814 DRM -4.824048 DFF -0.03303695
+GFR -4.739886 GFE -5.7958674
+Epoch [  191/  500], batch 50 | d_loss: 0.0515 | g_loss: 4.7399
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_191_128.pkl
+DRR -0.054407496 DRM -4.830164 DFF -0.037854966
+GFR -5.2308044 GFE -5.7958217
+Epoch [  192/  500], batch 0 | d_loss: 0.0923 | g_loss: 5.2308
+DRR -0.039757103 DRM -4.7929354 DFF -0.012277225
+GFR -5.5494127 GFE -5.7950783
+Epoch [  192/  500], batch 50 | d_loss: 0.0520 | g_loss: 5.5494
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_192_128.pkl
+DRR -0.0122253 DRM -4.777713 DFF -0.019334262
+GFR -5.1087165 GFE -5.795505
+Epoch [  193/  500], batch 0 | d_loss: 0.0316 | g_loss: 5.1087
+DRR -0.048111424 DRM -4.79352 DFF -0.018759046
+GFR -5.4773903 GFE -5.7958403
+Epoch [  193/  500], batch 50 | d_loss: 0.0669 | g_loss: 5.4774
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_193_128.pkl
+DRR -0.010267048 DRM -4.7581635 DFF -0.03578265
+GFR -5.0632033 GFE -5.7955027
+Epoch [  194/  500], batch 0 | d_loss: 0.0460 | g_loss: 5.0632
+DRR -0.021597728 DRM -4.8194118 DFF -0.009208787
+GFR -7.9226475 GFE -5.795453
+Epoch [  194/  500], batch 50 | d_loss: 0.0308 | g_loss: 7.9226
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_194_128.pkl
+DRR -0.05233486 DRM -4.8063383 DFF -0.008941394
+GFR -6.638364 GFE -5.796055
+Epoch [  195/  500], batch 0 | d_loss: 0.0613 | g_loss: 6.6384
+DRR -0.041087966 DRM -4.8149166 DFF -0.038949583
+GFR -4.247675 GFE -5.7951565
+Epoch [  195/  500], batch 50 | d_loss: 0.0800 | g_loss: 4.2477
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_195_128.pkl
+DRR -0.006571397 DRM -4.8205166 DFF -0.034659643
+GFR -4.293694 GFE -5.7956944
+Epoch [  196/  500], batch 0 | d_loss: 0.0412 | g_loss: 4.2937
+DRR -0.038526695 DRM -4.771527 DFF -0.013185857
+GFR -4.772482 GFE -5.795837
+Epoch [  196/  500], batch 50 | d_loss: 0.0517 | g_loss: 4.7725
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_196_128.pkl
+DRR -0.005367073 DRM -4.7762094 DFF -0.015187905
+GFR -5.416743 GFE -5.796176
+Epoch [  197/  500], batch 0 | d_loss: 0.0206 | g_loss: 5.4167
+DRR -0.06103987 DRM -4.7880764 DFF -0.05295319
+GFR -5.0708094 GFE -5.795572
+Epoch [  197/  500], batch 50 | d_loss: 0.1140 | g_loss: 5.0708
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_197_128.pkl
+DRR -0.00459036 DRM -4.773837 DFF -0.072102256
+GFR -5.012135 GFE -5.7958393
+Epoch [  198/  500], batch 0 | d_loss: 0.0767 | g_loss: 5.0121
+DRR -0.02557746 DRM -4.8055415 DFF -0.014143497
+GFR -5.6520443 GFE -5.796154
+Epoch [  198/  500], batch 50 | d_loss: 0.0397 | g_loss: 5.6520
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_198_128.pkl
+DRR -0.05804763 DRM -4.8476367 DFF -0.010096806
+GFR -4.928771 GFE -5.79588
+Epoch [  199/  500], batch 0 | d_loss: 0.0681 | g_loss: 4.9288
+DRR -0.02114991 DRM -4.806109 DFF -0.015806738
+GFR -5.185347 GFE -5.7955027
+Epoch [  199/  500], batch 50 | d_loss: 0.0370 | g_loss: 5.1853
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_199_128.pkl
+DRR -0.004956467 DRM -4.807041 DFF -0.04831873
+GFR -5.6527405 GFE -5.796114
+Epoch [  200/  500], batch 0 | d_loss: 0.0533 | g_loss: 5.6527
+DRR -0.09877715 DRM -4.801641 DFF -1.5994334
+GFR -10.786404 GFE -5.7957234
+Epoch [  200/  500], batch 50 | d_loss: 1.6982 | g_loss: 10.7864
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_200_128.pkl
+DRR -1.1801338 DRM -4.780759 DFF -1.4109261
+GFR -5.573228 GFE -5.796214
+Epoch [  201/  500], batch 0 | d_loss: 2.5911 | g_loss: 5.5732
+DRR -0.13602719 DRM -4.8158407 DFF -0.511281
+GFR -5.0866275 GFE -5.7960877
+Epoch [  201/  500], batch 50 | d_loss: 0.6473 | g_loss: 5.0866
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_201_128.pkl
+DRR -0.1314137 DRM -4.8403664 DFF -0.27724725
+GFR -5.40181 GFE -5.7957287
+Epoch [  202/  500], batch 0 | d_loss: 0.4087 | g_loss: 5.4018
+DRR -0.0604373 DRM -4.8131475 DFF -0.102423124
+GFR -5.0764832 GFE -5.7958517
+Epoch [  202/  500], batch 50 | d_loss: 0.1629 | g_loss: 5.0765
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_202_128.pkl
+DRR -0.018155606 DRM -4.792017 DFF -0.09177603
+GFR -5.280893 GFE -5.7958393
+Epoch [  203/  500], batch 0 | d_loss: 0.1099 | g_loss: 5.2809
+DRR -0.028309684 DRM -4.773506 DFF -0.056152917
+GFR -4.808488 GFE -5.7952356
+Epoch [  203/  500], batch 50 | d_loss: 0.0845 | g_loss: 4.8085
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_203_128.pkl
+DRR -0.048907712 DRM -4.8184004 DFF -0.011358274
+GFR -5.2913065 GFE -5.7958136
+Epoch [  204/  500], batch 0 | d_loss: 0.0603 | g_loss: 5.2913
+DRR -0.043454297 DRM -4.8170614 DFF -0.03355349
+GFR -4.1548057 GFE -5.7959146
+Epoch [  204/  500], batch 50 | d_loss: 0.0770 | g_loss: 4.1548
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_204_128.pkl
+DRR -0.015019966 DRM -4.804545 DFF -0.058314644
+GFR -4.4890995 GFE -5.7957506
+Epoch [  205/  500], batch 0 | d_loss: 0.0733 | g_loss: 4.4891
+DRR -0.025113575 DRM -4.8154616 DFF -0.026330587
+GFR -4.4631395 GFE -5.796104
+Epoch [  205/  500], batch 50 | d_loss: 0.0514 | g_loss: 4.4631
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_205_128.pkl
+DRR -0.0028465823 DRM -4.7809706 DFF -0.07576526
+GFR -3.7863765 GFE -5.796229
+Epoch [  206/  500], batch 0 | d_loss: 0.0786 | g_loss: 3.7864
+DRR -0.016670939 DRM -4.7992053 DFF -0.029541517
+GFR -4.5705357 GFE -5.796435
+Epoch [  206/  500], batch 50 | d_loss: 0.0462 | g_loss: 4.5705
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_206_128.pkl
+DRR -0.00390004 DRM -4.8109837 DFF -0.083736755
+GFR -3.954126 GFE -5.7961617
+Epoch [  207/  500], batch 0 | d_loss: 0.0876 | g_loss: 3.9541
+DRR -0.018698897 DRM -4.8156366 DFF -0.020253606
+GFR -4.714561 GFE -5.7955675
+Epoch [  207/  500], batch 50 | d_loss: 0.0390 | g_loss: 4.7146
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_207_128.pkl
+DRR -0.008268239 DRM -4.798195 DFF -0.039702855
+GFR -4.5816526 GFE -5.7959566
+Epoch [  208/  500], batch 0 | d_loss: 0.0480 | g_loss: 4.5817
+DRR -0.008439746 DRM -4.86128 DFF -0.023442265
+GFR -4.923561 GFE -5.7957897
+Epoch [  208/  500], batch 50 | d_loss: 0.0319 | g_loss: 4.9236
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_208_128.pkl
+DRR -0.024457082 DRM -4.811686 DFF -0.051438086
+GFR -4.87207 GFE -5.795985
+Epoch [  209/  500], batch 0 | d_loss: 0.0759 | g_loss: 4.8721
+DRR -0.021525558 DRM -4.7843976 DFF -0.023111574
+GFR -5.5415044 GFE -5.7955227
+Epoch [  209/  500], batch 50 | d_loss: 0.0446 | g_loss: 5.5415
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_209_128.pkl
+DRR -0.02867677 DRM -4.7788086 DFF -0.03212425
+GFR -4.6132755 GFE -5.79562
+Epoch [  210/  500], batch 0 | d_loss: 0.0608 | g_loss: 4.6133
+DRR -0.017824866 DRM -4.83794 DFF -0.05228245
+GFR -5.3360643 GFE -5.796174
+Epoch [  210/  500], batch 50 | d_loss: 0.0701 | g_loss: 5.3361
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_210_128.pkl
+DRR -0.017229171 DRM -4.7827744 DFF -0.013898661
+GFR -5.472424 GFE -5.7956595
+Epoch [  211/  500], batch 0 | d_loss: 0.0311 | g_loss: 5.4724
+DRR -0.026971435 DRM -4.793152 DFF -0.039104957
+GFR -5.0135927 GFE -5.795574
+Epoch [  211/  500], batch 50 | d_loss: 0.0661 | g_loss: 5.0136
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_211_128.pkl
+DRR -0.008429161 DRM -4.792221 DFF -0.035288315
+GFR -5.586859 GFE -5.796172
+Epoch [  212/  500], batch 0 | d_loss: 0.0437 | g_loss: 5.5869
+DRR -0.00807507 DRM -4.7848496 DFF -0.021260217
+GFR -5.4742546 GFE -5.795289
+Epoch [  212/  500], batch 50 | d_loss: 0.0293 | g_loss: 5.4743
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_212_128.pkl
+DRR -0.032612696 DRM -4.7542257 DFF -0.017574959
+GFR -4.8397546 GFE -5.7958875
+Epoch [  213/  500], batch 0 | d_loss: 0.0502 | g_loss: 4.8398
+DRR -0.04345677 DRM -4.7880096 DFF -0.010400672
+GFR -4.518929 GFE -5.7958555
+Epoch [  213/  500], batch 50 | d_loss: 0.0539 | g_loss: 4.5189
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_213_128.pkl
+DRR -0.010845517 DRM -4.835245 DFF -0.04337784
+GFR -5.557046 GFE -5.7961955
+Epoch [  214/  500], batch 0 | d_loss: 0.0542 | g_loss: 5.5570
+DRR -0.007727565 DRM -4.810116 DFF -0.013331421
+GFR -4.749408 GFE -5.7959824
+Epoch [  214/  500], batch 50 | d_loss: 0.0211 | g_loss: 4.7494
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_214_128.pkl
+DRR -0.009274777 DRM -4.8083086 DFF -0.021582909
+GFR -4.6668763 GFE -5.796274
+Epoch [  215/  500], batch 0 | d_loss: 0.0309 | g_loss: 4.6669
+DRR -0.026608951 DRM -4.792263 DFF -0.017889868
+GFR -5.0921535 GFE -5.7962894
+Epoch [  215/  500], batch 50 | d_loss: 0.0445 | g_loss: 5.0922
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_215_128.pkl
+DRR -0.0043756654 DRM -4.840077 DFF -0.009336034
+GFR -5.1788363 GFE -5.7958794
+Epoch [  216/  500], batch 0 | d_loss: 0.0137 | g_loss: 5.1788
+DRR -0.011969792 DRM -4.763286 DFF -0.010529399
+GFR -4.621876 GFE -5.7966146
+Epoch [  216/  500], batch 50 | d_loss: 0.0225 | g_loss: 4.6219
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_216_128.pkl
+DRR -0.006417142 DRM -4.792576 DFF -0.015465205
+GFR -5.798435 GFE -5.7962394
+Epoch [  217/  500], batch 0 | d_loss: 0.0219 | g_loss: 5.7984
+DRR -0.017561032 DRM -4.841527 DFF -0.006110894
+GFR -4.857628 GFE -5.796008
+Epoch [  217/  500], batch 50 | d_loss: 0.0237 | g_loss: 4.8576
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_217_128.pkl
+DRR -0.0076162387 DRM -4.810457 DFF -0.0114251785
+GFR -5.8609896 GFE -5.7963076
+Epoch [  218/  500], batch 0 | d_loss: 0.0190 | g_loss: 5.8610
+DRR -0.013355407 DRM -4.8288193 DFF -0.009958895
+GFR -5.4192147 GFE -5.7959437
+Epoch [  218/  500], batch 50 | d_loss: 0.0233 | g_loss: 5.4192
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_218_128.pkl
+DRR -0.017145641 DRM -4.8209295 DFF -0.015197659
+GFR -6.097271 GFE -5.796816
+Epoch [  219/  500], batch 0 | d_loss: 0.0323 | g_loss: 6.0973
+DRR -0.006857835 DRM -4.844926 DFF -0.02895185
+GFR -5.975743 GFE -5.7959847
+Epoch [  219/  500], batch 50 | d_loss: 0.0358 | g_loss: 5.9757
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_219_128.pkl
+DRR -0.024095941 DRM -4.8183336 DFF -0.012172979
+GFR -5.260684 GFE -5.7960324
+Epoch [  220/  500], batch 0 | d_loss: 0.0363 | g_loss: 5.2607
+DRR -0.020986803 DRM -4.7910147 DFF -0.028786946
+GFR -5.9434986 GFE -5.795329
+Epoch [  220/  500], batch 50 | d_loss: 0.0498 | g_loss: 5.9435
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_220_128.pkl
+DRR -0.0011364641 DRM -4.819344 DFF -0.20936778
+GFR -5.582618 GFE -5.7957625
+Epoch [  221/  500], batch 0 | d_loss: 0.2105 | g_loss: 5.5826
+DRR -1.2417973 DRM -4.7940407 DFF -0.11644834
+GFR -6.450506 GFE -5.7961926
+Epoch [  221/  500], batch 50 | d_loss: 1.3582 | g_loss: 6.4505
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_221_128.pkl
+DRR -0.5233469 DRM -4.8396654 DFF -0.14578484
+GFR -6.4189734 GFE -5.7959566
+Epoch [  222/  500], batch 0 | d_loss: 0.6691 | g_loss: 6.4190
+DRR -0.349443 DRM -4.8484125 DFF -0.13405739
+GFR -5.9398403 GFE -5.7962713
+Epoch [  222/  500], batch 50 | d_loss: 0.4835 | g_loss: 5.9398
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_222_128.pkl
+DRR -0.033824325 DRM -4.7639847 DFF -0.370561
+GFR -5.7527685 GFE -5.7959447
+Epoch [  223/  500], batch 0 | d_loss: 0.4044 | g_loss: 5.7528
+DRR -0.03513619 DRM -4.808388 DFF -0.07861243
+GFR -5.0705485 GFE -5.795995
+Epoch [  223/  500], batch 50 | d_loss: 0.1137 | g_loss: 5.0705
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_223_128.pkl
+DRR -0.049955443 DRM -4.804823 DFF -0.08017871
+GFR -6.3785257 GFE -5.796137
+Epoch [  224/  500], batch 0 | d_loss: 0.1301 | g_loss: 6.3785
+DRR -0.03578146 DRM -4.8793755 DFF -0.022765681
+GFR -5.370969 GFE -5.7957582
+Epoch [  224/  500], batch 50 | d_loss: 0.0585 | g_loss: 5.3710
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_224_128.pkl
+DRR -0.017978765 DRM -4.810258 DFF -0.067584336
+GFR -4.3124475 GFE -5.7954507
+Epoch [  225/  500], batch 0 | d_loss: 0.0856 | g_loss: 4.3124
+DRR -0.032362137 DRM -4.826986 DFF -0.03322218
+GFR -5.030781 GFE -5.795912
+Epoch [  225/  500], batch 50 | d_loss: 0.0656 | g_loss: 5.0308
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_225_128.pkl
+DRR -0.010520283 DRM -4.8205595 DFF -0.03070056
+GFR -4.541684 GFE -5.7957277
+Epoch [  226/  500], batch 0 | d_loss: 0.0412 | g_loss: 4.5417
+DRR -0.011297168 DRM -4.8342724 DFF -0.028883336
+GFR -5.2905283 GFE -5.795752
+Epoch [  226/  500], batch 50 | d_loss: 0.0402 | g_loss: 5.2905
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_226_128.pkl
+DRR -0.010337693 DRM -4.8401194 DFF -0.046314362
+GFR -5.2354994 GFE -5.795786
+Epoch [  227/  500], batch 0 | d_loss: 0.0567 | g_loss: 5.2355
+DRR -0.017924761 DRM -4.7937794 DFF -0.027031397
+GFR -5.5985017 GFE -5.7956524
+Epoch [  227/  500], batch 50 | d_loss: 0.0450 | g_loss: 5.5985
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_227_128.pkl
+DRR -0.012176406 DRM -4.805049 DFF -0.067141145
+GFR -5.720461 GFE -5.79528
+Epoch [  228/  500], batch 0 | d_loss: 0.0793 | g_loss: 5.7205
+DRR -0.02264419 DRM -4.8125105 DFF -0.011952806
+GFR -5.202959 GFE -5.796119
+Epoch [  228/  500], batch 50 | d_loss: 0.0346 | g_loss: 5.2030
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_228_128.pkl
+DRR -0.0057665966 DRM -4.7703276 DFF -0.050265554
+GFR -5.0479403 GFE -5.7955914
+Epoch [  229/  500], batch 0 | d_loss: 0.0560 | g_loss: 5.0479
+DRR -0.05383932 DRM -4.765791 DFF -0.013784564
+GFR -5.295272 GFE -5.795323
+Epoch [  229/  500], batch 50 | d_loss: 0.0676 | g_loss: 5.2953
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_229_128.pkl
+DRR -0.01157615 DRM -4.776358 DFF -0.047606718
+GFR -5.33248 GFE -5.795375
+Epoch [  230/  500], batch 0 | d_loss: 0.0592 | g_loss: 5.3325
+DRR -0.01406919 DRM -4.774349 DFF -0.028480602
+GFR -4.505582 GFE -5.795575
+Epoch [  230/  500], batch 50 | d_loss: 0.0425 | g_loss: 4.5056
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_230_128.pkl
+DRR -0.0022642994 DRM -4.842226 DFF -0.06073556
+GFR -5.123723 GFE -5.795454
+Epoch [  231/  500], batch 0 | d_loss: 0.0630 | g_loss: 5.1237
+DRR -0.0130066145 DRM -4.7948685 DFF -0.016203843
+GFR -5.506345 GFE -5.7958574
+Epoch [  231/  500], batch 50 | d_loss: 0.0292 | g_loss: 5.5063
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_231_128.pkl
+DRR -0.0060255798 DRM -4.7837186 DFF -0.042536747
+GFR -5.822727 GFE -5.795907
+Epoch [  232/  500], batch 0 | d_loss: 0.0486 | g_loss: 5.8227
+DRR -0.023452025 DRM -4.7580667 DFF -0.007866453
+GFR -5.5905094 GFE -5.795511
+Epoch [  232/  500], batch 50 | d_loss: 0.0313 | g_loss: 5.5905
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_232_128.pkl
+DRR -0.014329892 DRM -4.832812 DFF -0.046940245
+GFR -5.5495977 GFE -5.7962766
+Epoch [  233/  500], batch 0 | d_loss: 0.0613 | g_loss: 5.5496
+DRR -0.016855992 DRM -4.844533 DFF -0.026290942
+GFR -5.1435537 GFE -5.796091
+Epoch [  233/  500], batch 50 | d_loss: 0.0431 | g_loss: 5.1436
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_233_128.pkl
+DRR -0.011326224 DRM -4.7804937 DFF -0.016285378
+GFR -5.5020227 GFE -5.796145
+Epoch [  234/  500], batch 0 | d_loss: 0.0276 | g_loss: 5.5020
+DRR -0.0056804894 DRM -4.7823153 DFF -0.030565659
+GFR -5.6069546 GFE -5.7953496
+Epoch [  234/  500], batch 50 | d_loss: 0.0362 | g_loss: 5.6070
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_234_128.pkl
+DRR -0.0053797965 DRM -4.8109455 DFF -0.015551255
+GFR -4.930954 GFE -5.7954245
+Epoch [  235/  500], batch 0 | d_loss: 0.0209 | g_loss: 4.9310
+DRR -0.01265487 DRM -4.8189554 DFF -0.0046790484
+GFR -4.9463363 GFE -5.7959642
+Epoch [  235/  500], batch 50 | d_loss: 0.0173 | g_loss: 4.9463
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_235_128.pkl
+DRR -0.0043080305 DRM -4.8381104 DFF -0.025198553
+GFR -4.7615814 GFE -5.7956305
+Epoch [  236/  500], batch 0 | d_loss: 0.0295 | g_loss: 4.7616
+DRR -0.012653189 DRM -4.8282948 DFF -0.009279611
+GFR -5.8926983 GFE -5.795686
+Epoch [  236/  500], batch 50 | d_loss: 0.0219 | g_loss: 5.8927
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_236_128.pkl
+DRR -0.0055651646 DRM -4.79775 DFF -0.019252498
+GFR -5.6563606 GFE -5.795609
+Epoch [  237/  500], batch 0 | d_loss: 0.0248 | g_loss: 5.6564
+DRR -0.0066329692 DRM -4.82086 DFF -0.015923895
+GFR -6.2688675 GFE -5.796032
+Epoch [  237/  500], batch 50 | d_loss: 0.0226 | g_loss: 6.2689
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_237_128.pkl
+DRR -0.0058177924 DRM -4.7825146 DFF -0.016097566
+GFR -5.4408813 GFE -5.796341
+Epoch [  238/  500], batch 0 | d_loss: 0.0219 | g_loss: 5.4409
+DRR -0.00949232 DRM -4.7701693 DFF -0.012075599
+GFR -6.3120956 GFE -5.7963734
+Epoch [  238/  500], batch 50 | d_loss: 0.0216 | g_loss: 6.3121
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_238_128.pkl
+DRR -0.00571555 DRM -4.7980037 DFF -0.010679809
+GFR -6.2066402 GFE -5.795661
+Epoch [  239/  500], batch 0 | d_loss: 0.0164 | g_loss: 6.2066
+DRR -0.033495657 DRM -4.8105125 DFF -0.0044665956
+GFR -6.740888 GFE -5.796361
+Epoch [  239/  500], batch 50 | d_loss: 0.0380 | g_loss: 6.7409
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_239_128.pkl
+DRR -0.03358041 DRM -4.8220873 DFF -0.005740526
+GFR -6.877819 GFE -5.795561
+Epoch [  240/  500], batch 0 | d_loss: 0.0393 | g_loss: 6.8778
+DRR -0.011160731 DRM -4.8015304 DFF -0.024046872
+GFR -5.908633 GFE -5.79577
+Epoch [  240/  500], batch 50 | d_loss: 0.0352 | g_loss: 5.9086
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_240_128.pkl
+DRR -0.0045520267 DRM -4.8046207 DFF -0.016096953
+GFR -5.1355114 GFE -5.7958574
+Epoch [  241/  500], batch 0 | d_loss: 0.0206 | g_loss: 5.1355
+DRR -0.017482413 DRM -4.814364 DFF -0.0036945762
+GFR -6.207645 GFE -5.796156
+Epoch [  241/  500], batch 50 | d_loss: 0.0212 | g_loss: 6.2076
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_241_128.pkl
+DRR -0.010789455 DRM -4.8248825 DFF -0.020696033
+GFR -6.1470413 GFE -5.7962346
+Epoch [  242/  500], batch 0 | d_loss: 0.0315 | g_loss: 6.1470
+DRR -0.013562612 DRM -4.810378 DFF -0.0068396963
+GFR -6.057598 GFE -5.7961454
+Epoch [  242/  500], batch 50 | d_loss: 0.0204 | g_loss: 6.0576
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_242_128.pkl
+DRR -0.023476131 DRM -4.764764 DFF -0.009424288
+GFR -5.9173384 GFE -5.797078
+Epoch [  243/  500], batch 0 | d_loss: 0.0329 | g_loss: 5.9173
+DRR -0.005751682 DRM -4.8319583 DFF -0.00596233
+GFR -6.235217 GFE -5.7956247
+Epoch [  243/  500], batch 50 | d_loss: 0.0117 | g_loss: 6.2352
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_243_128.pkl
+DRR -0.01204336 DRM -4.8588 DFF -0.0027814438
+GFR -7.2114067 GFE -5.7963743
+Epoch [  244/  500], batch 0 | d_loss: 0.0148 | g_loss: 7.2114
+DRR -0.007965349 DRM -4.732811 DFF -0.008865049
+GFR -5.9735003 GFE -5.795806
+Epoch [  244/  500], batch 50 | d_loss: 0.0168 | g_loss: 5.9735
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_244_128.pkl
+DRR -0.011210242 DRM -4.8343487 DFF -0.008928841
+GFR -6.019568 GFE -5.7954326
+Epoch [  245/  500], batch 0 | d_loss: 0.0201 | g_loss: 6.0196
+DRR -0.009275777 DRM -4.8259897 DFF -0.108567625
+GFR -8.132391 GFE -5.7966228
+Epoch [  245/  500], batch 50 | d_loss: 0.1178 | g_loss: 8.1324
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_245_128.pkl
+DRR -0.003544407 DRM -4.7534294 DFF -0.035130873
+GFR -6.5625134 GFE -5.7963586
+Epoch [  246/  500], batch 0 | d_loss: 0.0387 | g_loss: 6.5625
+DRR -0.404526 DRM -4.8043957 DFF -1.303365
+GFR -9.2686205 GFE -5.7960596
+Epoch [  246/  500], batch 50 | d_loss: 1.7079 | g_loss: 9.2686
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_246_128.pkl
+DRR -0.13295934 DRM -4.784787 DFF -3.4048529
+GFR -10.769261 GFE -5.795969
+Epoch [  247/  500], batch 0 | d_loss: 3.5378 | g_loss: 10.7693
+DRR -0.05658525 DRM -4.8439026 DFF -0.33799613
+GFR -3.9180074 GFE -5.795905
+Epoch [  247/  500], batch 50 | d_loss: 0.3946 | g_loss: 3.9180
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_247_128.pkl
+DRR -0.48653442 DRM -4.811261 DFF -0.042978704
+GFR -5.426154 GFE -5.795745
+Epoch [  248/  500], batch 0 | d_loss: 0.5295 | g_loss: 5.4262
+DRR -0.045252763 DRM -4.8451643 DFF -0.10847303
+GFR -4.62484 GFE -5.79513
+Epoch [  248/  500], batch 50 | d_loss: 0.1537 | g_loss: 4.6248
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_248_128.pkl
+DRR -0.20906076 DRM -4.847377 DFF -0.029688353
+GFR -5.8541107 GFE -5.7958174
+Epoch [  249/  500], batch 0 | d_loss: 0.2387 | g_loss: 5.8541
+DRR -0.037505217 DRM -4.8082438 DFF -0.10413418
+GFR -4.783545 GFE -5.7961283
+Epoch [  249/  500], batch 50 | d_loss: 0.1416 | g_loss: 4.7835
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_249_128.pkl
+DRR -0.020347048 DRM -4.8116045 DFF -0.06172975
+GFR -4.6613045 GFE -5.795931
+Epoch [  250/  500], batch 0 | d_loss: 0.0821 | g_loss: 4.6613
+DRR -0.030439187 DRM -4.8334284 DFF -0.05826188
+GFR -4.789275 GFE -5.796131
+Epoch [  250/  500], batch 50 | d_loss: 0.0887 | g_loss: 4.7893
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_250_128.pkl
+DRR -0.025837347 DRM -4.8092556 DFF -0.034331884
+GFR -4.4084435 GFE -5.7960873
+Epoch [  251/  500], batch 0 | d_loss: 0.0602 | g_loss: 4.4084
+DRR -0.076194614 DRM -4.858882 DFF -0.013446648
+GFR -4.6669235 GFE -5.796399
+Epoch [  251/  500], batch 50 | d_loss: 0.0896 | g_loss: 4.6669
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_251_128.pkl
+DRR -0.049293496 DRM -4.826469 DFF -0.024863586
+GFR -5.5131187 GFE -5.795722
+Epoch [  252/  500], batch 0 | d_loss: 0.0742 | g_loss: 5.5131
+DRR -0.021704089 DRM -4.7637944 DFF -0.014714811
+GFR -5.93742 GFE -5.796439
+Epoch [  252/  500], batch 50 | d_loss: 0.0364 | g_loss: 5.9374
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_252_128.pkl
+DRR -0.02657134 DRM -4.787836 DFF -0.01840584
+GFR -4.7074556 GFE -5.796088
+Epoch [  253/  500], batch 0 | d_loss: 0.0450 | g_loss: 4.7075
+DRR -0.016242519 DRM -4.826312 DFF -0.016938072
+GFR -5.172716 GFE -5.795589
+Epoch [  253/  500], batch 50 | d_loss: 0.0332 | g_loss: 5.1727
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_253_128.pkl
+DRR -0.013113041 DRM -4.8209057 DFF -0.028784567
+GFR -5.3151827 GFE -5.7958584
+Epoch [  254/  500], batch 0 | d_loss: 0.0419 | g_loss: 5.3152
+DRR -0.023012105 DRM -4.840187 DFF -0.0093681095
+GFR -5.3204317 GFE -5.7957535
+Epoch [  254/  500], batch 50 | d_loss: 0.0324 | g_loss: 5.3204
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_254_128.pkl
+DRR -0.011102855 DRM -4.820019 DFF -0.028608872
+GFR -5.2807207 GFE -5.795553
+Epoch [  255/  500], batch 0 | d_loss: 0.0397 | g_loss: 5.2807
+DRR -0.062769264 DRM -4.8219495 DFF -0.01617086
+GFR -5.716003 GFE -5.7958527
+Epoch [  255/  500], batch 50 | d_loss: 0.0789 | g_loss: 5.7160
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_255_128.pkl
+DRR -0.0037060943 DRM -4.8199973 DFF -0.04506462
+GFR -4.6051226 GFE -5.7958374
+Epoch [  256/  500], batch 0 | d_loss: 0.0488 | g_loss: 4.6051
+DRR -0.024706986 DRM -4.816264 DFF -0.022139704
+GFR -5.637613 GFE -5.7953634
+Epoch [  256/  500], batch 50 | d_loss: 0.0468 | g_loss: 5.6376
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_256_128.pkl
+DRR -0.018371731 DRM -4.807173 DFF -0.007248638
+GFR -4.6061573 GFE -5.795437
+Epoch [  257/  500], batch 0 | d_loss: 0.0256 | g_loss: 4.6062
+DRR -0.013604905 DRM -4.8104777 DFF -0.034267485
+GFR -6.2330503 GFE -5.7957706
+Epoch [  257/  500], batch 50 | d_loss: 0.0479 | g_loss: 6.2331
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_257_128.pkl
+DRR -0.0097761275 DRM -4.855614 DFF -0.034201033
+GFR -4.298354 GFE -5.7958603
+Epoch [  258/  500], batch 0 | d_loss: 0.0440 | g_loss: 4.2984
+DRR -0.017921153 DRM -4.7937107 DFF -0.020039191
+GFR -5.571906 GFE -5.7963047
+Epoch [  258/  500], batch 50 | d_loss: 0.0380 | g_loss: 5.5719
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_258_128.pkl
+DRR -0.004030305 DRM -4.79144 DFF -0.010658015
+GFR -5.1684704 GFE -5.7955985
+Epoch [  259/  500], batch 0 | d_loss: 0.0147 | g_loss: 5.1685
+DRR -0.04974234 DRM -4.7817087 DFF -0.025311096
+GFR -5.455537 GFE -5.7956467
+Epoch [  259/  500], batch 50 | d_loss: 0.0751 | g_loss: 5.4555
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_259_128.pkl
+DRR -0.0071578072 DRM -4.782818 DFF -0.009236274
+GFR -6.333219 GFE -5.795588
+Epoch [  260/  500], batch 0 | d_loss: 0.0164 | g_loss: 6.3332
+DRR -0.017956078 DRM -4.8288374 DFF -0.009938766
+GFR -5.705903 GFE -5.795867
+Epoch [  260/  500], batch 50 | d_loss: 0.0279 | g_loss: 5.7059
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_260_128.pkl
+DRR -0.0039396104 DRM -4.78662 DFF -0.0323157
+GFR -5.06674 GFE -5.795792
+Epoch [  261/  500], batch 0 | d_loss: 0.0363 | g_loss: 5.0667
+DRR -0.014841901 DRM -4.8232546 DFF -0.013471694
+GFR -5.197241 GFE -5.796033
+Epoch [  261/  500], batch 50 | d_loss: 0.0283 | g_loss: 5.1972
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_261_128.pkl
+DRR -0.010841079 DRM -4.7943687 DFF -0.010451641
+GFR -6.283865 GFE -5.796201
+Epoch [  262/  500], batch 0 | d_loss: 0.0213 | g_loss: 6.2839
+DRR -0.012791072 DRM -4.7791686 DFF -0.012092444
+GFR -5.814333 GFE -5.795975
+Epoch [  262/  500], batch 50 | d_loss: 0.0249 | g_loss: 5.8143
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_262_128.pkl
+DRR -0.009268669 DRM -4.7381363 DFF -0.022301618
+GFR -5.693014 GFE -5.7961793
+Epoch [  263/  500], batch 0 | d_loss: 0.0316 | g_loss: 5.6930
+DRR -0.0074724713 DRM -4.7901745 DFF -0.0072345505
+GFR -6.077467 GFE -5.7963076
+Epoch [  263/  500], batch 50 | d_loss: 0.0147 | g_loss: 6.0775
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_263_128.pkl
+DRR -0.010296458 DRM -4.7802925 DFF -0.016980894
+GFR -6.6568336 GFE -5.796361
+Epoch [  264/  500], batch 0 | d_loss: 0.0273 | g_loss: 6.6568
+DRR -0.0070102075 DRM -4.814166 DFF -0.0068526
+GFR -6.431449 GFE -5.7967596
+Epoch [  264/  500], batch 50 | d_loss: 0.0139 | g_loss: 6.4314
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_264_128.pkl
+DRR -0.011282167 DRM -4.814345 DFF -0.0056488034
+GFR -5.7289 GFE -5.796611
+Epoch [  265/  500], batch 0 | d_loss: 0.0169 | g_loss: 5.7289
+DRR -0.005819317 DRM -4.8435206 DFF -0.007540526
+GFR -5.7715645 GFE -5.795945
+Epoch [  265/  500], batch 50 | d_loss: 0.0134 | g_loss: 5.7716
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_265_128.pkl
+DRR -0.007160562 DRM -4.7594967 DFF -0.011438883
+GFR -4.8119364 GFE -5.795946
+Epoch [  266/  500], batch 0 | d_loss: 0.0186 | g_loss: 4.8119
+DRR -0.016146347 DRM -4.7778015 DFF -0.0075609586
+GFR -5.166687 GFE -5.7954407
+Epoch [  266/  500], batch 50 | d_loss: 0.0237 | g_loss: 5.1667
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_266_128.pkl
+DRR -0.0057453327 DRM -4.774502 DFF -0.011780735
+GFR -6.9239244 GFE -5.7966332
+Epoch [  267/  500], batch 0 | d_loss: 0.0175 | g_loss: 6.9239
+DRR -0.013677217 DRM -4.7755694 DFF -0.012325624
+GFR -6.12858 GFE -5.7961116
+Epoch [  267/  500], batch 50 | d_loss: 0.0260 | g_loss: 6.1286
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_267_128.pkl
+DRR -0.012129088 DRM -4.8094254 DFF -0.013227344
+GFR -5.7807646 GFE -5.796303
+Epoch [  268/  500], batch 0 | d_loss: 0.0254 | g_loss: 5.7808
+DRR -0.0072745616 DRM -4.774414 DFF -0.026757607
+GFR -6.361619 GFE -5.7954245
+Epoch [  268/  500], batch 50 | d_loss: 0.0340 | g_loss: 6.3616
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_268_128.pkl
+DRR -0.010349768 DRM -4.795461 DFF -0.008420519
+GFR -4.934823 GFE -5.796115
+Epoch [  269/  500], batch 0 | d_loss: 0.0188 | g_loss: 4.9348
+DRR -0.0109686265 DRM -4.7893734 DFF -0.0048228037
+GFR -4.8422146 GFE -5.7954636
+Epoch [  269/  500], batch 50 | d_loss: 0.0158 | g_loss: 4.8422
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_269_128.pkl
+DRR -0.0070052687 DRM -4.7998934 DFF -0.021323457
+GFR -5.988717 GFE -5.796191
+Epoch [  270/  500], batch 0 | d_loss: 0.0283 | g_loss: 5.9887
+DRR -0.004074815 DRM -4.805322 DFF -0.0153714325
+GFR -6.0129423 GFE -5.7962484
+Epoch [  270/  500], batch 50 | d_loss: 0.0194 | g_loss: 6.0129
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_270_128.pkl
+DRR -0.0026938661 DRM -4.783595 DFF -0.024838984
+GFR -5.764162 GFE -5.7963057
+Epoch [  271/  500], batch 0 | d_loss: 0.0275 | g_loss: 5.7642
+DRR -0.0052848617 DRM -4.7629757 DFF -0.005849262
+GFR -5.4392023 GFE -5.796357
+Epoch [  271/  500], batch 50 | d_loss: 0.0111 | g_loss: 5.4392
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_271_128.pkl
+DRR -0.0033283695 DRM -4.836896 DFF -0.01985737
+GFR -6.0618777 GFE -5.7964125
+Epoch [  272/  500], batch 0 | d_loss: 0.0232 | g_loss: 6.0619
+DRR -0.008171187 DRM -4.771918 DFF -0.015660845
+GFR -6.550265 GFE -5.795211
+Epoch [  272/  500], batch 50 | d_loss: 0.0238 | g_loss: 6.5503
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_272_128.pkl
+DRR -0.00827204 DRM -4.7993407 DFF -0.0039497386
+GFR -6.758733 GFE -5.7961235
+Epoch [  273/  500], batch 0 | d_loss: 0.0122 | g_loss: 6.7587
+DRR -0.0064804778 DRM -4.798617 DFF -0.01306548
+GFR -5.725355 GFE -5.7959595
+Epoch [  273/  500], batch 50 | d_loss: 0.0195 | g_loss: 5.7254
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_273_128.pkl
+DRR -0.002948721 DRM -4.770854 DFF -0.034385003
+GFR -6.2647524 GFE -5.7958975
+Epoch [  274/  500], batch 0 | d_loss: 0.0373 | g_loss: 6.2648
+DRR -0.0015733558 DRM -4.789858 DFF -0.004291771
+GFR -6.0292215 GFE -5.7966685
+Epoch [  274/  500], batch 50 | d_loss: 0.0059 | g_loss: 6.0292
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_274_128.pkl
+DRR -0.00951273 DRM -4.795033 DFF -0.008105379
+GFR -6.53084 GFE -5.7962418
+Epoch [  275/  500], batch 0 | d_loss: 0.0176 | g_loss: 6.5308
+DRR -0.00973941 DRM -4.808876 DFF -0.0026788241
+GFR -6.3809166 GFE -5.7963314
+Epoch [  275/  500], batch 50 | d_loss: 0.0124 | g_loss: 6.3809
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_275_128.pkl
+DRR -0.0034704395 DRM -4.807652 DFF -0.021890964
+GFR -5.7254295 GFE -5.7966185
+Epoch [  276/  500], batch 0 | d_loss: 0.0254 | g_loss: 5.7254
+DRR -0.0064791916 DRM -4.796189 DFF -0.021002246
+GFR -6.6189594 GFE -5.7961245
+Epoch [  276/  500], batch 50 | d_loss: 0.0275 | g_loss: 6.6190
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_276_128.pkl
+DRR -0.004914323 DRM -4.8115816 DFF -0.01286933
+GFR -6.0339694 GFE -5.7964487
+Epoch [  277/  500], batch 0 | d_loss: 0.0178 | g_loss: 6.0340
+DRR -1.428755 DRM -4.8240194 DFF -0.8880162
+GFR -1.9739983 GFE -5.7943487
+Epoch [  277/  500], batch 50 | d_loss: 2.3168 | g_loss: 1.9740
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_277_128.pkl
+DRR -0.93515706 DRM -4.764926 DFF -0.55826616
+GFR -1.7622684 GFE -5.794563
+Epoch [  278/  500], batch 0 | d_loss: 1.4934 | g_loss: 1.7623
+DRR -0.6276194 DRM -4.8609147 DFF -0.32968444
+GFR -3.0045629 GFE -5.7951407
+Epoch [  278/  500], batch 50 | d_loss: 0.9573 | g_loss: 3.0046
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_278_128.pkl
+DRR -0.6140334 DRM -4.785697 DFF -0.43686345
+GFR -2.174117 GFE -5.7950616
+Epoch [  279/  500], batch 0 | d_loss: 1.0509 | g_loss: 2.1741
+DRR -0.685711 DRM -4.8413887 DFF -0.083187476
+GFR -4.1620936 GFE -5.795534
+Epoch [  279/  500], batch 50 | d_loss: 0.7689 | g_loss: 4.1621
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_279_128.pkl
+DRR -0.25179213 DRM -4.7510986 DFF -0.24739489
+GFR -5.198204 GFE -5.7956553
+Epoch [  280/  500], batch 0 | d_loss: 0.4992 | g_loss: 5.1982
+DRR -0.21908222 DRM -4.8496885 DFF -0.08237533
+GFR -5.3923793 GFE -5.7958503
+Epoch [  280/  500], batch 50 | d_loss: 0.3015 | g_loss: 5.3924
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_280_128.pkl
+DRR -0.16009133 DRM -4.8214064 DFF -0.063146845
+GFR -4.097515 GFE -5.795932
+Epoch [  281/  500], batch 0 | d_loss: 0.2232 | g_loss: 4.0975
+DRR -0.055620447 DRM -4.851763 DFF -0.15876186
+GFR -4.5029087 GFE -5.796031
+Epoch [  281/  500], batch 50 | d_loss: 0.2144 | g_loss: 4.5029
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_281_128.pkl
+DRR -0.054835122 DRM -4.787941 DFF -0.08128127
+GFR -4.8916683 GFE -5.7955604
+Epoch [  282/  500], batch 0 | d_loss: 0.1361 | g_loss: 4.8917
+DRR -0.08647292 DRM -4.8197727 DFF -0.021930598
+GFR -3.5638404 GFE -5.796633
+Epoch [  282/  500], batch 50 | d_loss: 0.1084 | g_loss: 3.5638
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_282_128.pkl
+DRR -0.06213148 DRM -4.809512 DFF -0.042634897
+GFR -4.479534 GFE -5.795694
+Epoch [  283/  500], batch 0 | d_loss: 0.1048 | g_loss: 4.4795
+DRR -0.03346818 DRM -4.7724385 DFF -0.033826254
+GFR -4.6794243 GFE -5.7960477
+Epoch [  283/  500], batch 50 | d_loss: 0.0673 | g_loss: 4.6794
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_283_128.pkl
+DRR -0.03376786 DRM -4.7997007 DFF -0.09813385
+GFR -4.809085 GFE -5.7961817
+Epoch [  284/  500], batch 0 | d_loss: 0.1319 | g_loss: 4.8091
+DRR -0.04778082 DRM -4.849597 DFF -0.059409764
+GFR -4.7375503 GFE -5.796124
+Epoch [  284/  500], batch 50 | d_loss: 0.1072 | g_loss: 4.7376
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_284_128.pkl
+DRR -0.016354356 DRM -4.786708 DFF -0.07244275
+GFR -4.4934316 GFE -5.7961173
+Epoch [  285/  500], batch 0 | d_loss: 0.0888 | g_loss: 4.4934
+DRR -0.025781166 DRM -4.843465 DFF -0.051556908
+GFR -4.91249 GFE -5.7955866
+Epoch [  285/  500], batch 50 | d_loss: 0.0773 | g_loss: 4.9125
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_285_128.pkl
+DRR -0.064005904 DRM -4.782424 DFF -0.013232918
+GFR -5.320015 GFE -5.7965617
+Epoch [  286/  500], batch 0 | d_loss: 0.0772 | g_loss: 5.3200
+DRR -0.03451726 DRM -4.853483 DFF -0.02841179
+GFR -5.3521366 GFE -5.795987
+Epoch [  286/  500], batch 50 | d_loss: 0.0629 | g_loss: 5.3521
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_286_128.pkl
+DRR -0.013911345 DRM -4.867881 DFF -0.021315197
+GFR -4.420719 GFE -5.795755
+Epoch [  287/  500], batch 0 | d_loss: 0.0352 | g_loss: 4.4207
+DRR -0.019129071 DRM -4.7735424 DFF -0.03878606
+GFR -4.8268895 GFE -5.7958126
+Epoch [  287/  500], batch 50 | d_loss: 0.0579 | g_loss: 4.8269
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_287_128.pkl
+DRR -0.015251231 DRM -4.778324 DFF -0.042117767
+GFR -4.7517457 GFE -5.796118
+Epoch [  288/  500], batch 0 | d_loss: 0.0574 | g_loss: 4.7517
+DRR -0.028150503 DRM -4.817569 DFF -0.015953176
+GFR -5.2631726 GFE -5.7959
+Epoch [  288/  500], batch 50 | d_loss: 0.0441 | g_loss: 5.2632
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_288_128.pkl
+DRR -0.01196586 DRM -4.8068705 DFF -0.032897208
+GFR -5.2303963 GFE -5.79535
+Epoch [  289/  500], batch 0 | d_loss: 0.0449 | g_loss: 5.2304
+DRR -0.03563951 DRM -4.8041716 DFF -0.0049707657
+GFR -5.108371 GFE -5.795992
+Epoch [  289/  500], batch 50 | d_loss: 0.0406 | g_loss: 5.1084
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_289_128.pkl
+DRR -0.006744791 DRM -4.840926 DFF -0.028892
+GFR -4.6451674 GFE -5.79578
+Epoch [  290/  500], batch 0 | d_loss: 0.0356 | g_loss: 4.6452
+DRR -0.019460123 DRM -4.8066206 DFF -0.023372578
+GFR -5.1650734 GFE -5.7959256
+Epoch [  290/  500], batch 50 | d_loss: 0.0428 | g_loss: 5.1651
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_290_128.pkl
+DRR -0.0076833484 DRM -4.7820063 DFF -0.00975186
+GFR -4.753069 GFE -5.7961907
+Epoch [  291/  500], batch 0 | d_loss: 0.0174 | g_loss: 4.7531
+DRR -0.04646977 DRM -4.824001 DFF -0.021228295
+GFR -5.24111 GFE -5.796288
+Epoch [  291/  500], batch 50 | d_loss: 0.0677 | g_loss: 5.2411
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_291_128.pkl
+DRR -0.007510284 DRM -4.8187695 DFF -0.058754135
+GFR -4.307883 GFE -5.796051
+Epoch [  292/  500], batch 0 | d_loss: 0.0663 | g_loss: 4.3079
+DRR -0.032260183 DRM -4.843366 DFF -0.017242357
+GFR -5.554214 GFE -5.7962084
+Epoch [  292/  500], batch 50 | d_loss: 0.0495 | g_loss: 5.5542
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_292_128.pkl
+DRR -0.008306233 DRM -4.804286 DFF -0.017964149
+GFR -5.685047 GFE -5.7957745
+Epoch [  293/  500], batch 0 | d_loss: 0.0263 | g_loss: 5.6850
+DRR -0.006842321 DRM -4.8044577 DFF -0.022100072
+GFR -5.056986 GFE -5.7957506
+Epoch [  293/  500], batch 50 | d_loss: 0.0289 | g_loss: 5.0570
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_293_128.pkl
+DRR -0.017484128 DRM -4.834111 DFF -0.01819652
+GFR -4.6463118 GFE -5.795548
+Epoch [  294/  500], batch 0 | d_loss: 0.0357 | g_loss: 4.6463
+DRR -0.01520242 DRM -4.841917 DFF -0.010261565
+GFR -4.9282618 GFE -5.796262
+Epoch [  294/  500], batch 50 | d_loss: 0.0255 | g_loss: 4.9283
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_294_128.pkl
+DRR -0.008181583 DRM -4.8145905 DFF -0.0287342
+GFR -5.6007323 GFE -5.7959795
+Epoch [  295/  500], batch 0 | d_loss: 0.0369 | g_loss: 5.6007
+DRR -0.016673706 DRM -4.7685328 DFF -0.01448742
+GFR -5.4462667 GFE -5.795675
+Epoch [  295/  500], batch 50 | d_loss: 0.0312 | g_loss: 5.4463
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_295_128.pkl
+DRR -0.0060761506 DRM -4.844879 DFF -0.009094838
+GFR -4.5927353 GFE -5.796318
+Epoch [  296/  500], batch 0 | d_loss: 0.0152 | g_loss: 4.5927
+DRR -0.0296732 DRM -4.798386 DFF -0.009298231
+GFR -5.4839315 GFE -5.7968845
+Epoch [  296/  500], batch 50 | d_loss: 0.0390 | g_loss: 5.4839
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_296_128.pkl
+DRR -0.003020352 DRM -4.758422 DFF -0.009670006
+GFR -6.120489 GFE -5.79546
+Epoch [  297/  500], batch 0 | d_loss: 0.0127 | g_loss: 6.1205
+DRR -0.01233696 DRM -4.808829 DFF -0.017411549
+GFR -6.581609 GFE -5.7967243
+Epoch [  297/  500], batch 50 | d_loss: 0.0297 | g_loss: 6.5816
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_297_128.pkl
+DRR -0.018645184 DRM -4.806849 DFF -0.022987336
+GFR -6.0293846 GFE -5.7955055
+Epoch [  298/  500], batch 0 | d_loss: 0.0416 | g_loss: 6.0294
+DRR -0.0072513144 DRM -4.7727857 DFF -0.009048983
+GFR -5.7404737 GFE -5.7957277
+Epoch [  298/  500], batch 50 | d_loss: 0.0163 | g_loss: 5.7405
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_298_128.pkl
+DRR -0.0036186948 DRM -4.822606 DFF -0.014980187
+GFR -4.9402056 GFE -5.795796
+Epoch [  299/  500], batch 0 | d_loss: 0.0186 | g_loss: 4.9402
+DRR -0.0067529785 DRM -4.7819834 DFF -0.017595146
+GFR -5.9061556 GFE -5.796278
+Epoch [  299/  500], batch 50 | d_loss: 0.0243 | g_loss: 5.9062
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_299_128.pkl
+DRR -0.012490571 DRM -4.772209 DFF -0.018237792
+GFR -5.2269735 GFE -5.795814
+Epoch [  300/  500], batch 0 | d_loss: 0.0307 | g_loss: 5.2270
+DRR -0.011451618 DRM -4.772723 DFF -0.011471098
+GFR -6.3429484 GFE -5.7960844
+Epoch [  300/  500], batch 50 | d_loss: 0.0229 | g_loss: 6.3429
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_300_128.pkl
+DRR -0.0062787062 DRM -4.824809 DFF -0.023843877
+GFR -6.1280804 GFE -5.7963533
+Epoch [  301/  500], batch 0 | d_loss: 0.0301 | g_loss: 6.1281
+DRR -0.027486 DRM -4.7732997 DFF -0.05662498
+GFR -5.6190796 GFE -5.7960544
+Epoch [  301/  500], batch 50 | d_loss: 0.0841 | g_loss: 5.6191
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_301_128.pkl
+DRR -0.0072846464 DRM -4.835295 DFF -0.013231092
+GFR -5.851495 GFE -5.7958813
+Epoch [  302/  500], batch 0 | d_loss: 0.0205 | g_loss: 5.8515
+DRR -0.013276418 DRM -4.8090324 DFF -0.03055474
+GFR -5.758794 GFE -5.7957077
+Epoch [  302/  500], batch 50 | d_loss: 0.0438 | g_loss: 5.7588
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_302_128.pkl
+DRR -0.04612756 DRM -4.7823696 DFF -0.0030275784
+GFR -5.5182934 GFE -5.7966976
+Epoch [  303/  500], batch 0 | d_loss: 0.0492 | g_loss: 5.5183
+DRR -0.015395293 DRM -4.7686825 DFF -0.017025474
+GFR -6.038598 GFE -5.7963862
+Epoch [  303/  500], batch 50 | d_loss: 0.0324 | g_loss: 6.0386
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_303_128.pkl
+DRR -0.007348838 DRM -4.7900367 DFF -0.0072919414
+GFR -5.7551255 GFE -5.796299
+Epoch [  304/  500], batch 0 | d_loss: 0.0146 | g_loss: 5.7551
+DRR -0.009040484 DRM -4.8294334 DFF -0.014710515
+GFR -5.624687 GFE -5.7957177
+Epoch [  304/  500], batch 50 | d_loss: 0.0238 | g_loss: 5.6247
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_304_128.pkl
+DRR -0.008856924 DRM -4.7417393 DFF -0.018166143
+GFR -5.4793773 GFE -5.796268
+Epoch [  305/  500], batch 0 | d_loss: 0.0270 | g_loss: 5.4794
+DRR -0.010348582 DRM -4.837222 DFF -0.013320804
+GFR -5.625578 GFE -5.795731
+Epoch [  305/  500], batch 50 | d_loss: 0.0237 | g_loss: 5.6256
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_305_128.pkl
+DRR -0.0136103025 DRM -4.78975 DFF -0.015877206
+GFR -5.0682096 GFE -5.7952285
+Epoch [  306/  500], batch 0 | d_loss: 0.0295 | g_loss: 5.0682
+DRR -0.0076530487 DRM -4.77537 DFF -0.017215014
+GFR -7.04381 GFE -5.796071
+Epoch [  306/  500], batch 50 | d_loss: 0.0249 | g_loss: 7.0438
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_306_128.pkl
+DRR -0.007686777 DRM -4.785489 DFF -0.0039902898
+GFR -6.1338596 GFE -5.79642
+Epoch [  307/  500], batch 0 | d_loss: 0.0117 | g_loss: 6.1339
+DRR -0.018282346 DRM -4.8234577 DFF -0.02187284
+GFR -6.064157 GFE -5.796026
+Epoch [  307/  500], batch 50 | d_loss: 0.0402 | g_loss: 6.0642
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_307_128.pkl
+DRR -0.01557935 DRM -4.777551 DFF -0.0064230026
+GFR -6.711851 GFE -5.7964816
+Epoch [  308/  500], batch 0 | d_loss: 0.0220 | g_loss: 6.7119
+DRR -0.013520723 DRM -4.7642107 DFF -0.006025771
+GFR -5.912724 GFE -5.7963934
+Epoch [  308/  500], batch 50 | d_loss: 0.0195 | g_loss: 5.9127
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_308_128.pkl
+DRR -0.004924931 DRM -4.769562 DFF -0.013931702
+GFR -5.7610416 GFE -5.796352
+Epoch [  309/  500], batch 0 | d_loss: 0.0189 | g_loss: 5.7610
+DRR -0.012848642 DRM -4.8463354 DFF -0.007830607
+GFR -5.8307247 GFE -5.7962503
+Epoch [  309/  500], batch 50 | d_loss: 0.0207 | g_loss: 5.8307
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_309_128.pkl
+DRR -0.003706499 DRM -4.7772703 DFF -0.008984841
+GFR -5.4184685 GFE -5.7964473
+Epoch [  310/  500], batch 0 | d_loss: 0.0127 | g_loss: 5.4185
+DRR -0.033942316 DRM -4.811919 DFF -0.019412987
+GFR -5.8513727 GFE -5.79526
+Epoch [  310/  500], batch 50 | d_loss: 0.0534 | g_loss: 5.8514
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_310_128.pkl
+DRR -0.0333399 DRM -4.837236 DFF -0.009358048
+GFR -7.0843077 GFE -5.79543
+Epoch [  311/  500], batch 0 | d_loss: 0.0427 | g_loss: 7.0843
+DRR -0.010461008 DRM -4.7477283 DFF -0.016589243
+GFR -6.4085164 GFE -5.7961473
+Epoch [  311/  500], batch 50 | d_loss: 0.0271 | g_loss: 6.4085
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_311_128.pkl
+DRR -0.009137689 DRM -4.756668 DFF -0.009075811
+GFR -8.164421 GFE -5.7961164
+Epoch [  312/  500], batch 0 | d_loss: 0.0182 | g_loss: 8.1644
+DRR -0.008465368 DRM -4.812648 DFF -0.01637382
+GFR -6.2365675 GFE -5.796214
+Epoch [  312/  500], batch 50 | d_loss: 0.0248 | g_loss: 6.2366
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_312_128.pkl
+DRR -0.004367752 DRM -4.7842426 DFF -0.014885567
+GFR -6.6707363 GFE -5.7960653
+Epoch [  313/  500], batch 0 | d_loss: 0.0193 | g_loss: 6.6707
+DRR -0.006592843 DRM -4.763793 DFF -0.011196154
+GFR -6.0975866 GFE -5.7960753
+Epoch [  313/  500], batch 50 | d_loss: 0.0178 | g_loss: 6.0976
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_313_128.pkl
+DRR -0.003114783 DRM -4.775352 DFF -0.00919172
+GFR -5.7880917 GFE -5.7954893
+Epoch [  314/  500], batch 0 | d_loss: 0.0123 | g_loss: 5.7881
+DRR -0.007845843 DRM -4.8146553 DFF -0.010525401
+GFR -6.1664968 GFE -5.795976
+Epoch [  314/  500], batch 50 | d_loss: 0.0184 | g_loss: 6.1665
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_314_128.pkl
+DRR -0.009676265 DRM -4.826332 DFF -0.007011112
+GFR -6.7887783 GFE -5.79711
+Epoch [  315/  500], batch 0 | d_loss: 0.0167 | g_loss: 6.7888
+DRR -0.013167905 DRM -4.8140182 DFF -0.0049547344
+GFR -5.206048 GFE -5.7968197
+Epoch [  315/  500], batch 50 | d_loss: 0.0181 | g_loss: 5.2060
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_315_128.pkl
+DRR -0.0072270716 DRM -4.8331122 DFF -0.007420008
+GFR -6.130133 GFE -5.7968397
+Epoch [  316/  500], batch 0 | d_loss: 0.0146 | g_loss: 6.1301
+DRR -0.0030442462 DRM -4.799747 DFF -0.006063492
+GFR -6.458935 GFE -5.796485
+Epoch [  316/  500], batch 50 | d_loss: 0.0091 | g_loss: 6.4589
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_316_128.pkl
+DRR -0.003525107 DRM -4.765236 DFF -0.007551702
+GFR -6.217106 GFE -5.7967834
+Epoch [  317/  500], batch 0 | d_loss: 0.0111 | g_loss: 6.2171
+DRR -0.008154281 DRM -4.813676 DFF -0.0038606669
+GFR -6.1158504 GFE -5.7969747
+Epoch [  317/  500], batch 50 | d_loss: 0.0120 | g_loss: 6.1159
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_317_128.pkl
+DRR -0.0015391686 DRM -4.785712 DFF -0.03576809
+GFR -6.25911 GFE -5.796976
+Epoch [  318/  500], batch 0 | d_loss: 0.0373 | g_loss: 6.2591
+DRR -0.0069101797 DRM -4.7944255 DFF -0.03710918
+GFR -7.000238 GFE -5.7970214
+Epoch [  318/  500], batch 50 | d_loss: 0.0440 | g_loss: 7.0002
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_318_128.pkl
+DRR -0.0011838155 DRM -4.7558208 DFF -0.007766379
+GFR -6.463398 GFE -5.797014
+Epoch [  319/  500], batch 0 | d_loss: 0.0090 | g_loss: 6.4634
+DRR -0.49317196 DRM -4.811522 DFF -1.8805772
+GFR -7.238768 GFE -5.794279
+Epoch [  319/  500], batch 50 | d_loss: 2.3737 | g_loss: 7.2388
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_319_128.pkl
+DRR -1.6915697 DRM -4.810573 DFF -1.347607
+GFR -4.4176064 GFE -5.794276
+Epoch [  320/  500], batch 0 | d_loss: 3.0392 | g_loss: 4.4176
+DRR -0.3914172 DRM -4.838372 DFF -0.9547671
+GFR -5.102131 GFE -5.795164
+Epoch [  320/  500], batch 50 | d_loss: 1.3462 | g_loss: 5.1021
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_320_128.pkl
+DRR -0.17160767 DRM -4.810797 DFF -0.47002342
+GFR -6.191496 GFE -5.7952766
+Epoch [  321/  500], batch 0 | d_loss: 0.6416 | g_loss: 6.1915
+DRR -0.2969837 DRM -4.8118963 DFF -0.07092867
+GFR -3.9585564 GFE -5.795582
+Epoch [  321/  500], batch 50 | d_loss: 0.3679 | g_loss: 3.9586
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_321_128.pkl
+DRR -0.069584444 DRM -4.777655 DFF -0.20533395
+GFR -4.573947 GFE -5.7958555
+Epoch [  322/  500], batch 0 | d_loss: 0.2749 | g_loss: 4.5739
+DRR -0.057637144 DRM -4.8343544 DFF -0.021151565
+GFR -4.4532824 GFE -5.7959642
+Epoch [  322/  500], batch 50 | d_loss: 0.0788 | g_loss: 4.4533
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_322_128.pkl
+DRR -0.044304878 DRM -4.818221 DFF -0.09445116
+GFR -4.347568 GFE -5.7953215
+Epoch [  323/  500], batch 0 | d_loss: 0.1388 | g_loss: 4.3476
+DRR -0.09145041 DRM -4.7925224 DFF -0.033577707
+GFR -5.303488 GFE -5.79572
+Epoch [  323/  500], batch 50 | d_loss: 0.1250 | g_loss: 5.3035
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_323_128.pkl
+DRR -0.042709388 DRM -4.824913 DFF -0.023229044
+GFR -5.188521 GFE -5.795373
+Epoch [  324/  500], batch 0 | d_loss: 0.0659 | g_loss: 5.1885
+DRR -0.04324563 DRM -4.7700996 DFF -0.01790223
+GFR -4.5774198 GFE -5.7951794
+Epoch [  324/  500], batch 50 | d_loss: 0.0611 | g_loss: 4.5774
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_324_128.pkl
+DRR -0.02118922 DRM -4.828102 DFF -0.04430817
+GFR -5.2406983 GFE -5.7957706
+Epoch [  325/  500], batch 0 | d_loss: 0.0655 | g_loss: 5.2407
+DRR -0.037857503 DRM -4.7749586 DFF -0.025001818
+GFR -6.127625 GFE -5.795661
+Epoch [  325/  500], batch 50 | d_loss: 0.0629 | g_loss: 6.1276
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_325_128.pkl
+DRR -0.021360476 DRM -4.8728623 DFF -0.020031625
+GFR -5.510871 GFE -5.795042
+Epoch [  326/  500], batch 0 | d_loss: 0.0414 | g_loss: 5.5109
+DRR -0.028557865 DRM -4.7919097 DFF -0.053617053
+GFR -3.98007 GFE -5.7967
+Epoch [  326/  500], batch 50 | d_loss: 0.0822 | g_loss: 3.9801
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_326_128.pkl
+DRR -0.022548454 DRM -4.8293457 DFF -0.016180724
+GFR -5.1304226 GFE -5.795645
+Epoch [  327/  500], batch 0 | d_loss: 0.0387 | g_loss: 5.1304
+DRR -0.04996808 DRM -4.819936 DFF -0.032085545
+GFR -4.9209146 GFE -5.796443
+Epoch [  327/  500], batch 50 | d_loss: 0.0821 | g_loss: 4.9209
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_327_128.pkl
+DRR -0.018956598 DRM -4.8264437 DFF -0.032437753
+GFR -5.212302 GFE -5.7956963
+Epoch [  328/  500], batch 0 | d_loss: 0.0514 | g_loss: 5.2123
+DRR -0.019262947 DRM -4.794894 DFF -0.020220088
+GFR -5.1217017 GFE -5.7955556
+Epoch [  328/  500], batch 50 | d_loss: 0.0395 | g_loss: 5.1217
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_328_128.pkl
+DRR -0.012449769 DRM -4.8023324 DFF -0.013679711
+GFR -5.0168896 GFE -5.7953215
+Epoch [  329/  500], batch 0 | d_loss: 0.0261 | g_loss: 5.0169
+DRR -0.054463744 DRM -4.825367 DFF -0.010967627
+GFR -4.2452016 GFE -5.7958145
+Epoch [  329/  500], batch 50 | d_loss: 0.0654 | g_loss: 4.2452
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_329_128.pkl
+DRR -0.009712132 DRM -4.7649817 DFF -0.020766191
+GFR -5.2111454 GFE -5.795471
+Epoch [  330/  500], batch 0 | d_loss: 0.0305 | g_loss: 5.2111
+DRR -0.021481436 DRM -4.7921724 DFF -0.017925978
+GFR -5.5252237 GFE -5.7955236
+Epoch [  330/  500], batch 50 | d_loss: 0.0394 | g_loss: 5.5252
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_330_128.pkl
+DRR -0.008477904 DRM -4.811685 DFF -0.016184265
+GFR -4.892831 GFE -5.7960196
+Epoch [  331/  500], batch 0 | d_loss: 0.0247 | g_loss: 4.8928
+DRR -0.009057406 DRM -4.840982 DFF -0.024712972
+GFR -6.180089 GFE -5.7955546
+Epoch [  331/  500], batch 50 | d_loss: 0.0338 | g_loss: 6.1801
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_331_128.pkl
+DRR -0.0032089157 DRM -4.7645674 DFF -0.028642897
+GFR -4.869938 GFE -5.7960997
+Epoch [  332/  500], batch 0 | d_loss: 0.0319 | g_loss: 4.8699
+DRR -0.027603634 DRM -4.834879 DFF -0.025624875
+GFR -5.609394 GFE -5.7959156
+Epoch [  332/  500], batch 50 | d_loss: 0.0532 | g_loss: 5.6094
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_332_128.pkl
+DRR -0.0024331668 DRM -4.8101797 DFF -0.024632365
+GFR -5.287979 GFE -5.795551
+Epoch [  333/  500], batch 0 | d_loss: 0.0271 | g_loss: 5.2880
+DRR -0.012912177 DRM -4.7885766 DFF -0.011792425
+GFR -6.037682 GFE -5.795842
+Epoch [  333/  500], batch 50 | d_loss: 0.0247 | g_loss: 6.0377
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_333_128.pkl
+DRR -0.007056468 DRM -4.8142586 DFF -0.011449741
+GFR -5.558968 GFE -5.7956944
+Epoch [  334/  500], batch 0 | d_loss: 0.0185 | g_loss: 5.5590
+DRR -0.010635428 DRM -4.7634974 DFF -0.016227817
+GFR -6.035108 GFE -5.796159
+Epoch [  334/  500], batch 50 | d_loss: 0.0269 | g_loss: 6.0351
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_334_128.pkl
+DRR -0.0067081437 DRM -4.765458 DFF -0.010923302
+GFR -4.8180203 GFE -5.796543
+Epoch [  335/  500], batch 0 | d_loss: 0.0176 | g_loss: 4.8180
+DRR -0.011328645 DRM -4.7751203 DFF -0.0127939675
+GFR -5.9748926 GFE -5.795908
+Epoch [  335/  500], batch 50 | d_loss: 0.0241 | g_loss: 5.9749
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_335_128.pkl
+DRR -0.0068129716 DRM -4.7638183 DFF -0.009935602
+GFR -5.4432206 GFE -5.796521
+Epoch [  336/  500], batch 0 | d_loss: 0.0167 | g_loss: 5.4432
+DRR -0.009755379 DRM -4.7872496 DFF -0.05285574
+GFR -5.908003 GFE -5.795542
+Epoch [  336/  500], batch 50 | d_loss: 0.0626 | g_loss: 5.9080
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_336_128.pkl
+DRR -0.005326461 DRM -4.7382584 DFF -0.023596592
+GFR -4.7184124 GFE -5.7951813
+Epoch [  337/  500], batch 0 | d_loss: 0.0289 | g_loss: 4.7184
+DRR -0.010357755 DRM -4.7488523 DFF -0.016855815
+GFR -6.309119 GFE -5.795577
+Epoch [  337/  500], batch 50 | d_loss: 0.0272 | g_loss: 6.3091
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_337_128.pkl
+DRR -0.004030299 DRM -4.7803288 DFF -0.01967928
+GFR -5.3147984 GFE -5.7964907
+Epoch [  338/  500], batch 0 | d_loss: 0.0237 | g_loss: 5.3148
+DRR -0.007825722 DRM -4.845031 DFF -0.01496095
+GFR -4.922666 GFE -5.7954636
+Epoch [  338/  500], batch 50 | d_loss: 0.0228 | g_loss: 4.9227
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_338_128.pkl
+DRR -0.008899052 DRM -4.769759 DFF -0.006527625
+GFR -6.54749 GFE -5.796194
+Epoch [  339/  500], batch 0 | d_loss: 0.0154 | g_loss: 6.5475
+DRR -0.008312352 DRM -4.7855806 DFF -0.0061598048
+GFR -5.881931 GFE -5.7955375
+Epoch [  339/  500], batch 50 | d_loss: 0.0145 | g_loss: 5.8819
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_339_128.pkl
+DRR -0.014838496 DRM -4.8114324 DFF -0.006765405
+GFR -5.9253473 GFE -5.795459
+Epoch [  340/  500], batch 0 | d_loss: 0.0216 | g_loss: 5.9253
+DRR -0.0057561747 DRM -4.840674 DFF -0.009384742
+GFR -5.8548956 GFE -5.7964573
+Epoch [  340/  500], batch 50 | d_loss: 0.0151 | g_loss: 5.8549
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_340_128.pkl
+DRR -0.006488931 DRM -4.8126516 DFF -0.005515189
+GFR -6.30591 GFE -5.795843
+Epoch [  341/  500], batch 0 | d_loss: 0.0120 | g_loss: 6.3059
+DRR -0.014117807 DRM -4.790065 DFF -0.006979566
+GFR -6.543762 GFE -5.7960224
+Epoch [  341/  500], batch 50 | d_loss: 0.0211 | g_loss: 6.5438
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_341_128.pkl
+DRR -0.0023298692 DRM -4.8182507 DFF -0.040984534
+GFR -5.776045 GFE -5.7962093
+Epoch [  342/  500], batch 0 | d_loss: 0.0433 | g_loss: 5.7760
+DRR -0.01090106 DRM -4.7555637 DFF -0.0110838385
+GFR -6.5239773 GFE -5.7958975
+Epoch [  342/  500], batch 50 | d_loss: 0.0220 | g_loss: 6.5240
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_342_128.pkl
+DRR -0.00615481 DRM -4.8066044 DFF -0.0027972471
+GFR -6.2153006 GFE -5.7957697
+Epoch [  343/  500], batch 0 | d_loss: 0.0090 | g_loss: 6.2153
+DRR -0.006933634 DRM -4.801301 DFF -0.005953365
+GFR -6.153038 GFE -5.796215
+Epoch [  343/  500], batch 50 | d_loss: 0.0129 | g_loss: 6.1530
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_343_128.pkl
+DRR -0.0015036613 DRM -4.803458 DFF -0.0174337
+GFR -5.32255 GFE -5.795931
+Epoch [  344/  500], batch 0 | d_loss: 0.0189 | g_loss: 5.3225
+DRR -0.0028065327 DRM -4.772775 DFF -0.0082953945
+GFR -5.837439 GFE -5.79592
+Epoch [  344/  500], batch 50 | d_loss: 0.0111 | g_loss: 5.8374
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_344_128.pkl
+DRR -0.002533909 DRM -4.7963514 DFF -0.012673265
+GFR -6.536127 GFE -5.795988
+Epoch [  345/  500], batch 0 | d_loss: 0.0152 | g_loss: 6.5361
+DRR -0.005354897 DRM -4.7736454 DFF -0.02068385
+GFR -6.125226 GFE -5.796133
+Epoch [  345/  500], batch 50 | d_loss: 0.0260 | g_loss: 6.1252
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_345_128.pkl
+DRR -0.0035739413 DRM -4.80311 DFF -0.016696457
+GFR -5.500738 GFE -5.796391
+Epoch [  346/  500], batch 0 | d_loss: 0.0203 | g_loss: 5.5007
+DRR -0.008601489 DRM -4.79782 DFF -0.015300819
+GFR -6.708483 GFE -5.7960296
+Epoch [  346/  500], batch 50 | d_loss: 0.0239 | g_loss: 6.7085
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_346_128.pkl
+DRR -0.002902837 DRM -4.7583914 DFF -0.0044625523
+GFR -7.134942 GFE -5.796132
+Epoch [  347/  500], batch 0 | d_loss: 0.0074 | g_loss: 7.1349
+DRR -0.0030062636 DRM -4.827339 DFF -0.011642336
+GFR -7.163105 GFE -5.796648
+Epoch [  347/  500], batch 50 | d_loss: 0.0146 | g_loss: 7.1631
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_347_128.pkl
+DRR -0.0042364635 DRM -4.781668 DFF -0.010127172
+GFR -6.4207273 GFE -5.7967777
+Epoch [  348/  500], batch 0 | d_loss: 0.0144 | g_loss: 6.4207
+DRR -0.010577418 DRM -4.814183 DFF -0.003014063
+GFR -6.007369 GFE -5.796675
+Epoch [  348/  500], batch 50 | d_loss: 0.0136 | g_loss: 6.0074
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_348_128.pkl
+DRR -0.0020998355 DRM -4.7733574 DFF -0.008370135
+GFR -5.375181 GFE -5.7967067
+Epoch [  349/  500], batch 0 | d_loss: 0.0105 | g_loss: 5.3752
+DRR -0.0036456487 DRM -4.7989016 DFF -0.0110862125
+GFR -5.7753396 GFE -5.796025
+Epoch [  349/  500], batch 50 | d_loss: 0.0147 | g_loss: 5.7753
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_349_128.pkl
+DRR -0.0017686614 DRM -4.829362 DFF -0.012226911
+GFR -5.9230204 GFE -5.7960405
+Epoch [  350/  500], batch 0 | d_loss: 0.0140 | g_loss: 5.9230
+DRR -0.00828396 DRM -4.7580156 DFF -0.0032302886
+GFR -5.627034 GFE -5.7964735
+Epoch [  350/  500], batch 50 | d_loss: 0.0115 | g_loss: 5.6270
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_350_128.pkl
+DRR -0.004243628 DRM -4.7900705 DFF -0.012941848
+GFR -6.585984 GFE -5.796138
+Epoch [  351/  500], batch 0 | d_loss: 0.0172 | g_loss: 6.5860
+DRR -0.007910222 DRM -4.7962766 DFF -0.007231704
+GFR -6.234786 GFE -5.796126
+Epoch [  351/  500], batch 50 | d_loss: 0.0151 | g_loss: 6.2348
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_351_128.pkl
+DRR -0.004296075 DRM -4.830677 DFF -0.055985816
+GFR -7.343995 GFE -5.796606
+Epoch [  352/  500], batch 0 | d_loss: 0.0603 | g_loss: 7.3440
+DRR -0.0032070023 DRM -4.8264923 DFF -0.0063116713
+GFR -7.593465 GFE -5.7957144
+Epoch [  352/  500], batch 50 | d_loss: 0.0095 | g_loss: 7.5935
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_352_128.pkl
+DRR -0.0012926913 DRM -4.810154 DFF -0.036425203
+GFR -7.762604 GFE -5.796036
+Epoch [  353/  500], batch 0 | d_loss: 0.0377 | g_loss: 7.7626
+DRR -0.007811535 DRM -4.8122654 DFF -0.013043707
+GFR -7.0862827 GFE -5.796152
+Epoch [  353/  500], batch 50 | d_loss: 0.0209 | g_loss: 7.0863
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_353_128.pkl
+DRR -0.003098194 DRM -4.7979155 DFF -0.011975448
+GFR -6.7280884 GFE -5.7961407
+Epoch [  354/  500], batch 0 | d_loss: 0.0151 | g_loss: 6.7281
+DRR -0.0022596277 DRM -4.8258758 DFF -0.003881544
+GFR -6.2336855 GFE -5.7959433
+Epoch [  354/  500], batch 50 | d_loss: 0.0061 | g_loss: 6.2337
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_354_128.pkl
+DRR -0.0062634074 DRM -4.761571 DFF -0.0022400375
+GFR -6.4228497 GFE -5.7959175
+Epoch [  355/  500], batch 0 | d_loss: 0.0085 | g_loss: 6.4228
+DRR -0.0016978628 DRM -4.818511 DFF -0.004962433
+GFR -6.5598993 GFE -5.79612
+Epoch [  355/  500], batch 50 | d_loss: 0.0067 | g_loss: 6.5599
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_355_128.pkl
+DRR -0.0026124232 DRM -4.8105717 DFF -0.0038258524
+GFR -6.18254 GFE -5.7959743
+Epoch [  356/  500], batch 0 | d_loss: 0.0064 | g_loss: 6.1825
+DRR -0.005569705 DRM -4.798666 DFF -0.0050796825
+GFR -6.5224414 GFE -5.7962074
+Epoch [  356/  500], batch 50 | d_loss: 0.0106 | g_loss: 6.5224
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_356_128.pkl
+DRR -0.0030430038 DRM -4.7950716 DFF -0.010370991
+GFR -6.9997234 GFE -5.796601
+Epoch [  357/  500], batch 0 | d_loss: 0.0134 | g_loss: 6.9997
+DRR -0.0052542454 DRM -4.819898 DFF -0.0033150516
+GFR -7.222252 GFE -5.796264
+Epoch [  357/  500], batch 50 | d_loss: 0.0086 | g_loss: 7.2223
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_357_128.pkl
+DRR -0.0010178704 DRM -4.810196 DFF -0.019001776
+GFR -6.540866 GFE -5.7959266
+Epoch [  358/  500], batch 0 | d_loss: 0.0200 | g_loss: 6.5409
+DRR -0.004740614 DRM -4.7856703 DFF -0.0055400534
+GFR -6.7183285 GFE -5.796008
+Epoch [  358/  500], batch 50 | d_loss: 0.0103 | g_loss: 6.7183
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_358_128.pkl
+DRR -0.0026339942 DRM -4.7960653 DFF -0.002678854
+GFR -7.279481 GFE -5.7963066
+Epoch [  359/  500], batch 0 | d_loss: 0.0053 | g_loss: 7.2795
+DRR -0.0029356778 DRM -4.8094783 DFF -0.024858473
+GFR -7.7801685 GFE -5.7966614
+Epoch [  359/  500], batch 50 | d_loss: 0.0278 | g_loss: 7.7802
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_359_128.pkl
+DRR -0.0032100708 DRM -4.806037 DFF -0.0046646837
+GFR -6.770075 GFE -5.796059
+Epoch [  360/  500], batch 0 | d_loss: 0.0079 | g_loss: 6.7701
+DRR -0.010473607 DRM -4.81227 DFF -0.003771561
+GFR -7.281872 GFE -5.7956347
+Epoch [  360/  500], batch 50 | d_loss: 0.0142 | g_loss: 7.2819
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_360_128.pkl
+DRR -0.0025065679 DRM -4.7945156 DFF -0.0067629614
+GFR -5.639402 GFE -5.7959785
+Epoch [  361/  500], batch 0 | d_loss: 0.0093 | g_loss: 5.6394
+DRR -0.0017610522 DRM -4.7943597 DFF -0.0025246586
+GFR -7.0036335 GFE -5.795999
+Epoch [  361/  500], batch 50 | d_loss: 0.0043 | g_loss: 7.0036
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_361_128.pkl
+DRR -0.002013325 DRM -4.8141756 DFF -0.010525436
+GFR -7.995316 GFE -5.7957306
+Epoch [  362/  500], batch 0 | d_loss: 0.0125 | g_loss: 7.9953
+DRR -0.0042747306 DRM -4.78469 DFF -0.004082313
+GFR -7.1442723 GFE -5.795744
+Epoch [  362/  500], batch 50 | d_loss: 0.0084 | g_loss: 7.1443
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_362_128.pkl
+DRR -0.005003068 DRM -4.7935224 DFF -0.004847049
+GFR -7.2942395 GFE -5.7957172
+Epoch [  363/  500], batch 0 | d_loss: 0.0099 | g_loss: 7.2942
+DRR -0.0029790308 DRM -4.7719765 DFF -0.0037548554
+GFR -7.2234235 GFE -5.796377
+Epoch [  363/  500], batch 50 | d_loss: 0.0067 | g_loss: 7.2234
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_363_128.pkl
+DRR -0.0011132977 DRM -4.80828 DFF -0.0028085124
+GFR -6.545501 GFE -5.7961006
+Epoch [  364/  500], batch 0 | d_loss: 0.0039 | g_loss: 6.5455
+DRR -0.002784844 DRM -4.7896075 DFF -0.002590274
+GFR -7.213443 GFE -5.795763
+Epoch [  364/  500], batch 50 | d_loss: 0.0054 | g_loss: 7.2134
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_364_128.pkl
+DRR -0.005106454 DRM -4.7999096 DFF -0.010183655
+GFR -7.6583695 GFE -5.795775
+Epoch [  365/  500], batch 0 | d_loss: 0.0153 | g_loss: 7.6584
+DRR -0.00017793164 DRM -4.8014803 DFF -7.054103
+GFR -10.602009 GFE -5.7959967
+Epoch [  365/  500], batch 50 | d_loss: 7.0543 | g_loss: 10.6020
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_365_128.pkl
+DRR -1.7039461 DRM -4.8096323 DFF -0.662902
+GFR -4.988047 GFE -5.795513
+Epoch [  366/  500], batch 0 | d_loss: 2.3668 | g_loss: 4.9880
+DRR -0.29225293 DRM -4.7921176 DFF -0.021283159
+GFR -6.141651 GFE -5.7948637
+Epoch [  366/  500], batch 50 | d_loss: 0.3135 | g_loss: 6.1417
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_366_128.pkl
+DRR -0.082445964 DRM -4.8423853 DFF -1.5084467
+GFR -9.187605 GFE -5.7953625
+Epoch [  367/  500], batch 0 | d_loss: 1.5909 | g_loss: 9.1876
+DRR -0.28003812 DRM -4.817701 DFF -0.5289659
+GFR -7.7676363 GFE -5.796067
+Epoch [  367/  500], batch 50 | d_loss: 0.8090 | g_loss: 7.7676
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_367_128.pkl
+DRR -0.32297033 DRM -4.806002 DFF -0.010101932
+GFR -6.9271765 GFE -5.7954674
+Epoch [  368/  500], batch 0 | d_loss: 0.3331 | g_loss: 6.9272
+DRR -0.13101816 DRM -4.8140345 DFF -0.018944688
+GFR -5.7314596 GFE -5.79593
+Epoch [  368/  500], batch 50 | d_loss: 0.1500 | g_loss: 5.7315
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_368_128.pkl
+DRR -0.01615924 DRM -4.8101063 DFF -0.1497151
+GFR -6.2304726 GFE -5.795593
+Epoch [  369/  500], batch 0 | d_loss: 0.1659 | g_loss: 6.2305
+DRR -0.015710842 DRM -4.831293 DFF -0.04217393
+GFR -5.3837175 GFE -5.79564
+Epoch [  369/  500], batch 50 | d_loss: 0.0579 | g_loss: 5.3837
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_369_128.pkl
+DRR -0.01627089 DRM -4.7909784 DFF -0.05991409
+GFR -5.0420594 GFE -5.795871
+Epoch [  370/  500], batch 0 | d_loss: 0.0762 | g_loss: 5.0421
+DRR -0.05615516 DRM -4.790518 DFF -0.0045599453
+GFR -6.228306 GFE -5.7955656
+Epoch [  370/  500], batch 50 | d_loss: 0.0607 | g_loss: 6.2283
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_370_128.pkl
+DRR -0.01802336 DRM -4.801301 DFF -0.030404065
+GFR -5.4521184 GFE -5.7955565
+Epoch [  371/  500], batch 0 | d_loss: 0.0484 | g_loss: 5.4521
+DRR -0.017293204 DRM -4.829748 DFF -0.06376427
+GFR -4.8800125 GFE -5.7957096
+Epoch [  371/  500], batch 50 | d_loss: 0.0811 | g_loss: 4.8800
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_371_128.pkl
+DRR -0.009409609 DRM -4.81864 DFF -0.05400859
+GFR -4.992985 GFE -5.795669
+Epoch [  372/  500], batch 0 | d_loss: 0.0634 | g_loss: 4.9930
+DRR -0.046551485 DRM -4.7843466 DFF -0.027172912
+GFR -4.645889 GFE -5.7956257
+Epoch [  372/  500], batch 50 | d_loss: 0.0737 | g_loss: 4.6459
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_372_128.pkl
+DRR -0.007146074 DRM -4.7956944 DFF -0.021019917
+GFR -4.9821296 GFE -5.79587
+Epoch [  373/  500], batch 0 | d_loss: 0.0282 | g_loss: 4.9821
+DRR -0.053355057 DRM -4.807535 DFF -0.014205908
+GFR -4.7928123 GFE -5.7954235
+Epoch [  373/  500], batch 50 | d_loss: 0.0676 | g_loss: 4.7928
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_373_128.pkl
+DRR -0.009360725 DRM -4.8317537 DFF -0.03646765
+GFR -4.4938564 GFE -5.7956743
+Epoch [  374/  500], batch 0 | d_loss: 0.0458 | g_loss: 4.4939
+DRR -0.012145961 DRM -4.8317914 DFF -0.02819305
+GFR -5.601712 GFE -5.79582
+Epoch [  374/  500], batch 50 | d_loss: 0.0403 | g_loss: 5.6017
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_374_128.pkl
+DRR -0.008060506 DRM -4.8030186 DFF -0.03726875
+GFR -6.277026 GFE -5.795766
+Epoch [  375/  500], batch 0 | d_loss: 0.0453 | g_loss: 6.2770
+DRR -0.019125799 DRM -4.8046227 DFF -0.018386919
+GFR -5.425491 GFE -5.7960453
+Epoch [  375/  500], batch 50 | d_loss: 0.0375 | g_loss: 5.4255
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_375_128.pkl
+DRR -0.029078588 DRM -4.7911 DFF -0.010662449
+GFR -5.6140633 GFE -5.795718
+Epoch [  376/  500], batch 0 | d_loss: 0.0397 | g_loss: 5.6141
+DRR -0.020781333 DRM -4.8181553 DFF -0.011703005
+GFR -4.82487 GFE -5.795664
+Epoch [  376/  500], batch 50 | d_loss: 0.0325 | g_loss: 4.8249
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_376_128.pkl
+DRR -0.009816967 DRM -4.811618 DFF -0.031138986
+GFR -5.1065283 GFE -5.796198
+Epoch [  377/  500], batch 0 | d_loss: 0.0410 | g_loss: 5.1065
+DRR -0.013228631 DRM -4.81633 DFF -0.019836701
+GFR -6.1821203 GFE -5.7961645
+Epoch [  377/  500], batch 50 | d_loss: 0.0331 | g_loss: 6.1821
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_377_128.pkl
+DRR -0.008183837 DRM -4.800639 DFF -0.020859756
+GFR -4.8572893 GFE -5.7955704
+Epoch [  378/  500], batch 0 | d_loss: 0.0290 | g_loss: 4.8573
+DRR -0.028115641 DRM -4.7713017 DFF -0.011098753
+GFR -5.589821 GFE -5.796052
+Epoch [  378/  500], batch 50 | d_loss: 0.0392 | g_loss: 5.5898
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_378_128.pkl
+DRR -0.007701545 DRM -4.810014 DFF -0.021079816
+GFR -5.87965 GFE -5.7955823
+Epoch [  379/  500], batch 0 | d_loss: 0.0288 | g_loss: 5.8797
+DRR -0.005558746 DRM -4.7802873 DFF -0.007587506
+GFR -5.699957 GFE -5.795582
+Epoch [  379/  500], batch 50 | d_loss: 0.0131 | g_loss: 5.7000
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_379_128.pkl
+DRR -0.0056291567 DRM -4.7958655 DFF -0.01069667
+GFR -5.620744 GFE -5.796618
+Epoch [  380/  500], batch 0 | d_loss: 0.0163 | g_loss: 5.6207
+DRR -0.014094362 DRM -4.8023686 DFF -0.00949357
+GFR -5.066777 GFE -5.796012
+Epoch [  380/  500], batch 50 | d_loss: 0.0236 | g_loss: 5.0668
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_380_128.pkl
+DRR -0.0071078204 DRM -4.8287745 DFF -0.01421331
+GFR -5.3905945 GFE -5.795989
+Epoch [  381/  500], batch 0 | d_loss: 0.0213 | g_loss: 5.3906
+DRR -0.014164614 DRM -4.795706 DFF -0.011503028
+GFR -5.190635 GFE -5.7959747
+Epoch [  381/  500], batch 50 | d_loss: 0.0257 | g_loss: 5.1906
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_381_128.pkl
+DRR -0.00828382 DRM -4.796747 DFF -0.01723005
+GFR -6.503147 GFE -5.7964697
+Epoch [  382/  500], batch 0 | d_loss: 0.0255 | g_loss: 6.5031
+DRR -0.01583693 DRM -4.795996 DFF -0.0068417415
+GFR -5.851601 GFE -5.7968006
+Epoch [  382/  500], batch 50 | d_loss: 0.0227 | g_loss: 5.8516
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_382_128.pkl
+DRR -0.0067754555 DRM -4.790375 DFF -0.0152654685
+GFR -5.2698593 GFE -5.7964406
+Epoch [  383/  500], batch 0 | d_loss: 0.0220 | g_loss: 5.2699
+DRR -0.008192888 DRM -4.7933908 DFF -0.013387634
+GFR -5.977437 GFE -5.796274
+Epoch [  383/  500], batch 50 | d_loss: 0.0216 | g_loss: 5.9774
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_383_128.pkl
+DRR -0.004309989 DRM -4.8313913 DFF -0.00754866
+GFR -6.257562 GFE -5.796566
+Epoch [  384/  500], batch 0 | d_loss: 0.0119 | g_loss: 6.2576
+DRR -0.011078638 DRM -4.7895637 DFF -0.009254407
+GFR -6.0078115 GFE -5.795369
+Epoch [  384/  500], batch 50 | d_loss: 0.0203 | g_loss: 6.0078
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_384_128.pkl
+DRR -0.0014598696 DRM -4.772106 DFF -0.0087365685
+GFR -4.8189316 GFE -5.795806
+Epoch [  385/  500], batch 0 | d_loss: 0.0102 | g_loss: 4.8189
+DRR -0.017081182 DRM -4.805599 DFF -0.008557908
+GFR -6.4954405 GFE -5.7957973
+Epoch [  385/  500], batch 50 | d_loss: 0.0256 | g_loss: 6.4954
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_385_128.pkl
+DRR -0.018013498 DRM -4.8215675 DFF -0.01146392
+GFR -6.8565974 GFE -5.795664
+Epoch [  386/  500], batch 0 | d_loss: 0.0295 | g_loss: 6.8566
+DRR -0.019938584 DRM -4.821865 DFF -0.001855725
+GFR -6.280045 GFE -5.795973
+Epoch [  386/  500], batch 50 | d_loss: 0.0218 | g_loss: 6.2800
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_386_128.pkl
+DRR -0.0022967248 DRM -4.769894 DFF -0.0063756593
+GFR -6.2129364 GFE -5.7961545
+Epoch [  387/  500], batch 0 | d_loss: 0.0087 | g_loss: 6.2129
+DRR -0.0030619246 DRM -4.7813663 DFF -0.017480921
+GFR -5.516926 GFE -5.7958603
+Epoch [  387/  500], batch 50 | d_loss: 0.0205 | g_loss: 5.5169
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_387_128.pkl
+DRR -0.0017012877 DRM -4.7937403 DFF -0.0072500366
+GFR -5.811624 GFE -5.7962093
+Epoch [  388/  500], batch 0 | d_loss: 0.0090 | g_loss: 5.8116
+DRR -0.0018816496 DRM -4.8083954 DFF -0.006583007
+GFR -6.8442965 GFE -5.795683
+Epoch [  388/  500], batch 50 | d_loss: 0.0085 | g_loss: 6.8443
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_388_128.pkl
+DRR -0.0015443093 DRM -4.7972283 DFF -0.009386207
+GFR -6.3367596 GFE -5.795307
+Epoch [  389/  500], batch 0 | d_loss: 0.0109 | g_loss: 6.3368
+DRR -0.0034218526 DRM -4.808356 DFF -0.014821869
+GFR -6.932562 GFE -5.796193
+Epoch [  389/  500], batch 50 | d_loss: 0.0182 | g_loss: 6.9326
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_389_128.pkl
+DRR -0.0055059483 DRM -4.8149796 DFF -0.0051638526
+GFR -6.3402414 GFE -5.7958775
+Epoch [  390/  500], batch 0 | d_loss: 0.0107 | g_loss: 6.3402
+DRR -0.007949138 DRM -4.8054404 DFF -0.012191867
+GFR -5.519946 GFE -5.795317
+Epoch [  390/  500], batch 50 | d_loss: 0.0201 | g_loss: 5.5199
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_390_128.pkl
+DRR -0.0029965567 DRM -4.8058844 DFF -0.0025250043
+GFR -8.130575 GFE -5.796319
+Epoch [  391/  500], batch 0 | d_loss: 0.0055 | g_loss: 8.1306
+DRR -0.005356021 DRM -4.7730455 DFF -0.011807025
+GFR -6.687496 GFE -5.7955446
+Epoch [  391/  500], batch 50 | d_loss: 0.0172 | g_loss: 6.6875
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_391_128.pkl
+DRR -0.0056375097 DRM -4.7862453 DFF -0.034142822
+GFR -6.7197943 GFE -5.7954593
+Epoch [  392/  500], batch 0 | d_loss: 0.0398 | g_loss: 6.7198
+DRR -0.0022242842 DRM -4.7961297 DFF -0.02724005
+GFR -6.84715 GFE -5.7962637
+Epoch [  392/  500], batch 50 | d_loss: 0.0295 | g_loss: 6.8471
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_392_128.pkl
+DRR -0.0071022636 DRM -4.763872 DFF -0.0063594785
+GFR -7.0848947 GFE -5.796337
+Epoch [  393/  500], batch 0 | d_loss: 0.0135 | g_loss: 7.0849
+DRR -0.0071032206 DRM -4.832635 DFF -0.00978509
+GFR -5.9272394 GFE -5.796138
+Epoch [  393/  500], batch 50 | d_loss: 0.0169 | g_loss: 5.9272
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_393_128.pkl
+DRR -0.013813652 DRM -4.7975817 DFF -0.007594986
+GFR -6.752658 GFE -5.795929
+Epoch [  394/  500], batch 0 | d_loss: 0.0214 | g_loss: 6.7527
+DRR -0.007728315 DRM -4.790886 DFF -0.0036202364
+GFR -5.9121532 GFE -5.7955675
+Epoch [  394/  500], batch 50 | d_loss: 0.0113 | g_loss: 5.9122
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_394_128.pkl
+DRR -0.0016194603 DRM -4.795124 DFF -0.0032960153
+GFR -6.4979525 GFE -5.7956986
+Epoch [  395/  500], batch 0 | d_loss: 0.0049 | g_loss: 6.4980
+DRR -0.005129082 DRM -4.8122745 DFF -0.0016884285
+GFR -7.6822762 GFE -5.7960835
+Epoch [  395/  500], batch 50 | d_loss: 0.0068 | g_loss: 7.6823
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_395_128.pkl
+DRR -0.010643169 DRM -4.79084 DFF -0.0040738313
+GFR -6.2440977 GFE -5.7964926
+Epoch [  396/  500], batch 0 | d_loss: 0.0147 | g_loss: 6.2441
+DRR -0.0128630875 DRM -4.7894354 DFF -0.002883169
+GFR -8.231654 GFE -5.797189
+Epoch [  396/  500], batch 50 | d_loss: 0.0157 | g_loss: 8.2317
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_396_128.pkl
+DRR -0.00022631497 DRM -4.8358502 DFF -0.01187272
+GFR -11.089766 GFE -5.797059
+Epoch [  397/  500], batch 0 | d_loss: 0.0121 | g_loss: 11.0898
+DRR -0.002880612 DRM -4.7500877 DFF -6.4808104e-05
+GFR -11.529375 GFE -5.798642
+Epoch [  397/  500], batch 50 | d_loss: 0.0029 | g_loss: 11.5294
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_397_128.pkl
+DRR -0.0045145676 DRM -4.800792 DFF -0.0016972705
+GFR -9.509251 GFE -5.798601
+Epoch [  398/  500], batch 0 | d_loss: 0.0062 | g_loss: 9.5093
+DRR -0.00026337913 DRM -4.8160887 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800417
+Epoch [  398/  500], batch 50 | d_loss: 0.0003 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_398_128.pkl
+DRR -0.0011584298 DRM -4.781605 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8003616
+Epoch [  399/  500], batch 0 | d_loss: 0.0012 | g_loss: 16.1181
+DRR -0.000120160716 DRM -4.813525 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001127
+Epoch [  399/  500], batch 50 | d_loss: 0.0001 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_399_128.pkl
+DRR -7.41342e-06 DRM -4.773326 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800287
+Epoch [  400/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -6.2366744e-05 DRM -4.82548 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001313
+Epoch [  400/  500], batch 50 | d_loss: 0.0001 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_400_128.pkl
+DRR -3.3405937e-05 DRM -4.7644587 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001447
+Epoch [  401/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.883818e-05 DRM -4.793766 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002157
+Epoch [  401/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_401_128.pkl
+DRR -6.1952396e-06 DRM -4.8152013 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001046
+Epoch [  402/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -7.54811e-05 DRM -4.829172 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800259
+Epoch [  402/  500], batch 50 | d_loss: 0.0001 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_402_128.pkl
+DRR -1.3579203e-05 DRM -4.8071227 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.80031
+Epoch [  403/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -8.43429e-06 DRM -4.7868133 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800412
+Epoch [  403/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_403_128.pkl
+DRR -1.5041719e-05 DRM -4.753743 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001995
+Epoch [  404/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -2.2682727e-05 DRM -4.7693853 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8003383
+Epoch [  404/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_404_128.pkl
+DRR -1.4037347e-05 DRM -4.8041224 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800163
+Epoch [  405/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -2.3859855e-05 DRM -4.783928 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002186
+Epoch [  405/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_405_128.pkl
+DRR -7.8234025e-06 DRM -4.8016286 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002234
+Epoch [  406/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.7756505e-05 DRM -4.8066435 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8003035
+Epoch [  406/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_406_128.pkl
+DRR -6.6050497e-06 DRM -4.8137264 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8003736
+Epoch [  407/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -7.2495714e-06 DRM -4.752402 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8003683
+Epoch [  407/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_407_128.pkl
+DRR -4.3556498e-05 DRM -4.8459344 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800265
+Epoch [  408/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -6.668396e-06 DRM -4.780896 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001776
+Epoch [  408/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_408_128.pkl
+DRR -4.5962122e-05 DRM -4.7871504 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8004265
+Epoch [  409/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -2.4550045e-06 DRM -4.7785373 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002634
+Epoch [  409/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_409_128.pkl
+DRR -2.7701743e-05 DRM -4.794333 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001766
+Epoch [  410/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -5.759413e-06 DRM -4.77095 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002825
+Epoch [  410/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_410_128.pkl
+DRR -1.3527193e-05 DRM -4.793284 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8004227
+Epoch [  411/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.3079816e-05 DRM -4.7449784 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8003073
+Epoch [  411/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_411_128.pkl
+DRR -5.9644026e-06 DRM -4.809733 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001966
+Epoch [  412/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -3.8566337e-05 DRM -4.781536 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002834
+Epoch [  412/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_412_128.pkl
+DRR -6.5192717e-07 DRM -4.813567 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800072
+Epoch [  413/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -4.9770906e-06 DRM -4.805602 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800288
+Epoch [  413/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_413_128.pkl
+DRR -3.6806248e-06 DRM -4.824292 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001614
+Epoch [  414/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -5.964289e-06 DRM -4.8157315 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001623
+Epoch [  414/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_414_128.pkl
+DRR -1.1094159e-05 DRM -4.7874413 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8000402
+Epoch [  415/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -7.178795e-06 DRM -4.7810698 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8003364
+Epoch [  415/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_415_128.pkl
+DRR -5.3719195e-06 DRM -4.797429 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002963
+Epoch [  416/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -4.8988895e-06 DRM -4.7800527 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8004265
+Epoch [  416/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_416_128.pkl
+DRR -4.507672e-06 DRM -4.760456 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800547
+Epoch [  417/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -2.8275497e-06 DRM -4.770643 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001885
+Epoch [  417/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_417_128.pkl
+DRR -1.1869111e-05 DRM -4.793601 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800463
+Epoch [  418/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.2558219e-05 DRM -4.8167734 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800467
+Epoch [  418/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_418_128.pkl
+DRR -1.9967647e-06 DRM -4.769776 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800199
+Epoch [  419/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -5.587952e-07 DRM -4.8295383 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800301
+Epoch [  419/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_419_128.pkl
+DRR -1.8812809e-06 DRM -4.823361 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800104
+Epoch [  420/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.1790934e-05 DRM -4.7855663 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001785
+Epoch [  420/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_420_128.pkl
+DRR -9.2300415e-06 DRM -4.7661734 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800377
+Epoch [  421/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -4.4890276e-06 DRM -4.803775 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001823
+Epoch [  421/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_421_128.pkl
+DRR -6.716899e-06 DRM -4.782522 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800216
+Epoch [  422/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -2.7343842e-06 DRM -4.7924576 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800206
+Epoch [  422/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_422_128.pkl
+DRR -5.0851177e-06 DRM -4.763478 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8000703
+Epoch [  423/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -2.2053919e-06 DRM -4.7966185 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001623
+Epoch [  423/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_423_128.pkl
+DRR -1.0546787e-05 DRM -4.8023663 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800261
+Epoch [  424/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.4565956e-06 DRM -4.8098855 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8000383
+Epoch [  424/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_424_128.pkl
+DRR -8.121157e-07 DRM -4.7806306 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.80012
+Epoch [  425/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -5.327176e-07 DRM -4.783556 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800191
+Epoch [  425/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_425_128.pkl
+DRR -1.07889955e-05 DRM -4.782626 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.799947
+Epoch [  426/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -4.67533e-06 DRM -4.785575 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.80021
+Epoch [  426/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_426_128.pkl
+DRR -7.1340423e-06 DRM -4.7802706 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002253
+Epoch [  427/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -3.4310094e-06 DRM -4.8365755 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8000836
+Epoch [  427/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_427_128.pkl
+DRR -2.4624337e-06 DRM -4.8010178 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8003883
+Epoch [  428/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.7509057e-06 DRM -4.754097 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800293
+Epoch [  428/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_428_128.pkl
+DRR -3.6918173e-06 DRM -4.779802 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001676
+Epoch [  429/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -3.5502285e-06 DRM -4.792436 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800207
+Epoch [  429/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_429_128.pkl
+DRR -4.571041e-06 DRM -4.7923584 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8000793
+Epoch [  430/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -4.0978434e-06 DRM -4.7946157 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800335
+Epoch [  430/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_430_128.pkl
+DRR -4.049445e-06 DRM -4.777958 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800324
+Epoch [  431/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -2.6486923e-06 DRM -4.802569 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800092
+Epoch [  431/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_431_128.pkl
+DRR -1.6205112e-06 DRM -4.772578 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002396
+Epoch [  432/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -8.02459e-06 DRM -4.8163385 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001633
+Epoch [  432/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_432_128.pkl
+DRR -4.917392e-07 DRM -4.802314 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800312
+Epoch [  433/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -2.8163406e-06 DRM -4.8126354 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8003154
+Epoch [  433/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_433_128.pkl
+DRR -2.5555821e-06 DRM -4.7674584 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800196
+Epoch [  434/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -8.7544595e-07 DRM -4.8283644 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800166
+Epoch [  434/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_434_128.pkl
+DRR -6.0983584e-06 DRM -4.778863 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800419
+Epoch [  435/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -2.2336037e-05 DRM -4.772496 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800427
+Epoch [  435/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_435_128.pkl
+DRR -7.6741213e-07 DRM -4.843011 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002405
+Epoch [  436/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -2.1271587e-06 DRM -4.8122873 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8004384
+Epoch [  436/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_436_128.pkl
+DRR -2.4028382e-06 DRM -4.8466725 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800274
+Epoch [  437/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -4.3213416e-07 DRM -4.791038 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.80021
+Epoch [  437/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_437_128.pkl
+DRR -3.2037706e-06 DRM -4.796832 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8003645
+Epoch [  438/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.5385531e-06 DRM -4.79939 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800395
+Epoch [  438/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_438_128.pkl
+DRR -2.3841883e-07 DRM -4.8061247 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001013
+Epoch [  439/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.7136474e-06 DRM -4.764334 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002577
+Epoch [  439/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_439_128.pkl
+DRR -4.7237227e-06 DRM -4.7296124 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800118
+Epoch [  440/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.1995457e-06 DRM -4.7874546 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800269
+Epoch [  440/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_440_128.pkl
+DRR -2.1159815e-06 DRM -4.802607 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800132
+Epoch [  441/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.7210923e-06 DRM -4.8448067 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002653
+Epoch [  441/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_441_128.pkl
+DRR -4.3585962e-07 DRM -4.827983 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.7999883
+Epoch [  442/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -3.1292643e-06 DRM -4.77526 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002815
+Epoch [  442/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_442_128.pkl
+DRR -1.0207325e-06 DRM -4.7766957 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8004413
+Epoch [  443/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -2.123426e-06 DRM -4.810103 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800127
+Epoch [  443/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_443_128.pkl
+DRR -1.2666027e-06 DRM -4.7972565 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001585
+Epoch [  444/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.8961819e-06 DRM -4.7835035 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8003826
+Epoch [  444/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_444_128.pkl
+DRR -2.264995e-06 DRM -4.77221 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800047
+Epoch [  445/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.2218986e-06 DRM -4.7497387 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001466
+Epoch [  445/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_445_128.pkl
+DRR -1.5385485e-06 DRM -4.7645607 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001165
+Epoch [  446/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -3.427273e-07 DRM -4.788418 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800254
+Epoch [  446/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_446_128.pkl
+DRR -2.294787e-06 DRM -4.7940063 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8000913
+Epoch [  447/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -6.0349873e-07 DRM -4.793068 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.7999496
+Epoch [  447/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_447_128.pkl
+DRR -1.4863979e-06 DRM -4.7522607 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800153
+Epoch [  448/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -7.338839e-07 DRM -4.8201485 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8003254
+Epoch [  448/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_448_128.pkl
+DRR -2.4848046e-06 DRM -4.7895555 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002996
+Epoch [  449/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -3.5167177e-06 DRM -4.8003387 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800211
+Epoch [  449/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_449_128.pkl
+DRR -8.419181e-07 DRM -4.8245096 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8004813
+Epoch [  450/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -7.115318e-07 DRM -4.78634 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800213
+Epoch [  450/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_450_128.pkl
+DRR -2.793974e-07 DRM -4.79805 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002253
+Epoch [  451/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.0579856e-06 DRM -4.8011665 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.80042
+Epoch [  451/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_451_128.pkl
+DRR -5.6251986e-07 DRM -4.7971363 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8003535
+Epoch [  452/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -8.2701933e-07 DRM -4.8206406 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002644
+Epoch [  452/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_452_128.pkl
+DRR -4.9434925e-06 DRM -4.761612 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002615
+Epoch [  453/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.2703314e-06 DRM -4.7845783 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800251
+Epoch [  453/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_453_128.pkl
+DRR -9.126984e-07 DRM -4.7954803 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001537
+Epoch [  454/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -5.662451e-07 DRM -4.7789354 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800336
+Epoch [  454/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_454_128.pkl
+DRR -3.5427843e-06 DRM -4.789777 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001413
+Epoch [  455/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -2.1942192e-06 DRM -4.788149 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002777
+Epoch [  455/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_455_128.pkl
+DRR -2.3916577e-06 DRM -4.7937117 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800194
+Epoch [  456/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.166019e-06 DRM -4.808896 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800104
+Epoch [  456/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_456_128.pkl
+DRR -1.3113092e-06 DRM -4.7792454 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800152
+Epoch [  457/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.3075805e-06 DRM -4.779827 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800186
+Epoch [  457/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_457_128.pkl
+DRR -1.0989629e-06 DRM -4.8425174 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8004656
+Epoch [  458/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -2.495947e-07 DRM -4.806574 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8003073
+Epoch [  458/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_458_128.pkl
+DRR -3.725302e-07 DRM -4.7801714 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001585
+Epoch [  459/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -2.533205e-07 DRM -4.7879624 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800311
+Epoch [  459/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_459_128.pkl
+DRR -1.8999003e-07 DRM -4.807835 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800332
+Epoch [  460/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.0952384e-06 DRM -4.8058033 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800357
+Epoch [  460/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_460_128.pkl
+DRR -1.5981573e-06 DRM -4.7868404 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8000984
+Epoch [  461/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -3.725292e-08 DRM -4.8332644 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001575
+Epoch [  461/  500], batch 50 | d_loss: -0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_461_128.pkl
+DRR -1.933434e-06 DRM -4.8201003 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800208
+Epoch [  462/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -5.6252e-07 DRM -4.7963037 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800313
+Epoch [  462/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_462_128.pkl
+DRR -1.4752213e-06 DRM -4.8342533 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800267
+Epoch [  463/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -5.960484e-07 DRM -4.8108177 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800164
+Epoch [  463/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_463_128.pkl
+DRR -1.9669603e-06 DRM -4.7944794 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800237
+Epoch [  464/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -4.6193668e-07 DRM -4.8262043 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001137
+Epoch [  464/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_464_128.pkl
+DRR -2.6449584e-07 DRM -4.795066 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8003597
+Epoch [  465/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -3.2782603e-07 DRM -4.802539 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002777
+Epoch [  465/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_465_128.pkl
+DRR -1.4603224e-06 DRM -4.807184 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800047
+Epoch [  466/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -3.42727e-07 DRM -4.7737145 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800109
+Epoch [  466/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_466_128.pkl
+DRR -1.6763835e-07 DRM -4.7559443 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.80017
+Epoch [  467/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.493851e-06 DRM -4.782508 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001547
+Epoch [  467/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_467_128.pkl
+DRR -1.4193412e-06 DRM -4.748597 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800437
+Epoch [  468/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.4864002e-06 DRM -4.795871 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8003445
+Epoch [  468/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_468_128.pkl
+DRR -7.3388355e-07 DRM -4.7772474 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8004475
+Epoch [  469/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.7434468e-06 DRM -4.818884 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8000755
+Epoch [  469/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_469_128.pkl
+DRR -3.2782577e-07 DRM -4.7618184 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800309
+Epoch [  470/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -2.9802374e-07 DRM -4.816567 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8000517
+Epoch [  470/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_470_128.pkl
+DRR -2.79397e-07 DRM -4.7900887 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002872
+Epoch [  471/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -4.097825e-08 DRM -4.7600307 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002615
+Epoch [  471/  500], batch 50 | d_loss: -0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_471_128.pkl
+DRR -4.1723303e-07 DRM -4.82969 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001547
+Epoch [  472/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -2.2351753e-07 DRM -4.762299 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800118
+Epoch [  472/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_472_128.pkl
+DRR -3.0919938e-07 DRM -4.8541164 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800153
+Epoch [  473/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.8626469e-07 DRM -4.790004 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800376
+Epoch [  473/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_473_128.pkl
+DRR -8.903477e-07 DRM -4.794082 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8000865
+Epoch [  474/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -3.8370592e-07 DRM -4.765718 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800308
+Epoch [  474/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_474_128.pkl
+DRR -1.4156109e-07 DRM -4.832856 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800259
+Epoch [  475/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -3.9115588e-07 DRM -4.8027353 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800209
+Epoch [  475/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_475_128.pkl
+DRR -8.940704e-08 DRM -4.783714 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800163
+Epoch [  476/  500], batch 0 | d_loss: -0.0000 | g_loss: 16.1181
+DRR -7.0780686e-08 DRM -4.78605 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800271
+Epoch [  476/  500], batch 50 | d_loss: -0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_476_128.pkl
+DRR -1.1809202e-06 DRM -4.7435308 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002124
+Epoch [  477/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -4.991899e-07 DRM -4.8504734 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800165
+Epoch [  477/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_477_128.pkl
+DRR 4.8428767e-08 DRM -4.7746677 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.80043
+Epoch [  478/  500], batch 0 | d_loss: -0.0000 | g_loss: 16.1181
+DRR -6.929056e-07 DRM -4.8160887 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002844
+Epoch [  478/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_478_128.pkl
+DRR -3.3527647e-07 DRM -4.792156 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002796
+Epoch [  479/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -4.768385e-07 DRM -4.7682886 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800299
+Epoch [  479/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_479_128.pkl
+DRR -1.9744053e-07 DRM -4.811431 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.7999806
+Epoch [  480/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -5.587942e-08 DRM -4.821993 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002377
+Epoch [  480/  500], batch 50 | d_loss: -0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_480_128.pkl
+DRR -1.601877e-07 DRM -4.783025 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002563
+Epoch [  481/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -4.6193665e-07 DRM -4.788808 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800225
+Epoch [  481/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_481_128.pkl
+DRR -6.7055296e-08 DRM -4.815445 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002396
+Epoch [  482/  500], batch 0 | d_loss: -0.0000 | g_loss: 16.1181
+DRR -1.035635e-06 DRM -4.771514 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800207
+Epoch [  482/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_482_128.pkl
+DRR -1.0095575e-06 DRM -4.803298 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002787
+Epoch [  483/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -6.556529e-07 DRM -4.8162665 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001842
+Epoch [  483/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_483_128.pkl
+DRR -4.1350899e-07 DRM -4.8348083 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002434
+Epoch [  484/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.8998998e-07 DRM -4.7936535 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800178
+Epoch [  484/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_484_128.pkl
+DRR -3.39002e-07 DRM -4.8181524 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800152
+Epoch [  485/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -4.9546435e-07 DRM -4.8055496 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001404
+Epoch [  485/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_485_128.pkl
+DRR -9.3132456e-08 DRM -4.754628 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800102
+Epoch [  486/  500], batch 0 | d_loss: -0.0000 | g_loss: 16.1181
+DRR -7.1153386e-07 DRM -4.7759027 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8000526
+Epoch [  486/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_486_128.pkl
+DRR -2.1979247e-07 DRM -4.764448 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800254
+Epoch [  487/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -4.8428817e-08 DRM -4.802113 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8003263
+Epoch [  487/  500], batch 50 | d_loss: -0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_487_128.pkl
+DRR -2.7567197e-07 DRM -4.789836 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800292
+Epoch [  488/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR 4.8428767e-08 DRM -4.7744946 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800341
+Epoch [  488/  500], batch 50 | d_loss: -0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_488_128.pkl
+DRR 4.470347e-08 DRM -4.78433 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800028
+Epoch [  489/  500], batch 0 | d_loss: -0.0000 | g_loss: 16.1181
+DRR -3.241015e-07 DRM -4.7799025 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800111
+Epoch [  489/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_489_128.pkl
+DRR -4.2840907e-07 DRM -4.8467565 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002243
+Epoch [  490/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -1.1175895e-08 DRM -4.802436 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8000536
+Epoch [  490/  500], batch 50 | d_loss: -0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_490_128.pkl
+DRR -2.060096e-06 DRM -4.7941365 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002057
+Epoch [  491/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR 2.9802308e-08 DRM -4.758362 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001995
+Epoch [  491/  500], batch 50 | d_loss: -0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_491_128.pkl
+DRR -2.570452e-07 DRM -4.7557616 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800315
+Epoch [  492/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -8.940719e-08 DRM -4.791077 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001566
+Epoch [  492/  500], batch 50 | d_loss: -0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_492_128.pkl
+DRR -1.11758794e-07 DRM -4.7656965 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800153
+Epoch [  493/  500], batch 0 | d_loss: -0.0000 | g_loss: 16.1181
+DRR 6.705522e-08 DRM -4.7795076 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800276
+Epoch [  493/  500], batch 50 | d_loss: -0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_493_128.pkl
+DRR -8.9407024e-08 DRM -4.8209834 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800068
+Epoch [  494/  500], batch 0 | d_loss: -0.0000 | g_loss: 16.1181
+DRR -6.705529e-08 DRM -4.780696 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002377
+Epoch [  494/  500], batch 50 | d_loss: -0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_494_128.pkl
+DRR -1.1175884e-07 DRM -4.8025455 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002
+Epoch [  495/  500], batch 0 | d_loss: -0.0000 | g_loss: 16.1181
+DRR -2.9057307e-07 DRM -4.8010654 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001237
+Epoch [  495/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_495_128.pkl
+DRR -9.3132385e-08 DRM -4.7935977 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002014
+Epoch [  496/  500], batch 0 | d_loss: -0.0000 | g_loss: 16.1181
+DRR -1.2665996e-07 DRM -4.76493 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001175
+Epoch [  496/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_496_128.pkl
+DRR -3.0919958e-07 DRM -4.7550898 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800247
+Epoch [  497/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR 7.07805e-08 DRM -4.7722616 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800184
+Epoch [  497/  500], batch 50 | d_loss: -0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_497_128.pkl
+DRR 5.960463e-08 DRM -4.79606 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800055
+Epoch [  498/  500], batch 0 | d_loss: -0.0000 | g_loss: 16.1181
+DRR -1.4901179e-08 DRM -4.810568 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.800257
+Epoch [  498/  500], batch 50 | d_loss: -0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_498_128.pkl
+DRR 1.8626437e-08 DRM -4.7860565 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.799959
+Epoch [  499/  500], batch 0 | d_loss: -0.0000 | g_loss: 16.1181
+DRR -1.4901173e-07 DRM -4.7809124 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001537
+Epoch [  499/  500], batch 50 | d_loss: 0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_499_128.pkl
+DRR -2.607705e-07 DRM -4.7791214 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8001194
+Epoch [  500/  500], batch 0 | d_loss: 0.0000 | g_loss: 16.1181
+DRR -8.1956614e-08 DRM -4.795395 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8002205
+Epoch [  500/  500], batch 50 | d_loss: -0.0000 | g_loss: 16.1181
+SAVING: img_z/img_z_2020-05-03 01:35:43.639239_epoch_500_128.pkl

@@ -1,0 +1,2640 @@
+Random Seed:  999
+Generator(
+  (main): Sequential(
+    (0): ConvTranspose2d(100, 2048, kernel_size=(4, 4), stride=(1, 1), bias=False)
+    (1): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): ConvTranspose2d(2048, 1024, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (4): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU(inplace=True)
+    (6): ConvTranspose2d(1024, 512, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (7): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU(inplace=True)
+    (9): ConvTranspose2d(512, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (10): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (11): ReLU(inplace=True)
+    (12): ConvTranspose2d(256, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (13): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (14): ReLU(inplace=True)
+    (15): ConvTranspose2d(128, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (16): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (17): ReLU(inplace=True)
+    (18): ConvTranspose2d(64, 3, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (19): Tanh()
+  )
+)
+Discriminator(
+  (conv1): Conv2d(3, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+  (conv2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+  (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv3): Conv2d(64, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+  (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv4): Conv2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+  (bn4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv5): Conv2d(256, 512, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+  (bn5): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv6): Conv2d(512, 512, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+  (bn6): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (real): Linear(in_features=8192, out_features=1, bias=True)
+  (multi1): Linear(in_features=8192, out_features=1024, bias=True)
+  (multi2): Linear(in_features=1024, out_features=512, bias=True)
+  (multi3): Linear(in_features=512, out_features=120, bias=True)
+)
+GPU available for training. Models moved to GPU
+Starting Training Loop...
+DRR -0.73250055 DRM -4.788312 DFF -0.7295284
+GFR -0.67898315 GFE -5.793353
+Epoch [    1/  100], batch 0 | d_loss: 1.9409 | g_loss: 1.2583
+DRR -0.0041568833 DRM -4.8051 DFF -0.3724178
+GFR -1.221258 GFE -5.793258
+Epoch [    1/  100], batch 50 | d_loss: 0.8571 | g_loss: 1.8006
+DRR -2.7232036e-06 DRM -4.7649646 DFF -2.1550488
+GFR -0.13804826 GFE -5.792685
+Epoch [    1/  100], batch 100 | d_loss: 2.6315 | g_loss: 0.7173
+DRR -2.7567188e-07 DRM -4.793602 DFF -0.1877349
+GFR -2.0746942 GFE -5.7917743
+Epoch [    1/  100], batch 150 | d_loss: 0.6671 | g_loss: 2.6539
+DRR 7.450579e-08 DRM -4.737547 DFF -1.783545
+GFR -0.26234996 GFE -5.7917814
+Epoch [    1/  100], batch 200 | d_loss: 2.2573 | g_loss: 0.8415
+DRR 8.940696e-08 DRM -4.785513 DFF -2.1868553
+GFR -0.16176437 GFE -5.791913
+Epoch [    1/  100], batch 250 | d_loss: 2.6654 | g_loss: 0.7410
+DRR -1.5646278e-07 DRM -4.7728596 DFF -3.1035104
+GFR -0.077572875 GFE -5.7926645
+Epoch [    1/  100], batch 300 | d_loss: 3.5808 | g_loss: 0.6568
+DRR -7.2160137e-06 DRM -4.7361493 DFF -3.177556
+GFR -0.11200499 GFE -5.793251
+Epoch [    1/  100], batch 350 | d_loss: 3.6512 | g_loss: 0.6913
+DRR -0.012390032 DRM -4.7080717 DFF -0.015158622
+GFR -4.828659 GFE -5.79385
+Epoch [    1/  100], batch 400 | d_loss: 0.4984 | g_loss: 5.4080
+DRR -0.00042841653 DRM -4.7343407 DFF -4.3284373
+GFR -0.043348193 GFE -5.7944374
+Epoch [    1/  100], batch 450 | d_loss: 4.8023 | g_loss: 0.6228
+DRR -0.008083386 DRM -4.8126626 DFF -0.27833477
+GFR -2.6149807 GFE -5.7955046
+Epoch [    1/  100], batch 500 | d_loss: 0.7677 | g_loss: 3.1945
+DRR -0.0012596364 DRM -4.7970676 DFF -1.3651955
+GFR -0.7807685 GFE -5.7950244
+Epoch [    1/  100], batch 550 | d_loss: 1.8462 | g_loss: 1.3603
+DRR -0.003520177 DRM -4.722724 DFF -0.8401828
+GFR -1.547923 GFE -5.794456
+Epoch [    1/  100], batch 600 | d_loss: 1.3160 | g_loss: 2.1274
+/home/yph2105/.local/lib/python3.6/site-packages/torch/nn/functional.py:1351: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+original_CAN_as_script.py:179: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  multi_output = F.softmax(self.multi3(multi_output))
+DRR -0.006071832 DRM -4.7248735 DFF -1.0161484
+GFR -1.1275905 GFE -5.7930775
+Epoch [    2/  100], batch 0 | d_loss: 1.4947 | g_loss: 1.7069
+DRR -0.0020101857 DRM -4.713973 DFF -1.0844152
+GFR -1.2284026 GFE -5.79203
+Epoch [    2/  100], batch 50 | d_loss: 1.5578 | g_loss: 1.8076
+DRR -0.0038275188 DRM -4.6657667 DFF -1.0297227
+GFR -0.91582686 GFE -5.7906775
+Epoch [    2/  100], batch 100 | d_loss: 1.5001 | g_loss: 1.4949
+DRR -0.0017496163 DRM -4.6558304 DFF -1.1294608
+GFR -0.7317307 GFE -5.7900944
+Epoch [    2/  100], batch 150 | d_loss: 1.5968 | g_loss: 1.3107
+DRR -0.002024375 DRM -4.733369 DFF -1.2378933
+GFR -0.4349779 GFE -5.790976
+Epoch [    2/  100], batch 200 | d_loss: 1.7133 | g_loss: 1.0141
+DRR -0.00073897163 DRM -4.7063804 DFF -1.672441
+GFR -0.26158738 GFE -5.791824
+Epoch [    2/  100], batch 250 | d_loss: 2.1438 | g_loss: 0.8408
+DRR -0.00014522957 DRM -4.729034 DFF -5.6433544
+GFR -0.014154537 GFE -5.7936635
+Epoch [    2/  100], batch 300 | d_loss: 6.1164 | g_loss: 0.5935
+DRR -0.007844246 DRM -4.72781 DFF -1.5196757
+GFR -0.33737838 GFE -5.795912
+Epoch [    2/  100], batch 350 | d_loss: 2.0003 | g_loss: 0.9170
+DRR -0.0018225518 DRM -4.7168646 DFF -1.3553075
+GFR -0.5205498 GFE -5.7961764
+Epoch [    2/  100], batch 400 | d_loss: 1.8288 | g_loss: 1.1002
+DRR -4.4885237e-05 DRM -4.726513 DFF -7.162778
+GFR -0.01211171 GFE -5.7996426
+Epoch [    2/  100], batch 450 | d_loss: 7.6355 | g_loss: 0.5921
+DRR -0.084630385 DRM -4.6980963 DFF -0.5042058
+GFR -4.0708466 GFE -5.7990384
+Epoch [    2/  100], batch 500 | d_loss: 1.0586 | g_loss: 4.6508
+DRR -0.06419197 DRM -4.7426558 DFF -5.489843
+GFR -0.9130764 GFE -5.798654
+Epoch [    2/  100], batch 550 | d_loss: 6.0283 | g_loss: 1.4929
+DRR -0.043521736 DRM -4.7150755 DFF -2.9704695
+GFR -1.1376967 GFE -5.797649
+Epoch [    2/  100], batch 600 | d_loss: 3.4855 | g_loss: 1.7175
+DRR -0.31866235 DRM -4.720495 DFF -1.1566757
+GFR -3.850157 GFE -5.797103
+Epoch [    3/  100], batch 0 | d_loss: 1.9474 | g_loss: 4.4299
+DRR -0.11085772 DRM -4.694985 DFF -3.2431707
+GFR -1.7101303 GFE -5.795329
+Epoch [    3/  100], batch 50 | d_loss: 3.8235 | g_loss: 2.2897
+DRR -0.00053615635 DRM -4.712681 DFF -4.220792
+GFR -0.056796815 GFE -5.794626
+Epoch [    3/  100], batch 100 | d_loss: 4.6926 | g_loss: 0.6363
+DRR -1.1124392 DRM -4.7463827 DFF -1.6523438
+GFR -2.4629118 GFE -5.793723
+Epoch [    3/  100], batch 150 | d_loss: 3.2394 | g_loss: 3.0423
+DRR -0.057788398 DRM -4.755816 DFF -1.805895
+GFR -1.2044415 GFE -5.7939997
+Epoch [    3/  100], batch 200 | d_loss: 2.3393 | g_loss: 1.7838
+DRR -0.02549395 DRM -4.784193 DFF -2.8468301
+GFR -1.0259537 GFE -5.7933393
+Epoch [    3/  100], batch 250 | d_loss: 3.3507 | g_loss: 1.6053
+DRR -0.0077702133 DRM -4.8101892 DFF -2.5258124
+GFR -0.45482838 GFE -5.7934923
+Epoch [    3/  100], batch 300 | d_loss: 3.0146 | g_loss: 1.0342
+DRR -0.2358949 DRM -4.78371 DFF -0.3778171
+GFR -1.4395938 GFE -5.793866
+Epoch [    3/  100], batch 350 | d_loss: 1.0921 | g_loss: 2.0190
+DRR -0.008540808 DRM -4.805485 DFF -2.515974
+GFR -0.44670647 GFE -5.794098
+Epoch [    3/  100], batch 400 | d_loss: 3.0051 | g_loss: 1.0261
+DRR -0.18204999 DRM -4.8259096 DFF -0.41675496
+GFR -1.4449985 GFE -5.794463
+Epoch [    3/  100], batch 450 | d_loss: 1.0814 | g_loss: 2.0244
+DRR -0.002910307 DRM -4.815304 DFF -2.3640318
+GFR -0.114791885 GFE -5.7948556
+Epoch [    3/  100], batch 500 | d_loss: 2.8485 | g_loss: 0.6943
+DRR -0.51740134 DRM -4.7886095 DFF -0.30140227
+GFR -2.5234187 GFE -5.7945085
+Epoch [    3/  100], batch 550 | d_loss: 1.2977 | g_loss: 3.1029
+DRR -0.0025460757 DRM -4.7529483 DFF -3.993247
+GFR -0.053779386 GFE -5.7944646
+Epoch [    3/  100], batch 600 | d_loss: 4.4711 | g_loss: 0.6332
+DRR -0.4548571 DRM -4.8402624 DFF -0.1251362
+GFR -2.3334854 GFE -5.7935653
+Epoch [    4/  100], batch 0 | d_loss: 1.0640 | g_loss: 2.9128
+DRR -0.107166596 DRM -4.7785726 DFF -1.1789432
+GFR -0.5202279 GFE -5.7946854
+Epoch [    4/  100], batch 50 | d_loss: 1.7640 | g_loss: 1.0997
+DRR -0.009719881 DRM -4.8216524 DFF -4.03302
+GFR -0.038627848 GFE -5.795458
+Epoch [    4/  100], batch 100 | d_loss: 4.5249 | g_loss: 0.6182
+DRR -0.32912776 DRM -4.8079467 DFF -0.07119112
+GFR -3.1142912 GFE -5.796646
+Epoch [    4/  100], batch 150 | d_loss: 0.8811 | g_loss: 3.6940
+DRR -0.012109587 DRM -4.7809477 DFF -0.29878134
+GFR -1.5933986 GFE -5.7976675
+Epoch [    4/  100], batch 200 | d_loss: 0.7890 | g_loss: 2.1732
+DRR -4.4025714e-05 DRM -4.791148 DFF -3.8904543
+GFR -0.027846279 GFE -5.799777
+Epoch [    4/  100], batch 250 | d_loss: 4.3696 | g_loss: 0.6078
+DRR -0.0005294401 DRM -4.823421 DFF -0.035834525
+GFR -3.937644 GFE -5.8012695
+Epoch [    4/  100], batch 300 | d_loss: 0.5187 | g_loss: 4.5178
+DRR -0.008606136 DRM -4.8322515 DFF -0.02715109
+GFR -4.2475333 GFE -5.8053026
+Epoch [    4/  100], batch 350 | d_loss: 0.5190 | g_loss: 4.8281
+DRR -0.0024603994 DRM -4.8600416 DFF -0.4477614
+GFR -1.4731882 GFE -5.8118544
+Epoch [    4/  100], batch 400 | d_loss: 0.9362 | g_loss: 2.0544
+DRR -1.6763849e-07 DRM -4.7812223 DFF -3.0756822
+GFR -0.069519974 GFE -5.8081865
+Epoch [    4/  100], batch 450 | d_loss: 3.5538 | g_loss: 0.6503
+DRR -5.9568474e-06 DRM -4.867109 DFF -3.1753054
+GFR -0.1179992 GFE -5.810651
+Epoch [    4/  100], batch 500 | d_loss: 3.6620 | g_loss: 0.6991
+DRR -0.0015879939 DRM -4.8955874 DFF -2.1386323
+GFR -0.15150732 GFE -5.815271
+Epoch [    4/  100], batch 550 | d_loss: 2.6298 | g_loss: 0.7330
+DRR -0.00036542234 DRM -4.860686 DFF -1.2319514
+GFR -0.4171099 GFE -5.8215528
+Epoch [    4/  100], batch 600 | d_loss: 1.7184 | g_loss: 0.9993
+DRR -0.043344747 DRM -4.8779373 DFF -0.7795353
+GFR -0.7602298 GFE -5.8268614
+Epoch [    5/  100], batch 0 | d_loss: 1.3107 | g_loss: 1.3429
+DRR -0.09793579 DRM -4.765004 DFF -0.6573533
+GFR -0.8779954 GFE -5.833156
+Epoch [    5/  100], batch 50 | d_loss: 1.2318 | g_loss: 1.4613
+DRR -0.1846126 DRM -4.8947334 DFF -0.87865233
+GFR -0.6439403 GFE -5.831879
+Epoch [    5/  100], batch 100 | d_loss: 1.5527 | g_loss: 1.2271
+DRR -0.06982173 DRM -4.8031387 DFF -0.8897711
+GFR -0.6274178 GFE -5.8329916
+Epoch [    5/  100], batch 150 | d_loss: 1.4399 | g_loss: 1.2107
+DRR -0.00020318238 DRM -4.8200207 DFF -0.8628297
+GFR -0.75092804 GFE -5.8275185
+Epoch [    5/  100], batch 200 | d_loss: 1.3450 | g_loss: 1.3337
+DRR -4.1799344e-06 DRM -4.735734 DFF -0.87659335
+GFR -0.7928318 GFE -5.8171864
+Epoch [    5/  100], batch 250 | d_loss: 1.3502 | g_loss: 1.3746
+DRR -1.2293481e-07 DRM -4.866953 DFF -0.8713
+GFR -0.7062783 GFE -5.8154955
+Epoch [    5/  100], batch 300 | d_loss: 1.3580 | g_loss: 1.2878
+DRR -3.144315e-06 DRM -4.9527817 DFF -0.84784126
+GFR -0.90449494 GFE -5.8147106
+Epoch [    5/  100], batch 350 | d_loss: 1.3431 | g_loss: 1.4860
+DRR -3.0847032e-06 DRM -5.0570984 DFF -0.6998215
+GFR -0.8682636 GFE -5.806435
+Epoch [    5/  100], batch 400 | d_loss: 1.2055 | g_loss: 1.4489
+DRR -3.1107827e-06 DRM -4.909758 DFF -0.5753637
+GFR -0.9731059 GFE -5.812959
+Epoch [    5/  100], batch 450 | d_loss: 1.0663 | g_loss: 1.5544
+DRR 1.1920928e-07 DRM -4.806946 DFF -0.6827535
+GFR -0.91047126 GFE -5.812299
+Epoch [    5/  100], batch 500 | d_loss: 1.1634 | g_loss: 1.4917
+DRR 1.1548399e-07 DRM -4.7063394 DFF -0.7088044
+GFR -0.7807356 GFE -5.8179073
+Epoch [    5/  100], batch 550 | d_loss: 1.1794 | g_loss: 1.3625
+DRR 1.1920928e-07 DRM -4.67797 DFF -0.6972687
+GFR -0.90776527 GFE -5.8293476
+Epoch [    5/  100], batch 600 | d_loss: 1.1651 | g_loss: 1.4907
+DRR 1.1920928e-07 DRM -4.570164 DFF -0.6453755
+GFR -0.8705227 GFE -5.816772
+Epoch [    6/  100], batch 0 | d_loss: 1.1024 | g_loss: 1.4522
+DRR 1.1920928e-07 DRM -4.774704 DFF -0.9577335
+GFR -0.59817374 GFE -5.8063536
+Epoch [    6/  100], batch 50 | d_loss: 1.4352 | g_loss: 1.1788
+DRR 1.1920928e-07 DRM -4.553787 DFF -0.72504574
+GFR -0.74920875 GFE -5.8147326
+Epoch [    6/  100], batch 100 | d_loss: 1.1804 | g_loss: 1.3307
+DRR 1.1920928e-07 DRM -4.7817097 DFF -1.0752679
+GFR -0.4998092 GFE -5.8226013
+Epoch [    6/  100], batch 150 | d_loss: 1.5534 | g_loss: 1.0821
+DRR 1.1920928e-07 DRM -4.686052 DFF -0.6168345
+GFR -0.8699086 GFE -5.8216662
+Epoch [    6/  100], batch 200 | d_loss: 1.0854 | g_loss: 1.4521
+DRR 1.1920928e-07 DRM -4.733067 DFF -0.95279217
+GFR -0.57955027 GFE -5.8047457
+Epoch [    6/  100], batch 250 | d_loss: 1.4261 | g_loss: 1.1600
+DRR 1.1920928e-07 DRM -5.01313 DFF -0.5888785
+GFR -0.9173439 GFE -5.819751
+Epoch [    6/  100], batch 300 | d_loss: 1.0902 | g_loss: 1.4993
+DRR 1.1920928e-07 DRM -4.6494536 DFF -0.76974535
+GFR -0.71055114 GFE -5.8265653
+Epoch [    6/  100], batch 350 | d_loss: 1.2347 | g_loss: 1.2932
+DRR 1.1920928e-07 DRM -4.947961 DFF -0.7491262
+GFR -0.78226316 GFE -5.812108
+Epoch [    6/  100], batch 400 | d_loss: 1.2439 | g_loss: 1.3635
+DRR 1.1920928e-07 DRM -4.6350336 DFF -0.64291817
+GFR -0.81197584 GFE -5.807003
+Epoch [    6/  100], batch 450 | d_loss: 1.1064 | g_loss: 1.3927
+DRR 1.1920928e-07 DRM -4.7919245 DFF -0.56443685
+GFR -0.9219279 GFE -5.8188276
+Epoch [    6/  100], batch 500 | d_loss: 1.0436 | g_loss: 1.5038
+DRR 1.1920928e-07 DRM -4.820169 DFF -0.8257694
+GFR -0.617703 GFE -5.8345304
+Epoch [    6/  100], batch 550 | d_loss: 1.3078 | g_loss: 1.2012
+DRR 1.1920928e-07 DRM -4.5829773 DFF -0.6952417
+GFR -0.74120617 GFE -5.823042
+Epoch [    6/  100], batch 600 | d_loss: 1.1535 | g_loss: 1.3235
+DRR 1.1920928e-07 DRM -4.5466356 DFF -0.70572364
+GFR -0.7232439 GFE -5.810962
+Epoch [    7/  100], batch 0 | d_loss: 1.1604 | g_loss: 1.3043
+DRR 1.1920928e-07 DRM -5.062894 DFF -0.49255162
+GFR -1.003764 GFE -5.834025
+Epoch [    7/  100], batch 50 | d_loss: 0.9988 | g_loss: 1.5872
+DRR 1.1920928e-07 DRM -5.055887 DFF -1.335543
+GFR -0.33750987 GFE -5.840679
+Epoch [    7/  100], batch 100 | d_loss: 1.8411 | g_loss: 0.9216
+DRR 1.1920928e-07 DRM -4.90802 DFF -2.034277
+GFR -0.16328347 GFE -5.814946
+Epoch [    7/  100], batch 150 | d_loss: 2.5251 | g_loss: 0.7448
+DRR 1.1920928e-07 DRM -4.765433 DFF -0.00015705515
+GFR -9.042401 GFE -5.815237
+Epoch [    7/  100], batch 200 | d_loss: 0.4767 | g_loss: 9.6239
+DRR 1.1920928e-07 DRM -4.806367 DFF -14.610871
+GFR -9.462261e-07 GFE -5.8351507
+Epoch [    7/  100], batch 250 | d_loss: 15.0915 | g_loss: 0.5835
+DRR 1.1920928e-07 DRM -4.564056 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.826735
+Epoch [    7/  100], batch 300 | d_loss: 0.4564 | g_loss: 16.7008
+DRR 1.1920928e-07 DRM -4.7780886 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.816786
+Epoch [    7/  100], batch 350 | d_loss: 0.4778 | g_loss: 16.6998
+DRR 1.1920928e-07 DRM -4.854494 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8407097
+Epoch [    7/  100], batch 400 | d_loss: 0.4854 | g_loss: 16.7022
+DRR -2.548179e-06 DRM -4.829507 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8447785
+Epoch [    7/  100], batch 450 | d_loss: 0.4830 | g_loss: 16.7026
+DRR -5.365901e-05 DRM -4.7407355 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8274846
+Epoch [    7/  100], batch 500 | d_loss: 0.4741 | g_loss: 16.7008
+DRR -0.50366133 DRM -4.792713 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.836649
+Epoch [    7/  100], batch 550 | d_loss: 0.9829 | g_loss: 16.7018
+DRR 1.1920928e-07 DRM -4.676382 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8543873
+Epoch [    7/  100], batch 600 | d_loss: 0.4676 | g_loss: 16.7035
+DRR 1.1920928e-07 DRM -4.639113 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8401394
+Epoch [    8/  100], batch 0 | d_loss: 0.4639 | g_loss: 16.7021
+DRR 1.1920928e-07 DRM -4.937107 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.830688
+Epoch [    8/  100], batch 50 | d_loss: 0.4937 | g_loss: 16.7012
+DRR 1.1920928e-07 DRM -5.0142107 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.843874
+Epoch [    8/  100], batch 100 | d_loss: 0.5014 | g_loss: 16.7025
+DRR 1.1920928e-07 DRM -4.840122 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.853297
+Epoch [    8/  100], batch 150 | d_loss: 0.4840 | g_loss: 16.7034
+DRR 1.1920928e-07 DRM -4.5888157 DFF 1.1920928e-07
+GFR -16.118095 GFE -5.8431616
+Epoch [    8/  100], batch 200 | d_loss: 0.4589 | g_loss: 16.7024
+DRR 1.1920928e-07 DRM -4.9886613 DFF 1.1920928e-07
+GFR -16.118044 GFE -5.845928
+Epoch [    8/  100], batch 250 | d_loss: 0.4989 | g_loss: 16.7026
+DRR 1.1920928e-07 DRM -4.652967 DFF -5.7834477
+GFR -7.5780754 GFE -5.871647
+Epoch [    8/  100], batch 300 | d_loss: 6.2487 | g_loss: 8.1652
+DRR 1.1920928e-07 DRM -4.751422 DFF -2.1360645
+GFR -2.4636264 GFE -5.856262
+Epoch [    8/  100], batch 350 | d_loss: 2.6112 | g_loss: 3.0493
+DRR 1.1920928e-07 DRM -4.8160043 DFF -1.2163672
+GFR -1.7053592 GFE -5.854089
+Epoch [    8/  100], batch 400 | d_loss: 1.6980 | g_loss: 2.2908
+DRR 1.1920928e-07 DRM -4.8379865 DFF -0.5191327
+GFR -1.8233204 GFE -5.8438015
+Epoch [    8/  100], batch 450 | d_loss: 1.0029 | g_loss: 2.4077
+DRR 1.1920928e-07 DRM -4.6467175 DFF -0.7497989
+GFR -1.293436 GFE -5.837598
+Epoch [    8/  100], batch 500 | d_loss: 1.2145 | g_loss: 1.8772
+DRR 1.1920928e-07 DRM -4.88443 DFF -0.85173154
+GFR -0.9542038 GFE -5.846438
+Epoch [    8/  100], batch 550 | d_loss: 1.3402 | g_loss: 1.5388
+DRR 1.1920928e-07 DRM -4.83511 DFF -0.4527007
+GFR -1.320496 GFE -5.8495917
+Epoch [    8/  100], batch 600 | d_loss: 0.9362 | g_loss: 1.9055
+DRR 1.1920928e-07 DRM -4.7367067 DFF -0.46758187
+GFR -1.3577893 GFE -5.8443546
+Epoch [    9/  100], batch 0 | d_loss: 0.9413 | g_loss: 1.9422
+DRR 1.1920928e-07 DRM -4.577138 DFF -0.9833188
+GFR -0.66038394 GFE -5.8357763
+Epoch [    9/  100], batch 50 | d_loss: 1.4410 | g_loss: 1.2440
+DRR 1.1920928e-07 DRM -4.8608413 DFF -0.90900034
+GFR -0.6027655 GFE -5.8393183
+Epoch [    9/  100], batch 100 | d_loss: 1.3951 | g_loss: 1.1867
+DRR 1.1920928e-07 DRM -5.23314 DFF -1.0341094
+GFR -0.71884775 GFE -5.8496623
+Epoch [    9/  100], batch 150 | d_loss: 1.5574 | g_loss: 1.3038
+DRR 1.1920928e-07 DRM -4.7839985 DFF -0.6713023
+GFR -0.9076656 GFE -5.830841
+Epoch [    9/  100], batch 200 | d_loss: 1.1497 | g_loss: 1.4907
+DRR 1.1920928e-07 DRM -4.7687798 DFF -0.55792314
+GFR -1.0105001 GFE -5.849311
+Epoch [    9/  100], batch 250 | d_loss: 1.0348 | g_loss: 1.5954
+DRR 1.1920928e-07 DRM -4.6670218 DFF -0.5970908
+GFR -0.9459239 GFE -5.850098
+Epoch [    9/  100], batch 300 | d_loss: 1.0638 | g_loss: 1.5309
+DRR 1.1920928e-07 DRM -4.725952 DFF -0.9305836
+GFR -0.5954585 GFE -5.8533278
+Epoch [    9/  100], batch 350 | d_loss: 1.4032 | g_loss: 1.1808
+DRR 1.1920928e-07 DRM -4.943222 DFF -0.54389477
+GFR -0.9609647 GFE -5.851663
+Epoch [    9/  100], batch 400 | d_loss: 1.0382 | g_loss: 1.5461
+DRR 1.1920928e-07 DRM -5.1104155 DFF -0.6865246
+GFR -0.7947548 GFE -5.852854
+Epoch [    9/  100], batch 450 | d_loss: 1.1976 | g_loss: 1.3800
+DRR 1.1920928e-07 DRM -4.979129 DFF -0.7558656
+GFR -0.78359455 GFE -5.8460712
+Epoch [    9/  100], batch 500 | d_loss: 1.2538 | g_loss: 1.3682
+DRR 1.1920928e-07 DRM -4.7146916 DFF -0.7657056
+GFR -0.7383024 GFE -5.8390965
+Epoch [    9/  100], batch 550 | d_loss: 1.2372 | g_loss: 1.3222
+DRR 1.1920928e-07 DRM -4.7642155 DFF -0.91331327
+GFR -0.6174892 GFE -5.846099
+Epoch [    9/  100], batch 600 | d_loss: 1.3897 | g_loss: 1.2021
+DRR 1.1920928e-07 DRM -4.901634 DFF -1.966649
+GFR -0.19858363 GFE -5.8365135
+Epoch [   10/  100], batch 0 | d_loss: 2.4568 | g_loss: 0.7822
+DRR 1.1920928e-07 DRM -4.966652 DFF -12.644969
+GFR -4.2505717e-06 GFE -5.835216
+Epoch [   10/  100], batch 50 | d_loss: 13.1416 | g_loss: 0.5835
+DRR 1.1920928e-07 DRM -4.736513 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.8328953
+Epoch [   10/  100], batch 100 | d_loss: 16.5917 | g_loss: 0.5833
+DRR 1.1920928e-07 DRM -4.978982 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.8321056
+Epoch [   10/  100], batch 150 | d_loss: 16.6160 | g_loss: 0.5832
+DRR 1.1920928e-07 DRM -5.3972464 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.8453856
+Epoch [   10/  100], batch 200 | d_loss: 16.6578 | g_loss: 0.5845
+DRR 1.1920928e-07 DRM -5.145533 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.852792
+Epoch [   10/  100], batch 250 | d_loss: 16.6326 | g_loss: 0.5853
+DRR 1.1920928e-07 DRM -4.7508316 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.859623
+Epoch [   10/  100], batch 300 | d_loss: 16.5932 | g_loss: 0.5860
+DRR 1.1920928e-07 DRM -5.3778625 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.870845
+Epoch [   10/  100], batch 350 | d_loss: 16.6559 | g_loss: 0.5871
+DRR 1.1920928e-07 DRM -5.070629 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.8606043
+Epoch [   10/  100], batch 400 | d_loss: 16.6252 | g_loss: 0.5861
+DRR 1.1920928e-07 DRM -4.7097363 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.86129
+Epoch [   10/  100], batch 450 | d_loss: 16.5891 | g_loss: 0.5861
+DRR 1.1920928e-07 DRM -4.7862687 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.870757
+Epoch [   10/  100], batch 500 | d_loss: 16.5967 | g_loss: 0.5871
+DRR 1.1920928e-07 DRM -4.9309597 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.8614798
+Epoch [   10/  100], batch 550 | d_loss: 16.6112 | g_loss: 0.5861
+DRR 1.1920928e-07 DRM -4.865425 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.8546658
+Epoch [   10/  100], batch 600 | d_loss: 16.6046 | g_loss: 0.5855
+DRR 1.1920928e-07 DRM -4.9269466 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.891242
+Epoch [   11/  100], batch 0 | d_loss: 16.6108 | g_loss: 0.5891
+DRR 1.1920928e-07 DRM -4.4952655 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.8928347
+Epoch [   11/  100], batch 50 | d_loss: 16.5676 | g_loss: 0.5893
+DRR 1.1920928e-07 DRM -5.309655 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.882808
+Epoch [   11/  100], batch 100 | d_loss: 16.6491 | g_loss: 0.5883
+DRR 1.1920928e-07 DRM -4.777011 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.8563747
+Epoch [   11/  100], batch 150 | d_loss: 16.5958 | g_loss: 0.5856
+DRR 1.1920928e-07 DRM -5.181061 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.896922
+Epoch [   11/  100], batch 200 | d_loss: 16.6362 | g_loss: 0.5897
+DRR 1.1920928e-07 DRM -5.4772825 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.9272733
+Epoch [   11/  100], batch 250 | d_loss: 16.6658 | g_loss: 0.5927
+DRR 1.1920928e-07 DRM -4.9705644 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.950696
+Epoch [   11/  100], batch 300 | d_loss: 16.6152 | g_loss: 0.5951
+DRR 1.1920928e-07 DRM -5.5148854 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.909272
+Epoch [   11/  100], batch 350 | d_loss: 16.6696 | g_loss: 0.5909
+DRR 1.1920928e-07 DRM -5.3399897 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.8913803
+Epoch [   11/  100], batch 400 | d_loss: 16.6521 | g_loss: 0.5891
+DRR 1.1920928e-07 DRM -5.964843 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.8696346
+Epoch [   11/  100], batch 450 | d_loss: 16.7146 | g_loss: 0.5870
+DRR 1.1920928e-07 DRM -5.12622 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.9068656
+Epoch [   11/  100], batch 500 | d_loss: 16.6307 | g_loss: 0.5907
+DRR 1.1920928e-07 DRM -4.7816353 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.914371
+Epoch [   11/  100], batch 550 | d_loss: 16.5963 | g_loss: 0.5914
+DRR 1.1920928e-07 DRM -5.17585 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.946376
+Epoch [   11/  100], batch 600 | d_loss: 16.6357 | g_loss: 0.5946
+DRR 1.1920928e-07 DRM -4.88389 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.9254436
+Epoch [   12/  100], batch 0 | d_loss: 16.6065 | g_loss: 0.5925
+DRR 1.1920928e-07 DRM -4.980913 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.902682
+Epoch [   12/  100], batch 50 | d_loss: 16.6162 | g_loss: 0.5903
+DRR 1.1920928e-07 DRM -5.87498 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.944637
+Epoch [   12/  100], batch 100 | d_loss: 16.7056 | g_loss: 0.5945
+DRR 1.1920928e-07 DRM -5.6396503 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.9628515
+Epoch [   12/  100], batch 150 | d_loss: 16.6821 | g_loss: 0.5963
+DRR 1.1920928e-07 DRM -5.3861275 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.913539
+Epoch [   12/  100], batch 200 | d_loss: 16.6567 | g_loss: 0.5914
+DRR 1.1920928e-07 DRM -5.778438 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.902895
+Epoch [   12/  100], batch 250 | d_loss: 16.6959 | g_loss: 0.5903
+DRR 1.1920928e-07 DRM -5.1628103 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.9596076
+Epoch [   12/  100], batch 300 | d_loss: 16.6344 | g_loss: 0.5960
+DRR 1.1920928e-07 DRM -5.5964174 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.907213
+Epoch [   12/  100], batch 350 | d_loss: 16.6777 | g_loss: 0.5907
+DRR 1.1920928e-07 DRM -5.070077 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.9118013
+Epoch [   12/  100], batch 400 | d_loss: 16.6251 | g_loss: 0.5912
+DRR 1.1920928e-07 DRM -5.3227024 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.9556894
+Epoch [   12/  100], batch 450 | d_loss: 16.6504 | g_loss: 0.5956
+DRR 1.1920928e-07 DRM -5.2240095 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.938799
+Epoch [   12/  100], batch 500 | d_loss: 16.6405 | g_loss: 0.5939
+DRR 1.1920928e-07 DRM -5.7039113 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.996043
+Epoch [   12/  100], batch 550 | d_loss: 16.6885 | g_loss: 0.5996
+DRR 1.1920928e-07 DRM -5.0367393 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.947484
+Epoch [   12/  100], batch 600 | d_loss: 16.6218 | g_loss: 0.5947
+DRR 1.1920928e-07 DRM -4.821948 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.961988
+Epoch [   13/  100], batch 0 | d_loss: 16.6003 | g_loss: 0.5962
+DRR 1.1920928e-07 DRM -5.460454 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.931877
+Epoch [   13/  100], batch 50 | d_loss: 16.6641 | g_loss: 0.5932
+DRR 1.1920928e-07 DRM -5.420759 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.968611
+Epoch [   13/  100], batch 100 | d_loss: 16.6602 | g_loss: 0.5969
+DRR 1.1920928e-07 DRM -5.407951 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.90757
+Epoch [   13/  100], batch 150 | d_loss: 16.6589 | g_loss: 0.5908
+DRR 1.1920928e-07 DRM -5.9876413 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.9487643
+Epoch [   13/  100], batch 200 | d_loss: 16.7169 | g_loss: 0.5949
+DRR 1.1920928e-07 DRM -5.706002 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.9821877
+Epoch [   13/  100], batch 250 | d_loss: 16.6887 | g_loss: 0.5982
+DRR 1.1920928e-07 DRM -5.9891114 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.984478
+Epoch [   13/  100], batch 300 | d_loss: 16.7170 | g_loss: 0.5984
+DRR 1.1920928e-07 DRM -5.395557 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.977866
+Epoch [   13/  100], batch 350 | d_loss: 16.6577 | g_loss: 0.5978
+DRR 1.1920928e-07 DRM -5.9416494 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.0308714
+Epoch [   13/  100], batch 400 | d_loss: 16.7123 | g_loss: 0.6031
+DRR 1.1920928e-07 DRM -5.7076125 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.0300703
+Epoch [   13/  100], batch 450 | d_loss: 16.6889 | g_loss: 0.6030
+DRR 1.1920928e-07 DRM -5.3135123 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.0248804
+Epoch [   13/  100], batch 500 | d_loss: 16.6494 | g_loss: 0.6025
+DRR 1.1920928e-07 DRM -5.3722057 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.0214944
+Epoch [   13/  100], batch 550 | d_loss: 16.6553 | g_loss: 0.6021
+DRR 1.1920928e-07 DRM -5.9806623 DFF -16.118095
+GFR 1.1920928e-07 GFE -5.9831705
+Epoch [   13/  100], batch 600 | d_loss: 16.7162 | g_loss: 0.5983
+DRR 1.1920928e-07 DRM -5.763648 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.0585003
+Epoch [   14/  100], batch 0 | d_loss: 16.6945 | g_loss: 0.6058
+DRR 1.1920928e-07 DRM -6.0851545 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.091366
+Epoch [   14/  100], batch 50 | d_loss: 16.7266 | g_loss: 0.6091
+DRR 1.1920928e-07 DRM -6.043782 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.120107
+Epoch [   14/  100], batch 100 | d_loss: 16.7225 | g_loss: 0.6120
+DRR 1.1920928e-07 DRM -6.161376 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.129686
+Epoch [   14/  100], batch 150 | d_loss: 16.7342 | g_loss: 0.6130
+DRR 1.1920928e-07 DRM -6.317551 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.0550923
+Epoch [   14/  100], batch 200 | d_loss: 16.7499 | g_loss: 0.6055
+DRR 1.1920928e-07 DRM -6.04653 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.13581
+Epoch [   14/  100], batch 250 | d_loss: 16.7227 | g_loss: 0.6136
+DRR 1.1920928e-07 DRM -5.7118616 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.142686
+Epoch [   14/  100], batch 300 | d_loss: 16.6893 | g_loss: 0.6143
+DRR 1.1920928e-07 DRM -5.773058 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.130288
+Epoch [   14/  100], batch 350 | d_loss: 16.6954 | g_loss: 0.6130
+DRR 1.1920928e-07 DRM -5.9696836 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.230479
+Epoch [   14/  100], batch 400 | d_loss: 16.7151 | g_loss: 0.6230
+DRR 1.1920928e-07 DRM -6.7709723 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.220083
+Epoch [   14/  100], batch 450 | d_loss: 16.7952 | g_loss: 0.6220
+DRR 1.1920928e-07 DRM -6.9912176 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.327136
+Epoch [   14/  100], batch 500 | d_loss: 16.8172 | g_loss: 0.6327
+DRR 1.1920928e-07 DRM -5.899047 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.1868954
+Epoch [   14/  100], batch 550 | d_loss: 16.7080 | g_loss: 0.6187
+DRR 1.1920928e-07 DRM -7.792884 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.297617
+Epoch [   14/  100], batch 600 | d_loss: 16.8974 | g_loss: 0.6298
+DRR 1.1920928e-07 DRM -6.2947187 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.3010283
+Epoch [   15/  100], batch 0 | d_loss: 16.7476 | g_loss: 0.6301
+DRR 1.1920928e-07 DRM -7.3346834 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.4333315
+Epoch [   15/  100], batch 50 | d_loss: 16.8516 | g_loss: 0.6433
+DRR 1.1920928e-07 DRM -7.322201 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.518303
+Epoch [   15/  100], batch 100 | d_loss: 16.8503 | g_loss: 0.6518
+DRR 1.1920928e-07 DRM -8.619471 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.615943
+Epoch [   15/  100], batch 150 | d_loss: 16.9800 | g_loss: 0.6616
+DRR 1.1920928e-07 DRM -7.7840505 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.7494736
+Epoch [   15/  100], batch 200 | d_loss: 16.8965 | g_loss: 0.6749
+DRR 1.1920928e-07 DRM -7.7091293 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.7242937
+Epoch [   15/  100], batch 250 | d_loss: 16.8890 | g_loss: 0.6724
+DRR 1.1920928e-07 DRM -8.756802 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.809412
+Epoch [   15/  100], batch 300 | d_loss: 16.9938 | g_loss: 0.6809
+DRR 1.1920928e-07 DRM -8.303334 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.845242
+Epoch [   15/  100], batch 350 | d_loss: 16.9484 | g_loss: 0.6845
+DRR 1.1920928e-07 DRM -8.129991 DFF -16.118095
+GFR 1.1920928e-07 GFE -6.934978
+Epoch [   15/  100], batch 400 | d_loss: 16.9311 | g_loss: 0.6935
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   15/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   15/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   15/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   15/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   16/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   16/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   16/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   16/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   16/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   16/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   16/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   16/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   16/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   16/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   16/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   16/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   16/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   17/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   17/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   17/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   17/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   17/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   17/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   17/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   17/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   17/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   17/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   17/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   17/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   17/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   18/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   18/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   18/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   18/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   18/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   18/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   18/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   18/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   18/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   18/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   18/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   18/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   18/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   19/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   19/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   19/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   19/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   19/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   19/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   19/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   19/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   19/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   19/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   19/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   19/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   19/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   20/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   20/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   20/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   20/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   20/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   20/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   20/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   20/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   20/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   20/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   20/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   20/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   20/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   21/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   21/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   21/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   21/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   21/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   21/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   21/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   21/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   21/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   21/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   21/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   21/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   21/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   22/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   22/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   22/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   22/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   22/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   22/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   22/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   22/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   22/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   22/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   22/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   22/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   22/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   23/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   23/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   23/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   23/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   23/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   23/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   23/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   23/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   23/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   23/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   23/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   23/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   23/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   24/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   24/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   24/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   24/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   24/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   24/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   24/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   24/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   24/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   24/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   24/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   24/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   24/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   25/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   25/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   25/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   25/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   25/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   25/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   25/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   25/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   25/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   25/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   25/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   25/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   25/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   26/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   26/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   26/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   26/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   26/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   26/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   26/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   26/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   26/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   26/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   26/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   26/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   26/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   27/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   27/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   27/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   27/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   27/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   27/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   27/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   27/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   27/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   27/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   27/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   27/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   27/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   28/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   28/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   28/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   28/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   28/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   28/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   28/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   28/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   28/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   28/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   28/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   28/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   28/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   29/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   29/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   29/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   29/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   29/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   29/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   29/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   29/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   29/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   29/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   29/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   29/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   29/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   30/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   30/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   30/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   30/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   30/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   30/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   30/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   30/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   30/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   30/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   30/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   30/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   30/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   31/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   31/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   31/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   31/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   31/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   31/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   31/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   31/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   31/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   31/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   31/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   31/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   31/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   32/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   32/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   32/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   32/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   32/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   32/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   32/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   32/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   32/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   32/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   32/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   32/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   32/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   33/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   33/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   33/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   33/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   33/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   33/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   33/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   33/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   33/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   33/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   33/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   33/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   33/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   34/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   34/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   34/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   34/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   34/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   34/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   34/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   34/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   34/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   34/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   34/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   34/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   34/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   35/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   35/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   35/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   35/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   35/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   35/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   35/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   35/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   35/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   35/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   35/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   35/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   35/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   36/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   36/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   36/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   36/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   36/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   36/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   36/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   36/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   36/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   36/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   36/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   36/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   36/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   37/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   37/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   37/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   37/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   37/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   37/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   37/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   37/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   37/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   37/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   37/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   37/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   37/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   38/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   38/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   38/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   38/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   38/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   38/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   38/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   38/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   38/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   38/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   38/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   38/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   38/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   39/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   39/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   39/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   39/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   39/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   39/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   39/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   39/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   39/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   39/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   39/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   39/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   39/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   40/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   40/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   40/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   40/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   40/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   40/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   40/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   40/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   40/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   40/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   40/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   40/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   40/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   41/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   41/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   41/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   41/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   41/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   41/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   41/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   41/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   41/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   41/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   41/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   41/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   41/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   42/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   42/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   42/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   42/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   42/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   42/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   42/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   42/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   42/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   42/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   42/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   42/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   42/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   43/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   43/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   43/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   43/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   43/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   43/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   43/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   43/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   43/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   43/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   43/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   43/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   43/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   44/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   44/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   44/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   44/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   44/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   44/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   44/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   44/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   44/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   44/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   44/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   44/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   44/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   45/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   45/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   45/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   45/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   45/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   45/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   45/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   45/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   45/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   45/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   45/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   45/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   45/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   46/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   46/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   46/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   46/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   46/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   46/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   46/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   46/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   46/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   46/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   46/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   46/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   46/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   47/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   47/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   47/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   47/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   47/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   47/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   47/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   47/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   47/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   47/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   47/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   47/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   47/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   48/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   48/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   48/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   48/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   48/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   48/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   48/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   48/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   48/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   48/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   48/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   48/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   48/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   49/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   49/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   49/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   49/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   49/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   49/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   49/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   49/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   49/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   49/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   49/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   49/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   49/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   50/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   50/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   50/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   50/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   50/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   50/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   50/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   50/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   50/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   50/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   50/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   50/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   50/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   51/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   51/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   51/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   51/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   51/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   51/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   51/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   51/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   51/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   51/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   51/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   51/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   51/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   52/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   52/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   52/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   52/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   52/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   52/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   52/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   52/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   52/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   52/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   52/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   52/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   52/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   53/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   53/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   53/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   53/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   53/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   53/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   53/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   53/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   53/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   53/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   53/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   53/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   53/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   54/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   54/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   54/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   54/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   54/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   54/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   54/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   54/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   54/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   54/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   54/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   54/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   54/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   55/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   55/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   55/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   55/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   55/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   55/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   55/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   55/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   55/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   55/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   55/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   55/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   55/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   56/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   56/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   56/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   56/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   56/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   56/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   56/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   56/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   56/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   56/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   56/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   56/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   56/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   57/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   57/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   57/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   57/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   57/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   57/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   57/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   57/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   57/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   57/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   57/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   57/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   57/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   58/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   58/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   58/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   58/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   58/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   58/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   58/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   58/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   58/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   58/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   58/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   58/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   58/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   59/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   59/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   59/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   59/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   59/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   59/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   59/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   59/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   59/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   59/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   59/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   59/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   59/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   60/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   60/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   60/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   60/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   60/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   60/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   60/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   60/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   60/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   60/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   60/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   60/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   60/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   61/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   61/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   61/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   61/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   61/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   61/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   61/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   61/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   61/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   61/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   61/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   61/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   61/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   62/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   62/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   62/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   62/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   62/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   62/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   62/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   62/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   62/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   62/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   62/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   62/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   62/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   63/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   63/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   63/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   63/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   63/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   63/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   63/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   63/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   63/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   63/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   63/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   63/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   63/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   64/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   64/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   64/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   64/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   64/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   64/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   64/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   64/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   64/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   64/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   64/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   64/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   64/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   65/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   65/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   65/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   65/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   65/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   65/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   65/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   65/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   65/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   65/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   65/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   65/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   65/  100], batch 600 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   66/  100], batch 0 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   66/  100], batch 50 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   66/  100], batch 100 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   66/  100], batch 150 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   66/  100], batch 200 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   66/  100], batch 250 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   66/  100], batch 300 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   66/  100], batch 350 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   66/  100], batch 400 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   66/  100], batch 450 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   66/  100], batch 500 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   66/  100], batch 550 | d_loss:    nan | g_loss:    nan
+DRR nan DRM nan DFF nan
+GFR nan GFE nan
+Epoch [   66/  100], batch 600 | d_loss:    nan | g_loss:    nan
+Traceback (most recent call last):
+  File "original_CAN_as_script.py", line 331, in <module>
+    for batch_i, (real_images, real_labels) in enumerate(train_dataloader, 0):
+  File "/home/yph2105/.local/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 279, in __iter__
+    return _MultiProcessingDataLoaderIter(self)
+  File "/home/yph2105/.local/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 719, in __init__
+    w.start()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 105, in start
+    self._popen = self._Popen(self)
+  File "/usr/lib/python3.6/multiprocessing/context.py", line 223, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/usr/lib/python3.6/multiprocessing/context.py", line 277, in _Popen
+    return Popen(process_obj)
+  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/usr/lib/python3.6/multiprocessing/popen_fork.py", line 66, in _launch
+    self.pid = os.fork()
+OSError: [Errno 12] Cannot allocate memory

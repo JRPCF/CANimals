@@ -1,0 +1,5144 @@
+Random Seed:  999
+252
+Generator(
+  (main): Sequential(
+    (0): ConvTranspose2d(100, 2048, kernel_size=(4, 4), stride=(1, 1), bias=False)
+    (1): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): ConvTranspose2d(2048, 1024, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (4): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU(inplace=True)
+    (6): ConvTranspose2d(1024, 512, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (7): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU(inplace=True)
+    (9): ConvTranspose2d(512, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (10): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (11): ReLU(inplace=True)
+    (12): ConvTranspose2d(256, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (13): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (14): ReLU(inplace=True)
+    (15): ConvTranspose2d(128, 3, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (16): Tanh()
+  )
+)
+Discriminator(
+  (conv1): Conv2d(3, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+  (conv2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+  (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv3): Conv2d(64, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+  (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv4): Conv2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+  (bn4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv5): Conv2d(256, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+  (bn5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (real): Linear(in_features=4096, out_features=1, bias=True)
+  (multi1): Linear(in_features=4096, out_features=1024, bias=True)
+  (multi2): Linear(in_features=1024, out_features=512, bias=True)
+  (multi3): Linear(in_features=512, out_features=120, bias=True)
+)
+GPU available for training. Models moved to GPU
+Starting Training Loop...
+0 / 8
+DRR -0.84996575 DRM -4.788406 DFF -0.5562938
+GFR -1.7696404 GFE -5.793053
+D Loss: 1.4062595 G Loss: 1.7696404
+Epoch [    1/ 2000], batch 0 | d_loss: 1.4063 | g_loss: 1.7696
+1 / 8
+D Loss: 2.4528012 G Loss: 0.950313
+2 / 8
+D Loss: 2.8339992 G Loss: 0.94865644
+3 / 8
+D Loss: 2.847321 G Loss: 1.1558831
+4 / 8
+D Loss: 2.915514 G Loss: 1.159421
+5 / 8
+D Loss: 2.764902 G Loss: 1.4633014
+6 / 8
+D Loss: 2.784012 G Loss: 1.6365097
+7 / 8
+D Loss: 2.6065578 G Loss: 1.8047857
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_1_128.pkl
+/home/yph2105/.local/lib/python3.6/site-packages/torch/nn/functional.py:1351: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+original_CAN_as_script_128-fix_training.py:186: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  multi_output = F.softmax(self.multi3(multi_output))
+0 / 8
+DRR -0.8133898 DRM -4.806172 DFF -1.4849393
+GFR -2.0724626 GFE -5.7925634
+D Loss: 2.298329 G Loss: 2.0724626
+Epoch [    2/ 2000], batch 0 | d_loss: 2.2983 | g_loss: 2.0725
+1 / 8
+D Loss: 2.0848625 G Loss: 2.283617
+2 / 8
+D Loss: 1.920308 G Loss: 2.470181
+3 / 8
+D Loss: 2.0705757 G Loss: 2.5428836
+4 / 8
+D Loss: 2.133777 G Loss: 2.6096318
+5 / 8
+D Loss: 2.4325652 G Loss: 2.7092602
+6 / 8
+D Loss: 2.260989 G Loss: 2.8661861
+7 / 8
+D Loss: 2.0958931 G Loss: 3.027835
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_2_128.pkl
+0 / 8
+DRR -0.66279 DRM -4.7999015 DFF -0.9049411
+GFR -2.963583 GFE -5.7957354
+D Loss: 1.5677311 G Loss: 2.963583
+Epoch [    3/ 2000], batch 0 | d_loss: 1.5677 | g_loss: 2.9636
+1 / 8
+D Loss: 1.8040764 G Loss: 2.9534614
+2 / 8
+D Loss: 2.1112344 G Loss: 3.0341086
+3 / 8
+D Loss: 1.9053622 G Loss: 3.317183
+4 / 8
+D Loss: 1.5616108 G Loss: 3.3534446
+5 / 8
+D Loss: 1.9020149 G Loss: 3.2972589
+6 / 8
+D Loss: 1.8246136 G Loss: 3.357219
+7 / 8
+D Loss: 1.8040321 G Loss: 3.4187472
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_3_128.pkl
+0 / 8
+DRR -0.7057494 DRM -4.8351564 DFF -0.8099984
+GFR -3.4419339 GFE -5.7937145
+D Loss: 1.5157478 G Loss: 3.4419339
+Epoch [    4/ 2000], batch 0 | d_loss: 1.5157 | g_loss: 3.4419
+1 / 8
+D Loss: 1.5395643 G Loss: 3.4825616
+2 / 8
+D Loss: 1.5288489 G Loss: 3.438394
+3 / 8
+D Loss: 1.5064571 G Loss: 3.492478
+4 / 8
+D Loss: 1.4064605 G Loss: 3.6733193
+5 / 8
+D Loss: 1.2456667 G Loss: 3.5825982
+6 / 8
+D Loss: 1.4487481 G Loss: 3.7054095
+7 / 8
+D Loss: 1.282971 G Loss: 3.7641385
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_4_128.pkl
+0 / 8
+DRR -0.5883554 DRM -4.7605286 DFF -0.5988073
+GFR -3.7233021 GFE -5.793701
+D Loss: 1.1871626 G Loss: 3.7233021
+Epoch [    5/ 2000], batch 0 | d_loss: 1.1872 | g_loss: 3.7233
+1 / 8
+D Loss: 1.0770242 G Loss: 3.790992
+2 / 8
+D Loss: 1.212987 G Loss: 3.9386814
+3 / 8
+D Loss: 1.2158501 G Loss: 3.9044333
+4 / 8
+D Loss: 1.2721412 G Loss: 3.8512332
+5 / 8
+D Loss: 1.1158004 G Loss: 3.9020786
+6 / 8
+D Loss: 1.0843201 G Loss: 3.776592
+7 / 8
+D Loss: 1.2393622 G Loss: 3.9051852
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_5_128.pkl
+0 / 8
+DRR -0.44796467 DRM -4.727541 DFF -0.5087539
+GFR -3.881157 GFE -5.792677
+D Loss: 0.95671856 G Loss: 3.881157
+Epoch [    6/ 2000], batch 0 | d_loss: 0.9567 | g_loss: 3.8812
+1 / 8
+D Loss: 1.3333004 G Loss: 3.6621342
+2 / 8
+D Loss: 0.90307045 G Loss: 3.7546015
+3 / 8
+D Loss: 1.086323 G Loss: 3.9452
+4 / 8
+D Loss: 0.8958852 G Loss: 3.924347
+5 / 8
+D Loss: 0.92201686 G Loss: 3.793703
+6 / 8
+D Loss: 1.1651288 G Loss: 3.9340944
+7 / 8
+D Loss: 1.0292544 G Loss: 4.051941
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_6_128.pkl
+0 / 8
+DRR -0.5224849 DRM -4.718444 DFF -0.36018836
+GFR -3.8049767 GFE -5.79408
+D Loss: 0.88267326 G Loss: 3.8049767
+Epoch [    7/ 2000], batch 0 | d_loss: 0.8827 | g_loss: 3.8050
+1 / 8
+D Loss: 0.9967807 G Loss: 3.9423537
+2 / 8
+D Loss: 0.92155766 G Loss: 4.0492086
+3 / 8
+D Loss: 0.8891557 G Loss: 3.8376927
+4 / 8
+D Loss: 0.7788073 G Loss: 3.7696104
+5 / 8
+D Loss: 0.83349746 G Loss: 3.8002415
+6 / 8
+D Loss: 0.74599725 G Loss: 3.8393383
+7 / 8
+D Loss: 0.9547138 G Loss: 3.8250103
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_7_128.pkl
+0 / 8
+DRR -0.3586095 DRM -4.7249355 DFF -0.54367465
+GFR -4.04583 GFE -5.7919655
+D Loss: 0.90228415 G Loss: 4.04583
+Epoch [    8/ 2000], batch 0 | d_loss: 0.9023 | g_loss: 4.0458
+1 / 8
+D Loss: 0.7009382 G Loss: 3.985985
+2 / 8
+D Loss: 0.8178848 G Loss: 4.0334883
+3 / 8
+D Loss: 0.91199327 G Loss: 4.368284
+4 / 8
+D Loss: 0.80494475 G Loss: 4.279476
+5 / 8
+D Loss: 0.7884846 G Loss: 4.1939077
+6 / 8
+D Loss: 0.7479913 G Loss: 4.1424146
+7 / 8
+D Loss: 0.84450257 G Loss: 4.0638595
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_8_128.pkl
+0 / 8
+DRR -0.26837534 DRM -4.75422 DFF -0.4355455
+GFR -4.329961 GFE -5.7932243
+D Loss: 0.70392084 G Loss: 4.329961
+Epoch [    9/ 2000], batch 0 | d_loss: 0.7039 | g_loss: 4.3300
+1 / 8
+D Loss: 0.7107605 G Loss: 4.2802963
+2 / 8
+D Loss: 0.86007166 G Loss: 4.167244
+3 / 8
+D Loss: 0.74052113 G Loss: 4.43616
+4 / 8
+D Loss: 0.78472507 G Loss: 4.081247
+5 / 8
+D Loss: 0.90474457 G Loss: 4.0286994
+6 / 8
+D Loss: 0.72037023 G Loss: 4.0518227
+7 / 8
+D Loss: 0.7568382 G Loss: 4.20817
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_9_128.pkl
+0 / 8
+DRR -0.30165488 DRM -4.7192526 DFF -0.31154805
+GFR -4.3328857 GFE -5.792862
+D Loss: 0.6132029 G Loss: 4.3328857
+Epoch [   10/ 2000], batch 0 | d_loss: 0.6132 | g_loss: 4.3329
+1 / 8
+D Loss: 0.70626307 G Loss: 4.548916
+2 / 8
+D Loss: 0.7355217 G Loss: 4.460614
+3 / 8
+D Loss: 0.7397784 G Loss: 4.737235
+4 / 8
+D Loss: 0.59313875 G Loss: 4.4203563
+5 / 8
+D Loss: 0.6621847 G Loss: 4.1078596
+6 / 8
+D Loss: 0.7158475 G Loss: 4.4194584
+7 / 8
+D Loss: 0.63631845 G Loss: 4.453422
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_10_128.pkl
+0 / 8
+DRR -0.24286301 DRM -4.701886 DFF -0.21621066
+GFR -4.1215115 GFE -5.7947826
+D Loss: 0.45907366 G Loss: 4.1215115
+Epoch [   11/ 2000], batch 0 | d_loss: 0.4591 | g_loss: 4.1215
+1 / 8
+D Loss: 0.591545 G Loss: 4.1012673
+2 / 8
+D Loss: 0.5605273 G Loss: 4.2860003
+3 / 8
+D Loss: 0.40731162 G Loss: 4.156902
+4 / 8
+D Loss: 0.4965072 G Loss: 4.210462
+5 / 8
+D Loss: 0.557019 G Loss: 4.3414316
+6 / 8
+D Loss: 0.60569656 G Loss: 4.3798313
+7 / 8
+D Loss: 0.5049991 G Loss: 4.3066473
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_11_128.pkl
+0 / 8
+DRR -0.18970156 DRM -4.694783 DFF -0.2828176
+GFR -4.4536514 GFE -5.794366
+D Loss: 0.47251916 G Loss: 4.4536514
+Epoch [   12/ 2000], batch 0 | d_loss: 0.4725 | g_loss: 4.4537
+1 / 8
+D Loss: 0.4635868 G Loss: 4.3392386
+2 / 8
+D Loss: 0.5647075 G Loss: 4.5283203
+3 / 8
+D Loss: 0.36395043 G Loss: 4.3144493
+4 / 8
+D Loss: 0.51140153 G Loss: 4.5974393
+5 / 8
+D Loss: 0.33593142 G Loss: 4.4091787
+6 / 8
+D Loss: 0.48606968 G Loss: 4.7878103
+7 / 8
+D Loss: 0.33535838 G Loss: 4.637224
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_12_128.pkl
+0 / 8
+DRR -0.15721303 DRM -4.698797 DFF -0.17009264
+GFR -4.420182 GFE -5.793147
+D Loss: 0.32730567 G Loss: 4.420182
+Epoch [   13/ 2000], batch 0 | d_loss: 0.3273 | g_loss: 4.4202
+1 / 8
+D Loss: 0.4101849 G Loss: 4.6752796
+2 / 8
+D Loss: 0.53647006 G Loss: 4.5809937
+3 / 8
+D Loss: 0.42718947 G Loss: 4.581642
+4 / 8
+D Loss: 0.3372708 G Loss: 4.7579565
+5 / 8
+D Loss: 0.40856782 G Loss: 4.892748
+6 / 8
+D Loss: 0.31655407 G Loss: 4.735115
+7 / 8
+D Loss: 0.41676927 G Loss: 4.9729013
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_13_128.pkl
+0 / 8
+DRR -0.18868238 DRM -4.7270565 DFF -0.15858254
+GFR -4.7538137 GFE -5.7956457
+D Loss: 0.34726492 G Loss: 4.7538137
+Epoch [   14/ 2000], batch 0 | d_loss: 0.3473 | g_loss: 4.7538
+1 / 8
+D Loss: 0.32157648 G Loss: 4.6721706
+2 / 8
+D Loss: 0.34383136 G Loss: 4.800741
+3 / 8
+D Loss: 0.27166831 G Loss: 4.449912
+4 / 8
+D Loss: 0.41811916 G Loss: 4.3075986
+5 / 8
+D Loss: 0.3824886 G Loss: 5.048769
+6 / 8
+D Loss: 0.23451313 G Loss: 4.724757
+7 / 8
+D Loss: 0.24361074 G Loss: 4.419508
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_14_128.pkl
+0 / 8
+DRR -0.094394505 DRM -4.7006903 DFF -0.19912559
+GFR -4.9462166 GFE -5.791428
+D Loss: 0.2935201 G Loss: 4.9462166
+Epoch [   15/ 2000], batch 0 | d_loss: 0.2935 | g_loss: 4.9462
+1 / 8
+D Loss: 0.28164548 G Loss: 4.738079
+2 / 8
+D Loss: 0.3512931 G Loss: 5.0020514
+3 / 8
+D Loss: 0.24019499 G Loss: 4.7547903
+4 / 8
+D Loss: 0.32181466 G Loss: 4.491199
+5 / 8
+D Loss: 0.2584601 G Loss: 4.7531924
+6 / 8
+D Loss: 0.30932367 G Loss: 4.702907
+7 / 8
+D Loss: 0.24503545 G Loss: 4.6598945
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_15_128.pkl
+0 / 8
+DRR -0.11249061 DRM -4.711727 DFF -0.12786499
+GFR -4.6064253 GFE -5.7943068
+D Loss: 0.2403556 G Loss: 4.6064253
+Epoch [   16/ 2000], batch 0 | d_loss: 0.2404 | g_loss: 4.6064
+1 / 8
+D Loss: 0.2842403 G Loss: 4.764512
+2 / 8
+D Loss: 0.23691064 G Loss: 4.6071815
+3 / 8
+D Loss: 0.30315834 G Loss: 4.683818
+4 / 8
+D Loss: 0.29637265 G Loss: 4.589596
+5 / 8
+D Loss: 0.30687675 G Loss: 4.460643
+6 / 8
+D Loss: 0.30549324 G Loss: 4.489823
+7 / 8
+D Loss: 0.22853217 G Loss: 4.6460185
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_16_128.pkl
+0 / 8
+DRR -0.15102446 DRM -4.716991 DFF -0.09664009
+GFR -4.437969 GFE -5.794567
+D Loss: 0.24766454 G Loss: 4.437969
+Epoch [   17/ 2000], batch 0 | d_loss: 0.2477 | g_loss: 4.4380
+1 / 8
+D Loss: 0.26383668 G Loss: 4.645359
+2 / 8
+D Loss: 0.22131684 G Loss: 4.7637568
+3 / 8
+D Loss: 0.22610632 G Loss: 4.7591553
+4 / 8
+D Loss: 0.19170721 G Loss: 4.651245
+5 / 8
+D Loss: 0.22030772 G Loss: 5.0706053
+6 / 8
+D Loss: 0.2727431 G Loss: 4.8760533
+7 / 8
+D Loss: 0.25684097 G Loss: 4.9192176
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_17_128.pkl
+0 / 8
+DRR -0.10965218 DRM -4.7264585 DFF -0.13322768
+GFR -5.040126 GFE -5.7936797
+D Loss: 0.24287985 G Loss: 5.040126
+Epoch [   18/ 2000], batch 0 | d_loss: 0.2429 | g_loss: 5.0401
+1 / 8
+D Loss: 0.18750393 G Loss: 5.3562326
+2 / 8
+D Loss: 0.1634898 G Loss: 5.042646
+3 / 8
+D Loss: 0.29630822 G Loss: 5.0830526
+4 / 8
+D Loss: 0.2536652 G Loss: 4.7710333
+5 / 8
+D Loss: 0.19036539 G Loss: 4.503901
+6 / 8
+D Loss: 0.17625278 G Loss: 4.512149
+7 / 8
+D Loss: 0.16903666 G Loss: 4.55251
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_18_128.pkl
+0 / 8
+DRR -0.14773735 DRM -4.7293653 DFF -0.089313745
+GFR -4.5535502 GFE -5.7947893
+D Loss: 0.2370511 G Loss: 4.5535502
+Epoch [   19/ 2000], batch 0 | d_loss: 0.2371 | g_loss: 4.5536
+1 / 8
+D Loss: 0.16027194 G Loss: 4.726205
+2 / 8
+D Loss: 0.2163657 G Loss: 4.8998995
+3 / 8
+D Loss: 0.15850504 G Loss: 5.2227173
+4 / 8
+D Loss: 0.1296551 G Loss: 4.9352937
+5 / 8
+D Loss: 0.14971715 G Loss: 4.7016764
+6 / 8
+D Loss: 0.11823653 G Loss: 4.970701
+7 / 8
+D Loss: 0.11037722 G Loss: 4.805297
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_19_128.pkl
+0 / 8
+DRR -0.045385417 DRM -4.714062 DFF -0.10728221
+GFR -4.9134865 GFE -5.7946744
+D Loss: 0.15266763 G Loss: 4.9134865
+Epoch [   20/ 2000], batch 0 | d_loss: 0.1527 | g_loss: 4.9135
+1 / 8
+D Loss: 0.23302037 G Loss: 4.82102
+2 / 8
+D Loss: 0.17844349 G Loss: 4.922151
+3 / 8
+D Loss: 0.104752086 G Loss: 4.8851104
+4 / 8
+D Loss: 0.1854125 G Loss: 4.976602
+5 / 8
+D Loss: 0.10380392 G Loss: 5.151264
+6 / 8
+D Loss: 0.09718588 G Loss: 4.924187
+7 / 8
+D Loss: 0.16923246 G Loss: 4.7663174
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_20_128.pkl
+0 / 8
+DRR -0.036499638 DRM -4.6939116 DFF -0.090094924
+GFR -5.351085 GFE -5.792715
+D Loss: 0.12659456 G Loss: 5.351085
+Epoch [   21/ 2000], batch 0 | d_loss: 0.1266 | g_loss: 5.3511
+1 / 8
+D Loss: 0.09837596 G Loss: 5.122916
+2 / 8
+D Loss: 0.2574 G Loss: 4.6510706
+3 / 8
+D Loss: 0.2773723 G Loss: 6.022274
+4 / 8
+D Loss: 0.060659163 G Loss: 5.6990128
+5 / 8
+D Loss: 0.12019518 G Loss: 4.9740944
+6 / 8
+D Loss: 0.16228996 G Loss: 5.5942364
+7 / 8
+D Loss: 0.07897389 G Loss: 5.4132304
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_21_128.pkl
+0 / 8
+DRR -0.07753642 DRM -4.6776667 DFF -0.08596726
+GFR -5.064842 GFE -5.792331
+D Loss: 0.16350368 G Loss: 5.064842
+Epoch [   22/ 2000], batch 0 | d_loss: 0.1635 | g_loss: 5.0648
+1 / 8
+D Loss: 0.11681917 G Loss: 5.1113696
+2 / 8
+D Loss: 0.1431632 G Loss: 4.966034
+3 / 8
+D Loss: 0.12640627 G Loss: 4.818208
+4 / 8
+D Loss: 0.15034512 G Loss: 4.641885
+5 / 8
+D Loss: 0.16565135 G Loss: 5.1622276
+6 / 8
+D Loss: 0.095555216 G Loss: 4.9474635
+7 / 8
+D Loss: 0.11478399 G Loss: 4.7269697
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_22_128.pkl
+0 / 8
+DRR -0.06028782 DRM -4.704316 DFF -0.067374244
+GFR -4.8727865 GFE -5.7941537
+D Loss: 0.12766206 G Loss: 4.8727865
+Epoch [   23/ 2000], batch 0 | d_loss: 0.1277 | g_loss: 4.8728
+1 / 8
+D Loss: 0.1011917 G Loss: 4.9809074
+2 / 8
+D Loss: 0.14547087 G Loss: 4.614482
+3 / 8
+D Loss: 0.12981997 G Loss: 4.8913045
+4 / 8
+D Loss: 0.095165156 G Loss: 5.2090883
+5 / 8
+D Loss: 0.07744339 G Loss: 5.0989227
+6 / 8
+D Loss: 0.08718367 G Loss: 4.9096637
+7 / 8
+D Loss: 0.10203926 G Loss: 5.392539
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_23_128.pkl
+0 / 8
+DRR -0.058151383 DRM -4.7283087 DFF -0.026783356
+GFR -5.19616 GFE -5.7950172
+D Loss: 0.08493474 G Loss: 5.19616
+Epoch [   24/ 2000], batch 0 | d_loss: 0.0849 | g_loss: 5.1962
+1 / 8
+D Loss: 0.09397763 G Loss: 4.89304
+2 / 8
+D Loss: 0.06978595 G Loss: 4.9925427
+3 / 8
+D Loss: 0.08442551 G Loss: 5.367386
+4 / 8
+D Loss: 0.10868605 G Loss: 5.19193
+5 / 8
+D Loss: 0.12835678 G Loss: 5.4583616
+6 / 8
+D Loss: 0.07127175 G Loss: 5.6056757
+7 / 8
+D Loss: 0.05512868 G Loss: 5.386594
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_24_128.pkl
+0 / 8
+DRR -0.033709783 DRM -4.708268 DFF -0.027230127
+GFR -5.2017365 GFE -5.793808
+D Loss: 0.060939908 G Loss: 5.2017365
+Epoch [   25/ 2000], batch 0 | d_loss: 0.0609 | g_loss: 5.2017
+1 / 8
+D Loss: 0.063244894 G Loss: 5.1552877
+2 / 8
+D Loss: 0.07053754 G Loss: 5.289841
+3 / 8
+D Loss: 0.09389585 G Loss: 5.409339
+4 / 8
+D Loss: 0.1128816 G Loss: 6.645785
+5 / 8
+D Loss: 0.061141886 G Loss: 5.960924
+6 / 8
+D Loss: 0.054011535 G Loss: 5.2949877
+7 / 8
+D Loss: 0.0666383 G Loss: 5.126071
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_25_128.pkl
+0 / 8
+DRR -0.025597438 DRM -4.7290564 DFF -0.018033456
+GFR -5.2500324 GFE -5.7945166
+D Loss: 0.043630894 G Loss: 5.2500324
+Epoch [   26/ 2000], batch 0 | d_loss: 0.0436 | g_loss: 5.2500
+1 / 8
+D Loss: 0.08909281 G Loss: 5.8369036
+2 / 8
+D Loss: 0.07390149 G Loss: 5.756562
+3 / 8
+D Loss: 0.070802175 G Loss: 5.631689
+4 / 8
+D Loss: 0.06988287 G Loss: 5.4503937
+5 / 8
+D Loss: 0.075772956 G Loss: 5.3587036
+6 / 8
+D Loss: 0.13304804 G Loss: 4.7852736
+7 / 8
+D Loss: 0.14778078 G Loss: 6.8076906
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_26_128.pkl
+0 / 8
+DRR -0.039924502 DRM -4.7208004 DFF -0.0102524115
+GFR -6.168991 GFE -5.794398
+D Loss: 0.050176915 G Loss: 6.168991
+Epoch [   27/ 2000], batch 0 | d_loss: 0.0502 | g_loss: 6.1690
+1 / 8
+D Loss: 0.04868966 G Loss: 5.0831947
+2 / 8
+D Loss: 0.07729295 G Loss: 5.069107
+3 / 8
+D Loss: 0.06517623 G Loss: 5.1946926
+4 / 8
+D Loss: 0.06684988 G Loss: 5.204339
+5 / 8
+D Loss: 0.048601788 G Loss: 5.250801
+6 / 8
+D Loss: 0.07559496 G Loss: 4.6806145
+7 / 8
+D Loss: 0.07852331 G Loss: 5.297828
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_27_128.pkl
+0 / 8
+DRR -0.03467345 DRM -4.7176337 DFF -0.026429424
+GFR -5.4702277 GFE -5.79304
+D Loss: 0.061102875 G Loss: 5.4702277
+Epoch [   28/ 2000], batch 0 | d_loss: 0.0611 | g_loss: 5.4702
+1 / 8
+D Loss: 0.049182568 G Loss: 5.1995687
+2 / 8
+D Loss: 0.074794225 G Loss: 5.0114326
+3 / 8
+D Loss: 0.05959297 G Loss: 5.623367
+4 / 8
+D Loss: 0.047618963 G Loss: 5.2682023
+5 / 8
+D Loss: 0.093641914 G Loss: 5.023722
+6 / 8
+D Loss: 0.1446876 G Loss: 5.64514
+7 / 8
+D Loss: 0.064098775 G Loss: 5.0941696
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_28_128.pkl
+0 / 8
+DRR -0.016280545 DRM -4.7623606 DFF -0.060189053
+GFR -7.0963893 GFE -5.793
+D Loss: 0.0764696 G Loss: 7.0963893
+Epoch [   29/ 2000], batch 0 | d_loss: 0.0765 | g_loss: 7.0964
+1 / 8
+D Loss: 0.1151372 G Loss: 4.652006
+2 / 8
+D Loss: 0.17430021 G Loss: 7.0999765
+3 / 8
+D Loss: 0.08222779 G Loss: 6.17867
+4 / 8
+D Loss: 0.056897044 G Loss: 4.498248
+5 / 8
+D Loss: 0.09884858 G Loss: 6.0549273
+6 / 8
+D Loss: 0.11543661 G Loss: 4.920583
+7 / 8
+D Loss: 0.09446242 G Loss: 6.817907
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_29_128.pkl
+0 / 8
+DRR -0.25151902 DRM -4.703959 DFF -0.0036894171
+GFR -4.506134 GFE -5.7922554
+D Loss: 0.25520843 G Loss: 4.506134
+Epoch [   30/ 2000], batch 0 | d_loss: 0.2552 | g_loss: 4.5061
+1 / 8
+D Loss: 0.6037655 G Loss: 11.309406
+2 / 8
+D Loss: 5.976713 G Loss: 6.364151
+3 / 8
+D Loss: 2.3949087 G Loss: 1.6683974
+4 / 8
+D Loss: 0.6552833 G Loss: 3.8762634
+5 / 8
+D Loss: 0.3745114 G Loss: 3.5188158
+6 / 8
+D Loss: 2.7950153 G Loss: 7.0440297
+7 / 8
+D Loss: 1.8627893 G Loss: 4.139138
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_30_128.pkl
+0 / 8
+DRR -1.6153541 DRM -4.7746334 DFF -0.33139414
+GFR -2.182964 GFE -5.7934704
+D Loss: 1.9467483 G Loss: 2.182964
+Epoch [   31/ 2000], batch 0 | d_loss: 1.9467 | g_loss: 2.1830
+1 / 8
+D Loss: 1.353428 G Loss: 3.0505166
+2 / 8
+D Loss: 0.7915101 G Loss: 3.399609
+3 / 8
+D Loss: 0.48825967 G Loss: 3.3102193
+4 / 8
+D Loss: 0.31100106 G Loss: 3.4348903
+5 / 8
+D Loss: 0.23211622 G Loss: 3.713294
+6 / 8
+D Loss: 0.17471966 G Loss: 3.9204576
+7 / 8
+D Loss: 0.1598907 G Loss: 4.0193458
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_31_128.pkl
+0 / 8
+DRR -0.19349831 DRM -4.7408657 DFF -0.16238743
+GFR -4.245894 GFE -5.7945304
+D Loss: 0.35588574 G Loss: 4.245894
+Epoch [   32/ 2000], batch 0 | d_loss: 0.3559 | g_loss: 4.2459
+1 / 8
+D Loss: 0.3366242 G Loss: 6.0061893
+2 / 8
+D Loss: 0.41524976 G Loss: 5.502338
+3 / 8
+D Loss: 1.8792789 G Loss: 9.02941
+4 / 8
+D Loss: 0.8630034 G Loss: 6.7954936
+5 / 8
+D Loss: 0.70729256 G Loss: 3.395786
+6 / 8
+D Loss: 0.916829 G Loss: 5.039631
+7 / 8
+D Loss: 0.6574499 G Loss: 4.4222236
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_32_128.pkl
+0 / 8
+DRR -0.34775674 DRM -4.7681165 DFF -0.16542831
+GFR -3.3448503 GFE -5.7914495
+D Loss: 0.513185 G Loss: 3.3448503
+Epoch [   33/ 2000], batch 0 | d_loss: 0.5132 | g_loss: 3.3449
+1 / 8
+D Loss: 0.5240773 G Loss: 4.1650476
+2 / 8
+D Loss: 0.70548147 G Loss: 3.271615
+3 / 8
+D Loss: 0.35746974 G Loss: 3.250941
+4 / 8
+D Loss: 0.3382647 G Loss: 3.9425242
+5 / 8
+D Loss: 0.33390588 G Loss: 4.2416725
+6 / 8
+D Loss: 0.52785397 G Loss: 4.874901
+7 / 8
+D Loss: 0.5786897 G Loss: 3.9081903
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_33_128.pkl
+0 / 8
+DRR -0.21978673 DRM -4.739906 DFF -0.13196656
+GFR -3.9077384 GFE -5.7927265
+D Loss: 0.3517533 G Loss: 3.9077384
+Epoch [   34/ 2000], batch 0 | d_loss: 0.3518 | g_loss: 3.9077
+1 / 8
+D Loss: 0.31096387 G Loss: 3.917577
+2 / 8
+D Loss: 0.29673272 G Loss: 4.0859838
+3 / 8
+D Loss: 0.17581782 G Loss: 4.808585
+4 / 8
+D Loss: 0.13248855 G Loss: 4.8426857
+5 / 8
+D Loss: 0.1596606 G Loss: 4.3418236
+6 / 8
+D Loss: 0.12430994 G Loss: 4.1379986
+7 / 8
+D Loss: 0.15147454 G Loss: 4.1589117
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_34_128.pkl
+0 / 8
+DRR -0.054516464 DRM -4.7222424 DFF -0.123792365
+GFR -4.804988 GFE -5.7921753
+D Loss: 0.17830883 G Loss: 4.804988
+Epoch [   35/ 2000], batch 0 | d_loss: 0.1783 | g_loss: 4.8050
+1 / 8
+D Loss: 0.33662203 G Loss: 6.5707855
+2 / 8
+D Loss: 0.368708 G Loss: 4.4745474
+3 / 8
+D Loss: 0.5336791 G Loss: 5.890364
+4 / 8
+D Loss: 0.5598283 G Loss: 5.4798355
+5 / 8
+D Loss: 0.48651546 G Loss: 4.093609
+6 / 8
+D Loss: 0.6163589 G Loss: 5.131917
+7 / 8
+D Loss: 0.39877027 G Loss: 3.9272823
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_35_128.pkl
+0 / 8
+DRR -0.21061262 DRM -4.770689 DFF -0.3403683
+GFR -5.9322567 GFE -5.7940903
+D Loss: 0.5509809 G Loss: 5.9322567
+Epoch [   36/ 2000], batch 0 | d_loss: 0.5510 | g_loss: 5.9323
+1 / 8
+D Loss: 0.435008 G Loss: 3.7970238
+2 / 8
+D Loss: 0.4094466 G Loss: 4.5419817
+3 / 8
+D Loss: 0.31347916 G Loss: 4.103978
+4 / 8
+D Loss: 0.22668342 G Loss: 3.8333402
+5 / 8
+D Loss: 0.3277489 G Loss: 3.695939
+6 / 8
+D Loss: 0.28243044 G Loss: 3.706183
+7 / 8
+D Loss: 0.27077648 G Loss: 4.099681
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_36_128.pkl
+0 / 8
+DRR -0.12781067 DRM -4.7851524 DFF -0.1506074
+GFR -4.5456786 GFE -5.795472
+D Loss: 0.27841806 G Loss: 4.5456786
+Epoch [   37/ 2000], batch 0 | d_loss: 0.2784 | g_loss: 4.5457
+1 / 8
+D Loss: 0.68704516 G Loss: 5.4642305
+2 / 8
+D Loss: 0.35904387 G Loss: 4.895545
+3 / 8
+D Loss: 0.19722167 G Loss: 4.139179
+4 / 8
+D Loss: 0.4940357 G Loss: 5.007199
+5 / 8
+D Loss: 0.40023303 G Loss: 5.2064605
+6 / 8
+D Loss: 0.41676506 G Loss: 4.0833125
+7 / 8
+D Loss: 0.97822666 G Loss: 3.949924
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_37_128.pkl
+0 / 8
+DRR -0.30289692 DRM -4.8073907 DFF -0.30945683
+GFR -4.1168604 GFE -5.7942553
+D Loss: 0.61235374 G Loss: 4.1168604
+Epoch [   38/ 2000], batch 0 | d_loss: 0.6124 | g_loss: 4.1169
+1 / 8
+D Loss: 0.58387315 G Loss: 3.3765035
+2 / 8
+D Loss: 0.87654865 G Loss: 5.8026266
+3 / 8
+D Loss: 0.8423274 G Loss: 1.0254385
+4 / 8
+D Loss: 2.2296205 G Loss: 4.9212966
+5 / 8
+D Loss: 2.2208517 G Loss: 2.319108
+6 / 8
+D Loss: 1.7349292 G Loss: 1.4075973
+7 / 8
+D Loss: 1.5857694 G Loss: 2.9764144
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_38_128.pkl
+0 / 8
+DRR -1.0045414 DRM -4.8267097 DFF -0.1410334
+GFR -2.7024617 GFE -5.795356
+D Loss: 1.1455748 G Loss: 2.7024617
+Epoch [   39/ 2000], batch 0 | d_loss: 1.1456 | g_loss: 2.7025
+1 / 8
+D Loss: 0.9792934 G Loss: 1.4507184
+2 / 8
+D Loss: 1.2126839 G Loss: 1.6456919
+3 / 8
+D Loss: 0.86577654 G Loss: 2.5312457
+4 / 8
+D Loss: 1.2402353 G Loss: 1.5993656
+5 / 8
+D Loss: 1.3775207 G Loss: 1.9290974
+6 / 8
+D Loss: 1.1097865 G Loss: 2.1770306
+7 / 8
+D Loss: 0.85049117 G Loss: 1.9588662
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_39_128.pkl
+0 / 8
+DRR -0.2752831 DRM -4.772511 DFF -0.53185064
+GFR -2.7340627 GFE -5.7961264
+D Loss: 0.80713373 G Loss: 2.7340627
+Epoch [   40/ 2000], batch 0 | d_loss: 0.8071 | g_loss: 2.7341
+1 / 8
+D Loss: 0.6439637 G Loss: 2.8108993
+2 / 8
+D Loss: 0.99262863 G Loss: 1.2739182
+3 / 8
+D Loss: 1.2067387 G Loss: 3.3252182
+4 / 8
+D Loss: 1.2096696 G Loss: 1.4667091
+5 / 8
+D Loss: 1.0594661 G Loss: 1.9788778
+6 / 8
+D Loss: 1.0010983 G Loss: 2.0745974
+7 / 8
+D Loss: 1.0312576 G Loss: 1.0564194
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_40_128.pkl
+0 / 8
+DRR -0.22622815 DRM -4.7573347 DFF -0.8158219
+GFR -2.6512034 GFE -5.79624
+D Loss: 1.04205 G Loss: 2.6512034
+Epoch [   41/ 2000], batch 0 | d_loss: 1.0421 | g_loss: 2.6512
+1 / 8
+D Loss: 0.94648117 G Loss: 1.3918357
+2 / 8
+D Loss: 0.6631679 G Loss: 2.0308547
+3 / 8
+D Loss: 0.93614185 G Loss: 1.9506296
+4 / 8
+D Loss: 1.3077472 G Loss: 0.9652059
+5 / 8
+D Loss: 1.1928204 G Loss: 2.6012156
+6 / 8
+D Loss: 0.9477187 G Loss: 1.7145593
+7 / 8
+D Loss: 0.8562561 G Loss: 1.2929399
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_41_128.pkl
+0 / 8
+DRR -0.23020267 DRM -4.7600083 DFF -0.589486
+GFR -2.3048244 GFE -5.7960243
+D Loss: 0.8196887 G Loss: 2.3048244
+Epoch [   42/ 2000], batch 0 | d_loss: 0.8197 | g_loss: 2.3048
+1 / 8
+D Loss: 0.9039209 G Loss: 1.5142865
+2 / 8
+D Loss: 0.8187094 G Loss: 2.0585654
+3 / 8
+D Loss: 0.8238971 G Loss: 1.7136108
+4 / 8
+D Loss: 0.9211043 G Loss: 1.879111
+5 / 8
+D Loss: 0.84803975 G Loss: 1.5876603
+6 / 8
+D Loss: 0.80960125 G Loss: 2.3767424
+7 / 8
+D Loss: 0.86643624 G Loss: 1.0758321
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_42_128.pkl
+0 / 8
+DRR -0.1845369 DRM -4.780768 DFF -1.0565764
+GFR -3.637798 GFE -5.796029
+D Loss: 1.2411133 G Loss: 3.637798
+Epoch [   43/ 2000], batch 0 | d_loss: 1.2411 | g_loss: 3.6378
+1 / 8
+D Loss: 1.4361017 G Loss: 1.4430535
+2 / 8
+D Loss: 1.1448236 G Loss: 1.158634
+3 / 8
+D Loss: 1.2160599 G Loss: 1.8876686
+4 / 8
+D Loss: 1.0023429 G Loss: 1.9825002
+5 / 8
+D Loss: 0.9245564 G Loss: 2.077389
+6 / 8
+D Loss: 1.0151005 G Loss: 1.460933
+7 / 8
+D Loss: 0.87765265 G Loss: 1.9431529
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_43_128.pkl
+0 / 8
+DRR -0.46902987 DRM -4.7813234 DFF -0.4146645
+GFR -2.0114825 GFE -5.7957125
+D Loss: 0.8836944 G Loss: 2.0114825
+Epoch [   44/ 2000], batch 0 | d_loss: 0.8837 | g_loss: 2.0115
+1 / 8
+D Loss: 0.8836137 G Loss: 1.6026651
+2 / 8
+D Loss: 0.90111804 G Loss: 1.6900735
+3 / 8
+D Loss: 0.95848036 G Loss: 2.7893534
+4 / 8
+D Loss: 0.9806988 G Loss: 1.625116
+5 / 8
+D Loss: 0.83866876 G Loss: 1.5024588
+6 / 8
+D Loss: 0.8753839 G Loss: 2.0850222
+7 / 8
+D Loss: 0.9806526 G Loss: 1.5531647
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_44_128.pkl
+0 / 8
+DRR -0.56410056 DRM -4.779234 DFF -0.42347944
+GFR -1.2847763 GFE -5.795767
+D Loss: 0.98758 G Loss: 1.2847763
+Epoch [   45/ 2000], batch 0 | d_loss: 0.9876 | g_loss: 1.2848
+1 / 8
+D Loss: 0.92116904 G Loss: 2.257155
+2 / 8
+D Loss: 0.96615577 G Loss: 1.4508276
+3 / 8
+D Loss: 1.0173042 G Loss: 2.2422585
+4 / 8
+D Loss: 0.9197369 G Loss: 1.7684269
+5 / 8
+D Loss: 1.0262432 G Loss: 2.0684557
+6 / 8
+D Loss: 1.1492503 G Loss: 1.6681101
+7 / 8
+D Loss: 0.95693445 G Loss: 1.8105831
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_45_128.pkl
+0 / 8
+DRR -0.5397505 DRM -4.765752 DFF -0.49498367
+GFR -1.6847514 GFE -5.795978
+D Loss: 1.0347342 G Loss: 1.6847514
+Epoch [   46/ 2000], batch 0 | d_loss: 1.0347 | g_loss: 1.6848
+1 / 8
+D Loss: 0.7757881 G Loss: 1.8788769
+2 / 8
+D Loss: 0.770274 G Loss: 2.7535849
+3 / 8
+D Loss: 0.77327657 G Loss: 1.492345
+4 / 8
+D Loss: 0.77923423 G Loss: 2.705474
+5 / 8
+D Loss: 0.94833493 G Loss: 1.2740774
+6 / 8
+D Loss: 0.8356323 G Loss: 1.9451141
+7 / 8
+D Loss: 0.67388326 G Loss: 2.5928116
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_46_128.pkl
+0 / 8
+DRR -0.59557045 DRM -4.7425323 DFF -0.2191984
+GFR -1.7640096 GFE -5.7958345
+D Loss: 0.81476885 G Loss: 1.7640096
+Epoch [   47/ 2000], batch 0 | d_loss: 0.8148 | g_loss: 1.7640
+1 / 8
+D Loss: 0.98091966 G Loss: 2.591805
+2 / 8
+D Loss: 1.4947239 G Loss: 1.1405667
+3 / 8
+D Loss: 1.3204128 G Loss: 2.8917022
+4 / 8
+D Loss: 1.3918581 G Loss: 1.2580242
+5 / 8
+D Loss: 0.9918364 G Loss: 1.9888446
+6 / 8
+D Loss: 0.72003186 G Loss: 2.3979027
+7 / 8
+D Loss: 0.69845283 G Loss: 1.9600888
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_47_128.pkl
+0 / 8
+DRR -0.45885655 DRM -4.763702 DFF -0.46679986
+GFR -1.8693053 GFE -5.796769
+D Loss: 0.92565644 G Loss: 1.8693053
+Epoch [   48/ 2000], batch 0 | d_loss: 0.9257 | g_loss: 1.8693
+1 / 8
+D Loss: 1.1211238 G Loss: 1.8536336
+2 / 8
+D Loss: 0.98465574 G Loss: 1.8488553
+3 / 8
+D Loss: 1.0931733 G Loss: 1.0810741
+4 / 8
+D Loss: 1.1215023 G Loss: 3.9881487
+5 / 8
+D Loss: 1.2290752 G Loss: 1.6768639
+6 / 8
+D Loss: 0.8153239 G Loss: 1.3678868
+7 / 8
+D Loss: 0.8201282 G Loss: 2.818342
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_48_128.pkl
+0 / 8
+DRR -0.456595 DRM -4.789551 DFF -0.38916188
+GFR -2.386404 GFE -5.796919
+D Loss: 0.8457569 G Loss: 2.386404
+Epoch [   49/ 2000], batch 0 | d_loss: 0.8458 | g_loss: 2.3864
+1 / 8
+D Loss: 1.044123 G Loss: 1.5827277
+2 / 8
+D Loss: 1.0480919 G Loss: 2.479279
+3 / 8
+D Loss: 0.9657287 G Loss: 2.1265182
+4 / 8
+D Loss: 1.1909385 G Loss: 1.7220356
+5 / 8
+D Loss: 0.98920935 G Loss: 2.0269272
+6 / 8
+D Loss: 0.89670295 G Loss: 1.6426835
+7 / 8
+D Loss: 0.9078902 G Loss: 2.1884098
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_49_128.pkl
+0 / 8
+DRR -0.3224222 DRM -4.7464437 DFF -0.37231055
+GFR -2.8914125 GFE -5.796438
+D Loss: 0.6947328 G Loss: 2.8914125
+Epoch [   50/ 2000], batch 0 | d_loss: 0.6947 | g_loss: 2.8914
+1 / 8
+D Loss: 0.9844837 G Loss: 1.1942328
+2 / 8
+D Loss: 1.0502646 G Loss: 3.3273938
+3 / 8
+D Loss: 1.0238105 G Loss: 1.8347821
+4 / 8
+D Loss: 1.0300729 G Loss: 2.3663707
+5 / 8
+D Loss: 0.9784534 G Loss: 2.2426934
+6 / 8
+D Loss: 1.0706134 G Loss: 2.682404
+7 / 8
+D Loss: 0.89906263 G Loss: 1.6158898
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_50_128.pkl
+0 / 8
+DRR -0.1752728 DRM -4.7616444 DFF -0.8326988
+GFR -3.0713415 GFE -5.7967596
+D Loss: 1.0079716 G Loss: 3.0713415
+Epoch [   51/ 2000], batch 0 | d_loss: 1.0080 | g_loss: 3.0713
+1 / 8
+D Loss: 0.77035725 G Loss: 2.286606
+2 / 8
+D Loss: 0.7446979 G Loss: 3.3283114
+3 / 8
+D Loss: 1.1195616 G Loss: 1.2524831
+4 / 8
+D Loss: 1.299553 G Loss: 3.5154405
+5 / 8
+D Loss: 0.8863245 G Loss: 2.240442
+6 / 8
+D Loss: 0.9739013 G Loss: 2.839661
+7 / 8
+D Loss: 0.9272994 G Loss: 2.0375602
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_51_128.pkl
+0 / 8
+DRR -0.2379681 DRM -4.755285 DFF -0.67757225
+GFR -3.490085 GFE -5.795362
+D Loss: 0.91554034 G Loss: 3.490085
+Epoch [   52/ 2000], batch 0 | d_loss: 0.9155 | g_loss: 3.4901
+1 / 8
+D Loss: 0.74686396 G Loss: 2.1658783
+2 / 8
+D Loss: 0.8520098 G Loss: 1.9687657
+3 / 8
+D Loss: 0.6903754 G Loss: 2.7780304
+4 / 8
+D Loss: 0.35250935 G Loss: 3.0893795
+5 / 8
+D Loss: 0.4262092 G Loss: 2.8369756
+6 / 8
+D Loss: 0.60634345 G Loss: 2.7990155
+7 / 8
+D Loss: 0.545864 G Loss: 3.2381938
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_52_128.pkl
+0 / 8
+DRR -0.3367349 DRM -4.777849 DFF -0.15895635
+GFR -2.7827053 GFE -5.796379
+D Loss: 0.49569124 G Loss: 2.7827053
+Epoch [   53/ 2000], batch 0 | d_loss: 0.4957 | g_loss: 2.7827
+1 / 8
+D Loss: 0.532282 G Loss: 2.9246395
+2 / 8
+D Loss: 0.41623718 G Loss: 3.194457
+3 / 8
+D Loss: 0.39268222 G Loss: 3.2365913
+4 / 8
+D Loss: 0.4565289 G Loss: 3.1335144
+5 / 8
+D Loss: 0.40788424 G Loss: 3.2471924
+6 / 8
+D Loss: 0.4762076 G Loss: 3.7788348
+7 / 8
+D Loss: 0.98035043 G Loss: 2.3841877
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_53_128.pkl
+0 / 8
+DRR -0.21612859 DRM -4.7816696 DFF -0.80268997
+GFR -4.6064672 GFE -5.7961383
+D Loss: 1.0188186 G Loss: 4.6064672
+Epoch [   54/ 2000], batch 0 | d_loss: 1.0188 | g_loss: 4.6065
+1 / 8
+D Loss: 1.0524104 G Loss: 3.287837
+2 / 8
+D Loss: 1.3069347 G Loss: 5.0846043
+3 / 8
+D Loss: 1.4664161 G Loss: 3.139133
+4 / 8
+D Loss: 1.936228 G Loss: 3.4568095
+5 / 8
+D Loss: 0.9555948 G Loss: 3.608881
+6 / 8
+D Loss: 0.6024618 G Loss: 2.9758623
+7 / 8
+D Loss: 1.1726664 G Loss: 4.9089737
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_54_128.pkl
+0 / 8
+DRR -1.1221278 DRM -4.786681 DFF -0.14101419
+GFR -2.482766 GFE -5.794715
+D Loss: 1.263142 G Loss: 2.482766
+Epoch [   55/ 2000], batch 0 | d_loss: 1.2631 | g_loss: 2.4828
+1 / 8
+D Loss: 1.1070656 G Loss: 2.6189208
+2 / 8
+D Loss: 1.4699645 G Loss: 3.0307689
+3 / 8
+D Loss: 0.93122995 G Loss: 2.8369532
+4 / 8
+D Loss: 1.1800098 G Loss: 2.8622065
+5 / 8
+D Loss: 1.2437211 G Loss: 2.0222335
+6 / 8
+D Loss: 1.1770892 G Loss: 4.022629
+7 / 8
+D Loss: 0.98823804 G Loss: 2.0811582
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_55_128.pkl
+0 / 8
+DRR -0.299913 DRM -4.7704167 DFF -0.5514674
+GFR -2.938654 GFE -5.796009
+D Loss: 0.8513804 G Loss: 2.938654
+Epoch [   56/ 2000], batch 0 | d_loss: 0.8514 | g_loss: 2.9387
+1 / 8
+D Loss: 0.64006793 G Loss: 2.8435926
+2 / 8
+D Loss: 0.5405658 G Loss: 2.3329988
+3 / 8
+D Loss: 0.3866718 G Loss: 2.7624784
+4 / 8
+D Loss: 0.49300063 G Loss: 2.8728037
+5 / 8
+D Loss: 0.36364996 G Loss: 2.822577
+6 / 8
+D Loss: 0.38588738 G Loss: 2.926382
+7 / 8
+D Loss: 0.39354235 G Loss: 3.020665
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_56_128.pkl
+0 / 8
+DRR -0.21330018 DRM -4.764236 DFF -0.10781516
+GFR -3.0204682 GFE -5.7977123
+D Loss: 0.32111534 G Loss: 3.0204682
+Epoch [   57/ 2000], batch 0 | d_loss: 0.3211 | g_loss: 3.0205
+1 / 8
+D Loss: 0.22324136 G Loss: 3.2897227
+2 / 8
+D Loss: 0.41748676 G Loss: 3.031603
+3 / 8
+D Loss: 0.29467678 G Loss: 3.5934095
+4 / 8
+D Loss: 0.45308018 G Loss: 3.5373414
+5 / 8
+D Loss: 0.66240156 G Loss: 4.212515
+6 / 8
+D Loss: 0.74551594 G Loss: 3.4445953
+7 / 8
+D Loss: 0.5412652 G Loss: 2.477509
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_57_128.pkl
+0 / 8
+DRR -0.1620277 DRM -4.7481604 DFF -0.46777558
+GFR -3.45272 GFE -5.796292
+D Loss: 0.6298033 G Loss: 3.45272
+Epoch [   58/ 2000], batch 0 | d_loss: 0.6298 | g_loss: 3.4527
+1 / 8
+D Loss: 0.37961203 G Loss: 3.7445812
+2 / 8
+D Loss: 0.41178048 G Loss: 3.2334156
+3 / 8
+D Loss: 0.5937162 G Loss: 3.6167078
+4 / 8
+D Loss: 0.63714457 G Loss: 4.288924
+5 / 8
+D Loss: 1.028703 G Loss: 2.8172898
+6 / 8
+D Loss: 0.83407617 G Loss: 4.1939554
+7 / 8
+D Loss: 0.77819073 G Loss: 2.7256818
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_58_128.pkl
+0 / 8
+DRR -0.26171923 DRM -4.7395825 DFF -0.7391885
+GFR -4.5948877 GFE -5.7937803
+D Loss: 1.0009077 G Loss: 4.5948877
+Epoch [   59/ 2000], batch 0 | d_loss: 1.0009 | g_loss: 4.5949
+1 / 8
+D Loss: 0.8354975 G Loss: 2.7696939
+2 / 8
+D Loss: 0.82957757 G Loss: 3.3320165
+3 / 8
+D Loss: 0.698027 G Loss: 3.25613
+4 / 8
+D Loss: 0.46883798 G Loss: 3.3956492
+5 / 8
+D Loss: 0.49841958 G Loss: 3.1769366
+6 / 8
+D Loss: 0.9483065 G Loss: 1.8032185
+7 / 8
+D Loss: 0.83284223 G Loss: 3.9033444
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_59_128.pkl
+0 / 8
+DRR -0.40981656 DRM -4.7601953 DFF -0.07900397
+GFR -3.1700578 GFE -5.795858
+D Loss: 0.48882052 G Loss: 3.1700578
+Epoch [   60/ 2000], batch 0 | d_loss: 0.4888 | g_loss: 3.1701
+1 / 8
+D Loss: 0.42038408 G Loss: 3.3284564
+2 / 8
+D Loss: 0.41965348 G Loss: 3.1485553
+3 / 8
+D Loss: 0.30273175 G Loss: 3.0580556
+4 / 8
+D Loss: 0.39475226 G Loss: 3.0979338
+5 / 8
+D Loss: 0.4233725 G Loss: 3.8823986
+6 / 8
+D Loss: 0.39713007 G Loss: 3.4331756
+7 / 8
+D Loss: 0.4443205 G Loss: 3.0122304
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_60_128.pkl
+0 / 8
+DRR -0.2780063 DRM -4.7543383 DFF -0.28013384
+GFR -2.9936929 GFE -5.7955694
+D Loss: 0.55814016 G Loss: 2.9936929
+Epoch [   61/ 2000], batch 0 | d_loss: 0.5581 | g_loss: 2.9937
+1 / 8
+D Loss: 0.57589245 G Loss: 3.2842176
+2 / 8
+D Loss: 1.2073365 G Loss: 2.3318563
+3 / 8
+D Loss: 1.2591203 G Loss: 3.879734
+4 / 8
+D Loss: 0.93301463 G Loss: 3.2942772
+5 / 8
+D Loss: 0.9947178 G Loss: 2.8711667
+6 / 8
+D Loss: 0.72715163 G Loss: 3.4362292
+7 / 8
+D Loss: 0.9564314 G Loss: 4.538614
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_61_128.pkl
+0 / 8
+DRR -1.3536057 DRM -4.799365 DFF -0.087205365
+GFR -2.3640118 GFE -5.7972136
+D Loss: 1.4408112 G Loss: 2.3640118
+Epoch [   62/ 2000], batch 0 | d_loss: 1.4408 | g_loss: 2.3640
+1 / 8
+D Loss: 0.8049449 G Loss: 3.4084723
+2 / 8
+D Loss: 0.6674144 G Loss: 3.8053007
+3 / 8
+D Loss: 0.5714975 G Loss: 3.1608367
+4 / 8
+D Loss: 0.47517776 G Loss: 3.488141
+5 / 8
+D Loss: 1.2956169 G Loss: 2.3710172
+6 / 8
+D Loss: 0.7536054 G Loss: 4.1498003
+7 / 8
+D Loss: 1.1696815 G Loss: 2.5900142
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_62_128.pkl
+0 / 8
+DRR -0.10426491 DRM -4.781995 DFF -0.6244391
+GFR -4.118142 GFE -5.7937794
+D Loss: 0.72870404 G Loss: 4.118142
+Epoch [   63/ 2000], batch 0 | d_loss: 0.7287 | g_loss: 4.1181
+1 / 8
+D Loss: 0.6023062 G Loss: 3.6050787
+2 / 8
+D Loss: 0.65006423 G Loss: 2.848182
+3 / 8
+D Loss: 0.6454445 G Loss: 4.475412
+4 / 8
+D Loss: 0.39234215 G Loss: 4.13094
+5 / 8
+D Loss: 0.41921195 G Loss: 2.913276
+6 / 8
+D Loss: 0.3644752 G Loss: 3.8668444
+7 / 8
+D Loss: 0.3430771 G Loss: 3.7456768
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_63_128.pkl
+0 / 8
+DRR -0.33907825 DRM -4.759857 DFF -0.46339297
+GFR -3.945178 GFE -5.7937727
+D Loss: 0.8024712 G Loss: 3.945178
+Epoch [   64/ 2000], batch 0 | d_loss: 0.8025 | g_loss: 3.9452
+1 / 8
+D Loss: 0.6610556 G Loss: 4.3164473
+2 / 8
+D Loss: 1.0508927 G Loss: 4.334287
+3 / 8
+D Loss: 1.0176067 G Loss: 4.8984423
+4 / 8
+D Loss: 1.5734551 G Loss: 2.8109732
+5 / 8
+D Loss: 1.539312 G Loss: 5.9265113
+6 / 8
+D Loss: 0.9389049 G Loss: 4.351574
+7 / 8
+D Loss: 0.7442317 G Loss: 2.9769254
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_64_128.pkl
+0 / 8
+DRR -0.11611313 DRM -4.791974 DFF -0.5390866
+GFR -5.23195 GFE -5.7949457
+D Loss: 0.6551997 G Loss: 5.23195
+Epoch [   65/ 2000], batch 0 | d_loss: 0.6552 | g_loss: 5.2319
+1 / 8
+D Loss: 0.81811684 G Loss: 2.746278
+2 / 8
+D Loss: 0.97976714 G Loss: 4.8317614
+3 / 8
+D Loss: 0.4961152 G Loss: 4.11685
+4 / 8
+D Loss: 0.54894006 G Loss: 3.1185832
+5 / 8
+D Loss: 0.645424 G Loss: 3.7918851
+6 / 8
+D Loss: 0.7931992 G Loss: 3.1639206
+7 / 8
+D Loss: 0.70010525 G Loss: 3.4056478
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_65_128.pkl
+0 / 8
+DRR -0.43120795 DRM -4.802984 DFF -0.5087711
+GFR -3.774095 GFE -5.795057
+D Loss: 0.9399791 G Loss: 3.774095
+Epoch [   66/ 2000], batch 0 | d_loss: 0.9400 | g_loss: 3.7741
+1 / 8
+D Loss: 1.0670274 G Loss: 1.5337074
+2 / 8
+D Loss: 1.4331083 G Loss: 4.3328085
+3 / 8
+D Loss: 1.8256745 G Loss: 1.3688098
+4 / 8
+D Loss: 1.0319952 G Loss: 2.1362314
+5 / 8
+D Loss: 0.97162235 G Loss: 1.2248528
+6 / 8
+D Loss: 0.7937771 G Loss: 2.2270455
+7 / 8
+D Loss: 1.2141557 G Loss: 1.3288481
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_66_128.pkl
+0 / 8
+DRR -0.36580592 DRM -4.759112 DFF -0.5093267
+GFR -2.3138645 GFE -5.79416
+D Loss: 0.8751326 G Loss: 2.3138645
+Epoch [   67/ 2000], batch 0 | d_loss: 0.8751 | g_loss: 2.3139
+1 / 8
+D Loss: 1.4339195 G Loss: 0.78727984
+2 / 8
+D Loss: 1.2904704 G Loss: 2.875636
+3 / 8
+D Loss: 1.0330834 G Loss: 1.5816977
+4 / 8
+D Loss: 0.8520956 G Loss: 1.6815089
+5 / 8
+D Loss: 0.7935085 G Loss: 1.9830378
+6 / 8
+D Loss: 0.77752465 G Loss: 1.641867
+7 / 8
+D Loss: 0.91478896 G Loss: 1.9735582
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_67_128.pkl
+0 / 8
+DRR -0.31076068 DRM -4.7579446 DFF -0.32311973
+GFR -2.7244449 GFE -5.795017
+D Loss: 0.6338804 G Loss: 2.7244449
+Epoch [   68/ 2000], batch 0 | d_loss: 0.6339 | g_loss: 2.7244
+1 / 8
+D Loss: 0.757581 G Loss: 1.0999689
+2 / 8
+D Loss: 1.0311333 G Loss: 3.607419
+3 / 8
+D Loss: 1.2895848 G Loss: 1.167412
+4 / 8
+D Loss: 1.0979993 G Loss: 2.5818245
+5 / 8
+D Loss: 0.9427936 G Loss: 1.4566092
+6 / 8
+D Loss: 0.80736053 G Loss: 1.5245674
+7 / 8
+D Loss: 0.7837784 G Loss: 1.9286757
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_68_128.pkl
+0 / 8
+DRR -0.17252578 DRM -4.7740774 DFF -0.52480483
+GFR -2.935803 GFE -5.79494
+D Loss: 0.6973306 G Loss: 2.935803
+Epoch [   69/ 2000], batch 0 | d_loss: 0.6973 | g_loss: 2.9358
+1 / 8
+D Loss: 0.8677654 G Loss: 1.709755
+2 / 8
+D Loss: 0.957397 G Loss: 1.6748202
+3 / 8
+D Loss: 1.0150927 G Loss: 2.5638132
+4 / 8
+D Loss: 0.9857748 G Loss: 1.3535362
+5 / 8
+D Loss: 0.9925363 G Loss: 2.551084
+6 / 8
+D Loss: 1.214676 G Loss: 1.1498184
+7 / 8
+D Loss: 1.0379243 G Loss: 2.3780391
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_69_128.pkl
+0 / 8
+DRR -0.45238405 DRM -4.755393 DFF -0.25767255
+GFR -2.351629 GFE -5.79544
+D Loss: 0.7100566 G Loss: 2.351629
+Epoch [   70/ 2000], batch 0 | d_loss: 0.7101 | g_loss: 2.3516
+1 / 8
+D Loss: 0.9706138 G Loss: 1.375354
+2 / 8
+D Loss: 0.8998612 G Loss: 2.1875086
+3 / 8
+D Loss: 0.81087375 G Loss: 2.6388073
+4 / 8
+D Loss: 0.90215725 G Loss: 1.3595693
+5 / 8
+D Loss: 0.9388454 G Loss: 2.4542313
+6 / 8
+D Loss: 1.0101137 G Loss: 1.8230627
+7 / 8
+D Loss: 0.9396698 G Loss: 2.3722627
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_70_128.pkl
+0 / 8
+DRR -0.23235476 DRM -4.7394753 DFF -0.5582139
+GFR -3.4630694 GFE -5.7963667
+D Loss: 0.79056865 G Loss: 3.4630694
+Epoch [   71/ 2000], batch 0 | d_loss: 0.7906 | g_loss: 3.4631
+1 / 8
+D Loss: 0.9514451 G Loss: 1.7176588
+2 / 8
+D Loss: 0.9648855 G Loss: 2.7588851
+3 / 8
+D Loss: 0.7079873 G Loss: 2.5361114
+4 / 8
+D Loss: 0.8191363 G Loss: 1.7445364
+5 / 8
+D Loss: 0.7701423 G Loss: 2.6295576
+6 / 8
+D Loss: 0.58039105 G Loss: 2.609594
+7 / 8
+D Loss: 0.68161345 G Loss: 1.5200895
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_71_128.pkl
+0 / 8
+DRR -0.14356434 DRM -4.7808356 DFF -0.7574026
+GFR -3.806834 GFE -5.7958593
+D Loss: 0.90096694 G Loss: 3.806834
+Epoch [   72/ 2000], batch 0 | d_loss: 0.9010 | g_loss: 3.8068
+1 / 8
+D Loss: 0.8075999 G Loss: 2.1702273
+2 / 8
+D Loss: 0.72645354 G Loss: 2.3356993
+3 / 8
+D Loss: 0.78265506 G Loss: 1.6532149
+4 / 8
+D Loss: 0.6542344 G Loss: 2.734201
+5 / 8
+D Loss: 0.6864884 G Loss: 2.1718924
+6 / 8
+D Loss: 0.7386017 G Loss: 1.8921081
+7 / 8
+D Loss: 0.6132791 G Loss: 2.2063754
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_72_128.pkl
+0 / 8
+DRR -0.33296418 DRM -4.7590866 DFF -0.23856111
+GFR -2.199375 GFE -5.7958627
+D Loss: 0.5715253 G Loss: 2.199375
+Epoch [   73/ 2000], batch 0 | d_loss: 0.5715 | g_loss: 2.1994
+1 / 8
+D Loss: 0.44371465 G Loss: 2.80623
+2 / 8
+D Loss: 0.49888325 G Loss: 2.6689472
+3 / 8
+D Loss: 0.6159711 G Loss: 2.6335669
+4 / 8
+D Loss: 0.89467216 G Loss: 1.8324115
+5 / 8
+D Loss: 0.85015917 G Loss: 3.2898724
+6 / 8
+D Loss: 0.5745423 G Loss: 3.0366468
+7 / 8
+D Loss: 0.609933 G Loss: 2.6272304
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_73_128.pkl
+0 / 8
+DRR -0.27502978 DRM -4.769487 DFF -0.43846938
+GFR -3.9602907 GFE -5.7960157
+D Loss: 0.7134992 G Loss: 3.9602907
+Epoch [   74/ 2000], batch 0 | d_loss: 0.7135 | g_loss: 3.9603
+1 / 8
+D Loss: 0.99792767 G Loss: 2.0590327
+2 / 8
+D Loss: 1.1843364 G Loss: 4.585126
+3 / 8
+D Loss: 0.97306406 G Loss: 1.4650725
+4 / 8
+D Loss: 1.9221702 G Loss: 5.3070087
+5 / 8
+D Loss: 1.324614 G Loss: 2.0070686
+6 / 8
+D Loss: 1.2269686 G Loss: 2.9320958
+7 / 8
+D Loss: 0.7709335 G Loss: 2.7026703
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_74_128.pkl
+0 / 8
+DRR -0.21594399 DRM -4.7616706 DFF -0.32767648
+GFR -2.8265643 GFE -5.795964
+D Loss: 0.54362047 G Loss: 2.8265643
+Epoch [   75/ 2000], batch 0 | d_loss: 0.5436 | g_loss: 2.8266
+1 / 8
+D Loss: 0.53612727 G Loss: 2.817348
+2 / 8
+D Loss: 0.66010135 G Loss: 2.700204
+3 / 8
+D Loss: 0.5842954 G Loss: 2.5982316
+4 / 8
+D Loss: 0.8606789 G Loss: 1.646922
+5 / 8
+D Loss: 1.039553 G Loss: 2.9660847
+6 / 8
+D Loss: 0.7741513 G Loss: 2.2307363
+7 / 8
+D Loss: 0.7184702 G Loss: 1.6511438
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_75_128.pkl
+0 / 8
+DRR -0.20607127 DRM -4.7921963 DFF -0.45234197
+GFR -2.6656747 GFE -5.794963
+D Loss: 0.65841323 G Loss: 2.6656747
+Epoch [   76/ 2000], batch 0 | d_loss: 0.6584 | g_loss: 2.6657
+1 / 8
+D Loss: 0.7094095 G Loss: 2.278002
+2 / 8
+D Loss: 0.780254 G Loss: 2.5915134
+3 / 8
+D Loss: 1.0221248 G Loss: 1.8003622
+4 / 8
+D Loss: 1.125027 G Loss: 2.6236503
+5 / 8
+D Loss: 1.1943467 G Loss: 2.2461681
+6 / 8
+D Loss: 0.860156 G Loss: 3.181202
+7 / 8
+D Loss: 0.6211798 G Loss: 2.1417043
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_76_128.pkl
+0 / 8
+DRR -0.114894114 DRM -4.7884507 DFF -0.4942413
+GFR -3.7267985 GFE -5.7953143
+D Loss: 0.6091354 G Loss: 3.7267985
+Epoch [   77/ 2000], batch 0 | d_loss: 0.6091 | g_loss: 3.7268
+1 / 8
+D Loss: 0.68699485 G Loss: 2.531866
+2 / 8
+D Loss: 0.8590056 G Loss: 3.010386
+3 / 8
+D Loss: 0.7251636 G Loss: 2.5856984
+4 / 8
+D Loss: 0.9712509 G Loss: 3.4525287
+5 / 8
+D Loss: 1.1007103 G Loss: 1.4410293
+6 / 8
+D Loss: 1.185037 G Loss: 4.8543873
+7 / 8
+D Loss: 0.81054044 G Loss: 3.28425
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_77_128.pkl
+0 / 8
+DRR -0.13877748 DRM -4.7798133 DFF -0.21513066
+GFR -2.7038488 GFE -5.7952337
+D Loss: 0.35390812 G Loss: 2.7038488
+Epoch [   78/ 2000], batch 0 | d_loss: 0.3539 | g_loss: 2.7038
+1 / 8
+D Loss: 0.90940315 G Loss: 4.834235
+2 / 8
+D Loss: 0.9519367 G Loss: 2.250687
+3 / 8
+D Loss: 1.2651913 G Loss: 3.3719323
+4 / 8
+D Loss: 0.8904564 G Loss: 2.809349
+5 / 8
+D Loss: 0.86165124 G Loss: 2.6116114
+6 / 8
+D Loss: 1.0279698 G Loss: 2.8059592
+7 / 8
+D Loss: 1.3218329 G Loss: 2.0006962
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_78_128.pkl
+0 / 8
+DRR -0.27451319 DRM -4.817108 DFF -0.4378394
+GFR -2.4254098 GFE -5.7945876
+D Loss: 0.7123526 G Loss: 2.4254098
+Epoch [   79/ 2000], batch 0 | d_loss: 0.7124 | g_loss: 2.4254
+1 / 8
+D Loss: 0.8479602 G Loss: 3.0298991
+2 / 8
+D Loss: 0.56498325 G Loss: 2.972941
+3 / 8
+D Loss: 1.0276434 G Loss: 1.5466213
+4 / 8
+D Loss: 0.9617063 G Loss: 3.4758534
+5 / 8
+D Loss: 1.0992259 G Loss: 1.4631851
+6 / 8
+D Loss: 0.86713886 G Loss: 2.1721609
+7 / 8
+D Loss: 0.7086587 G Loss: 2.3058548
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_79_128.pkl
+0 / 8
+DRR -0.4114765 DRM -4.798579 DFF -0.25147742
+GFR -1.7711104 GFE -5.7960534
+D Loss: 0.6629539 G Loss: 1.7711104
+Epoch [   80/ 2000], batch 0 | d_loss: 0.6630 | g_loss: 1.7711
+1 / 8
+D Loss: 0.9002369 G Loss: 1.9350704
+2 / 8
+D Loss: 0.67609084 G Loss: 2.6694672
+3 / 8
+D Loss: 0.78557307 G Loss: 1.0452254
+4 / 8
+D Loss: 0.9977559 G Loss: 2.4831433
+5 / 8
+D Loss: 0.76548076 G Loss: 1.9977069
+6 / 8
+D Loss: 0.6616446 G Loss: 2.3456616
+7 / 8
+D Loss: 0.6243423 G Loss: 1.975831
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_80_128.pkl
+0 / 8
+DRR -0.30245626 DRM -4.7776465 DFF -0.3797124
+GFR -2.3229485 GFE -5.7949533
+D Loss: 0.68216866 G Loss: 2.3229485
+Epoch [   81/ 2000], batch 0 | d_loss: 0.6822 | g_loss: 2.3229
+1 / 8
+D Loss: 0.66088206 G Loss: 2.4309847
+2 / 8
+D Loss: 0.83046377 G Loss: 1.3398018
+3 / 8
+D Loss: 0.7094273 G Loss: 3.2342057
+4 / 8
+D Loss: 0.63039637 G Loss: 2.266165
+5 / 8
+D Loss: 0.45280644 G Loss: 1.9143353
+6 / 8
+D Loss: 0.5128577 G Loss: 3.0013254
+7 / 8
+D Loss: 0.51027334 G Loss: 2.2120817
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_81_128.pkl
+0 / 8
+DRR -0.24523851 DRM -4.7544928 DFF -0.32374397
+GFR -2.116661 GFE -5.7963934
+D Loss: 0.5689825 G Loss: 2.116661
+Epoch [   82/ 2000], batch 0 | d_loss: 0.5690 | g_loss: 2.1167
+1 / 8
+D Loss: 0.5780829 G Loss: 3.13836
+2 / 8
+D Loss: 0.67314625 G Loss: 1.8944424
+3 / 8
+D Loss: 0.6728304 G Loss: 2.047698
+4 / 8
+D Loss: 0.50208586 G Loss: 2.6322265
+5 / 8
+D Loss: 0.5487652 G Loss: 2.1873753
+6 / 8
+D Loss: 0.61687386 G Loss: 3.015799
+7 / 8
+D Loss: 0.6735227 G Loss: 1.7359029
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_82_128.pkl
+0 / 8
+DRR -0.20587161 DRM -4.7629385 DFF -0.70490456
+GFR -3.1835856 GFE -5.795578
+D Loss: 0.91077614 G Loss: 3.1835856
+Epoch [   83/ 2000], batch 0 | d_loss: 0.9108 | g_loss: 3.1836
+1 / 8
+D Loss: 0.63985837 G Loss: 2.5056038
+2 / 8
+D Loss: 0.6990287 G Loss: 2.1529427
+3 / 8
+D Loss: 0.89820117 G Loss: 2.1001792
+4 / 8
+D Loss: 1.0103151 G Loss: 3.2654915
+5 / 8
+D Loss: 0.7672799 G Loss: 1.8921638
+6 / 8
+D Loss: 1.3463788 G Loss: 4.7768526
+7 / 8
+D Loss: 1.5544035 G Loss: 1.7357715
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_83_128.pkl
+0 / 8
+DRR -0.1925228 DRM -4.7696047 DFF -0.97978425
+GFR -3.2210221 GFE -5.7951965
+D Loss: 1.172307 G Loss: 3.2210221
+Epoch [   84/ 2000], batch 0 | d_loss: 1.1723 | g_loss: 3.2210
+1 / 8
+D Loss: 0.783823 G Loss: 3.4963007
+2 / 8
+D Loss: 1.0805707 G Loss: 1.7901359
+3 / 8
+D Loss: 0.99119526 G Loss: 2.870027
+4 / 8
+D Loss: 0.9532063 G Loss: 2.2820392
+5 / 8
+D Loss: 1.0804803 G Loss: 2.7984207
+6 / 8
+D Loss: 1.1349818 G Loss: 1.6802006
+7 / 8
+D Loss: 1.0297496 G Loss: 2.039131
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_84_128.pkl
+0 / 8
+DRR -0.17654605 DRM -4.784603 DFF -0.76069903
+GFR -3.230918 GFE -5.795115
+D Loss: 0.9372451 G Loss: 3.230918
+Epoch [   85/ 2000], batch 0 | d_loss: 0.9372 | g_loss: 3.2309
+1 / 8
+D Loss: 0.9993742 G Loss: 2.1128721
+2 / 8
+D Loss: 0.7895707 G Loss: 1.9008212
+3 / 8
+D Loss: 0.7871803 G Loss: 2.349502
+4 / 8
+D Loss: 0.7259764 G Loss: 1.9927433
+5 / 8
+D Loss: 0.8098339 G Loss: 1.9517319
+6 / 8
+D Loss: 0.98415035 G Loss: 1.5828422
+7 / 8
+D Loss: 0.95317566 G Loss: 3.1655955
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_85_128.pkl
+0 / 8
+DRR -0.50766724 DRM -4.764225 DFF -0.14214647
+GFR -2.1504893 GFE -5.795767
+D Loss: 0.6498137 G Loss: 2.1504893
+Epoch [   86/ 2000], batch 0 | d_loss: 0.6498 | g_loss: 2.1505
+1 / 8
+D Loss: 0.66100353 G Loss: 2.1463952
+2 / 8
+D Loss: 0.9189218 G Loss: 2.0050154
+3 / 8
+D Loss: 0.9534551 G Loss: 2.414962
+4 / 8
+D Loss: 0.72352374 G Loss: 2.1453202
+5 / 8
+D Loss: 0.81906676 G Loss: 2.8380396
+6 / 8
+D Loss: 0.43148583 G Loss: 3.0690036
+7 / 8
+D Loss: 0.528339 G Loss: 2.5239975
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_86_128.pkl
+0 / 8
+DRR -0.19903661 DRM -4.7644215 DFF -0.38066822
+GFR -3.1381319 GFE -5.7955465
+D Loss: 0.5797048 G Loss: 3.1381319
+Epoch [   87/ 2000], batch 0 | d_loss: 0.5797 | g_loss: 3.1381
+1 / 8
+D Loss: 0.6158374 G Loss: 2.4716082
+2 / 8
+D Loss: 0.5714338 G Loss: 2.8705819
+3 / 8
+D Loss: 0.74372697 G Loss: 2.9072268
+4 / 8
+D Loss: 0.6790539 G Loss: 2.4698937
+5 / 8
+D Loss: 0.9297612 G Loss: 2.8372993
+6 / 8
+D Loss: 1.0257486 G Loss: 3.89599
+7 / 8
+D Loss: 1.3897036 G Loss: 2.0347757
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_87_128.pkl
+0 / 8
+DRR -0.43815595 DRM -4.7565928 DFF -0.53028727
+GFR -1.9803789 GFE -5.794667
+D Loss: 0.9684432 G Loss: 1.9803789
+Epoch [   88/ 2000], batch 0 | d_loss: 0.9684 | g_loss: 1.9804
+1 / 8
+D Loss: 0.8742112 G Loss: 2.909199
+2 / 8
+D Loss: 0.8019098 G Loss: 2.9495924
+3 / 8
+D Loss: 1.0420892 G Loss: 1.5469632
+4 / 8
+D Loss: 1.066183 G Loss: 2.409561
+5 / 8
+D Loss: 0.70505095 G Loss: 3.354953
+6 / 8
+D Loss: 1.1518309 G Loss: 1.6919482
+7 / 8
+D Loss: 0.8034256 G Loss: 3.4270315
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_88_128.pkl
+0 / 8
+DRR -0.4569453 DRM -4.7463646 DFF -0.12364439
+GFR -2.374487 GFE -5.795641
+D Loss: 0.5805897 G Loss: 2.374487
+Epoch [   89/ 2000], batch 0 | d_loss: 0.5806 | g_loss: 2.3745
+1 / 8
+D Loss: 0.6349585 G Loss: 3.140682
+2 / 8
+D Loss: 1.007495 G Loss: 1.7175946
+3 / 8
+D Loss: 0.92944944 G Loss: 3.305733
+4 / 8
+D Loss: 0.93609536 G Loss: 2.4351296
+5 / 8
+D Loss: 0.5128706 G Loss: 2.8473032
+6 / 8
+D Loss: 0.56684583 G Loss: 3.085997
+7 / 8
+D Loss: 0.64024925 G Loss: 2.5415792
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_89_128.pkl
+0 / 8
+DRR -0.32719672 DRM -4.7725706 DFF -0.46250597
+GFR -2.5350518 GFE -5.795508
+D Loss: 0.78970265 G Loss: 2.5350518
+Epoch [   90/ 2000], batch 0 | d_loss: 0.7897 | g_loss: 2.5351
+1 / 8
+D Loss: 1.165304 G Loss: 1.7810601
+2 / 8
+D Loss: 0.6910388 G Loss: 3.4326973
+3 / 8
+D Loss: 0.8486962 G Loss: 1.6597197
+4 / 8
+D Loss: 0.66868246 G Loss: 2.6568718
+5 / 8
+D Loss: 0.77674055 G Loss: 2.340776
+6 / 8
+D Loss: 0.6478981 G Loss: 2.8256872
+7 / 8
+D Loss: 0.7890549 G Loss: 1.3495319
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_90_128.pkl
+0 / 8
+DRR -0.19144326 DRM -4.7380133 DFF -0.6693492
+GFR -3.5894723 GFE -5.796064
+D Loss: 0.86079246 G Loss: 3.5894723
+Epoch [   91/ 2000], batch 0 | d_loss: 0.8608 | g_loss: 3.5895
+1 / 8
+D Loss: 1.0045964 G Loss: 1.1740611
+2 / 8
+D Loss: 0.81739914 G Loss: 3.0858822
+3 / 8
+D Loss: 0.5356399 G Loss: 1.4170017
+4 / 8
+D Loss: 0.84756297 G Loss: 4.3111076
+5 / 8
+D Loss: 1.2324609 G Loss: 1.5683948
+6 / 8
+D Loss: 0.89369 G Loss: 1.8704008
+7 / 8
+D Loss: 0.72891057 G Loss: 2.4982486
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_91_128.pkl
+0 / 8
+DRR -0.4642771 DRM -4.747461 DFF -0.23133431
+GFR -1.9865539 GFE -5.795058
+D Loss: 0.6956114 G Loss: 1.9865539
+Epoch [   92/ 2000], batch 0 | d_loss: 0.6956 | g_loss: 1.9866
+1 / 8
+D Loss: 0.8877974 G Loss: 2.0127068
+2 / 8
+D Loss: 0.8815203 G Loss: 1.3396158
+3 / 8
+D Loss: 1.0580347 G Loss: 2.7522383
+4 / 8
+D Loss: 0.731489 G Loss: 2.2086048
+5 / 8
+D Loss: 0.809251 G Loss: 1.6677849
+6 / 8
+D Loss: 0.8771906 G Loss: 3.3287332
+7 / 8
+D Loss: 0.9024301 G Loss: 1.4421833
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_92_128.pkl
+0 / 8
+DRR -0.19871058 DRM -4.728465 DFF -1.0070632
+GFR -3.670745 GFE -5.7953434
+D Loss: 1.2057737 G Loss: 3.670745
+Epoch [   93/ 2000], batch 0 | d_loss: 1.2058 | g_loss: 3.6707
+1 / 8
+D Loss: 0.9980153 G Loss: 1.9703228
+2 / 8
+D Loss: 0.61783904 G Loss: 2.8663895
+3 / 8
+D Loss: 0.67078555 G Loss: 2.577923
+4 / 8
+D Loss: 0.47237054 G Loss: 2.7716768
+5 / 8
+D Loss: 0.45069453 G Loss: 2.5904682
+6 / 8
+D Loss: 0.48550922 G Loss: 2.7549543
+7 / 8
+D Loss: 0.31743395 G Loss: 3.0484622
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_93_128.pkl
+0 / 8
+DRR -0.2263795 DRM -4.752499 DFF -0.31543612
+GFR -2.729725 GFE -5.7947683
+D Loss: 0.54181564 G Loss: 2.729725
+Epoch [   94/ 2000], batch 0 | d_loss: 0.5418 | g_loss: 2.7297
+1 / 8
+D Loss: 0.7086194 G Loss: 3.0713894
+2 / 8
+D Loss: 1.0229205 G Loss: 1.9624254
+3 / 8
+D Loss: 1.2048516 G Loss: 3.5025656
+4 / 8
+D Loss: 0.7198044 G Loss: 2.213141
+5 / 8
+D Loss: 1.0408485 G Loss: 2.631339
+6 / 8
+D Loss: 0.87816757 G Loss: 2.0622249
+7 / 8
+D Loss: 0.8954352 G Loss: 3.0568614
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_94_128.pkl
+0 / 8
+DRR -0.8137003 DRM -4.780252 DFF -0.18692684
+GFR -1.4463956 GFE -5.795453
+D Loss: 1.0006272 G Loss: 1.4463956
+Epoch [   95/ 2000], batch 0 | d_loss: 1.0006 | g_loss: 1.4464
+1 / 8
+D Loss: 0.9009644 G Loss: 2.4778528
+2 / 8
+D Loss: 1.0375891 G Loss: 2.471014
+3 / 8
+D Loss: 0.9604697 G Loss: 3.21032
+4 / 8
+D Loss: 1.379594 G Loss: 1.9262445
+5 / 8
+D Loss: 1.1247811 G Loss: 2.4504538
+6 / 8
+D Loss: 0.8665545 G Loss: 2.6672773
+7 / 8
+D Loss: 0.7032416 G Loss: 2.7274797
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_95_128.pkl
+0 / 8
+DRR -0.8589742 DRM -4.805246 DFF -0.333714
+GFR -1.334693 GFE -5.795665
+D Loss: 1.1926882 G Loss: 1.334693
+Epoch [   96/ 2000], batch 0 | d_loss: 1.1927 | g_loss: 1.3347
+1 / 8
+D Loss: 1.1176052 G Loss: 3.5509176
+2 / 8
+D Loss: 0.68555045 G Loss: 2.935557
+3 / 8
+D Loss: 0.7496831 G Loss: 1.5469999
+4 / 8
+D Loss: 1.2150294 G Loss: 2.6772327
+5 / 8
+D Loss: 1.1963298 G Loss: 1.8790199
+6 / 8
+D Loss: 1.1873516 G Loss: 1.7493291
+7 / 8
+D Loss: 1.0538538 G Loss: 2.4822757
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_96_128.pkl
+0 / 8
+DRR -0.3782006 DRM -4.7798862 DFF -0.40020114
+GFR -2.910935 GFE -5.7949343
+D Loss: 0.77840173 G Loss: 2.910935
+Epoch [   97/ 2000], batch 0 | d_loss: 0.7784 | g_loss: 2.9109
+1 / 8
+D Loss: 0.8556385 G Loss: 2.0393777
+2 / 8
+D Loss: 1.0856955 G Loss: 2.7848969
+3 / 8
+D Loss: 1.0580884 G Loss: 2.4318683
+4 / 8
+D Loss: 1.2699051 G Loss: 2.061915
+5 / 8
+D Loss: 0.9209821 G Loss: 2.1213427
+6 / 8
+D Loss: 1.1683431 G Loss: 2.5716257
+7 / 8
+D Loss: 1.2829026 G Loss: 2.5354533
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_97_128.pkl
+0 / 8
+DRR -0.7286459 DRM -4.765626 DFF -0.39709145
+GFR -1.7789848 GFE -5.7954016
+D Loss: 1.1257374 G Loss: 1.7789848
+Epoch [   98/ 2000], batch 0 | d_loss: 1.1257 | g_loss: 1.7790
+1 / 8
+D Loss: 1.0924668 G Loss: 3.5899413
+2 / 8
+D Loss: 1.6757522 G Loss: 1.0618328
+3 / 8
+D Loss: 1.4193633 G Loss: 2.5978456
+4 / 8
+D Loss: 0.88195884 G Loss: 2.4021516
+5 / 8
+D Loss: 0.8002707 G Loss: 2.606103
+6 / 8
+D Loss: 0.5220095 G Loss: 3.1926441
+7 / 8
+D Loss: 0.6681384 G Loss: 3.0489738
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_98_128.pkl
+0 / 8
+DRR -0.44603068 DRM -4.7902184 DFF -0.32560688
+GFR -2.5047739 GFE -5.7955837
+D Loss: 0.77163756 G Loss: 2.5047739
+Epoch [   99/ 2000], batch 0 | d_loss: 0.7716 | g_loss: 2.5048
+1 / 8
+D Loss: 0.5922285 G Loss: 3.0867004
+2 / 8
+D Loss: 0.7754022 G Loss: 1.406709
+3 / 8
+D Loss: 1.3052466 G Loss: 4.6790347
+4 / 8
+D Loss: 1.6789548 G Loss: 1.4274805
+5 / 8
+D Loss: 0.80790645 G Loss: 2.186417
+6 / 8
+D Loss: 0.62682354 G Loss: 2.3849201
+7 / 8
+D Loss: 0.72516096 G Loss: 2.0131996
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_99_128.pkl
+0 / 8
+DRR -0.16023558 DRM -4.786111 DFF -0.5301652
+GFR -3.233036 GFE -5.7949677
+D Loss: 0.6904008 G Loss: 3.233036
+Epoch [  100/ 2000], batch 0 | d_loss: 0.6904 | g_loss: 3.2330
+1 / 8
+D Loss: 0.6137744 G Loss: 2.60426
+2 / 8
+D Loss: 0.47647256 G Loss: 2.3073783
+3 / 8
+D Loss: 0.97643137 G Loss: 2.8090787
+4 / 8
+D Loss: 1.1627319 G Loss: 1.739917
+5 / 8
+D Loss: 1.1611152 G Loss: 2.458937
+6 / 8
+D Loss: 0.96120965 G Loss: 1.7993315
+7 / 8
+D Loss: 0.98563385 G Loss: 2.1429834
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_100_128.pkl
+0 / 8
+DRR -0.45424283 DRM -4.768878 DFF -0.52634805
+GFR -2.81287 GFE -5.795376
+D Loss: 0.9805909 G Loss: 2.81287
+Epoch [  101/ 2000], batch 0 | d_loss: 0.9806 | g_loss: 2.8129
+1 / 8
+D Loss: 1.0087864 G Loss: 1.9213688
+2 / 8
+D Loss: 0.9162698 G Loss: 1.4948595
+3 / 8
+D Loss: 1.068698 G Loss: 3.4753575
+4 / 8
+D Loss: 1.1346741 G Loss: 1.4488283
+5 / 8
+D Loss: 1.0870878 G Loss: 2.3268692
+6 / 8
+D Loss: 0.79245967 G Loss: 2.7984822
+7 / 8
+D Loss: 1.1071444 G Loss: 1.458666
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_101_128.pkl
+0 / 8
+DRR -0.15442196 DRM -4.78403 DFF -0.896379
+GFR -2.530764 GFE -5.795457
+D Loss: 1.0508009 G Loss: 2.530764
+Epoch [  102/ 2000], batch 0 | d_loss: 1.0508 | g_loss: 2.5308
+1 / 8
+D Loss: 0.6895195 G Loss: 2.7070508
+2 / 8
+D Loss: 0.92363167 G Loss: 1.8499964
+3 / 8
+D Loss: 1.2014816 G Loss: 2.5035503
+4 / 8
+D Loss: 0.7287229 G Loss: 2.6736293
+5 / 8
+D Loss: 0.5498568 G Loss: 2.735423
+6 / 8
+D Loss: 0.7630094 G Loss: 2.823801
+7 / 8
+D Loss: 0.7906624 G Loss: 2.3065567
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_102_128.pkl
+0 / 8
+DRR -0.28836387 DRM -4.759386 DFF -0.56940806
+GFR -2.58949 GFE -5.7947397
+D Loss: 0.85777193 G Loss: 2.58949
+Epoch [  103/ 2000], batch 0 | d_loss: 0.8578 | g_loss: 2.5895
+1 / 8
+D Loss: 0.72344303 G Loss: 2.4385738
+2 / 8
+D Loss: 0.6715981 G Loss: 2.2000983
+3 / 8
+D Loss: 0.85852504 G Loss: 2.21296
+4 / 8
+D Loss: 0.8245394 G Loss: 2.4951255
+5 / 8
+D Loss: 0.79477745 G Loss: 2.145072
+6 / 8
+D Loss: 0.85810506 G Loss: 2.3025892
+7 / 8
+D Loss: 0.7755563 G Loss: 2.2562487
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_103_128.pkl
+0 / 8
+DRR -0.33181947 DRM -4.7697306 DFF -0.5368831
+GFR -2.3444145 GFE -5.7951217
+D Loss: 0.8687026 G Loss: 2.3444145
+Epoch [  104/ 2000], batch 0 | d_loss: 0.8687 | g_loss: 2.3444
+1 / 8
+D Loss: 0.5067452 G Loss: 2.342895
+2 / 8
+D Loss: 0.65663904 G Loss: 1.7370721
+3 / 8
+D Loss: 0.7402539 G Loss: 2.8402762
+4 / 8
+D Loss: 1.1819048 G Loss: 1.9311099
+5 / 8
+D Loss: 0.9679714 G Loss: 2.2562344
+6 / 8
+D Loss: 1.1703635 G Loss: 1.5664586
+7 / 8
+D Loss: 0.96608925 G Loss: 2.2699163
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_104_128.pkl
+0 / 8
+DRR -0.63581437 DRM -4.783942 DFF -0.35820538
+GFR -1.5822482 GFE -5.7945623
+D Loss: 0.99401975 G Loss: 1.5822482
+Epoch [  105/ 2000], batch 0 | d_loss: 0.9940 | g_loss: 1.5822
+1 / 8
+D Loss: 0.95530427 G Loss: 2.5260587
+2 / 8
+D Loss: 1.2260327 G Loss: 1.6278965
+3 / 8
+D Loss: 1.0083854 G Loss: 1.6095057
+4 / 8
+D Loss: 0.8325136 G Loss: 2.685388
+5 / 8
+D Loss: 0.80216366 G Loss: 1.9756078
+6 / 8
+D Loss: 0.820648 G Loss: 2.0145667
+7 / 8
+D Loss: 0.9618585 G Loss: 2.636216
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_105_128.pkl
+0 / 8
+DRR -0.39417744 DRM -4.7652617 DFF -0.40903962
+GFR -2.6537852 GFE -5.7949553
+D Loss: 0.80321705 G Loss: 2.6537852
+Epoch [  106/ 2000], batch 0 | d_loss: 0.8032 | g_loss: 2.6538
+1 / 8
+D Loss: 1.0995625 G Loss: 1.663444
+2 / 8
+D Loss: 0.9026822 G Loss: 2.119235
+3 / 8
+D Loss: 0.98022556 G Loss: 2.0831494
+4 / 8
+D Loss: 0.95309186 G Loss: 1.7719872
+5 / 8
+D Loss: 1.0667585 G Loss: 3.1649492
+6 / 8
+D Loss: 1.0456319 G Loss: 1.9347818
+7 / 8
+D Loss: 1.4052 G Loss: 2.0021586
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_106_128.pkl
+0 / 8
+DRR -0.3278873 DRM -4.7577133 DFF -0.47713828
+GFR -3.0107665 GFE -5.795966
+D Loss: 0.8050256 G Loss: 3.0107665
+Epoch [  107/ 2000], batch 0 | d_loss: 0.8050 | g_loss: 3.0108
+1 / 8
+D Loss: 0.77677345 G Loss: 2.7067266
+2 / 8
+D Loss: 1.0558865 G Loss: 2.2522454
+3 / 8
+D Loss: 1.1205487 G Loss: 2.1907527
+4 / 8
+D Loss: 0.9476466 G Loss: 2.0701272
+5 / 8
+D Loss: 0.9951365 G Loss: 2.442994
+6 / 8
+D Loss: 0.69072413 G Loss: 2.4271765
+7 / 8
+D Loss: 0.71073043 G Loss: 1.8398492
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_107_128.pkl
+0 / 8
+DRR -0.2529055 DRM -4.782015 DFF -0.59109247
+GFR -2.6112185 GFE -5.79535
+D Loss: 0.84399796 G Loss: 2.6112185
+Epoch [  108/ 2000], batch 0 | d_loss: 0.8440 | g_loss: 2.6112
+1 / 8
+D Loss: 0.6451536 G Loss: 2.523016
+2 / 8
+D Loss: 0.7470529 G Loss: 1.6287524
+3 / 8
+D Loss: 0.8624058 G Loss: 2.5009358
+4 / 8
+D Loss: 1.0587678 G Loss: 1.7762977
+5 / 8
+D Loss: 0.84686095 G Loss: 1.992886
+6 / 8
+D Loss: 0.9798176 G Loss: 1.929771
+7 / 8
+D Loss: 1.0240351 G Loss: 1.4869046
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_108_128.pkl
+0 / 8
+DRR -0.37776232 DRM -4.7750196 DFF -0.5369541
+GFR -1.9029379 GFE -5.795136
+D Loss: 0.9147164 G Loss: 1.9029379
+Epoch [  109/ 2000], batch 0 | d_loss: 0.9147 | g_loss: 1.9029
+1 / 8
+D Loss: 0.7979007 G Loss: 2.5774732
+2 / 8
+D Loss: 0.76098347 G Loss: 1.7578192
+3 / 8
+D Loss: 0.85698307 G Loss: 1.8010572
+4 / 8
+D Loss: 1.0031009 G Loss: 2.7349753
+5 / 8
+D Loss: 0.9654041 G Loss: 1.9251832
+6 / 8
+D Loss: 0.9213017 G Loss: 2.352439
+7 / 8
+D Loss: 0.8116393 G Loss: 2.198032
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_109_128.pkl
+0 / 8
+DRR -0.3513577 DRM -4.7534924 DFF -0.5293341
+GFR -2.6329181 GFE -5.7954803
+D Loss: 0.8806918 G Loss: 2.6329181
+Epoch [  110/ 2000], batch 0 | d_loss: 0.8807 | g_loss: 2.6329
+1 / 8
+D Loss: 0.9495388 G Loss: 1.9326057
+2 / 8
+D Loss: 0.95972216 G Loss: 2.4137304
+3 / 8
+D Loss: 0.8926451 G Loss: 2.271906
+4 / 8
+D Loss: 1.4538965 G Loss: 1.1583564
+5 / 8
+D Loss: 1.3308307 G Loss: 3.3063276
+6 / 8
+D Loss: 0.8847048 G Loss: 2.3035514
+7 / 8
+D Loss: 0.8365078 G Loss: 1.6801391
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_110_128.pkl
+0 / 8
+DRR -0.2344317 DRM -4.779088 DFF -0.7723692
+GFR -2.6682868 GFE -5.794655
+D Loss: 1.0068009 G Loss: 2.6682868
+Epoch [  111/ 2000], batch 0 | d_loss: 1.0068 | g_loss: 2.6683
+1 / 8
+D Loss: 0.6289278 G Loss: 2.842438
+2 / 8
+D Loss: 0.7564273 G Loss: 1.9901805
+3 / 8
+D Loss: 0.95440054 G Loss: 2.3760524
+4 / 8
+D Loss: 0.74520826 G Loss: 2.1952763
+5 / 8
+D Loss: 0.84131765 G Loss: 2.4500847
+6 / 8
+D Loss: 0.9704908 G Loss: 2.383287
+7 / 8
+D Loss: 0.8670681 G Loss: 1.7054038
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_111_128.pkl
+0 / 8
+DRR -0.31222907 DRM -4.7907653 DFF -0.5167988
+GFR -2.8374362 GFE -5.7953453
+D Loss: 0.8290279 G Loss: 2.8374362
+Epoch [  112/ 2000], batch 0 | d_loss: 0.8290 | g_loss: 2.8374
+1 / 8
+D Loss: 0.960327 G Loss: 1.703921
+2 / 8
+D Loss: 0.781789 G Loss: 1.9018406
+3 / 8
+D Loss: 0.7770767 G Loss: 2.1883757
+4 / 8
+D Loss: 0.6021365 G Loss: 2.3002648
+5 / 8
+D Loss: 0.5882674 G Loss: 2.190144
+6 / 8
+D Loss: 0.7544637 G Loss: 2.3449616
+7 / 8
+D Loss: 1.0057504 G Loss: 1.3206174
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_112_128.pkl
+0 / 8
+DRR -0.1252702 DRM -4.779913 DFF -0.78406405
+GFR -3.8467507 GFE -5.7953424
+D Loss: 0.90933424 G Loss: 3.8467507
+Epoch [  113/ 2000], batch 0 | d_loss: 0.9093 | g_loss: 3.8468
+1 / 8
+D Loss: 1.0679195 G Loss: 1.5380614
+2 / 8
+D Loss: 1.1131825 G Loss: 2.2009704
+3 / 8
+D Loss: 0.8025424 G Loss: 2.1006594
+4 / 8
+D Loss: 0.7627528 G Loss: 2.6977475
+5 / 8
+D Loss: 1.0194695 G Loss: 1.8310664
+6 / 8
+D Loss: 1.2021816 G Loss: 2.7988296
+7 / 8
+D Loss: 0.97807425 G Loss: 1.5393811
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_113_128.pkl
+0 / 8
+DRR -0.22199613 DRM -4.818371 DFF -0.7951416
+GFR -2.9352434 GFE -5.79499
+D Loss: 1.0171378 G Loss: 2.9352434
+Epoch [  114/ 2000], batch 0 | d_loss: 1.0171 | g_loss: 2.9352
+1 / 8
+D Loss: 0.5859647 G Loss: 2.8450837
+2 / 8
+D Loss: 0.83607507 G Loss: 1.7428281
+3 / 8
+D Loss: 1.0232648 G Loss: 3.0394669
+4 / 8
+D Loss: 1.3345861 G Loss: 1.638146
+5 / 8
+D Loss: 0.7012071 G Loss: 2.249187
+6 / 8
+D Loss: 0.797498 G Loss: 2.3810205
+7 / 8
+D Loss: 0.7234153 G Loss: 2.1020324
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_114_128.pkl
+0 / 8
+DRR -0.20875841 DRM -4.801041 DFF -0.52911365
+GFR -2.965443 GFE -5.796365
+D Loss: 0.73787206 G Loss: 2.965443
+Epoch [  115/ 2000], batch 0 | d_loss: 0.7379 | g_loss: 2.9654
+1 / 8
+D Loss: 0.6330498 G Loss: 2.6553693
+2 / 8
+D Loss: 0.956429 G Loss: 1.4630079
+3 / 8
+D Loss: 1.0093778 G Loss: 2.9063587
+4 / 8
+D Loss: 0.71298873 G Loss: 2.865083
+5 / 8
+D Loss: 0.8004372 G Loss: 1.9659245
+6 / 8
+D Loss: 0.95961946 G Loss: 1.6639682
+7 / 8
+D Loss: 0.8168781 G Loss: 2.4940171
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_115_128.pkl
+0 / 8
+DRR -0.42389065 DRM -4.79497 DFF -0.42204508
+GFR -2.2831545 GFE -5.7953014
+D Loss: 0.8459357 G Loss: 2.2831545
+Epoch [  116/ 2000], batch 0 | d_loss: 0.8459 | g_loss: 2.2832
+1 / 8
+D Loss: 0.79821587 G Loss: 1.8906076
+2 / 8
+D Loss: 0.81905067 G Loss: 2.0823343
+3 / 8
+D Loss: 1.1128508 G Loss: 1.3797376
+4 / 8
+D Loss: 1.3699894 G Loss: 2.713457
+5 / 8
+D Loss: 1.0897037 G Loss: 1.4917905
+6 / 8
+D Loss: 0.86320114 G Loss: 2.1088088
+7 / 8
+D Loss: 0.81384623 G Loss: 2.566137
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_116_128.pkl
+0 / 8
+DRR -0.5449233 DRM -4.801611 DFF -0.2227024
+GFR -1.8565652 GFE -5.7952347
+D Loss: 0.7676257 G Loss: 1.8565652
+Epoch [  117/ 2000], batch 0 | d_loss: 0.7676 | g_loss: 1.8566
+1 / 8
+D Loss: 0.6506175 G Loss: 2.1865132
+2 / 8
+D Loss: 0.8597552 G Loss: 2.4052215
+3 / 8
+D Loss: 0.7823687 G Loss: 1.8412461
+4 / 8
+D Loss: 0.9209912 G Loss: 2.098404
+5 / 8
+D Loss: 0.67969763 G Loss: 2.469975
+6 / 8
+D Loss: 0.6544429 G Loss: 2.04032
+7 / 8
+D Loss: 0.7777621 G Loss: 2.1477077
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_117_128.pkl
+0 / 8
+DRR -0.28359345 DRM -4.7649126 DFF -0.5204879
+GFR -2.379443 GFE -5.7956676
+D Loss: 0.8040813 G Loss: 2.379443
+Epoch [  118/ 2000], batch 0 | d_loss: 0.8041 | g_loss: 2.3794
+1 / 8
+D Loss: 0.72478807 G Loss: 2.23904
+2 / 8
+D Loss: 0.60760224 G Loss: 2.4688952
+3 / 8
+D Loss: 0.5636902 G Loss: 2.1961598
+4 / 8
+D Loss: 0.7274821 G Loss: 1.9308908
+5 / 8
+D Loss: 0.7745357 G Loss: 2.8156843
+6 / 8
+D Loss: 0.7642627 G Loss: 2.433683
+7 / 8
+D Loss: 0.7642737 G Loss: 3.2048419
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_118_128.pkl
+0 / 8
+DRR -0.6998492 DRM -4.8265953 DFF -0.45368558
+GFR -2.0727205 GFE -5.7953424
+D Loss: 1.1535348 G Loss: 2.0727205
+Epoch [  119/ 2000], batch 0 | d_loss: 1.1535 | g_loss: 2.0727
+1 / 8
+D Loss: 1.593654 G Loss: 3.858099
+2 / 8
+D Loss: 1.6370596 G Loss: 1.443345
+3 / 8
+D Loss: 1.3346368 G Loss: 3.6079245
+4 / 8
+D Loss: 0.95713234 G Loss: 2.7364244
+5 / 8
+D Loss: 0.7375485 G Loss: 2.4690845
+6 / 8
+D Loss: 0.9248046 G Loss: 3.38652
+7 / 8
+D Loss: 0.8671928 G Loss: 2.2946534
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_119_128.pkl
+0 / 8
+DRR -0.3492776 DRM -4.7915072 DFF -0.495457
+GFR -2.2361665 GFE -5.7951584
+D Loss: 0.84473455 G Loss: 2.2361665
+Epoch [  120/ 2000], batch 0 | d_loss: 0.8447 | g_loss: 2.2362
+1 / 8
+D Loss: 0.5352759 G Loss: 3.1720953
+2 / 8
+D Loss: 0.7833904 G Loss: 2.200239
+3 / 8
+D Loss: 0.7989831 G Loss: 2.87362
+4 / 8
+D Loss: 0.6797105 G Loss: 2.3867679
+5 / 8
+D Loss: 0.82255006 G Loss: 2.1320448
+6 / 8
+D Loss: 0.73125887 G Loss: 2.425342
+7 / 8
+D Loss: 0.8016474 G Loss: 2.4604118
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_120_128.pkl
+0 / 8
+DRR -0.5108759 DRM -4.8015532 DFF -0.34713927
+GFR -1.8964624 GFE -5.795429
+D Loss: 0.8580152 G Loss: 1.8964624
+Epoch [  121/ 2000], batch 0 | d_loss: 0.8580 | g_loss: 1.8965
+1 / 8
+D Loss: 0.76131254 G Loss: 2.117404
+2 / 8
+D Loss: 0.6448548 G Loss: 2.3726144
+3 / 8
+D Loss: 0.7241208 G Loss: 1.9982333
+4 / 8
+D Loss: 0.56606835 G Loss: 3.0084443
+5 / 8
+D Loss: 0.60419387 G Loss: 2.2135637
+6 / 8
+D Loss: 0.8471142 G Loss: 2.1256027
+7 / 8
+D Loss: 0.7922149 G Loss: 3.2176855
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_121_128.pkl
+0 / 8
+DRR -0.6810589 DRM -4.765091 DFF -0.14165197
+GFR -1.9429874 GFE -5.7950873
+D Loss: 0.8227109 G Loss: 1.9429874
+Epoch [  122/ 2000], batch 0 | d_loss: 0.8227 | g_loss: 1.9430
+1 / 8
+D Loss: 1.0027692 G Loss: 1.9920828
+2 / 8
+D Loss: 0.74912673 G Loss: 3.0336835
+3 / 8
+D Loss: 0.82289255 G Loss: 2.1113675
+4 / 8
+D Loss: 0.8410063 G Loss: 1.789388
+5 / 8
+D Loss: 0.94919646 G Loss: 3.0873435
+6 / 8
+D Loss: 0.7429911 G Loss: 2.6932688
+7 / 8
+D Loss: 0.87831545 G Loss: 1.9880404
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_122_128.pkl
+0 / 8
+DRR -0.17809911 DRM -4.7788005 DFF -0.59788847
+GFR -3.2750273 GFE -5.7950516
+D Loss: 0.77598757 G Loss: 3.2750273
+Epoch [  123/ 2000], batch 0 | d_loss: 0.7760 | g_loss: 3.2750
+1 / 8
+D Loss: 0.60591525 G Loss: 2.6916513
+2 / 8
+D Loss: 0.6731183 G Loss: 2.3826456
+3 / 8
+D Loss: 0.64392316 G Loss: 2.9450407
+4 / 8
+D Loss: 0.70949125 G Loss: 2.115933
+5 / 8
+D Loss: 0.8839105 G Loss: 3.0795922
+6 / 8
+D Loss: 0.9002695 G Loss: 1.6287959
+7 / 8
+D Loss: 0.8289301 G Loss: 2.397276
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_123_128.pkl
+0 / 8
+DRR -0.24024074 DRM -4.791053 DFF -0.35282642
+GFR -3.100237 GFE -5.79541
+D Loss: 0.59306717 G Loss: 3.100237
+Epoch [  124/ 2000], batch 0 | d_loss: 0.5931 | g_loss: 3.1002
+1 / 8
+D Loss: 0.76664054 G Loss: 1.6418965
+2 / 8
+D Loss: 0.7551155 G Loss: 2.7801743
+3 / 8
+D Loss: 0.8796537 G Loss: 1.9852285
+4 / 8
+D Loss: 0.8110956 G Loss: 2.396733
+5 / 8
+D Loss: 0.5654464 G Loss: 2.6149282
+6 / 8
+D Loss: 0.7530416 G Loss: 2.0055094
+7 / 8
+D Loss: 0.693643 G Loss: 3.0079095
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_124_128.pkl
+0 / 8
+DRR -0.6318248 DRM -4.801543 DFF -0.1587522
+GFR -1.9206357 GFE -5.795492
+D Loss: 0.790577 G Loss: 1.9206357
+Epoch [  125/ 2000], batch 0 | d_loss: 0.7906 | g_loss: 1.9206
+1 / 8
+D Loss: 0.96070045 G Loss: 2.448318
+2 / 8
+D Loss: 0.72927964 G Loss: 2.3036637
+3 / 8
+D Loss: 0.74196386 G Loss: 1.8659111
+4 / 8
+D Loss: 0.90203214 G Loss: 3.1050286
+5 / 8
+D Loss: 0.7972666 G Loss: 2.6470294
+6 / 8
+D Loss: 0.7715534 G Loss: 1.9692738
+7 / 8
+D Loss: 0.6160059 G Loss: 2.8805947
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_125_128.pkl
+0 / 8
+DRR -0.33292454 DRM -4.786847 DFF -0.39253062
+GFR -2.3776636 GFE -5.7950497
+D Loss: 0.72545516 G Loss: 2.3776636
+Epoch [  126/ 2000], batch 0 | d_loss: 0.7255 | g_loss: 2.3777
+1 / 8
+D Loss: 1.0044284 G Loss: 1.8758221
+2 / 8
+D Loss: 0.791958 G Loss: 2.892374
+3 / 8
+D Loss: 0.80409694 G Loss: 1.9825821
+4 / 8
+D Loss: 0.80326486 G Loss: 1.7234336
+5 / 8
+D Loss: 0.78459597 G Loss: 2.3784785
+6 / 8
+D Loss: 0.8257909 G Loss: 1.9958698
+7 / 8
+D Loss: 0.7454004 G Loss: 2.1157408
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_126_128.pkl
+0 / 8
+DRR -0.21417916 DRM -4.782527 DFF -0.32583746
+GFR -2.5646 GFE -5.795204
+D Loss: 0.54001665 G Loss: 2.5646
+Epoch [  127/ 2000], batch 0 | d_loss: 0.5400 | g_loss: 2.5646
+1 / 8
+D Loss: 0.5806543 G Loss: 2.4337811
+2 / 8
+D Loss: 0.8933482 G Loss: 1.5117176
+3 / 8
+D Loss: 0.89248997 G Loss: 2.5263386
+4 / 8
+D Loss: 0.6942009 G Loss: 2.8151383
+5 / 8
+D Loss: 1.002196 G Loss: 1.4334648
+6 / 8
+D Loss: 0.86567366 G Loss: 2.0605934
+7 / 8
+D Loss: 0.82369155 G Loss: 2.8608258
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_127_128.pkl
+0 / 8
+DRR -0.3455888 DRM -4.8154125 DFF -0.24717957
+GFR -2.6770413 GFE -5.79552
+D Loss: 0.5927684 G Loss: 2.6770413
+Epoch [  128/ 2000], batch 0 | d_loss: 0.5928 | g_loss: 2.6770
+1 / 8
+D Loss: 0.8524378 G Loss: 1.8628602
+2 / 8
+D Loss: 0.639104 G Loss: 3.0104258
+3 / 8
+D Loss: 0.61024594 G Loss: 3.0726256
+4 / 8
+D Loss: 0.64743763 G Loss: 2.4802175
+5 / 8
+D Loss: 0.8150062 G Loss: 2.866631
+6 / 8
+D Loss: 0.76085186 G Loss: 2.3215537
+7 / 8
+D Loss: 1.2370355 G Loss: 0.9418112
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_128_128.pkl
+0 / 8
+DRR -0.078698486 DRM -4.7628927 DFF -1.097008
+GFR -5.1515846 GFE -5.7949057
+D Loss: 1.1757065 G Loss: 5.1515846
+Epoch [  129/ 2000], batch 0 | d_loss: 1.1757 | g_loss: 5.1516
+1 / 8
+D Loss: 1.2379515 G Loss: 2.0041804
+2 / 8
+D Loss: 1.0363648 G Loss: 1.2120202
+3 / 8
+D Loss: 1.2900538 G Loss: 4.3549824
+4 / 8
+D Loss: 0.97111964 G Loss: 2.416543
+5 / 8
+D Loss: 0.7043662 G Loss: 2.0639896
+6 / 8
+D Loss: 1.0524887 G Loss: 2.0924587
+7 / 8
+D Loss: 1.1838684 G Loss: 1.8364985
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_129_128.pkl
+0 / 8
+DRR -0.3795939 DRM -4.7548027 DFF -0.32905483
+GFR -2.107487 GFE -5.7949314
+D Loss: 0.70864874 G Loss: 2.107487
+Epoch [  130/ 2000], batch 0 | d_loss: 0.7086 | g_loss: 2.1075
+1 / 8
+D Loss: 0.7500361 G Loss: 2.3981051
+2 / 8
+D Loss: 0.5193309 G Loss: 2.5476422
+3 / 8
+D Loss: 0.57827723 G Loss: 2.3154364
+4 / 8
+D Loss: 0.86679286 G Loss: 1.5769799
+5 / 8
+D Loss: 0.900818 G Loss: 3.0836942
+6 / 8
+D Loss: 0.6965717 G Loss: 2.3929396
+7 / 8
+D Loss: 0.64652914 G Loss: 1.9107397
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_130_128.pkl
+0 / 8
+DRR -0.17979176 DRM -4.7842083 DFF -0.55700815
+GFR -2.5777192 GFE -5.795246
+D Loss: 0.7367999 G Loss: 2.5777192
+Epoch [  131/ 2000], batch 0 | d_loss: 0.7368 | g_loss: 2.5777
+1 / 8
+D Loss: 0.83164746 G Loss: 2.1284125
+2 / 8
+D Loss: 0.8947627 G Loss: 2.3449733
+3 / 8
+D Loss: 0.7619772 G Loss: 2.4096627
+4 / 8
+D Loss: 0.8773713 G Loss: 1.7299075
+5 / 8
+D Loss: 0.83565795 G Loss: 2.6409292
+6 / 8
+D Loss: 0.88409054 G Loss: 1.9499965
+7 / 8
+D Loss: 0.79463726 G Loss: 2.774636
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_131_128.pkl
+0 / 8
+DRR -0.3395421 DRM -4.8062296 DFF -0.18310751
+GFR -2.5545242 GFE -5.7950435
+D Loss: 0.5226496 G Loss: 2.5545242
+Epoch [  132/ 2000], batch 0 | d_loss: 0.5226 | g_loss: 2.5545
+1 / 8
+D Loss: 0.65691507 G Loss: 1.8462456
+2 / 8
+D Loss: 0.889495 G Loss: 2.1054006
+3 / 8
+D Loss: 0.7505213 G Loss: 2.3567932
+4 / 8
+D Loss: 0.8737807 G Loss: 2.099494
+5 / 8
+D Loss: 0.91949207 G Loss: 1.7993395
+6 / 8
+D Loss: 0.74601305 G Loss: 2.2007527
+7 / 8
+D Loss: 0.7176732 G Loss: 2.5274644
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_132_128.pkl
+0 / 8
+DRR -0.4105211 DRM -4.816843 DFF -0.3202425
+GFR -2.0893962 GFE -5.7956157
+D Loss: 0.73076355 G Loss: 2.0893962
+Epoch [  133/ 2000], batch 0 | d_loss: 0.7308 | g_loss: 2.0894
+1 / 8
+D Loss: 1.0951275 G Loss: 3.5933084
+2 / 8
+D Loss: 1.4777523 G Loss: 1.2076749
+3 / 8
+D Loss: 0.8824965 G Loss: 2.8198268
+4 / 8
+D Loss: 1.3408676 G Loss: 0.97897923
+5 / 8
+D Loss: 0.8376945 G Loss: 3.1225612
+6 / 8
+D Loss: 0.69894266 G Loss: 2.5883775
+7 / 8
+D Loss: 0.8607009 G Loss: 2.7271872
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_133_128.pkl
+0 / 8
+DRR -0.5399659 DRM -4.7810826 DFF -0.27986684
+GFR -2.3650851 GFE -5.7948823
+D Loss: 0.8198328 G Loss: 2.3650851
+Epoch [  134/ 2000], batch 0 | d_loss: 0.8198 | g_loss: 2.3651
+1 / 8
+D Loss: 0.8075114 G Loss: 2.5398989
+2 / 8
+D Loss: 0.682981 G Loss: 2.112033
+3 / 8
+D Loss: 0.85962915 G Loss: 2.1882463
+4 / 8
+D Loss: 0.9878167 G Loss: 2.5067837
+5 / 8
+D Loss: 0.83317447 G Loss: 2.2141895
+6 / 8
+D Loss: 0.85955185 G Loss: 1.6604286
+7 / 8
+D Loss: 1.0624992 G Loss: 2.5226636
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_134_128.pkl
+0 / 8
+DRR -0.25806803 DRM -4.7709055 DFF -0.3274846
+GFR -2.9845207 GFE -5.795538
+D Loss: 0.58555263 G Loss: 2.9845207
+Epoch [  135/ 2000], batch 0 | d_loss: 0.5856 | g_loss: 2.9845
+1 / 8
+D Loss: 0.624958 G Loss: 2.150986
+2 / 8
+D Loss: 0.6412084 G Loss: 2.5141268
+3 / 8
+D Loss: 0.82838213 G Loss: 2.255177
+4 / 8
+D Loss: 0.60219866 G Loss: 2.5592933
+5 / 8
+D Loss: 0.77456546 G Loss: 2.477917
+6 / 8
+D Loss: 0.9797561 G Loss: 2.2761183
+7 / 8
+D Loss: 0.76294696 G Loss: 2.0863836
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_135_128.pkl
+0 / 8
+DRR -0.37084606 DRM -4.764517 DFF -0.3708049
+GFR -2.3272262 GFE -5.7949495
+D Loss: 0.74165094 G Loss: 2.3272262
+Epoch [  136/ 2000], batch 0 | d_loss: 0.7417 | g_loss: 2.3272
+1 / 8
+D Loss: 0.7096406 G Loss: 2.708827
+2 / 8
+D Loss: 0.5898687 G Loss: 2.588176
+3 / 8
+D Loss: 0.7942842 G Loss: 1.9566729
+4 / 8
+D Loss: 0.8286252 G Loss: 1.7676713
+5 / 8
+D Loss: 0.7216193 G Loss: 2.7624035
+6 / 8
+D Loss: 0.5354802 G Loss: 2.6588142
+7 / 8
+D Loss: 0.55454284 G Loss: 2.6448364
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_136_128.pkl
+0 / 8
+DRR -0.28954723 DRM -4.7469354 DFF -0.2664167
+GFR -2.564166 GFE -5.7956705
+D Loss: 0.55596393 G Loss: 2.564166
+Epoch [  137/ 2000], batch 0 | d_loss: 0.5560 | g_loss: 2.5642
+1 / 8
+D Loss: 0.6134665 G Loss: 2.7122838
+2 / 8
+D Loss: 0.63389957 G Loss: 2.268279
+3 / 8
+D Loss: 1.0261397 G Loss: 1.4072211
+4 / 8
+D Loss: 0.81255347 G Loss: 3.6457686
+5 / 8
+D Loss: 0.76968324 G Loss: 1.897346
+6 / 8
+D Loss: 0.6490944 G Loss: 2.065427
+7 / 8
+D Loss: 0.98196775 G Loss: 3.6281404
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_137_128.pkl
+0 / 8
+DRR -0.6781066 DRM -4.8070207 DFF -0.14376697
+GFR -2.0928042 GFE -5.795229
+D Loss: 0.82187355 G Loss: 2.0928042
+Epoch [  138/ 2000], batch 0 | d_loss: 0.8219 | g_loss: 2.0928
+1 / 8
+D Loss: 0.7613846 G Loss: 2.3942547
+2 / 8
+D Loss: 0.6904098 G Loss: 2.271497
+3 / 8
+D Loss: 0.68974745 G Loss: 2.66939
+4 / 8
+D Loss: 0.74323297 G Loss: 2.0807276
+5 / 8
+D Loss: 0.7175616 G Loss: 2.317752
+6 / 8
+D Loss: 0.72832423 G Loss: 2.9380274
+7 / 8
+D Loss: 0.79005563 G Loss: 2.3762906
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_138_128.pkl
+0 / 8
+DRR -0.18366033 DRM -4.7647367 DFF -0.4919111
+GFR -3.0028617 GFE -5.794407
+D Loss: 0.67557144 G Loss: 3.0028617
+Epoch [  139/ 2000], batch 0 | d_loss: 0.6756 | g_loss: 3.0029
+1 / 8
+D Loss: 0.57217026 G Loss: 2.6406388
+2 / 8
+D Loss: 0.6224898 G Loss: 2.4247818
+3 / 8
+D Loss: 0.6047202 G Loss: 2.8778658
+4 / 8
+D Loss: 0.59440196 G Loss: 2.705196
+5 / 8
+D Loss: 0.707802 G Loss: 2.1026115
+6 / 8
+D Loss: 0.67594504 G Loss: 2.702653
+7 / 8
+D Loss: 0.782071 G Loss: 2.5388155
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_139_128.pkl
+0 / 8
+DRR -0.27925113 DRM -4.8159456 DFF -0.35849404
+GFR -2.50986 GFE -5.794999
+D Loss: 0.63774514 G Loss: 2.50986
+Epoch [  140/ 2000], batch 0 | d_loss: 0.6377 | g_loss: 2.5099
+1 / 8
+D Loss: 0.5658399 G Loss: 2.5616786
+2 / 8
+D Loss: 0.62852794 G Loss: 2.689087
+3 / 8
+D Loss: 0.8154304 G Loss: 1.6360915
+4 / 8
+D Loss: 0.66277385 G Loss: 3.6955972
+5 / 8
+D Loss: 0.6822734 G Loss: 2.032735
+6 / 8
+D Loss: 0.75561786 G Loss: 2.6174033
+7 / 8
+D Loss: 0.55576366 G Loss: 3.3653648
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_140_128.pkl
+0 / 8
+DRR -0.5446939 DRM -4.7811785 DFF -0.2545228
+GFR -1.9769013 GFE -5.794529
+D Loss: 0.7992167 G Loss: 1.9769013
+Epoch [  141/ 2000], batch 0 | d_loss: 0.7992 | g_loss: 1.9769
+1 / 8
+D Loss: 0.79121304 G Loss: 2.9253778
+2 / 8
+D Loss: 0.70477307 G Loss: 1.5924469
+3 / 8
+D Loss: 0.88409835 G Loss: 3.4336407
+4 / 8
+D Loss: 0.61217475 G Loss: 2.4834409
+5 / 8
+D Loss: 0.6919613 G Loss: 2.431077
+6 / 8
+D Loss: 0.6597539 G Loss: 2.2934735
+7 / 8
+D Loss: 0.8163611 G Loss: 2.0490842
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_141_128.pkl
+0 / 8
+DRR -0.15200031 DRM -4.7608128 DFF -0.41659555
+GFR -3.4849825 GFE -5.79478
+D Loss: 0.5685959 G Loss: 3.4849825
+Epoch [  142/ 2000], batch 0 | d_loss: 0.5686 | g_loss: 3.4850
+1 / 8
+D Loss: 0.73814774 G Loss: 1.5420947
+2 / 8
+D Loss: 0.7586459 G Loss: 3.2578616
+3 / 8
+D Loss: 0.79802233 G Loss: 2.0333314
+4 / 8
+D Loss: 0.61792207 G Loss: 2.4490707
+5 / 8
+D Loss: 0.5377716 G Loss: 3.0070906
+6 / 8
+D Loss: 0.73520386 G Loss: 1.9856052
+7 / 8
+D Loss: 0.7355561 G Loss: 2.1820028
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_142_128.pkl
+0 / 8
+DRR -0.17660396 DRM -4.802343 DFF -0.40540054
+GFR -3.0872898 GFE -5.794942
+D Loss: 0.5820045 G Loss: 3.0872898
+Epoch [  143/ 2000], batch 0 | d_loss: 0.5820 | g_loss: 3.0873
+1 / 8
+D Loss: 0.65602475 G Loss: 1.9231308
+2 / 8
+D Loss: 0.69741726 G Loss: 2.8861892
+3 / 8
+D Loss: 0.6848329 G Loss: 1.7989502
+4 / 8
+D Loss: 0.7862125 G Loss: 2.985031
+5 / 8
+D Loss: 0.6733155 G Loss: 2.064225
+6 / 8
+D Loss: 0.64192533 G Loss: 2.0513463
+7 / 8
+D Loss: 0.75083786 G Loss: 2.48212
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_143_128.pkl
+0 / 8
+DRR -0.25325835 DRM -4.7890472 DFF -0.22351679
+GFR -2.578333 GFE -5.794928
+D Loss: 0.47677514 G Loss: 2.578333
+Epoch [  144/ 2000], batch 0 | d_loss: 0.4768 | g_loss: 2.5783
+1 / 8
+D Loss: 0.4601311 G Loss: 2.2502224
+2 / 8
+D Loss: 0.72633976 G Loss: 2.1927202
+3 / 8
+D Loss: 0.6122621 G Loss: 2.5010114
+4 / 8
+D Loss: 0.45628202 G Loss: 2.7253208
+5 / 8
+D Loss: 0.39282042 G Loss: 2.9441733
+6 / 8
+D Loss: 0.7212429 G Loss: 1.7735364
+7 / 8
+D Loss: 0.6812048 G Loss: 2.4167573
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_144_128.pkl
+0 / 8
+DRR -0.17464629 DRM -4.7724066 DFF -0.33482176
+GFR -2.9506984 GFE -5.7952185
+D Loss: 0.5094681 G Loss: 2.9506984
+Epoch [  145/ 2000], batch 0 | d_loss: 0.5095 | g_loss: 2.9507
+1 / 8
+D Loss: 0.7242564 G Loss: 1.7777913
+2 / 8
+D Loss: 0.6405715 G Loss: 3.0194502
+3 / 8
+D Loss: 0.72630346 G Loss: 1.8539433
+4 / 8
+D Loss: 0.63461715 G Loss: 2.3216734
+5 / 8
+D Loss: 0.82507646 G Loss: 3.2076907
+6 / 8
+D Loss: 0.6787899 G Loss: 1.8667338
+7 / 8
+D Loss: 0.8012588 G Loss: 2.650683
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_145_128.pkl
+0 / 8
+DRR -0.22673732 DRM -4.762105 DFF -0.45299947
+GFR -3.1824775 GFE -5.7944655
+D Loss: 0.6797368 G Loss: 3.1824775
+Epoch [  146/ 2000], batch 0 | d_loss: 0.6797 | g_loss: 3.1825
+1 / 8
+D Loss: 0.7076464 G Loss: 1.7138026
+2 / 8
+D Loss: 0.7523364 G Loss: 2.3777847
+3 / 8
+D Loss: 0.55287355 G Loss: 2.744686
+4 / 8
+D Loss: 0.51987123 G Loss: 2.7658787
+5 / 8
+D Loss: 0.6999109 G Loss: 1.8183616
+6 / 8
+D Loss: 0.6255137 G Loss: 2.5780723
+7 / 8
+D Loss: 0.63467395 G Loss: 2.949907
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_146_128.pkl
+0 / 8
+DRR -0.39908206 DRM -4.776575 DFF -0.20680796
+GFR -2.2368014 GFE -5.7950172
+D Loss: 0.60589004 G Loss: 2.2368014
+Epoch [  147/ 2000], batch 0 | d_loss: 0.6059 | g_loss: 2.2368
+1 / 8
+D Loss: 0.8487294 G Loss: 2.5982108
+2 / 8
+D Loss: 0.5510479 G Loss: 2.6144195
+3 / 8
+D Loss: 0.536461 G Loss: 2.9433002
+4 / 8
+D Loss: 0.85895985 G Loss: 1.4688632
+5 / 8
+D Loss: 0.60693383 G Loss: 3.090073
+6 / 8
+D Loss: 0.5117127 G Loss: 2.3854418
+7 / 8
+D Loss: 0.68457663 G Loss: 2.1785321
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_147_128.pkl
+0 / 8
+DRR -0.13408238 DRM -4.769001 DFF -0.3516829
+GFR -3.0183342 GFE -5.79436
+D Loss: 0.48576528 G Loss: 3.0183342
+Epoch [  148/ 2000], batch 0 | d_loss: 0.4858 | g_loss: 3.0183
+1 / 8
+D Loss: 0.75272083 G Loss: 1.8670852
+2 / 8
+D Loss: 0.7760762 G Loss: 3.0069427
+3 / 8
+D Loss: 0.6903553 G Loss: 1.8027165
+4 / 8
+D Loss: 0.70279133 G Loss: 2.9360714
+5 / 8
+D Loss: 0.6285497 G Loss: 2.0671773
+6 / 8
+D Loss: 0.5799651 G Loss: 2.4373884
+7 / 8
+D Loss: 0.694006 G Loss: 3.3469017
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_148_128.pkl
+0 / 8
+DRR -0.36293203 DRM -4.807248 DFF -0.18081436
+GFR -2.643719 GFE -5.7950706
+D Loss: 0.54374635 G Loss: 2.643719
+Epoch [  149/ 2000], batch 0 | d_loss: 0.5437 | g_loss: 2.6437
+1 / 8
+D Loss: 0.72104704 G Loss: 1.894151
+2 / 8
+D Loss: 0.60639995 G Loss: 3.4607162
+3 / 8
+D Loss: 0.5783785 G Loss: 2.5806231
+4 / 8
+D Loss: 0.6861417 G Loss: 2.90258
+5 / 8
+D Loss: 0.5188946 G Loss: 2.7779484
+6 / 8
+D Loss: 0.713096 G Loss: 1.794457
+7 / 8
+D Loss: 0.7021089 G Loss: 3.3007433
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_149_128.pkl
+0 / 8
+DRR -0.31053603 DRM -4.7827687 DFF -0.21332648
+GFR -2.6149793 GFE -5.7945747
+D Loss: 0.5238625 G Loss: 2.6149793
+Epoch [  150/ 2000], batch 0 | d_loss: 0.5239 | g_loss: 2.6150
+1 / 8
+D Loss: 0.7127427 G Loss: 2.119476
+2 / 8
+D Loss: 0.57143813 G Loss: 2.8614054
+3 / 8
+D Loss: 0.7073219 G Loss: 1.9697459
+4 / 8
+D Loss: 0.72467005 G Loss: 3.9586005
+5 / 8
+D Loss: 0.9089881 G Loss: 1.7125759
+6 / 8
+D Loss: 0.72234845 G Loss: 3.3027103
+7 / 8
+D Loss: 0.590513 G Loss: 2.3377218
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_150_128.pkl
+0 / 8
+DRR -0.18882692 DRM -4.803229 DFF -0.5041534
+GFR -3.03298 GFE -5.795348
+D Loss: 0.6929803 G Loss: 3.03298
+Epoch [  151/ 2000], batch 0 | d_loss: 0.6930 | g_loss: 3.0330
+1 / 8
+D Loss: 0.68217474 G Loss: 2.3000493
+2 / 8
+D Loss: 0.53518 G Loss: 3.171514
+3 / 8
+D Loss: 0.7111571 G Loss: 2.1119804
+4 / 8
+D Loss: 0.7946043 G Loss: 2.9587216
+5 / 8
+D Loss: 0.4497536 G Loss: 2.7195349
+6 / 8
+D Loss: 0.619774 G Loss: 2.0942295
+7 / 8
+D Loss: 0.6135173 G Loss: 2.3308296
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_151_128.pkl
+0 / 8
+DRR -0.10137658 DRM -4.785404 DFF -0.52963847
+GFR -4.038666 GFE -5.7949085
+D Loss: 0.63101506 G Loss: 4.038666
+Epoch [  152/ 2000], batch 0 | d_loss: 0.6310 | g_loss: 4.0387
+1 / 8
+D Loss: 0.73184866 G Loss: 2.236463
+2 / 8
+D Loss: 0.66314507 G Loss: 2.374671
+3 / 8
+D Loss: 0.63203716 G Loss: 2.9309175
+4 / 8
+D Loss: 0.7540848 G Loss: 2.3308163
+5 / 8
+D Loss: 0.6393806 G Loss: 2.1711855
+6 / 8
+D Loss: 0.5748066 G Loss: 2.9725895
+7 / 8
+D Loss: 0.53076637 G Loss: 2.9960706
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_152_128.pkl
+0 / 8
+DRR -0.31659025 DRM -4.8019514 DFF -0.35220942
+GFR -2.9013777 GFE -5.794749
+D Loss: 0.66879964 G Loss: 2.9013777
+Epoch [  153/ 2000], batch 0 | d_loss: 0.6688 | g_loss: 2.9014
+1 / 8
+D Loss: 0.519907 G Loss: 2.2958407
+2 / 8
+D Loss: 0.6744182 G Loss: 3.762795
+3 / 8
+D Loss: 0.9305823 G Loss: 1.3396634
+4 / 8
+D Loss: 0.95682347 G Loss: 4.1826525
+5 / 8
+D Loss: 0.6315092 G Loss: 2.5484977
+6 / 8
+D Loss: 0.516384 G Loss: 2.2909634
+7 / 8
+D Loss: 0.86856616 G Loss: 3.3101416
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_153_128.pkl
+0 / 8
+DRR -0.7440437 DRM -4.7972717 DFF -0.23018792
+GFR -2.3040524 GFE -5.7953663
+D Loss: 0.9742316 G Loss: 2.3040524
+Epoch [  154/ 2000], batch 0 | d_loss: 0.9742 | g_loss: 2.3041
+1 / 8
+D Loss: 0.52726775 G Loss: 2.725443
+2 / 8
+D Loss: 0.43643138 G Loss: 2.9701633
+3 / 8
+D Loss: 0.5928495 G Loss: 2.1978178
+4 / 8
+D Loss: 0.61174583 G Loss: 2.951809
+5 / 8
+D Loss: 0.54975283 G Loss: 2.4487534
+6 / 8
+D Loss: 0.6657738 G Loss: 2.3258328
+7 / 8
+D Loss: 0.5795626 G Loss: 2.6257997
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_154_128.pkl
+0 / 8
+DRR -0.25977606 DRM -4.818859 DFF -0.34834778
+GFR -2.8474154 GFE -5.7948275
+D Loss: 0.60812384 G Loss: 2.8474154
+Epoch [  155/ 2000], batch 0 | d_loss: 0.6081 | g_loss: 2.8474
+1 / 8
+D Loss: 0.4904726 G Loss: 2.7673051
+2 / 8
+D Loss: 0.5476891 G Loss: 2.6812198
+3 / 8
+D Loss: 0.75937617 G Loss: 2.7661915
+4 / 8
+D Loss: 0.44710836 G Loss: 2.947914
+5 / 8
+D Loss: 0.57231796 G Loss: 2.465177
+6 / 8
+D Loss: 0.65075326 G Loss: 2.460384
+7 / 8
+D Loss: 0.3706098 G Loss: 3.4175355
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_155_128.pkl
+0 / 8
+DRR -0.25782722 DRM -4.800147 DFF -0.21642953
+GFR -2.8324385 GFE -5.7949343
+D Loss: 0.47425675 G Loss: 2.8324385
+Epoch [  156/ 2000], batch 0 | d_loss: 0.4743 | g_loss: 2.8324
+1 / 8
+D Loss: 0.4986934 G Loss: 2.21828
+2 / 8
+D Loss: 0.45873797 G Loss: 2.7331662
+3 / 8
+D Loss: 0.49085638 G Loss: 2.430149
+4 / 8
+D Loss: 0.47739202 G Loss: 3.0333188
+5 / 8
+D Loss: 0.43608138 G Loss: 2.7330978
+6 / 8
+D Loss: 0.40463114 G Loss: 2.6647286
+7 / 8
+D Loss: 0.63865596 G Loss: 2.765151
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_156_128.pkl
+0 / 8
+DRR -0.34139305 DRM -4.833379 DFF -0.15731514
+GFR -2.1126227 GFE -5.794963
+D Loss: 0.4987082 G Loss: 2.1126227
+Epoch [  157/ 2000], batch 0 | d_loss: 0.4987 | g_loss: 2.1126
+1 / 8
+D Loss: 0.56683284 G Loss: 3.2130275
+2 / 8
+D Loss: 0.46240264 G Loss: 2.7298126
+3 / 8
+D Loss: 0.4919083 G Loss: 2.3840976
+4 / 8
+D Loss: 0.5830184 G Loss: 3.2142117
+5 / 8
+D Loss: 0.5413986 G Loss: 2.6198602
+6 / 8
+D Loss: 0.53527427 G Loss: 2.5061839
+7 / 8
+D Loss: 0.49925268 G Loss: 2.7719324
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_157_128.pkl
+0 / 8
+DRR -0.16557424 DRM -4.802664 DFF -0.2702889
+GFR -3.3215837 GFE -5.7952385
+D Loss: 0.43586314 G Loss: 3.3215837
+Epoch [  158/ 2000], batch 0 | d_loss: 0.4359 | g_loss: 3.3216
+1 / 8
+D Loss: 0.45359883 G Loss: 2.5602489
+2 / 8
+D Loss: 0.4575124 G Loss: 2.0567093
+3 / 8
+D Loss: 0.6752299 G Loss: 3.435061
+4 / 8
+D Loss: 0.55240583 G Loss: 2.3293505
+5 / 8
+D Loss: 0.43618283 G Loss: 2.2412138
+6 / 8
+D Loss: 0.8981757 G Loss: 3.8492887
+7 / 8
+D Loss: 0.67106444 G Loss: 2.3974226
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_158_128.pkl
+0 / 8
+DRR -0.20565957 DRM -4.7645993 DFF -0.4317804
+GFR -2.6173878 GFE -5.7942886
+D Loss: 0.63743997 G Loss: 2.6173878
+Epoch [  159/ 2000], batch 0 | d_loss: 0.6374 | g_loss: 2.6174
+1 / 8
+D Loss: 0.6234065 G Loss: 3.0968337
+2 / 8
+D Loss: 0.74716175 G Loss: 1.5741314
+3 / 8
+D Loss: 0.67982626 G Loss: 4.3042355
+4 / 8
+D Loss: 0.68862855 G Loss: 2.3153582
+5 / 8
+D Loss: 0.5331713 G Loss: 3.7374709
+6 / 8
+D Loss: 0.6678034 G Loss: 2.2268975
+7 / 8
+D Loss: 0.53340495 G Loss: 2.9899054
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_159_128.pkl
+0 / 8
+DRR -0.3007386 DRM -4.8188896 DFF -0.26479542
+GFR -2.7226214 GFE -5.79571
+D Loss: 0.565534 G Loss: 2.7226214
+Epoch [  160/ 2000], batch 0 | d_loss: 0.5655 | g_loss: 2.7226
+1 / 8
+D Loss: 0.58566904 G Loss: 2.9533339
+2 / 8
+D Loss: 0.4788626 G Loss: 2.7487936
+3 / 8
+D Loss: 0.6627323 G Loss: 1.9647532
+4 / 8
+D Loss: 0.65046114 G Loss: 4.1348257
+5 / 8
+D Loss: 0.75543946 G Loss: 2.1022253
+6 / 8
+D Loss: 0.6667537 G Loss: 2.8658652
+7 / 8
+D Loss: 0.47066763 G Loss: 3.0211117
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_160_128.pkl
+0 / 8
+DRR -0.32632816 DRM -4.798354 DFF -0.33491576
+GFR -2.604369 GFE -5.7948637
+D Loss: 0.6612439 G Loss: 2.604369
+Epoch [  161/ 2000], batch 0 | d_loss: 0.6612 | g_loss: 2.6044
+1 / 8
+D Loss: 0.5702742 G Loss: 2.995421
+2 / 8
+D Loss: 0.4221226 G Loss: 3.0616312
+3 / 8
+D Loss: 0.575014 G Loss: 2.1035562
+4 / 8
+D Loss: 0.571283 G Loss: 3.6652966
+5 / 8
+D Loss: 0.47543 G Loss: 3.0411298
+6 / 8
+D Loss: 0.5997697 G Loss: 2.033686
+7 / 8
+D Loss: 0.59383553 G Loss: 3.530907
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_161_128.pkl
+0 / 8
+DRR -0.28479093 DRM -4.7786617 DFF -0.10823431
+GFR -2.9545221 GFE -5.795416
+D Loss: 0.39302525 G Loss: 2.9545221
+Epoch [  162/ 2000], batch 0 | d_loss: 0.3930 | g_loss: 2.9545
+1 / 8
+D Loss: 0.52120805 G Loss: 2.153316
+2 / 8
+D Loss: 0.4250586 G Loss: 3.3232794
+3 / 8
+D Loss: 0.572191 G Loss: 2.5427094
+4 / 8
+D Loss: 0.47176856 G Loss: 2.2158666
+5 / 8
+D Loss: 0.60106194 G Loss: 3.0370383
+6 / 8
+D Loss: 0.59926295 G Loss: 1.9435432
+7 / 8
+D Loss: 0.480629 G Loss: 3.5281644
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_162_128.pkl
+0 / 8
+DRR -0.2364746 DRM -4.7864985 DFF -0.19043598
+GFR -2.9653826 GFE -5.7948036
+D Loss: 0.42691058 G Loss: 2.9653826
+Epoch [  163/ 2000], batch 0 | d_loss: 0.4269 | g_loss: 2.9654
+1 / 8
+D Loss: 0.5877825 G Loss: 2.2400606
+2 / 8
+D Loss: 0.59585536 G Loss: 2.5930977
+3 / 8
+D Loss: 0.44440165 G Loss: 2.8160977
+4 / 8
+D Loss: 0.53461885 G Loss: 2.5705974
+5 / 8
+D Loss: 0.6132339 G Loss: 2.3197207
+6 / 8
+D Loss: 0.73030865 G Loss: 4.150804
+7 / 8
+D Loss: 0.7003214 G Loss: 2.2946167
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_163_128.pkl
+0 / 8
+DRR -0.11554833 DRM -4.796273 DFF -0.28864312
+GFR -2.9018815 GFE -5.7947903
+D Loss: 0.40419143 G Loss: 2.9018815
+Epoch [  164/ 2000], batch 0 | d_loss: 0.4042 | g_loss: 2.9019
+1 / 8
+D Loss: 0.4772832 G Loss: 3.0968313
+2 / 8
+D Loss: 0.48736703 G Loss: 2.6328936
+3 / 8
+D Loss: 0.5176731 G Loss: 2.384408
+4 / 8
+D Loss: 0.7029191 G Loss: 3.5930648
+5 / 8
+D Loss: 0.55235535 G Loss: 2.569276
+6 / 8
+D Loss: 0.68579066 G Loss: 3.3060246
+7 / 8
+D Loss: 0.4124568 G Loss: 2.9459813
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_164_128.pkl
+0 / 8
+DRR -0.12908018 DRM -4.7536707 DFF -0.26492205
+GFR -3.2277422 GFE -5.795515
+D Loss: 0.39400223 G Loss: 3.2277422
+Epoch [  165/ 2000], batch 0 | d_loss: 0.3940 | g_loss: 3.2277
+1 / 8
+D Loss: 0.46187326 G Loss: 3.0768652
+2 / 8
+D Loss: 0.59955907 G Loss: 2.7312055
+3 / 8
+D Loss: 0.4524259 G Loss: 3.013117
+4 / 8
+D Loss: 0.6497408 G Loss: 2.6389637
+5 / 8
+D Loss: 0.5585028 G Loss: 4.0668764
+6 / 8
+D Loss: 0.63520586 G Loss: 2.5212216
+7 / 8
+D Loss: 0.4318642 G Loss: 2.7176602
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_165_128.pkl
+0 / 8
+DRR -0.14921488 DRM -4.787833 DFF -0.3841507
+GFR -4.0282345 GFE -5.795169
+D Loss: 0.5333656 G Loss: 4.0282345
+Epoch [  166/ 2000], batch 0 | d_loss: 0.5334 | g_loss: 4.0282
+1 / 8
+D Loss: 0.6505297 G Loss: 1.8982586
+2 / 8
+D Loss: 0.69655013 G Loss: 3.5606017
+3 / 8
+D Loss: 0.3793706 G Loss: 3.439147
+4 / 8
+D Loss: 0.5946102 G Loss: 2.3145506
+5 / 8
+D Loss: 0.4148212 G Loss: 3.088108
+6 / 8
+D Loss: 0.4939404 G Loss: 3.3639505
+7 / 8
+D Loss: 0.46637684 G Loss: 2.650566
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_166_128.pkl
+0 / 8
+DRR -0.20915386 DRM -4.802337 DFF -0.19935757
+GFR -2.615775 GFE -5.7950463
+D Loss: 0.40851143 G Loss: 2.615775
+Epoch [  167/ 2000], batch 0 | d_loss: 0.4085 | g_loss: 2.6158
+1 / 8
+D Loss: 0.47992718 G Loss: 2.926776
+2 / 8
+D Loss: 0.46996826 G Loss: 2.6630912
+3 / 8
+D Loss: 0.33134925 G Loss: 2.9113073
+4 / 8
+D Loss: 0.42758107 G Loss: 2.8709161
+5 / 8
+D Loss: 0.49404958 G Loss: 2.310472
+6 / 8
+D Loss: 0.563171 G Loss: 2.888173
+7 / 8
+D Loss: 0.504236 G Loss: 2.7533908
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_167_128.pkl
+0 / 8
+DRR -0.19043109 DRM -4.823039 DFF -0.1824864
+GFR -2.6844406 GFE -5.7943335
+D Loss: 0.37291747 G Loss: 2.6844406
+Epoch [  168/ 2000], batch 0 | d_loss: 0.3729 | g_loss: 2.6844
+1 / 8
+D Loss: 0.44378078 G Loss: 2.5659447
+2 / 8
+D Loss: 0.51613575 G Loss: 2.761685
+3 / 8
+D Loss: 0.44382572 G Loss: 2.926176
+4 / 8
+D Loss: 0.4052446 G Loss: 2.5472796
+5 / 8
+D Loss: 0.59707457 G Loss: 1.9754834
+6 / 8
+D Loss: 0.73339367 G Loss: 4.439553
+7 / 8
+D Loss: 0.772159 G Loss: 2.2538917
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_168_128.pkl
+0 / 8
+DRR -0.086012244 DRM -4.775714 DFF -0.3840199
+GFR -2.8842592 GFE -5.7949634
+D Loss: 0.47003216 G Loss: 2.8842592
+Epoch [  169/ 2000], batch 0 | d_loss: 0.4700 | g_loss: 2.8843
+1 / 8
+D Loss: 0.49388018 G Loss: 2.6555057
+2 / 8
+D Loss: 0.6011708 G Loss: 2.7172198
+3 / 8
+D Loss: 0.42472956 G Loss: 3.1366801
+4 / 8
+D Loss: 0.5962566 G Loss: 2.3855295
+5 / 8
+D Loss: 0.66075957 G Loss: 3.107988
+6 / 8
+D Loss: 0.47308564 G Loss: 3.2590446
+7 / 8
+D Loss: 0.5630162 G Loss: 2.7286885
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_169_128.pkl
+0 / 8
+DRR -0.14534548 DRM -4.7744303 DFF -0.2904542
+GFR -3.5025587 GFE -5.794666
+D Loss: 0.4357997 G Loss: 3.5025587
+Epoch [  170/ 2000], batch 0 | d_loss: 0.4358 | g_loss: 3.5026
+1 / 8
+D Loss: 0.4820319 G Loss: 2.2001314
+2 / 8
+D Loss: 0.4369408 G Loss: 3.1871552
+3 / 8
+D Loss: 0.55417216 G Loss: 2.7870383
+4 / 8
+D Loss: 0.3507061 G Loss: 2.8771505
+5 / 8
+D Loss: 0.49263656 G Loss: 2.620945
+6 / 8
+D Loss: 0.4037437 G Loss: 2.6847062
+7 / 8
+D Loss: 0.55323696 G Loss: 2.4229603
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_170_128.pkl
+0 / 8
+DRR -0.09827341 DRM -4.7985015 DFF -0.2531623
+GFR -3.6937463 GFE -5.7949414
+D Loss: 0.35143572 G Loss: 3.6937463
+Epoch [  171/ 2000], batch 0 | d_loss: 0.3514 | g_loss: 3.6937
+1 / 8
+D Loss: 0.40381405 G Loss: 2.7195206
+2 / 8
+D Loss: 0.34174412 G Loss: 2.5062327
+3 / 8
+D Loss: 0.5319141 G Loss: 3.1471987
+4 / 8
+D Loss: 0.49930817 G Loss: 2.0364478
+5 / 8
+D Loss: 0.45811173 G Loss: 3.083484
+6 / 8
+D Loss: 0.33953547 G Loss: 3.1653304
+7 / 8
+D Loss: 0.61649054 G Loss: 1.78394
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_171_128.pkl
+0 / 8
+DRR -0.05704869 DRM -4.7899027 DFF -0.4592703
+GFR -3.5969656 GFE -5.7947474
+D Loss: 0.516319 G Loss: 3.5969656
+Epoch [  172/ 2000], batch 0 | d_loss: 0.5163 | g_loss: 3.5970
+1 / 8
+D Loss: 0.43588978 G Loss: 2.7279
+2 / 8
+D Loss: 0.50756675 G Loss: 2.697104
+3 / 8
+D Loss: 0.4081901 G Loss: 3.6135046
+4 / 8
+D Loss: 0.6302198 G Loss: 1.7046351
+5 / 8
+D Loss: 0.70254743 G Loss: 4.234804
+6 / 8
+D Loss: 0.41828758 G Loss: 3.125191
+7 / 8
+D Loss: 0.45552915 G Loss: 1.7620891
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_172_128.pkl
+0 / 8
+DRR -0.1239463 DRM -4.7750025 DFF -0.57804674
+GFR -4.396523 GFE -5.7947903
+D Loss: 0.70199305 G Loss: 4.396523
+Epoch [  173/ 2000], batch 0 | d_loss: 0.7020 | g_loss: 4.3965
+1 / 8
+D Loss: 0.70382285 G Loss: 1.9431101
+2 / 8
+D Loss: 0.49254456 G Loss: 3.5463638
+3 / 8
+D Loss: 0.33277425 G Loss: 3.255046
+4 / 8
+D Loss: 0.30802977 G Loss: 2.6889188
+5 / 8
+D Loss: 0.5936227 G Loss: 2.5089676
+6 / 8
+D Loss: 0.40669718 G Loss: 3.4565697
+7 / 8
+D Loss: 0.69633716 G Loss: 1.7098801
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_173_128.pkl
+0 / 8
+DRR -0.06482619 DRM -4.747007 DFF -0.5264224
+GFR -4.1363964 GFE -5.794505
+D Loss: 0.5912486 G Loss: 4.1363964
+Epoch [  174/ 2000], batch 0 | d_loss: 0.5912 | g_loss: 4.1364
+1 / 8
+D Loss: 0.3785751 G Loss: 3.3686156
+2 / 8
+D Loss: 0.4262911 G Loss: 2.4467845
+3 / 8
+D Loss: 0.45148695 G Loss: 3.1804476
+4 / 8
+D Loss: 0.3724531 G Loss: 2.8278968
+5 / 8
+D Loss: 0.3497945 G Loss: 2.7368023
+6 / 8
+D Loss: 0.47906393 G Loss: 3.5121498
+7 / 8
+D Loss: 0.60757077 G Loss: 2.2688134
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_174_128.pkl
+0 / 8
+DRR -0.117118806 DRM -4.77613 DFF -0.37494937
+GFR -3.340973 GFE -5.7950435
+D Loss: 0.49206817 G Loss: 3.340973
+Epoch [  175/ 2000], batch 0 | d_loss: 0.4921 | g_loss: 3.3410
+1 / 8
+D Loss: 0.4893231 G Loss: 2.7943819
+2 / 8
+D Loss: 0.38471517 G Loss: 2.724935
+3 / 8
+D Loss: 0.4440536 G Loss: 3.27711
+4 / 8
+D Loss: 0.8329097 G Loss: 1.3985449
+5 / 8
+D Loss: 0.73324907 G Loss: 4.181562
+6 / 8
+D Loss: 0.5016521 G Loss: 2.9325747
+7 / 8
+D Loss: 0.37989962 G Loss: 2.392602
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_175_128.pkl
+0 / 8
+DRR -0.10080801 DRM -4.779454 DFF -0.30711588
+GFR -3.4300003 GFE -5.794341
+D Loss: 0.40792388 G Loss: 3.4300003
+Epoch [  176/ 2000], batch 0 | d_loss: 0.4079 | g_loss: 3.4300
+1 / 8
+D Loss: 0.33873966 G Loss: 3.0536127
+2 / 8
+D Loss: 0.36556873 G Loss: 2.547702
+3 / 8
+D Loss: 0.458914 G Loss: 2.771565
+4 / 8
+D Loss: 0.52096444 G Loss: 3.323038
+5 / 8
+D Loss: 0.6538289 G Loss: 2.068162
+6 / 8
+D Loss: 0.62448174 G Loss: 3.807736
+7 / 8
+D Loss: 0.52382636 G Loss: 3.036075
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_176_128.pkl
+0 / 8
+DRR -0.27956867 DRM -4.7840843 DFF -0.15450059
+GFR -2.4298267 GFE -5.795237
+D Loss: 0.43406928 G Loss: 2.4298267
+Epoch [  177/ 2000], batch 0 | d_loss: 0.4341 | g_loss: 2.4298
+1 / 8
+D Loss: 0.38935274 G Loss: 3.1833837
+2 / 8
+D Loss: 0.40745357 G Loss: 3.0955362
+3 / 8
+D Loss: 0.3546248 G Loss: 3.0940135
+4 / 8
+D Loss: 0.39233524 G Loss: 3.0000699
+5 / 8
+D Loss: 0.40327406 G Loss: 2.3100717
+6 / 8
+D Loss: 0.46596986 G Loss: 3.1408677
+7 / 8
+D Loss: 0.50401366 G Loss: 3.437438
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_177_128.pkl
+0 / 8
+DRR -0.23226269 DRM -4.8158865 DFF -0.094128415
+GFR -2.9157782 GFE -5.794959
+D Loss: 0.3263911 G Loss: 2.9157782
+Epoch [  178/ 2000], batch 0 | d_loss: 0.3264 | g_loss: 2.9158
+1 / 8
+D Loss: 0.3177985 G Loss: 2.6969218
+2 / 8
+D Loss: 0.30622244 G Loss: 3.590426
+3 / 8
+D Loss: 0.42076415 G Loss: 2.7487164
+4 / 8
+D Loss: 0.339397 G Loss: 2.7287824
+5 / 8
+D Loss: 0.40911704 G Loss: 3.007802
+6 / 8
+D Loss: 0.42565495 G Loss: 2.8007455
+7 / 8
+D Loss: 0.33746144 G Loss: 2.7052429
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_178_128.pkl
+0 / 8
+DRR -0.10389358 DRM -4.7985835 DFF -0.21838889
+GFR -3.1406584 GFE -5.794612
+D Loss: 0.32228246 G Loss: 3.1406584
+Epoch [  179/ 2000], batch 0 | d_loss: 0.3223 | g_loss: 3.1407
+1 / 8
+D Loss: 0.3201662 G Loss: 3.0016396
+2 / 8
+D Loss: 0.32104182 G Loss: 3.477116
+3 / 8
+D Loss: 0.42536134 G Loss: 2.2464998
+4 / 8
+D Loss: 0.3320326 G Loss: 2.4635
+5 / 8
+D Loss: 0.41251928 G Loss: 3.5269334
+6 / 8
+D Loss: 0.5498131 G Loss: 1.8100066
+7 / 8
+D Loss: 0.47228146 G Loss: 3.9532406
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_179_128.pkl
+0 / 8
+DRR -0.14930575 DRM -4.808778 DFF -0.110003404
+GFR -3.490233 GFE -5.7951746
+D Loss: 0.25930914 G Loss: 3.490233
+Epoch [  180/ 2000], batch 0 | d_loss: 0.2593 | g_loss: 3.4902
+1 / 8
+D Loss: 0.33261943 G Loss: 2.7496383
+2 / 8
+D Loss: 0.40702933 G Loss: 2.5240364
+3 / 8
+D Loss: 0.32591298 G Loss: 3.4260488
+4 / 8
+D Loss: 0.3366788 G Loss: 2.8132424
+5 / 8
+D Loss: 0.5146362 G Loss: 2.1642601
+6 / 8
+D Loss: 0.363514 G Loss: 3.3071914
+7 / 8
+D Loss: 0.4542706 G Loss: 3.6282578
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_180_128.pkl
+0 / 8
+DRR -0.31694797 DRM -4.8286705 DFF -0.088477276
+GFR -2.2500775 GFE -5.7948356
+D Loss: 0.40542525 G Loss: 2.2500775
+Epoch [  181/ 2000], batch 0 | d_loss: 0.4054 | g_loss: 2.2501
+1 / 8
+D Loss: 0.41866428 G Loss: 3.3001251
+2 / 8
+D Loss: 0.28137133 G Loss: 3.2124708
+3 / 8
+D Loss: 0.33274984 G Loss: 2.7638948
+4 / 8
+D Loss: 0.32049087 G Loss: 3.1224906
+5 / 8
+D Loss: 0.4189226 G Loss: 2.27813
+6 / 8
+D Loss: 0.36653203 G Loss: 3.3402727
+7 / 8
+D Loss: 0.36160934 G Loss: 2.6837785
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_181_128.pkl
+0 / 8
+DRR -0.100012384 DRM -4.7791796 DFF -0.1891843
+GFR -3.2015185 GFE -5.794426
+D Loss: 0.28919667 G Loss: 3.2015185
+Epoch [  182/ 2000], batch 0 | d_loss: 0.2892 | g_loss: 3.2015
+1 / 8
+D Loss: 0.26008257 G Loss: 3.2131305
+2 / 8
+D Loss: 0.25265574 G Loss: 2.8076737
+3 / 8
+D Loss: 0.39694297 G Loss: 2.5165703
+4 / 8
+D Loss: 0.354106 G Loss: 3.2168088
+5 / 8
+D Loss: 0.30005202 G Loss: 2.8661156
+6 / 8
+D Loss: 0.3127947 G Loss: 2.9774156
+7 / 8
+D Loss: 0.33477306 G Loss: 3.0640635
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_182_128.pkl
+0 / 8
+DRR -0.12771384 DRM -4.7980275 DFF -0.1375681
+GFR -3.3414867 GFE -5.7946386
+D Loss: 0.26528195 G Loss: 3.3414867
+Epoch [  183/ 2000], batch 0 | d_loss: 0.2653 | g_loss: 3.3415
+1 / 8
+D Loss: 0.30329713 G Loss: 2.7704656
+2 / 8
+D Loss: 0.31208184 G Loss: 3.440124
+3 / 8
+D Loss: 0.3775511 G Loss: 2.518967
+4 / 8
+D Loss: 0.3830619 G Loss: 3.3292127
+5 / 8
+D Loss: 0.44371918 G Loss: 2.6570282
+6 / 8
+D Loss: 0.3764385 G Loss: 2.7246823
+7 / 8
+D Loss: 0.36476305 G Loss: 3.5151196
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_183_128.pkl
+0 / 8
+DRR -0.19247189 DRM -4.7862153 DFF -0.09963536
+GFR -2.870696 GFE -5.7943883
+D Loss: 0.29210725 G Loss: 2.870696
+Epoch [  184/ 2000], batch 0 | d_loss: 0.2921 | g_loss: 2.8707
+1 / 8
+D Loss: 0.35571602 G Loss: 3.6626391
+2 / 8
+D Loss: 0.22938178 G Loss: 3.3901436
+3 / 8
+D Loss: 0.2870342 G Loss: 2.7666962
+4 / 8
+D Loss: 0.42350113 G Loss: 3.5208886
+5 / 8
+D Loss: 0.460664 G Loss: 2.0358198
+6 / 8
+D Loss: 0.5655757 G Loss: 3.7817736
+7 / 8
+D Loss: 0.3073439 G Loss: 3.3492672
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_184_128.pkl
+0 / 8
+DRR -0.14285275 DRM -4.792967 DFF -0.10479158
+GFR -2.7777808 GFE -5.795308
+D Loss: 0.24764434 G Loss: 2.7777808
+Epoch [  185/ 2000], batch 0 | d_loss: 0.2476 | g_loss: 2.7778
+1 / 8
+D Loss: 0.39019644 G Loss: 3.67134
+2 / 8
+D Loss: 0.39550117 G Loss: 3.0087523
+3 / 8
+D Loss: 0.28454632 G Loss: 3.056188
+4 / 8
+D Loss: 0.34924763 G Loss: 3.656039
+5 / 8
+D Loss: 0.4607139 G Loss: 2.521194
+6 / 8
+D Loss: 0.3191671 G Loss: 3.269572
+7 / 8
+D Loss: 0.40221834 G Loss: 3.2061238
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_185_128.pkl
+0 / 8
+DRR -0.11430141 DRM -4.784608 DFF -0.1321877
+GFR -3.5776677 GFE -5.7951794
+D Loss: 0.24648911 G Loss: 3.5776677
+Epoch [  186/ 2000], batch 0 | d_loss: 0.2465 | g_loss: 3.5777
+1 / 8
+D Loss: 0.3238973 G Loss: 3.0394547
+2 / 8
+D Loss: 0.2859401 G Loss: 2.6688912
+3 / 8
+D Loss: 0.3404955 G Loss: 3.4391742
+4 / 8
+D Loss: 0.3207643 G Loss: 3.0640898
+5 / 8
+D Loss: 0.34509575 G Loss: 2.674432
+6 / 8
+D Loss: 0.31954926 G Loss: 3.107303
+7 / 8
+D Loss: 0.2753074 G Loss: 3.7309375
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_186_128.pkl
+0 / 8
+DRR -0.14570582 DRM -4.8147516 DFF -0.1136848
+GFR -3.268336 GFE -5.7938538
+D Loss: 0.25939062 G Loss: 3.268336
+Epoch [  187/ 2000], batch 0 | d_loss: 0.2594 | g_loss: 3.2683
+1 / 8
+D Loss: 0.33203578 G Loss: 3.0863214
+2 / 8
+D Loss: 0.39735058 G Loss: 2.7877307
+3 / 8
+D Loss: 0.32791921 G Loss: 3.467603
+4 / 8
+D Loss: 0.33922237 G Loss: 2.9907384
+5 / 8
+D Loss: 0.29646838 G Loss: 3.1977448
+6 / 8
+D Loss: 0.2389467 G Loss: 3.4377003
+7 / 8
+D Loss: 0.25472242 G Loss: 3.3661299
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_187_128.pkl
+0 / 8
+DRR -0.13257863 DRM -4.7569237 DFF -0.099766806
+GFR -3.069406 GFE -5.7946234
+D Loss: 0.23234543 G Loss: 3.069406
+Epoch [  188/ 2000], batch 0 | d_loss: 0.2323 | g_loss: 3.0694
+1 / 8
+D Loss: 0.30114055 G Loss: 3.3010745
+2 / 8
+D Loss: 0.3290475 G Loss: 2.832765
+3 / 8
+D Loss: 0.30321568 G Loss: 3.4630651
+4 / 8
+D Loss: 0.2613253 G Loss: 3.0475192
+5 / 8
+D Loss: 0.25782257 G Loss: 2.9882002
+6 / 8
+D Loss: 0.28338233 G Loss: 3.3766055
+7 / 8
+D Loss: 0.36013746 G Loss: 2.6978593
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_188_128.pkl
+0 / 8
+DRR -0.13228714 DRM -4.7930913 DFF -0.16382468
+GFR -3.1190135 GFE -5.795026
+D Loss: 0.29611182 G Loss: 3.1190135
+Epoch [  189/ 2000], batch 0 | d_loss: 0.2961 | g_loss: 3.1190
+1 / 8
+D Loss: 0.21972196 G Loss: 3.7802596
+2 / 8
+D Loss: 0.32878318 G Loss: 2.7553763
+3 / 8
+D Loss: 0.22802143 G Loss: 3.135573
+4 / 8
+D Loss: 0.2990465 G Loss: 3.481046
+5 / 8
+D Loss: 0.32651845 G Loss: 2.4100368
+6 / 8
+D Loss: 0.42267573 G Loss: 3.5441008
+7 / 8
+D Loss: 0.3776639 G Loss: 2.5226986
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_189_128.pkl
+0 / 8
+DRR -0.043845795 DRM -4.7602763 DFF -0.26347345
+GFR -4.206496 GFE -5.7948713
+D Loss: 0.30731925 G Loss: 4.206496
+Epoch [  190/ 2000], batch 0 | d_loss: 0.3073 | g_loss: 4.2065
+1 / 8
+D Loss: 0.31336764 G Loss: 2.9555583
+2 / 8
+D Loss: 0.26289392 G Loss: 3.1025152
+3 / 8
+D Loss: 0.29940557 G Loss: 3.588777
+4 / 8
+D Loss: 0.31264025 G Loss: 2.8052216
+5 / 8
+D Loss: 0.3619644 G Loss: 3.461872
+6 / 8
+D Loss: 0.24218762 G Loss: 3.1414528
+7 / 8
+D Loss: 0.30442375 G Loss: 3.1981142
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_190_128.pkl
+0 / 8
+DRR -0.08655178 DRM -4.7821074 DFF -0.2603925
+GFR -4.0078993 GFE -5.793682
+D Loss: 0.34694427 G Loss: 4.0078993
+Epoch [  191/ 2000], batch 0 | d_loss: 0.3469 | g_loss: 4.0079
+1 / 8
+D Loss: 0.28484863 G Loss: 3.0373435
+2 / 8
+D Loss: 0.34448618 G Loss: 2.6525977
+3 / 8
+D Loss: 0.46448207 G Loss: 4.2863507
+4 / 8
+D Loss: 0.43117186 G Loss: 2.6107292
+5 / 8
+D Loss: 0.43916067 G Loss: 3.8639371
+6 / 8
+D Loss: 0.33643493 G Loss: 3.2938652
+7 / 8
+D Loss: 0.46317536 G Loss: 2.8106356
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_191_128.pkl
+0 / 8
+DRR -0.07630208 DRM -4.82858 DFF -0.20840439
+GFR -4.029837 GFE -5.7953014
+D Loss: 0.28470647 G Loss: 4.029837
+Epoch [  192/ 2000], batch 0 | d_loss: 0.2847 | g_loss: 4.0298
+1 / 8
+D Loss: 0.360426 G Loss: 3.2475233
+2 / 8
+D Loss: 0.35961998 G Loss: 2.9616675
+3 / 8
+D Loss: 0.2803493 G Loss: 3.6254115
+4 / 8
+D Loss: 0.25051677 G Loss: 3.337668
+5 / 8
+D Loss: 0.32749292 G Loss: 2.8479977
+6 / 8
+D Loss: 0.4402513 G Loss: 3.1364064
+7 / 8
+D Loss: 0.2938817 G Loss: 3.669615
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_192_128.pkl
+0 / 8
+DRR -0.10162628 DRM -4.752605 DFF -0.09100355
+GFR -3.6268578 GFE -5.7939167
+D Loss: 0.19262983 G Loss: 3.6268578
+Epoch [  193/ 2000], batch 0 | d_loss: 0.1926 | g_loss: 3.6269
+1 / 8
+D Loss: 0.21278238 G Loss: 3.7557716
+2 / 8
+D Loss: 0.21055555 G Loss: 3.364048
+3 / 8
+D Loss: 0.31018984 G Loss: 3.5148506
+4 / 8
+D Loss: 0.43285865 G Loss: 2.2923126
+5 / 8
+D Loss: 0.4120389 G Loss: 4.4340763
+6 / 8
+D Loss: 0.3418538 G Loss: 2.9080803
+7 / 8
+D Loss: 0.2518003 G Loss: 4.087449
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_193_128.pkl
+0 / 8
+DRR -0.21442974 DRM -4.800184 DFF -0.15419704
+GFR -2.909553 GFE -5.7951427
+D Loss: 0.36862677 G Loss: 2.909553
+Epoch [  194/ 2000], batch 0 | d_loss: 0.3686 | g_loss: 2.9096
+1 / 8
+D Loss: 0.29951346 G Loss: 3.9255273
+2 / 8
+D Loss: 0.23235591 G Loss: 3.4840808
+3 / 8
+D Loss: 0.27568787 G Loss: 3.1814144
+4 / 8
+D Loss: 0.31191146 G Loss: 3.7468176
+5 / 8
+D Loss: 0.24476968 G Loss: 3.618845
+6 / 8
+D Loss: 0.32473177 G Loss: 2.409452
+7 / 8
+D Loss: 0.33732542 G Loss: 4.8152075
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_194_128.pkl
+0 / 8
+DRR -0.18733916 DRM -4.7960057 DFF -0.052149687
+GFR -3.5410616 GFE -5.7947664
+D Loss: 0.23948884 G Loss: 3.5410616
+Epoch [  195/ 2000], batch 0 | d_loss: 0.2395 | g_loss: 3.5411
+1 / 8
+D Loss: 0.24261154 G Loss: 2.7941773
+2 / 8
+D Loss: 0.28115743 G Loss: 3.7704768
+3 / 8
+D Loss: 0.27137893 G Loss: 3.4382615
+4 / 8
+D Loss: 0.29617372 G Loss: 2.795187
+5 / 8
+D Loss: 0.3404057 G Loss: 3.715075
+6 / 8
+D Loss: 0.23295593 G Loss: 3.2206774
+7 / 8
+D Loss: 0.20954758 G Loss: 3.2279277
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_195_128.pkl
+0 / 8
+DRR -0.102260605 DRM -4.7987137 DFF -0.11467032
+GFR -3.273615 GFE -5.794833
+D Loss: 0.21693093 G Loss: 3.273615
+Epoch [  196/ 2000], batch 0 | d_loss: 0.2169 | g_loss: 3.2736
+1 / 8
+D Loss: 0.2577842 G Loss: 3.0074234
+2 / 8
+D Loss: 0.24276534 G Loss: 3.325346
+3 / 8
+D Loss: 0.28786844 G Loss: 3.3321202
+4 / 8
+D Loss: 0.19039561 G Loss: 3.8742337
+5 / 8
+D Loss: 0.28783214 G Loss: 2.8009315
+6 / 8
+D Loss: 0.27200106 G Loss: 3.5438316
+7 / 8
+D Loss: 0.20863296 G Loss: 3.316369
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_196_128.pkl
+0 / 8
+DRR -0.10226174 DRM -4.776427 DFF -0.11430244
+GFR -3.3226433 GFE -5.794841
+D Loss: 0.21656418 G Loss: 3.3226433
+Epoch [  197/ 2000], batch 0 | d_loss: 0.2166 | g_loss: 3.3226
+1 / 8
+D Loss: 0.2545406 G Loss: 2.8504477
+2 / 8
+D Loss: 0.27859983 G Loss: 3.928028
+3 / 8
+D Loss: 0.2747772 G Loss: 3.0852544
+4 / 8
+D Loss: 0.24687363 G Loss: 2.612094
+5 / 8
+D Loss: 0.35412556 G Loss: 4.9610367
+6 / 8
+D Loss: 0.4986647 G Loss: 2.5328312
+7 / 8
+D Loss: 0.3187272 G Loss: 3.268623
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_197_128.pkl
+0 / 8
+DRR -0.22283876 DRM -4.803855 DFF -0.19692567
+GFR -2.7420428 GFE -5.795144
+D Loss: 0.41976443 G Loss: 2.7420428
+Epoch [  198/ 2000], batch 0 | d_loss: 0.4198 | g_loss: 2.7420
+1 / 8
+D Loss: 0.33799195 G Loss: 5.1344557
+2 / 8
+D Loss: 0.3481471 G Loss: 3.521364
+3 / 8
+D Loss: 0.19247559 G Loss: 3.1318417
+4 / 8
+D Loss: 0.3927319 G Loss: 3.3931847
+5 / 8
+D Loss: 0.2906714 G Loss: 3.3686566
+6 / 8
+D Loss: 0.28735888 G Loss: 3.657368
+7 / 8
+D Loss: 0.30114004 G Loss: 3.5508332
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_198_128.pkl
+0 / 8
+DRR -0.084392294 DRM -4.7795544 DFF -0.117052436
+GFR -3.6613336 GFE -5.7945523
+D Loss: 0.20144473 G Loss: 3.6613336
+Epoch [  199/ 2000], batch 0 | d_loss: 0.2014 | g_loss: 3.6613
+1 / 8
+D Loss: 0.2984739 G Loss: 2.6577513
+2 / 8
+D Loss: 0.38604608 G Loss: 4.7345114
+3 / 8
+D Loss: 0.46251437 G Loss: 2.5373979
+4 / 8
+D Loss: 0.33685434 G Loss: 4.6405253
+5 / 8
+D Loss: 0.266551 G Loss: 2.995245
+6 / 8
+D Loss: 0.4631821 G Loss: 3.5650468
+7 / 8
+D Loss: 0.24433266 G Loss: 3.3331323
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_199_128.pkl
+0 / 8
+DRR -0.12636824 DRM -4.8044133 DFF -0.1472629
+GFR -3.6063817 GFE -5.794859
+D Loss: 0.27363116 G Loss: 3.6063817
+Epoch [  200/ 2000], batch 0 | d_loss: 0.2736 | g_loss: 3.6064
+1 / 8
+D Loss: 0.20528144 G Loss: 3.66887
+2 / 8
+D Loss: 0.24595213 G Loss: 3.2433994
+3 / 8
+D Loss: 0.21269044 G Loss: 3.9213514
+4 / 8
+D Loss: 0.22743455 G Loss: 3.198832
+5 / 8
+D Loss: 0.24627534 G Loss: 3.4400525
+6 / 8
+D Loss: 0.2586 G Loss: 3.7271886
+7 / 8
+D Loss: 0.25087345 G Loss: 3.3343713
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_200_128.pkl
+0 / 8
+DRR -0.101941094 DRM -4.757594 DFF -0.121233545
+GFR -3.3202336 GFE -5.794465
+D Loss: 0.22317463 G Loss: 3.3202336
+Epoch [  201/ 2000], batch 0 | d_loss: 0.2232 | g_loss: 3.3202
+1 / 8
+D Loss: 0.22452255 G Loss: 4.3115635
+2 / 8
+D Loss: 0.27067056 G Loss: 3.2506554
+3 / 8
+D Loss: 0.23106305 G Loss: 2.7890463
+4 / 8
+D Loss: 0.23224689 G Loss: 4.121538
+5 / 8
+D Loss: 0.23461595 G Loss: 3.633495
+6 / 8
+D Loss: 0.24559498 G Loss: 2.954698
+7 / 8
+D Loss: 0.26625538 G Loss: 4.2712784
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_201_128.pkl
+0 / 8
+DRR -0.1405054 DRM -4.7899714 DFF -0.07008182
+GFR -3.5028543 GFE -5.7943935
+D Loss: 0.21058723 G Loss: 3.5028543
+Epoch [  202/ 2000], batch 0 | d_loss: 0.2106 | g_loss: 3.5029
+1 / 8
+D Loss: 0.16948992 G Loss: 4.09507
+2 / 8
+D Loss: 0.23499943 G Loss: 3.536344
+3 / 8
+D Loss: 0.25067168 G Loss: 3.833889
+4 / 8
+D Loss: 0.2166683 G Loss: 3.4493012
+5 / 8
+D Loss: 0.21759479 G Loss: 4.038513
+6 / 8
+D Loss: 0.19036016 G Loss: 3.6702297
+7 / 8
+D Loss: 0.2237527 G Loss: 3.2684414
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_202_128.pkl
+0 / 8
+DRR -0.0706394 DRM -4.763164 DFF -0.15467608
+GFR -4.18153 GFE -5.7944727
+D Loss: 0.22531548 G Loss: 4.18153
+Epoch [  203/ 2000], batch 0 | d_loss: 0.2253 | g_loss: 4.1815
+1 / 8
+D Loss: 0.15542507 G Loss: 4.0668817
+2 / 8
+D Loss: 0.2604693 G Loss: 2.514389
+3 / 8
+D Loss: 0.33463708 G Loss: 4.7679224
+4 / 8
+D Loss: 0.33078095 G Loss: 2.9946346
+5 / 8
+D Loss: 0.20647115 G Loss: 3.7254539
+6 / 8
+D Loss: 0.1971311 G Loss: 4.567945
+7 / 8
+D Loss: 0.3215755 G Loss: 2.4178045
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_203_128.pkl
+0 / 8
+DRR -0.024116304 DRM -4.775897 DFF -0.2846868
+GFR -4.8862386 GFE -5.795308
+D Loss: 0.3088031 G Loss: 4.8862386
+Epoch [  204/ 2000], batch 0 | d_loss: 0.3088 | g_loss: 4.8862
+1 / 8
+D Loss: 0.31605667 G Loss: 3.3039021
+2 / 8
+D Loss: 0.20206863 G Loss: 3.4093974
+3 / 8
+D Loss: 0.2584815 G Loss: 4.3054533
+4 / 8
+D Loss: 0.15379849 G Loss: 4.154448
+5 / 8
+D Loss: 0.18559697 G Loss: 3.7108514
+6 / 8
+D Loss: 0.2752452 G Loss: 3.3903887
+7 / 8
+D Loss: 0.23794004 G Loss: 4.182631
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_204_128.pkl
+0 / 8
+DRR -0.18139428 DRM -4.765993 DFF -0.09337338
+GFR -3.084947 GFE -5.7947006
+D Loss: 0.27476767 G Loss: 3.084947
+Epoch [  205/ 2000], batch 0 | d_loss: 0.2748 | g_loss: 3.0849
+1 / 8
+D Loss: 0.20441613 G Loss: 4.196065
+2 / 8
+D Loss: 0.23813377 G Loss: 3.4280891
+3 / 8
+D Loss: 0.25191933 G Loss: 3.3193574
+4 / 8
+D Loss: 0.28856283 G Loss: 3.3643079
+5 / 8
+D Loss: 0.19714582 G Loss: 4.3114004
+6 / 8
+D Loss: 0.18371417 G Loss: 3.6919134
+7 / 8
+D Loss: 0.21814919 G Loss: 3.0005639
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_205_128.pkl
+0 / 8
+DRR -0.03273378 DRM -4.794775 DFF -0.15385053
+GFR -4.1859093 GFE -5.7947235
+D Loss: 0.18658431 G Loss: 4.1859093
+Epoch [  206/ 2000], batch 0 | d_loss: 0.1866 | g_loss: 4.1859
+1 / 8
+D Loss: 0.16609451 G Loss: 3.6391604
+2 / 8
+D Loss: 0.18296316 G Loss: 3.5004723
+3 / 8
+D Loss: 0.18972507 G Loss: 3.8291411
+4 / 8
+D Loss: 0.23541264 G Loss: 3.1821852
+5 / 8
+D Loss: 0.17396495 G Loss: 3.852435
+6 / 8
+D Loss: 0.20564075 G Loss: 3.2967
+7 / 8
+D Loss: 0.26793668 G Loss: 2.6003623
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_206_128.pkl
+0 / 8
+DRR -0.034052983 DRM -4.786968 DFF -0.22948861
+GFR -4.709884 GFE -5.7950435
+D Loss: 0.26354158 G Loss: 4.709884
+Epoch [  207/ 2000], batch 0 | d_loss: 0.2635 | g_loss: 4.7099
+1 / 8
+D Loss: 0.14589906 G Loss: 4.262421
+2 / 8
+D Loss: 0.20811242 G Loss: 2.8411467
+3 / 8
+D Loss: 0.26674038 G Loss: 3.7580335
+4 / 8
+D Loss: 0.20531347 G Loss: 3.930162
+5 / 8
+D Loss: 0.22884806 G Loss: 3.3020816
+6 / 8
+D Loss: 0.17608824 G Loss: 3.6042306
+7 / 8
+D Loss: 0.23175386 G Loss: 3.3223627
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_207_128.pkl
+0 / 8
+DRR -0.06356667 DRM -4.7706623 DFF -0.112529814
+GFR -3.8572435 GFE -5.794614
+D Loss: 0.17609648 G Loss: 3.8572435
+Epoch [  208/ 2000], batch 0 | d_loss: 0.1761 | g_loss: 3.8572
+1 / 8
+D Loss: 0.15896952 G Loss: 3.5510192
+2 / 8
+D Loss: 0.14870295 G Loss: 3.5465717
+3 / 8
+D Loss: 0.25885573 G Loss: 3.0783179
+4 / 8
+D Loss: 0.20577028 G Loss: 3.6733065
+5 / 8
+D Loss: 0.19440602 G Loss: 3.9084024
+6 / 8
+D Loss: 0.15327069 G Loss: 3.4382896
+7 / 8
+D Loss: 0.20462935 G Loss: 3.513926
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_208_128.pkl
+0 / 8
+DRR -0.09002409 DRM -4.7707205 DFF -0.10403296
+GFR -3.8522482 GFE -5.794603
+D Loss: 0.19405705 G Loss: 3.8522482
+Epoch [  209/ 2000], batch 0 | d_loss: 0.1941 | g_loss: 3.8522
+1 / 8
+D Loss: 0.15229282 G Loss: 3.6389608
+2 / 8
+D Loss: 0.17214236 G Loss: 3.215076
+3 / 8
+D Loss: 0.19149618 G Loss: 3.5454607
+4 / 8
+D Loss: 0.14503199 G Loss: 3.6996155
+5 / 8
+D Loss: 0.22310546 G Loss: 2.588152
+6 / 8
+D Loss: 0.22713022 G Loss: 4.3679724
+7 / 8
+D Loss: 0.20515363 G Loss: 3.356296
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_209_128.pkl
+0 / 8
+DRR -0.0471933 DRM -4.80079 DFF -0.109136984
+GFR -3.5553088 GFE -5.7949524
+D Loss: 0.15633029 G Loss: 3.5553088
+Epoch [  210/ 2000], batch 0 | d_loss: 0.1563 | g_loss: 3.5553
+1 / 8
+D Loss: 0.1828616 G Loss: 3.753568
+2 / 8
+D Loss: 0.2404505 G Loss: 3.1977592
+3 / 8
+D Loss: 0.20986277 G Loss: 3.6749127
+4 / 8
+D Loss: 0.17166403 G Loss: 3.8364964
+5 / 8
+D Loss: 0.1577341 G Loss: 3.3126671
+6 / 8
+D Loss: 0.17654309 G Loss: 3.3911324
+7 / 8
+D Loss: 0.18653092 G Loss: 4.0022182
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_210_128.pkl
+0 / 8
+DRR -0.10586263 DRM -4.8004837 DFF -0.046521273
+GFR -3.5483768 GFE -5.7941933
+D Loss: 0.15238391 G Loss: 3.5483768
+Epoch [  211/ 2000], batch 0 | d_loss: 0.1524 | g_loss: 3.5484
+1 / 8
+D Loss: 0.13322042 G Loss: 3.305242
+2 / 8
+D Loss: 0.18493491 G Loss: 3.4541435
+3 / 8
+D Loss: 0.1570675 G Loss: 4.150481
+4 / 8
+D Loss: 0.18389979 G Loss: 3.2768967
+5 / 8
+D Loss: 0.17412849 G Loss: 3.200354
+6 / 8
+D Loss: 0.19967657 G Loss: 3.7249897
+7 / 8
+D Loss: 0.1461679 G Loss: 3.953131
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_211_128.pkl
+0 / 8
+DRR -0.06535949 DRM -4.7991734 DFF -0.06218229
+GFR -4.0087214 GFE -5.794586
+D Loss: 0.12754178 G Loss: 4.0087214
+Epoch [  212/ 2000], batch 0 | d_loss: 0.1275 | g_loss: 4.0087
+1 / 8
+D Loss: 0.19401847 G Loss: 2.9341788
+2 / 8
+D Loss: 0.17330074 G Loss: 3.5463605
+3 / 8
+D Loss: 0.14975525 G Loss: 4.245923
+4 / 8
+D Loss: 0.16144739 G Loss: 3.6204572
+5 / 8
+D Loss: 0.22219792 G Loss: 3.0124004
+6 / 8
+D Loss: 0.1487347 G Loss: 3.9611967
+7 / 8
+D Loss: 0.17094767 G Loss: 3.5058846
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_212_128.pkl
+0 / 8
+DRR -0.076546684 DRM -4.811631 DFF -0.0808056
+GFR -3.5551202 GFE -5.7954025
+D Loss: 0.15735228 G Loss: 3.5551202
+Epoch [  213/ 2000], batch 0 | d_loss: 0.1574 | g_loss: 3.5551
+1 / 8
+D Loss: 0.098591074 G Loss: 3.921201
+2 / 8
+D Loss: 0.17394692 G Loss: 3.4993975
+3 / 8
+D Loss: 0.17114411 G Loss: 3.1175497
+4 / 8
+D Loss: 0.17086226 G Loss: 3.2923803
+5 / 8
+D Loss: 0.12790944 G Loss: 3.618866
+6 / 8
+D Loss: 0.1537261 G Loss: 3.3552032
+7 / 8
+D Loss: 0.16713469 G Loss: 4.102337
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_213_128.pkl
+0 / 8
+DRR -0.0945278 DRM -4.797044 DFF -0.052965425
+GFR -3.6230774 GFE -5.7951565
+D Loss: 0.14749323 G Loss: 3.6230774
+Epoch [  214/ 2000], batch 0 | d_loss: 0.1475 | g_loss: 3.6231
+1 / 8
+D Loss: 0.14570779 G Loss: 3.6192594
+2 / 8
+D Loss: 0.13986227 G Loss: 3.5325909
+3 / 8
+D Loss: 0.11544229 G Loss: 3.686931
+4 / 8
+D Loss: 0.12609711 G Loss: 3.2888956
+5 / 8
+D Loss: 0.14120296 G Loss: 3.4659448
+6 / 8
+D Loss: 0.20848417 G Loss: 3.5000014
+7 / 8
+D Loss: 0.19967528 G Loss: 3.2974844
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_214_128.pkl
+0 / 8
+DRR -0.045040775 DRM -4.820454 DFF -0.093088254
+GFR -3.6268153 GFE -5.7945223
+D Loss: 0.13812903 G Loss: 3.6268153
+Epoch [  215/ 2000], batch 0 | d_loss: 0.1381 | g_loss: 3.6268
+1 / 8
+D Loss: 0.17069098 G Loss: 3.480986
+2 / 8
+D Loss: 0.18359736 G Loss: 3.143302
+3 / 8
+D Loss: 0.15822363 G Loss: 3.9943533
+4 / 8
+D Loss: 0.13278079 G Loss: 4.1965303
+5 / 8
+D Loss: 0.12837502 G Loss: 3.3995833
+6 / 8
+D Loss: 0.1735523 G Loss: 3.4991078
+7 / 8
+D Loss: 0.16571137 G Loss: 3.3534977
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_215_128.pkl
+0 / 8
+DRR -0.042126343 DRM -4.7558904 DFF -0.13888472
+GFR -4.6174645 GFE -5.794976
+D Loss: 0.18101107 G Loss: 4.6174645
+Epoch [  216/ 2000], batch 0 | d_loss: 0.1810 | g_loss: 4.6175
+1 / 8
+D Loss: 0.13393345 G Loss: 3.8544908
+2 / 8
+D Loss: 0.13360327 G Loss: 3.1403399
+3 / 8
+D Loss: 0.18745577 G Loss: 4.2344255
+4 / 8
+D Loss: 0.13666816 G Loss: 3.979845
+5 / 8
+D Loss: 0.19156851 G Loss: 3.3591027
+6 / 8
+D Loss: 0.17898983 G Loss: 3.2999043
+7 / 8
+D Loss: 0.16783771 G Loss: 4.319552
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_216_128.pkl
+0 / 8
+DRR -0.09640881 DRM -4.8176484 DFF -0.037821922
+GFR -3.6905417 GFE -5.794308
+D Loss: 0.13423073 G Loss: 3.6905417
+Epoch [  217/ 2000], batch 0 | d_loss: 0.1342 | g_loss: 3.6905
+1 / 8
+D Loss: 0.11031213 G Loss: 3.4785912
+2 / 8
+D Loss: 0.13950966 G Loss: 3.7411933
+3 / 8
+D Loss: 0.12550727 G Loss: 3.6146998
+4 / 8
+D Loss: 0.1630769 G Loss: 3.1093173
+5 / 8
+D Loss: 0.20819935 G Loss: 4.3078637
+6 / 8
+D Loss: 0.16383314 G Loss: 3.4347496
+7 / 8
+D Loss: 0.17157286 G Loss: 3.2930024
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_217_128.pkl
+0 / 8
+DRR -0.027028117 DRM -4.776496 DFF -0.101635136
+GFR -4.265412 GFE -5.794865
+D Loss: 0.12866326 G Loss: 4.265412
+Epoch [  218/ 2000], batch 0 | d_loss: 0.1287 | g_loss: 4.2654
+1 / 8
+D Loss: 0.14234336 G Loss: 4.0180006
+2 / 8
+D Loss: 0.14950967 G Loss: 3.3821077
+3 / 8
+D Loss: 0.2019946 G Loss: 3.7668107
+4 / 8
+D Loss: 0.104420096 G Loss: 3.9771729
+5 / 8
+D Loss: 0.15566288 G Loss: 3.3798835
+6 / 8
+D Loss: 0.13804053 G Loss: 3.4405532
+7 / 8
+D Loss: 0.21370772 G Loss: 4.499325
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_218_128.pkl
+0 / 8
+DRR -0.07051323 DRM -4.770942 DFF -0.033612683
+GFR -4.3476315 GFE -5.7949567
+D Loss: 0.10412592 G Loss: 4.3476315
+Epoch [  219/ 2000], batch 0 | d_loss: 0.1041 | g_loss: 4.3476
+1 / 8
+D Loss: 0.23600438 G Loss: 2.5534813
+2 / 8
+D Loss: 0.25694016 G Loss: 5.5572824
+3 / 8
+D Loss: 0.31556198 G Loss: 2.6362162
+4 / 8
+D Loss: 0.32878444 G Loss: 5.694669
+5 / 8
+D Loss: 0.79517657 G Loss: 1.7091398
+6 / 8
+D Loss: 1.0222545 G Loss: 8.792508
+7 / 8
+D Loss: 3.3882308 G Loss: 1.0093415
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_219_128.pkl
+0 / 8
+DRR -0.011704441 DRM -4.769738 DFF -3.2378945
+GFR -6.937463 GFE -5.79389
+D Loss: 3.249599 G Loss: 6.937463
+Epoch [  220/ 2000], batch 0 | d_loss: 3.2496 | g_loss: 6.9375
+1 / 8
+D Loss: 1.2083417 G Loss: 6.1237583
+2 / 8
+D Loss: 2.8886652 G Loss: 1.8765663
+3 / 8
+D Loss: 2.8505154 G Loss: 8.875485
+4 / 8
+D Loss: 1.5245489 G Loss: 4.4458666
+5 / 8
+D Loss: 2.1142602 G Loss: 4.9917974
+6 / 8
+D Loss: 2.813548 G Loss: 5.761849
+7 / 8
+D Loss: 0.78829366 G Loss: 4.456963
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_220_128.pkl
+0 / 8
+DRR -0.13510804 DRM -4.784356 DFF -1.0820758
+GFR -6.596058 GFE -5.7945547
+D Loss: 1.2171838 G Loss: 6.596058
+Epoch [  221/ 2000], batch 0 | d_loss: 1.2172 | g_loss: 6.5961
+1 / 8
+D Loss: 0.98245704 G Loss: 3.6652863
+2 / 8
+D Loss: 1.1366322 G Loss: 4.7289243
+3 / 8
+D Loss: 0.81274724 G Loss: 3.7263546
+4 / 8
+D Loss: 0.58211005 G Loss: 3.6809072
+5 / 8
+D Loss: 0.7579917 G Loss: 5.012515
+6 / 8
+D Loss: 0.44365782 G Loss: 4.0277405
+7 / 8
+D Loss: 0.4849778 G Loss: 3.5122876
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_221_128.pkl
+0 / 8
+DRR -0.06795047 DRM -4.756174 DFF -0.34910503
+GFR -4.857418 GFE -5.794947
+D Loss: 0.4170555 G Loss: 4.857418
+Epoch [  222/ 2000], batch 0 | d_loss: 0.4171 | g_loss: 4.8574
+1 / 8
+D Loss: 0.29081064 G Loss: 4.2333603
+2 / 8
+D Loss: 0.5110925 G Loss: 3.6226275
+3 / 8
+D Loss: 0.744808 G Loss: 4.3351383
+4 / 8
+D Loss: 0.3354259 G Loss: 4.5017796
+5 / 8
+D Loss: 0.55108094 G Loss: 3.1713305
+6 / 8
+D Loss: 0.51726687 G Loss: 4.060628
+7 / 8
+D Loss: 0.3966965 G Loss: 4.08853
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_222_128.pkl
+0 / 8
+DRR -0.15267605 DRM -4.7641935 DFF -0.123889074
+GFR -3.9649835 GFE -5.794132
+D Loss: 0.27656513 G Loss: 3.9649835
+Epoch [  223/ 2000], batch 0 | d_loss: 0.2766 | g_loss: 3.9650
+1 / 8
+D Loss: 0.48084134 G Loss: 3.9182086
+2 / 8
+D Loss: 0.2602533 G Loss: 4.510702
+3 / 8
+D Loss: 0.2582912 G Loss: 4.173982
+4 / 8
+D Loss: 0.36209577 G Loss: 3.5842896
+5 / 8
+D Loss: 0.4037478 G Loss: 4.050773
+6 / 8
+D Loss: 0.37586248 G Loss: 3.8361537
+7 / 8
+D Loss: 0.27387115 G Loss: 3.4764729
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_223_128.pkl
+0 / 8
+DRR -0.063204676 DRM -4.7498713 DFF -0.20730838
+GFR -3.9979122 GFE -5.7953615
+D Loss: 0.27051306 G Loss: 3.9979122
+Epoch [  224/ 2000], batch 0 | d_loss: 0.2705 | g_loss: 3.9979
+1 / 8
+D Loss: 0.16261964 G Loss: 4.1828575
+2 / 8
+D Loss: 0.29050565 G Loss: 3.3375835
+3 / 8
+D Loss: 0.3635753 G Loss: 3.6970234
+4 / 8
+D Loss: 0.20806572 G Loss: 3.6668444
+5 / 8
+D Loss: 0.20139915 G Loss: 3.482486
+6 / 8
+D Loss: 0.2745456 G Loss: 3.2313046
+7 / 8
+D Loss: 0.3073797 G Loss: 3.4037776
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_224_128.pkl
+0 / 8
+DRR -0.04797081 DRM -4.7583976 DFF -0.13925897
+GFR -4.1944594 GFE -5.7947865
+D Loss: 0.18722978 G Loss: 4.1944594
+Epoch [  225/ 2000], batch 0 | d_loss: 0.1872 | g_loss: 4.1945
+1 / 8
+D Loss: 0.23364276 G Loss: 3.4116683
+2 / 8
+D Loss: 0.19517992 G Loss: 3.3120089
+3 / 8
+D Loss: 0.2271936 G Loss: 3.292105
+4 / 8
+D Loss: 0.2565674 G Loss: 3.3269532
+5 / 8
+D Loss: 0.27620727 G Loss: 3.6115046
+6 / 8
+D Loss: 0.40152076 G Loss: 2.783851
+7 / 8
+D Loss: 0.21862715 G Loss: 3.8537762
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_225_128.pkl
+0 / 8
+DRR -0.048221692 DRM -4.786282 DFF -0.12058034
+GFR -3.9762216 GFE -5.794972
+D Loss: 0.16880202 G Loss: 3.9762216
+Epoch [  226/ 2000], batch 0 | d_loss: 0.1688 | g_loss: 3.9762
+1 / 8
+D Loss: 0.18760644 G Loss: 3.6093814
+2 / 8
+D Loss: 0.17077261 G Loss: 3.608521
+3 / 8
+D Loss: 0.23391661 G Loss: 3.4257655
+4 / 8
+D Loss: 0.20487499 G Loss: 3.3639898
+5 / 8
+D Loss: 0.23969358 G Loss: 2.8797998
+6 / 8
+D Loss: 0.19050844 G Loss: 3.6556573
+7 / 8
+D Loss: 0.17657337 G Loss: 3.6175885
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_226_128.pkl
+0 / 8
+DRR -0.067257375 DRM -4.7691913 DFF -0.099669755
+GFR -3.8413966 GFE -5.794474
+D Loss: 0.16692713 G Loss: 3.8413966
+Epoch [  227/ 2000], batch 0 | d_loss: 0.1669 | g_loss: 3.8414
+1 / 8
+D Loss: 0.17977092 G Loss: 3.4512563
+2 / 8
+D Loss: 0.12045581 G Loss: 3.4072638
+3 / 8
+D Loss: 0.20516813 G Loss: 3.6788228
+4 / 8
+D Loss: 0.17349784 G Loss: 3.6023262
+5 / 8
+D Loss: 0.20387167 G Loss: 3.2530978
+6 / 8
+D Loss: 0.1856788 G Loss: 3.2633483
+7 / 8
+D Loss: 0.22680223 G Loss: 3.6954844
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_227_128.pkl
+0 / 8
+DRR -0.0766283 DRM -4.789659 DFF -0.05269868
+GFR -3.9025927 GFE -5.794752
+D Loss: 0.12932697 G Loss: 3.9025927
+Epoch [  228/ 2000], batch 0 | d_loss: 0.1293 | g_loss: 3.9026
+1 / 8
+D Loss: 0.13310504 G Loss: 3.7392077
+2 / 8
+D Loss: 0.1475452 G Loss: 3.408409
+3 / 8
+D Loss: 0.15511389 G Loss: 3.2217507
+4 / 8
+D Loss: 0.16601777 G Loss: 3.6394203
+5 / 8
+D Loss: 0.14044753 G Loss: 3.8745625
+6 / 8
+D Loss: 0.16089033 G Loss: 3.4478748
+7 / 8
+D Loss: 0.15374613 G Loss: 3.326392
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_228_128.pkl
+0 / 8
+DRR -0.03886919 DRM -4.780076 DFF -0.14768222
+GFR -3.6341763 GFE -5.794738
+D Loss: 0.1865514 G Loss: 3.6341763
+Epoch [  229/ 2000], batch 0 | d_loss: 0.1866 | g_loss: 3.6342
+1 / 8
+D Loss: 0.14784676 G Loss: 3.9215698
+2 / 8
+D Loss: 0.17046231 G Loss: 3.9595742
+3 / 8
+D Loss: 0.17397407 G Loss: 3.129345
+4 / 8
+D Loss: 0.15052146 G Loss: 3.2219467
+5 / 8
+D Loss: 0.13860098 G Loss: 3.6970966
+6 / 8
+D Loss: 0.14104393 G Loss: 3.8301764
+7 / 8
+D Loss: 0.19367483 G Loss: 3.8628285
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_229_128.pkl
+0 / 8
+DRR -0.0726618 DRM -4.786169 DFF -0.040434323
+GFR -3.7344007 GFE -5.7945805
+D Loss: 0.113096125 G Loss: 3.7344007
+Epoch [  230/ 2000], batch 0 | d_loss: 0.1131 | g_loss: 3.7344
+1 / 8
+D Loss: 0.10639144 G Loss: 3.7112112
+2 / 8
+D Loss: 0.1263152 G Loss: 3.720112
+3 / 8
+D Loss: 0.15276307 G Loss: 3.3079448
+4 / 8
+D Loss: 0.12626463 G Loss: 3.4772906
+5 / 8
+D Loss: 0.15413629 G Loss: 3.628818
+6 / 8
+D Loss: 0.15304582 G Loss: 3.5344326
+7 / 8
+D Loss: 0.1715437 G Loss: 3.1594338
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_230_128.pkl
+0 / 8
+DRR -0.042671807 DRM -4.7788973 DFF -0.112027355
+GFR -3.6392965 GFE -5.794545
+D Loss: 0.15469916 G Loss: 3.6392965
+Epoch [  231/ 2000], batch 0 | d_loss: 0.1547 | g_loss: 3.6393
+1 / 8
+D Loss: 0.13817385 G Loss: 3.7686076
+2 / 8
+D Loss: 0.111177236 G Loss: 3.8123791
+3 / 8
+D Loss: 0.16284132 G Loss: 3.196807
+4 / 8
+D Loss: 0.15048863 G Loss: 3.647948
+5 / 8
+D Loss: 0.15141475 G Loss: 3.5356383
+6 / 8
+D Loss: 0.1350464 G Loss: 3.5935702
+7 / 8
+D Loss: 0.13706207 G Loss: 3.7249017
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_231_128.pkl
+0 / 8
+DRR -0.0421016 DRM -4.790548 DFF -0.111220494
+GFR -3.4362442 GFE -5.795187
+D Loss: 0.1533221 G Loss: 3.4362442
+Epoch [  232/ 2000], batch 0 | d_loss: 0.1533 | g_loss: 3.4362
+1 / 8
+D Loss: 0.13850737 G Loss: 3.603973
+2 / 8
+D Loss: 0.10646994 G Loss: 3.8463154
+3 / 8
+D Loss: 0.13788286 G Loss: 3.3802342
+4 / 8
+D Loss: 0.09958893 G Loss: 3.5048242
+5 / 8
+D Loss: 0.13949159 G Loss: 3.443643
+6 / 8
+D Loss: 0.12289333 G Loss: 3.9212399
+7 / 8
+D Loss: 0.108279884 G Loss: 3.9426346
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_232_128.pkl
+0 / 8
+DRR -0.054011527 DRM -4.78103 DFF -0.051768977
+GFR -3.6501465 GFE -5.7952633
+D Loss: 0.105780505 G Loss: 3.6501465
+Epoch [  233/ 2000], batch 0 | d_loss: 0.1058 | g_loss: 3.6501
+1 / 8
+D Loss: 0.12758926 G Loss: 3.7330499
+2 / 8
+D Loss: 0.12038703 G Loss: 3.6305408
+3 / 8
+D Loss: 0.11105171 G Loss: 3.578259
+4 / 8
+D Loss: 0.13915949 G Loss: 3.4610138
+5 / 8
+D Loss: 0.121882156 G Loss: 3.4049144
+6 / 8
+D Loss: 0.14578213 G Loss: 3.4694257
+7 / 8
+D Loss: 0.13474245 G Loss: 3.6910958
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_233_128.pkl
+0 / 8
+DRR -0.047434077 DRM -4.792364 DFF -0.052421536
+GFR -3.8583338 GFE -5.795273
+D Loss: 0.09985562 G Loss: 3.8583338
+Epoch [  234/ 2000], batch 0 | d_loss: 0.0999 | g_loss: 3.8583
+1 / 8
+D Loss: 0.10791767 G Loss: 3.9205809
+2 / 8
+D Loss: 0.1890927 G Loss: 3.0415626
+3 / 8
+D Loss: 0.16054279 G Loss: 3.8260522
+4 / 8
+D Loss: 0.11401645 G Loss: 3.9136777
+5 / 8
+D Loss: 0.1732014 G Loss: 3.062963
+6 / 8
+D Loss: 0.13486606 G Loss: 3.5060716
+7 / 8
+D Loss: 0.12703347 G Loss: 3.8065836
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_234_128.pkl
+0 / 8
+DRR -0.055110514 DRM -4.7421026 DFF -0.079784766
+GFR -3.756483 GFE -5.794773
+D Loss: 0.13489528 G Loss: 3.756483
+Epoch [  235/ 2000], batch 0 | d_loss: 0.1349 | g_loss: 3.7565
+1 / 8
+D Loss: 0.1970534 G Loss: 2.9943347
+2 / 8
+D Loss: 0.14084458 G Loss: 3.4449816
+3 / 8
+D Loss: 0.13000646 G Loss: 3.7960598
+4 / 8
+D Loss: 0.13382035 G Loss: 3.6488442
+5 / 8
+D Loss: 0.117160425 G Loss: 3.8736706
+6 / 8
+D Loss: 0.11329813 G Loss: 3.7298481
+7 / 8
+D Loss: 0.123712964 G Loss: 3.659436
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_235_128.pkl
+0 / 8
+DRR -0.054030977 DRM -4.7851777 DFF -0.057019554
+GFR -3.6175532 GFE -5.7942677
+D Loss: 0.11105053 G Loss: 3.6175532
+Epoch [  236/ 2000], batch 0 | d_loss: 0.1111 | g_loss: 3.6176
+1 / 8
+D Loss: 0.14992124 G Loss: 3.3664622
+2 / 8
+D Loss: 0.15391922 G Loss: 3.9755151
+3 / 8
+D Loss: 0.16576119 G Loss: 3.344183
+4 / 8
+D Loss: 0.10907626 G Loss: 3.3336148
+5 / 8
+D Loss: 0.14294264 G Loss: 3.960612
+6 / 8
+D Loss: 0.16852008 G Loss: 3.5506668
+7 / 8
+D Loss: 0.083699554 G Loss: 3.7392032
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_236_128.pkl
+0 / 8
+DRR -0.04610988 DRM -4.765075 DFF -0.055097558
+GFR -3.9258873 GFE -5.795314
+D Loss: 0.101207435 G Loss: 3.9258873
+Epoch [  237/ 2000], batch 0 | d_loss: 0.1012 | g_loss: 3.9259
+1 / 8
+D Loss: 0.11244981 G Loss: 3.9141822
+2 / 8
+D Loss: 0.09536746 G Loss: 3.9923058
+3 / 8
+D Loss: 0.111407116 G Loss: 3.5175157
+4 / 8
+D Loss: 0.09882523 G Loss: 3.7638102
+5 / 8
+D Loss: 0.11978124 G Loss: 3.2834256
+6 / 8
+D Loss: 0.097240835 G Loss: 3.5558023
+7 / 8
+D Loss: 0.1214935 G Loss: 3.7345817
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_237_128.pkl
+0 / 8
+DRR -0.054363877 DRM -4.8046064 DFF -0.043819696
+GFR -3.8168993 GFE -5.7947903
+D Loss: 0.09818357 G Loss: 3.8168993
+Epoch [  238/ 2000], batch 0 | d_loss: 0.0982 | g_loss: 3.8169
+1 / 8
+D Loss: 0.10757326 G Loss: 3.5824738
+2 / 8
+D Loss: 0.098712415 G Loss: 3.8725872
+3 / 8
+D Loss: 0.105381824 G Loss: 3.8681436
+4 / 8
+D Loss: 0.092019856 G Loss: 3.8392434
+5 / 8
+D Loss: 0.11576805 G Loss: 3.5075006
+6 / 8
+D Loss: 0.12345523 G Loss: 3.448582
+7 / 8
+D Loss: 0.15066981 G Loss: 3.5350509
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_238_128.pkl
+0 / 8
+DRR -0.026289593 DRM -4.762114 DFF -0.060995687
+GFR -4.0758305 GFE -5.7949805
+D Loss: 0.08728528 G Loss: 4.0758305
+Epoch [  239/ 2000], batch 0 | d_loss: 0.0873 | g_loss: 4.0758
+1 / 8
+D Loss: 0.14267872 G Loss: 3.2990892
+2 / 8
+D Loss: 0.1389959 G Loss: 3.9709992
+3 / 8
+D Loss: 0.08374979 G Loss: 4.31577
+4 / 8
+D Loss: 0.14057429 G Loss: 3.3671725
+5 / 8
+D Loss: 0.11434941 G Loss: 3.5431552
+6 / 8
+D Loss: 0.08997072 G Loss: 3.8623362
+7 / 8
+D Loss: 0.104364954 G Loss: 3.7708976
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_239_128.pkl
+0 / 8
+DRR -0.027855419 DRM -4.79344 DFF -0.075820446
+GFR -3.8253417 GFE -5.794821
+D Loss: 0.103675865 G Loss: 3.8253417
+Epoch [  240/ 2000], batch 0 | d_loss: 0.1037 | g_loss: 3.8253
+1 / 8
+D Loss: 0.09819953 G Loss: 4.1183815
+2 / 8
+D Loss: 0.14269778 G Loss: 3.3451178
+3 / 8
+D Loss: 0.13778286 G Loss: 3.9823163
+4 / 8
+D Loss: 0.1169461 G Loss: 4.1727815
+5 / 8
+D Loss: 0.116005 G Loss: 3.4362955
+6 / 8
+D Loss: 0.10149707 G Loss: 3.5441995
+7 / 8
+D Loss: 0.10938616 G Loss: 3.4730716
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_240_128.pkl
+0 / 8
+DRR -0.024117578 DRM -4.772138 DFF -0.11605219
+GFR -4.4217386 GFE -5.794524
+D Loss: 0.14016977 G Loss: 4.4217386
+Epoch [  241/ 2000], batch 0 | d_loss: 0.1402 | g_loss: 4.4217
+1 / 8
+D Loss: 0.10747171 G Loss: 4.2137003
+2 / 8
+D Loss: 0.20061041 G Loss: 2.6914268
+3 / 8
+D Loss: 0.26753438 G Loss: 5.0536966
+4 / 8
+D Loss: 0.11108525 G Loss: 4.5224533
+5 / 8
+D Loss: 0.18865988 G Loss: 2.858266
+6 / 8
+D Loss: 0.17510392 G Loss: 4.279549
+7 / 8
+D Loss: 0.1146283 G Loss: 4.1882215
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_241_128.pkl
+0 / 8
+DRR -0.05248366 DRM -4.786791 DFF -0.038411826
+GFR -3.9859364 GFE -5.794628
+D Loss: 0.09089549 G Loss: 3.9859364
+Epoch [  242/ 2000], batch 0 | d_loss: 0.0909 | g_loss: 3.9859
+1 / 8
+D Loss: 0.1254421 G Loss: 3.3954134
+2 / 8
+D Loss: 0.11743039 G Loss: 3.7245932
+3 / 8
+D Loss: 0.16918525 G Loss: 4.2623997
+4 / 8
+D Loss: 0.1581519 G Loss: 3.4008179
+5 / 8
+D Loss: 0.12712358 G Loss: 3.2207327
+6 / 8
+D Loss: 0.094854355 G Loss: 3.903041
+7 / 8
+D Loss: 0.1225977 G Loss: 4.4679794
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_242_128.pkl
+0 / 8
+DRR -0.078024864 DRM -4.7842274 DFF -0.036989707
+GFR -3.749144 GFE -5.794785
+D Loss: 0.11501457 G Loss: 3.749144
+Epoch [  243/ 2000], batch 0 | d_loss: 0.1150 | g_loss: 3.7491
+1 / 8
+D Loss: 0.099590994 G Loss: 3.9652214
+2 / 8
+D Loss: 0.10384345 G Loss: 3.7797728
+3 / 8
+D Loss: 0.10873864 G Loss: 3.8604767
+4 / 8
+D Loss: 0.113739625 G Loss: 3.4916093
+5 / 8
+D Loss: 0.1418242 G Loss: 3.80381
+6 / 8
+D Loss: 0.13241398 G Loss: 3.7918036
+7 / 8
+D Loss: 0.08092412 G Loss: 4.212732
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_243_128.pkl
+0 / 8
+DRR -0.045534648 DRM -4.7956753 DFF -0.048946433
+GFR -3.9705744 GFE -5.7942195
+D Loss: 0.09448108 G Loss: 3.9705744
+Epoch [  244/ 2000], batch 0 | d_loss: 0.0945 | g_loss: 3.9706
+1 / 8
+D Loss: 0.10760136 G Loss: 3.9613156
+2 / 8
+D Loss: 0.09580373 G Loss: 4.0896473
+3 / 8
+D Loss: 0.086518794 G Loss: 4.0031238
+4 / 8
+D Loss: 0.16375892 G Loss: 3.260979
+5 / 8
+D Loss: 0.11719933 G Loss: 3.7936053
+6 / 8
+D Loss: 0.08525401 G Loss: 4.344415
+7 / 8
+D Loss: 0.08768053 G Loss: 4.2952943
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_244_128.pkl
+0 / 8
+DRR -0.081212744 DRM -4.80991 DFF -0.023222692
+GFR -3.6316242 GFE -5.795171
+D Loss: 0.10443544 G Loss: 3.6316242
+Epoch [  245/ 2000], batch 0 | d_loss: 0.1044 | g_loss: 3.6316
+1 / 8
+D Loss: 0.10407623 G Loss: 3.5328007
+2 / 8
+D Loss: 0.12134647 G Loss: 4.1188183
+3 / 8
+D Loss: 0.09437393 G Loss: 4.282242
+4 / 8
+D Loss: 0.11974684 G Loss: 3.4819202
+5 / 8
+D Loss: 0.10086627 G Loss: 3.7157538
+6 / 8
+D Loss: 0.096052304 G Loss: 3.918662
+7 / 8
+D Loss: 0.102407455 G Loss: 3.875779
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_245_128.pkl
+0 / 8
+DRR -0.03272462 DRM -4.768772 DFF -0.040709734
+GFR -4.06957 GFE -5.7938633
+D Loss: 0.07343435 G Loss: 4.06957
+Epoch [  246/ 2000], batch 0 | d_loss: 0.0734 | g_loss: 4.0696
+1 / 8
+D Loss: 0.100518465 G Loss: 3.7494578
+2 / 8
+D Loss: 0.09096855 G Loss: 3.914952
+3 / 8
+D Loss: 0.12377177 G Loss: 3.580191
+4 / 8
+D Loss: 0.108091876 G Loss: 3.7476768
+5 / 8
+D Loss: 0.086999685 G Loss: 3.8591802
+6 / 8
+D Loss: 0.09688919 G Loss: 3.867198
+7 / 8
+D Loss: 0.08893061 G Loss: 3.9547863
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_246_128.pkl
+0 / 8
+DRR -0.02805442 DRM -4.79568 DFF -0.04736109
+GFR -4.326724 GFE -5.794754
+D Loss: 0.07541551 G Loss: 4.326724
+Epoch [  247/ 2000], batch 0 | d_loss: 0.0754 | g_loss: 4.3267
+1 / 8
+D Loss: 0.0937213 G Loss: 3.816009
+2 / 8
+D Loss: 0.101456 G Loss: 3.4063594
+3 / 8
+D Loss: 0.09627633 G Loss: 3.9119346
+4 / 8
+D Loss: 0.066299304 G Loss: 4.0607324
+5 / 8
+D Loss: 0.092265904 G Loss: 4.0227795
+6 / 8
+D Loss: 0.07647173 G Loss: 4.06523
+7 / 8
+D Loss: 0.101995915 G Loss: 3.7936308
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_247_128.pkl
+0 / 8
+DRR -0.02961609 DRM -4.758219 DFF -0.047000695
+GFR -3.9706326 GFE -5.794296
+D Loss: 0.07661679 G Loss: 3.9706326
+Epoch [  248/ 2000], batch 0 | d_loss: 0.0766 | g_loss: 3.9706
+1 / 8
+D Loss: 0.0826761 G Loss: 3.9075222
+2 / 8
+D Loss: 0.08780706 G Loss: 3.75169
+3 / 8
+D Loss: 0.07176943 G Loss: 3.9464092
+4 / 8
+D Loss: 0.09679575 G Loss: 4.1617656
+5 / 8
+D Loss: 0.07072338 G Loss: 4.1217628
+6 / 8
+D Loss: 0.095209986 G Loss: 3.6804667
+7 / 8
+D Loss: 0.08926135 G Loss: 3.9223998
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_248_128.pkl
+0 / 8
+DRR -0.031751953 DRM -4.818444 DFF -0.06203621
+GFR -4.305151 GFE -5.7954445
+D Loss: 0.09378816 G Loss: 4.305151
+Epoch [  249/ 2000], batch 0 | d_loss: 0.0938 | g_loss: 4.3052
+1 / 8
+D Loss: 0.0938184 G Loss: 3.998807
+2 / 8
+D Loss: 0.08365722 G Loss: 3.9070764
+3 / 8
+D Loss: 0.102667585 G Loss: 4.2383814
+4 / 8
+D Loss: 0.07767581 G Loss: 4.5220885
+5 / 8
+D Loss: 0.10484389 G Loss: 3.8587716
+6 / 8
+D Loss: 0.07061102 G Loss: 3.961645
+7 / 8
+D Loss: 0.07232017 G Loss: 3.795709
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_249_128.pkl
+0 / 8
+DRR -0.06500706 DRM -4.8007555 DFF -0.053838816
+GFR -3.5882702 GFE -5.7945833
+D Loss: 0.11884588 G Loss: 3.5882702
+Epoch [  250/ 2000], batch 0 | d_loss: 0.1188 | g_loss: 3.5883
+1 / 8
+D Loss: 0.09220175 G Loss: 4.3779335
+2 / 8
+D Loss: 0.07591601 G Loss: 4.36484
+3 / 8
+D Loss: 0.18563335 G Loss: 2.8145728
+4 / 8
+D Loss: 0.19958669 G Loss: 4.7398105
+5 / 8
+D Loss: 0.15325019 G Loss: 3.6432583
+6 / 8
+D Loss: 0.09629184 G Loss: 3.7170959
+7 / 8
+D Loss: 0.10789832 G Loss: 3.7901754
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_250_128.pkl
+0 / 8
+DRR -0.024599504 DRM -4.7735143 DFF -0.07922953
+GFR -4.6874237 GFE -5.7948804
+D Loss: 0.10382904 G Loss: 4.6874237
+Epoch [  251/ 2000], batch 0 | d_loss: 0.1038 | g_loss: 4.6874
+1 / 8
+D Loss: 0.07810374 G Loss: 4.240262
+2 / 8
+D Loss: 0.112291545 G Loss: 3.4654818
+3 / 8
+D Loss: 0.1008659 G Loss: 3.728043
+4 / 8
+D Loss: 0.1394721 G Loss: 4.697378
+5 / 8
+D Loss: 0.21504383 G Loss: 2.479248
+6 / 8
+D Loss: 0.22049445 G Loss: 4.9310703
+7 / 8
+D Loss: 0.09030206 G Loss: 4.669536
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_251_128.pkl
+0 / 8
+DRR -0.049096048 DRM -4.77347 DFF -0.046057392
+GFR -3.930149 GFE -5.7947645
+D Loss: 0.095153436 G Loss: 3.930149
+Epoch [  252/ 2000], batch 0 | d_loss: 0.0952 | g_loss: 3.9301
+1 / 8
+D Loss: 0.12385466 G Loss: 3.8486814
+2 / 8
+D Loss: 0.11504359 G Loss: 4.2410183
+3 / 8
+D Loss: 0.09286718 G Loss: 4.182476
+4 / 8
+D Loss: 0.1011777 G Loss: 3.9560294
+5 / 8
+D Loss: 0.10016798 G Loss: 3.6192985
+6 / 8
+D Loss: 0.12829989 G Loss: 4.049692
+7 / 8
+D Loss: 0.118145406 G Loss: 3.8934143
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_252_128.pkl
+0 / 8
+DRR -0.027201146 DRM -4.8186264 DFF -0.06156469
+GFR -4.058649 GFE -5.7947197
+D Loss: 0.08876584 G Loss: 4.058649
+Epoch [  253/ 2000], batch 0 | d_loss: 0.0888 | g_loss: 4.0586
+1 / 8
+D Loss: 0.07898443 G Loss: 4.491189
+2 / 8
+D Loss: 0.10160545 G Loss: 3.944713
+3 / 8
+D Loss: 0.09657369 G Loss: 3.7222404
+4 / 8
+D Loss: 0.10865158 G Loss: 3.9283185
+5 / 8
+D Loss: 0.07931149 G Loss: 4.078691
+6 / 8
+D Loss: 0.12698373 G Loss: 3.4501238
+7 / 8
+D Loss: 0.088849604 G Loss: 3.6858149
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_253_128.pkl
+0 / 8
+DRR -0.019584807 DRM -4.7594414 DFF -0.0723328
+GFR -4.5000353 GFE -5.7945147
+D Loss: 0.091917604 G Loss: 4.5000353
+Epoch [  254/ 2000], batch 0 | d_loss: 0.0919 | g_loss: 4.5000
+1 / 8
+D Loss: 0.0629642 G Loss: 4.630286
+2 / 8
+D Loss: 0.07480458 G Loss: 3.9458313
+3 / 8
+D Loss: 0.06611456 G Loss: 3.8369381
+4 / 8
+D Loss: 0.06824083 G Loss: 4.1931896
+5 / 8
+D Loss: 0.089331016 G Loss: 4.149349
+6 / 8
+D Loss: 0.082194686 G Loss: 4.012248
+7 / 8
+D Loss: 0.12115961 G Loss: 3.6724806
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_254_128.pkl
+0 / 8
+DRR -0.03405384 DRM -4.7731485 DFF -0.08317943
+GFR -4.276547 GFE -5.794579
+D Loss: 0.11723327 G Loss: 4.276547
+Epoch [  255/ 2000], batch 0 | d_loss: 0.1172 | g_loss: 4.2765
+1 / 8
+D Loss: 0.066914946 G Loss: 4.355727
+2 / 8
+D Loss: 0.08636005 G Loss: 3.8901281
+3 / 8
+D Loss: 0.08849394 G Loss: 3.7946992
+4 / 8
+D Loss: 0.08755183 G Loss: 3.8312042
+5 / 8
+D Loss: 0.070736244 G Loss: 4.344383
+6 / 8
+D Loss: 0.07181803 G Loss: 4.3248425
+7 / 8
+D Loss: 0.10524039 G Loss: 3.5140595
+SAVING: img_z/img_z_2020-04-29 03:47:23.294050_epoch_255_128.pkl
