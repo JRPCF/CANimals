@@ -4,19 +4,12 @@ J.R. Carneiro JC4896
 Yarne Hermann YPH2105
 """
 
-import os
 import random
-import time
 from datetime import datetime
 import pickle as pkl
-import numpy as np
 import torch
-import torch.nn as nn
 import torch.optim as optim
-import torch.nn.functional as F
 from torch.utils.data import DataLoader
-# from torchvision.utils import make_grid
-# import matplotlib.pyplot as plt
 
 from data.stanford_dogs import StanfordDogs
 from model import weights_init, Generator, Discriminator
@@ -129,14 +122,6 @@ elif optimizer == 'sgd':
     optimizerG = optim.SGD(G.parameters(), lr=lr_sgd)
 
 
-# if train_on_gpu:
-#     G.cuda()
-#     D.cuda()
-#     print('GPU available for training. Models moved to GPU')
-# else:
-#     print('Training on CPU.')
-
-
 # Training Loop
 
 # Lists to keep track of progress
@@ -158,18 +143,14 @@ for epoch in range(start_epoch, num_epochs):
         ###########################
         
         D.zero_grad()
-        
-#         if train_on_gpu:
-#             real_images = real_images.cuda()
+
         real_images = real_images.to(device)
         D_real, D_multi = D(real_images) 
                 
         # Generate fake image batch with G
         z = torch.randn(b_size, 100, 1, 1, device=device)
         fake_images = G(z)
-        
-#         if train_on_gpu:
-#             real_images = real_images.cuda()
+
         D_fake, _ = D(fake_images)    
             
         # Calculate loss and update D
@@ -197,7 +178,6 @@ for epoch in range(start_epoch, num_epochs):
         
         ######################################################################
     
-#         print('D Loss:', d_loss.data.cpu().numpy(), 'G Loss:', g_loss.data.cpu().numpy())
         # Output training stats
         if info:
             # print discriminator and generator loss
@@ -226,9 +206,6 @@ for epoch in range(start_epoch, num_epochs):
     
     # generate and save sample, fake images for the fixed_z
     G.eval() # for generating samples
-#     if train_on_gpu:
-#         fixed_z = fixed_z.cuda()
-#     fixed_z = fixed_z.to(device)
     img_z = G(fixed_z).detach().cpu()
     img_list.append(img_z)
     # Save training generator samples

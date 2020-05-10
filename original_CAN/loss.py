@@ -14,10 +14,7 @@ def entropy_loss(D_out, device):
     batch_size = D_out.size(0)
     K = D_out.size(1)
     loss = torch.zeros(batch_size)
-    
-#     if train_on_gpu:
-#         D_out = D_out.cuda()
-#         loss = loss.cuda()
+
     D_out = D_out.to(device)
     loss = loss.to(device)
             
@@ -46,14 +43,10 @@ info: (boolean) Flag to print the 3 individual losses
 """
 def D_loss(D_out_real, D_out_multi, multi_labels, D_out_false, device, weights=None, info=False):
     batch_size = D_out_multi.size(0)
-#     print(batch_size, D_out_multi.size())
     eps=1e-7
     log_r = torch.mean(torch.log(D_out_real + eps))
     
     row_indices = torch.from_numpy(np.arange(batch_size))
-#     if train_on_gpu:
-#         multi_labels = multi_labels.cuda()
-#         row_indices = row_indices.cuda()
     
     multi_labels = multi_labels.to(device)
     row_indices = row_indices.to(device)
@@ -69,10 +62,6 @@ def D_loss(D_out_real, D_out_multi, multi_labels, D_out_false, device, weights=N
         return - (log_r + log_m + log_f)
     else:
         return - (weights[0] * log_r + weights[1] * log_m + weights[2] * log_f )
-#         s = sum(weights)
-#         return - (weights[0]/s * log_r + weights[1]/s * log_m + weights[2]/s * log_f )
-
-
 
 
 """
@@ -89,7 +78,6 @@ weights: (list of 2 floats) Custom weights to be applied to the 2 different part
 info: (boolean) Flag to print the 2 individual losses
 """
 def G_loss(D_out_false, D_out_multi, device, weights=None, info=False):
-    batch_size = D_out_multi.size(0)
     eps=1e-7
     log_f = torch.mean(torch.log(D_out_false + eps))
     l_entropy = entropy_loss(D_out_multi, device)

@@ -7,7 +7,6 @@ import random
 random.seed(0)
 
 import numpy as np
-import torch
 from torchvision import transforms
 from torch.utils.data import Dataset
 from PIL import Image
